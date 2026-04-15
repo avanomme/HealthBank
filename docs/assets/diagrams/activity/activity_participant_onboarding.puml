@@ -1,0 +1,88 @@
+@startuml HealthBank_Participant_Onboarding_Activity
+!theme plain
+skinparam activityBorderColor #2C76BF
+skinparam activityBackgroundColor #EBF4FF
+skinparam activityDiamondBorderColor #595959
+skinparam activityArrowColor #1A1A2E
+skinparam shadowing false
+
+title HealthBank — New Participant Onboarding Activity
+
+|Participant|
+start
+
+:Submit account request form\n(name, email, intended role, notes);
+
+|Admin|
+:Receive notification of\npending account request;
+
+if (Approve?) then (yes)
+  :Create account\n(Auth + AccountData)\nGenerate temp password;
+  |Email Service|
+  :Send welcome email\nwith temp password;
+  |Participant|
+  :Receive email\nwith credentials;
+else (no)
+  :Mark request rejected\n(add admin notes);
+  |Email Service|
+  :Send rejection email;
+  |Participant|
+  :Receive rejection;
+  stop
+endif
+
+|Participant|
+:Log in with\ntemp password;
+
+|System (Router Guard)|
+if (MustChangePassword?) then (yes)
+  |Participant|
+  :Set permanent password;
+endif
+
+if (Profile incomplete?) then (yes)
+  |Participant|
+  :Complete profile\n(birthdate, gender);
+endif
+
+if (Terms of Service\nnot accepted?) then (yes)
+  |Participant|
+  :Read and accept ToS;
+endif
+
+|System (Router Guard)|
+if (consent_required\nsystem setting = true?) then (yes)
+  if (Consent not\nyet signed?) then (yes)
+    |Participant|
+    :Read consent form\nType name as signature;
+    |System|
+    :Store ConsentRecord\n(document text, signature,\nIP address, user agent,\nconsent version, timestamp);
+  endif
+endif
+
+if (2FA setup\nprompted?) then (yes — optional)
+  |Participant|
+  :Scan QR code with\nauthenticator app;
+  :Enter verification code\nto confirm enrollment;
+endif
+
+|System (Router Guard)|
+:All gates passed;
+
+|Participant|
+:Arrive at Participant Dashboard;
+
+:View pending surveys\nand health tracking prompt;
+
+if (No baseline\nentries exist?) then (yes)
+  :Record baseline snapshot\n(pre-housing state for all metrics);
+  |System|
+  :Store TrackingEntry rows\nwith IsBaseline = 1;
+  |Participant|
+endif
+
+:Continue using HealthBank\n(surveys, health tracking,\nmessaging);
+
+stop
+
+@enduml

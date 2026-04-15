@@ -1,0 +1,10 @@
+# Exclude compiled output and tooling caches — keeps context small
+build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+*.iml
+.idea/
+
+# Exclude preview runner from Docker builds
+lib/main_preview.dart

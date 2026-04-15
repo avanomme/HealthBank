@@ -1,0 +1,62 @@
+# syntax=docker/dockerfile:1.4
+
+FROM ghcr.io/cirruslabs/flutter:stable AS build
+
+# Create non-root user for Flutter
+RUN useradd -m -s /bin/bash flutter && \
+    mkdir -p /app && \
+    chown -R flutter:flutter /app
+
+# Give flutter user write access to Flutter SDK cache (required)
+RUN chown -R flutter:flutter /sdks/flutter/bin/cache && \
+    chown -R flutter:flutter /sdks/flutter/packages/flutter_tools/.dart_tool
+
+# Switch to non-root user
+USER flutter
+WORKDIR /app
+
+# Set Flutter home for non-root user
+ENV PUB_CACHE=/home/flutter/.pub-cache
+
+# Fix Flutter SDK ownership warning (SDK is owned by root, we're running as flutter user)
+RUN git config --global --add safe.directory /sdks/flutter
+
+###############################################
+# 1. Copy only dependency files first
+###############################################
+COPY --chown=flutter:flutter pubspec.yaml pubspec.lock ./
+
+# Pub cache kept between builds
+RUN --mount=type=cache,target=/home/flutter/.pub-cache,uid=1000,gid=1000 \
+    flutter pub get
+
+###############################################
+# 2. Now copy the rest of the source
+###############################################
+COPY --chown=flutter:flutter . .
+
+# Run build_runner (no build cache - always fresh, but keep pub cache)
+RUN --mount=type=cache,target=/home/flutter/.pub-cache,uid=1000,gid=1000 \
+    flutter pub run build_runner build --delete-conflicting-outputs
+
+###############################################
+# 3. Build Flutter Web (always fresh build)
+###############################################
+# Only cache pub packages, NOT flutter build cache
+# This ensures UI changes are always reflected in new builds
+RUN --mount=type=cache,target=/home/flutter/.pub-cache,uid=1000,gid=1000 \
+    flutter build web --release
+
+
+
+############################################################
+# 4. Output container - copies build files and exits
+############################################################
+FROM alpine AS runtime
+
+# Copy the built web files to the output volume
+COPY --from=build /app/build/web /output
+
+# This container just copies files and exits
+# nginx service serves the files from the frontend_build volume
+CMD ["echo", "Frontend build complete"]

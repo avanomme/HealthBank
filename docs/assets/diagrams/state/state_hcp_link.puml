@@ -1,0 +1,45 @@
+@startuml HealthBank_HCP_Link_State
+!theme plain
+skinparam stateBorderColor #2C76BF
+skinparam stateBackgroundColor #EBF4FF
+skinparam stateArrowColor #1A1A2E
+skinparam shadowing false
+
+title HealthBank — HCP–Patient Link State Diagram
+
+[*] --> Pending : HCP or Participant sends link request\n(POST /hcp-links/request)
+
+state Pending {
+  [*] --> AwaitingResponse
+  AwaitingResponse : Displayed in recipient's tasks/notifications
+}
+
+Pending --> Active   : Recipient accepts\n(PUT /hcp-links/{id}/respond\nbody: { action: "accept" })
+Pending --> Rejected : Recipient rejects\n(PUT /hcp-links/{id}/respond\nbody: { action: "reject" })
+
+state Active {
+  [*] --> ConsentGranted
+  ConsentGranted : HCP can view patient surveys\nand health tracking data
+  ConsentGranted --> ConsentRevoked : Patient revokes consent\n(POST /hcp-links/{id}/revoke-consent)
+  ConsentRevoked --> ConsentGranted : Patient restores consent\n(POST /hcp-links/{id}/restore-consent)
+  ConsentRevoked : Link preserved in DB\nHCP cannot access patient data
+}
+
+Active   --> Removed : Either party removes link\n(DELETE /hcp-links/{id})
+Rejected --> [*]
+Removed  --> [*]
+
+note right of Active
+  ConsentRevoked = 1 means link exists
+  but all HCP data-access endpoints
+  return 403 until consent is restored.
+  Link record is preserved for audit.
+end note
+
+note left of Pending
+  HcpPatientLink.Status values:
+  'pending' | 'active' |
+  'rejected' | 'removed'
+end note
+
+@enduml

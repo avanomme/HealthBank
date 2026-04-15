@@ -1,0 +1,10 @@
+fastapi[standard]>=0.113.0,<0.114.0
+mysql-connector-python==9.5.0
+pyotp==2.9.0
+deep-translator==1.11.4
+cryptography==46.0.4
+pandas>=2.2.0
+numpy>=1.26.0
+
+# Dev & testing
+pytest>=7.0.0

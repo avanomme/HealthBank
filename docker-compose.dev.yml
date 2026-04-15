@@ -1,0 +1,25 @@
+# Development overrides — use with:
+#   docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d mysql api
+#
+# Backend code changes are picked up instantly (uvicorn --reload).
+# No need to rebuild the API image for code-only changes.
+# Frontend is run locally with `flutter run -d chrome`.
+
+services:
+  mysql:
+    env_file:
+      - ./env/mysql.dev.env
+
+  api:
+    volumes:
+      - ./backend/app:/code/app
+      - ./database/init:/code/sql:ro
+    env_file:
+      - ./env/api.dev.env
+    environment:
+      - CORS_ORIGINS=localhost
+    command: >
+      sh -c "cp /code/sql/01_create_database.sql /code/app/create_database.sql &&
+             cp /code/sql/02_survey_seed_data.sql /code/app/survey_seed_data.sql &&
+             python -m uvicorn app.main:app --host 0.0.0.0 --port 80 --reload --reload-dir /code/app"
+    user: root

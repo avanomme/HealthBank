@@ -1,0 +1,17 @@
+// Per-developer iOS signing configuration.
+//
+// To build HealthBank iOS on your machine:
+//   1. Copy this file to `LocalSigning.xcconfig` in the same directory
+//        cp ios/Flutter/LocalSigning.xcconfig.example ios/Flutter/LocalSigning.xcconfig
+//   2. Replace YOUR_TEAM_ID_HERE with your Apple Developer Team ID.
+//
+// To find your Team ID:
+//   - Paid account: https://developer.apple.com/account → Membership → Team ID (10 chars).
+//   - Free account (personal):
+//       open ios/Runner.xcworkspace
+//       → select Runner target → Signing & Capabilities
+//       → pick your Apple ID under "Team"
+//       → Xcode shows your personal team ID there.
+//
+// This file is gitignored — it stays on your machine only.
+DEVELOPMENT_TEAM = YOUR_TEAM_ID_HERE

@@ -1,0 +1,121 @@
+@startuml HealthBank_System_Architecture
+!theme plain
+skinparam componentStyle rectangle
+skinparam ArrowColor #2C76BF
+skinparam ComponentBorderColor #2C76BF
+skinparam ComponentBackgroundColor #EBF4FF
+skinparam DatabaseBorderColor #595959
+skinparam DatabaseBackgroundColor #F5F5F5
+skinparam NodeBorderColor #1A1A2E
+skinparam NodeBackgroundColor #FAFAFA
+skinparam CloudBorderColor #888888
+skinparam CloudBackgroundColor #EFEFEF
+skinparam shadowing false
+skinparam packageStyle rectangle
+
+title HealthBank — System Architecture
+
+' ── Client Tier ─────────────────────────────────────────────────────────────
+package "Client Devices" {
+  [Web Browser\n(Chrome, Firefox, Safari)] as WEB
+  [Android App\n(Flutter)] as ANDROID
+  [iOS App\n(Flutter)] as IOS
+}
+
+' ── UPEI Server (Docker Compose) ────────────────────────────────────────────
+node "UPEI Virtual Server\n(Docker Compose Stack)" {
+
+  package "Frontend Container" {
+    [Nginx Reverse Proxy\n:80 / :443] as NGINX
+    [Flutter Web Build\n(Dart → JS, served static)] as FLUTTER_WEB
+    NGINX --> FLUTTER_WEB : serves static assets\n(/#/ hash routing)
+  }
+
+  package "Backend Container" {
+    [FastAPI Application\n(Python 3.11, Uvicorn)] as API
+    [Auth Middleware\n(session cookie / Bearer)] as AUTH_MW
+    [Audit Middleware\n(every request → AuditEvent)] as AUDIT_MW
+    [Rate Limiting\n(login, 2FA, reset)] as RATE_MW
+
+    API --> AUTH_MW
+    API --> AUDIT_MW
+    API --> RATE_MW
+  }
+
+  package "API Routers (/api/v1/)" {
+    [auth.py\nsessions.py\ntwo_factor.py] as RT_AUTH
+    [surveys.py\nquestion_bank.py\ntemplates.py\nassignments.py\nresponses.py] as RT_SURVEY
+    [health_tracking.py] as RT_HT
+    [research.py] as RT_RESEARCH
+    [hcp_patients.py\nhcp_links.py] as RT_HCP
+    [participants.py\nusers.py\nconsent.py\ntos.py] as RT_USER
+    [admin.py\n(users, settings, backup, audit)] as RT_ADMIN
+    [messaging.py] as RT_MSG
+  }
+
+  package "Services Layer" {
+    [AggregationService\n(k-anonymity, SHA-256 hashing)] as SVC_AGG
+    [EmailService\n(SMTP transactional)] as SVC_EMAIL
+    [SettingsService\n(30s cache)] as SVC_SETTINGS
+  }
+
+  package "Database Container" {
+    database "MySQL 8\nhealthdatabase" as DB {
+      [Auth, AccountData\nRoles, Sessions] as TBL_AUTH
+      [Survey, QuestionBank\nResponses, Assignments] as TBL_SURVEY
+      [TrackingCategory\nTrackingMetric\nTrackingEntry] as TBL_HT
+      [SystemSettings\nAuditEvent] as TBL_SYS
+      [Messaging\nFriendships] as TBL_MSG
+      [ConsentRecord\nDeletionRequests\nAccountRequests] as TBL_CONSENT
+    }
+  }
+
+  package "Backup Storage" {
+    folder "/backups/\n(daily / weekly / monthly / manual)" as BACKUPS
+  }
+
+  API --> RT_AUTH
+  API --> RT_SURVEY
+  API --> RT_HT
+  API --> RT_RESEARCH
+  API --> RT_HCP
+  API --> RT_USER
+  API --> RT_ADMIN
+  API --> RT_MSG
+
+  RT_SURVEY  --> SVC_AGG
+  RT_RESEARCH --> SVC_AGG
+  RT_HT --> SVC_AGG
+  API --> SVC_EMAIL
+  API --> SVC_SETTINGS
+
+  API --> DB
+  RT_ADMIN --> BACKUPS
+}
+
+' ── External Services ────────────────────────────────────────────────────────
+cloud "External Services" {
+  [SMTP Email Server\n(Gmail / UPEI SMTP)] as SMTP
+}
+
+' ── Client → Server connections ──────────────────────────────────────────────
+WEB     --> NGINX : HTTPS :443\n(browser)
+ANDROID --> API   : HTTPS :443\n(Bearer token, in-memory)
+IOS     --> API   : HTTPS :443\n(Bearer token, in-memory)
+NGINX   --> API   : /api/v1/* proxy_pass\n(HttpOnly session cookie)
+
+SVC_EMAIL --> SMTP : SMTP / TLS
+
+note right of AUTH_MW
+  Web: HttpOnly session cookie
+  Mobile: in-memory Bearer token
+  (never stored to disk on mobile)
+end note
+
+note right of SVC_AGG
+  k-anonymity threshold read
+  from SystemSettings (cached 30s)
+  Participant IDs → SHA-256[:16]
+end note
+
+@enduml

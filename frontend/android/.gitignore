@@ -1,0 +1,12 @@
+gradle-wrapper.jar
+/.gradle
+/captures/
+/gradlew
+/gradlew.bat
+/local.properties
+GeneratedPluginRegistrant.java
+.cxx/
+
+# Dev signing key is committed intentionally so all developers can build.
+# If a production key is ever added, exclude it here.
+key.properties

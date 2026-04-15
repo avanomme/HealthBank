@@ -1,0 +1,127 @@
+# Claude Code
+.claude/
+
+
+
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+*.iml
+
+# Android
+**/android/**/gradle-wrapper.jar
+**/android/.gradle
+**/android/captures/
+**/android/gradlew
+**/android/gradlew.bat
+**/android/local.properties
+**/android/**/GeneratedPluginRegistrant.*
+
+# iOS
+**/ios/**/*.mode1v3
+**/ios/**/*.mode2v3
+**/ios/**/*.moved-aside
+**/ios/**/*.pbxuser
+**/ios/**/*.perspectivev3
+**/ios/**/Pods/
+**/ios/**/.symlinks/
+**/ios/**/profile
+**/ios/**/xcuserdata
+**/ios/.generated/
+**/ios/Flutter/.last_build_id
+# Per-developer iOS signing config (team id) — use LocalSigning.xcconfig.example as template
+**/ios/Flutter/LocalSigning.xcconfig
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/ephemeral/
+**/ios/ServiceDefinitions.json
+
+# macOS
+**/macos/Flutter/ephemeral/
+
+# Web
+**/web/.dart_tool/
+
+# Windows
+**/windows/flutter/ephemeral/
+
+# Linux
+**/linux/flutter/ephemeral/
+
+# Environment files
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Database
+*.sql.bak
+database/backups/
+# TODO: Before production, uncomment the line below to exclude database data from git
+# database/data/*
+
+# Docker
+.docker/
+backend/app/create_database.sql
+backend/app/survey_seed_data.sql
+
+# Preview runner (installed via tools/preview/install_preview.sh)
+frontend/lib/main_preview.dart
+
+# Misc
+*.bak
+*.tmp
+*.temp
+docs/02-decisions.md
+
+# docs/TEMP_REMOVE_PROD/
+.vscode/openapi.json
+before_login_tap.png
+tmp-account-menu.png
+~$althBank Training Manual Addendum v2.docx
+/tools/render-scan/
+/tools/demo-videos/output/*
+/tools/demo-videos/playwright/node_modules/*
+Other Features.docx
+run_linux.sh
+run_mac.sh
+run_windows.ps1

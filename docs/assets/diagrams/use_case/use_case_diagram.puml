@@ -1,0 +1,157 @@
+@startuml HealthBank_Use_Case_Diagram
+!theme plain
+skinparam actorStyle awesome
+skinparam packageStyle rectangle
+skinparam ArrowColor #2C76BF
+skinparam ActorBorderColor #1A1A2E
+skinparam UsecaseBorderColor #2C76BF
+skinparam UsecaseBackgroundColor #EBF4FF
+skinparam PackageBorderColor #595959
+skinparam PackageBackgroundColor #FAFAFA
+skinparam shadowing false
+
+title HealthBank — Use Case Diagram
+
+' ── Actors ──────────────────────────────────────────────────────────────────
+actor "Participant" as P #LightBlue
+actor "Researcher"  as R #LightGreen
+actor "HCP"         as H #LightYellow
+actor "Admin"       as A #LightCoral
+actor "Email\nService" as E #DDDDDD
+
+' ── System boundary ─────────────────────────────────────────────────────────
+rectangle "HealthBank System" {
+
+  ' ── Shared / All Roles ───────────────────────────────────────────────────
+  package "Authentication & Account" {
+    usecase "Request Account"          as UC_REQ
+    usecase "Log In (+ optional 2FA)"  as UC_LOGIN
+    usecase "Reset Password via Email" as UC_PWRESET
+    usecase "Change Password"          as UC_PWCHANGE
+    usecase "Enroll / Disable 2FA"     as UC_2FA
+    usecase "Update Profile"           as UC_PROFILE
+    usecase "Change App Language"      as UC_LANG
+    usecase "Request Account Deletion" as UC_DEL_REQ
+  }
+
+  package "Participant Features" {
+    usecase "Sign Consent Form"                as UC_CONSENT
+    usecase "Complete Survey"                  as UC_SURVEY
+    usecase "View Results + Compare Aggregate" as UC_RESULTS
+    usecase "Log Health Metrics (Log Today)"   as UC_HT_LOG
+    usecase "View Health History (Charts)"     as UC_HT_HIST
+    usecase "Record Baseline Snapshot"         as UC_BASELINE
+    usecase "View Dashboard & Pending Tasks"   as UC_DASHBOARD
+    usecase "Send / Receive Messages"          as UC_MSG_P
+    usecase "Send Friend Request"              as UC_FRIEND
+  }
+
+  package "Researcher Features" {
+    usecase "Create & Publish Survey"          as UC_CREATE_S
+    usecase "Assign Survey to Participants"    as UC_ASSIGN
+    usecase "View Survey Aggregates"           as UC_AGG
+    usecase "Export Survey Data (CSV)"         as UC_CSV_S
+    usecase "View Health Tracking Trends"      as UC_HT_RES
+    usecase "Export Health Tracking CSV"       as UC_HT_CSV
+    usecase "Build Survey from Template"       as UC_TMPL
+  }
+
+  package "HCP Features" {
+    usecase "Request Patient Link"             as UC_LINK_REQ
+    usecase "View Linked Patient Surveys"      as UC_PATIENT_S
+    usecase "View Patient Health Tracking"     as UC_PATIENT_HT
+    usecase "Revoke / Restore HCP Access\n(patient-initiated)" as UC_REVOKE
+    usecase "Send / Receive Messages"          as UC_MSG_H
+  }
+
+  package "Admin Features" {
+    usecase "Approve / Reject Account Request" as UC_APPROVE
+    usecase "Manage Users (CRUD, Reset PW)"    as UC_MGMT
+    usecase "View As User (Impersonation)"     as UC_IMPERSONATE
+    usecase "Process Deletion Request"         as UC_DEL
+    usecase "Configure System Settings"        as UC_SETTINGS
+    usecase "Manage Health Tracking Config"    as UC_HT_ADMIN
+    usecase "View & Export Audit Log"          as UC_AUDIT
+    usecase "Browse Database Tables"           as UC_DB
+    usecase "Backup / Restore Database"        as UC_BACKUP
+    usecase "Send / Receive Messages"          as UC_MSG_A
+  }
+
+}
+
+' ── Participant associations ─────────────────────────────────────────────────
+P --> UC_REQ
+P --> UC_LOGIN
+P --> UC_PWRESET
+P --> UC_PWCHANGE
+P --> UC_2FA
+P --> UC_PROFILE
+P --> UC_LANG
+P --> UC_DEL_REQ
+P --> UC_CONSENT
+P --> UC_SURVEY
+P --> UC_RESULTS
+P --> UC_HT_LOG
+P --> UC_HT_HIST
+P --> UC_BASELINE
+P --> UC_DASHBOARD
+P --> UC_MSG_P
+P --> UC_FRIEND
+P --> UC_REVOKE
+
+' ── Researcher associations ──────────────────────────────────────────────────
+R --> UC_LOGIN
+R --> UC_PWRESET
+R --> UC_PWCHANGE
+R --> UC_2FA
+R --> UC_PROFILE
+R --> UC_LANG
+R --> UC_DEL_REQ
+R --> UC_CREATE_S
+R --> UC_ASSIGN
+R --> UC_AGG
+R --> UC_CSV_S
+R --> UC_HT_RES
+R --> UC_HT_CSV
+R --> UC_TMPL
+
+' ── HCP associations ─────────────────────────────────────────────────────────
+H --> UC_LOGIN
+H --> UC_PWRESET
+H --> UC_PWCHANGE
+H --> UC_2FA
+H --> UC_PROFILE
+H --> UC_LANG
+H --> UC_DEL_REQ
+H --> UC_LINK_REQ
+H --> UC_PATIENT_S
+H --> UC_PATIENT_HT
+H --> UC_MSG_H
+
+' ── Admin associations ───────────────────────────────────────────────────────
+A --> UC_LOGIN
+A --> UC_APPROVE
+A --> UC_MGMT
+A --> UC_IMPERSONATE
+A --> UC_DEL
+A --> UC_SETTINGS
+A --> UC_HT_ADMIN
+A --> UC_AUDIT
+A --> UC_DB
+A --> UC_BACKUP
+A --> UC_MSG_A
+A --> UC_LANG
+
+' ── Email Service associations ───────────────────────────────────────────────
+UC_APPROVE  --> E
+UC_PWRESET  --> E
+UC_DEL      --> E
+UC_MGMT     --> E
+
+' ── Include relationships ────────────────────────────────────────────────────
+UC_HT_LOG    .> UC_BASELINE : <<include>>\n(first visit)
+UC_SURVEY    .> UC_CONSENT  : <<include>>\n(if unsigned)
+UC_RESULTS   .> UC_AGG      : <<extend>>\n(compare toggle)
+UC_CREATE_S  .> UC_TMPL     : <<extend>>\n(from template)
+
+@enduml

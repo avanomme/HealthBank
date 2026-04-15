@@ -1,0 +1,458 @@
+Test Name,Reviewer,Assigned To,Tests Ran,Date Tested,Status,,,,,,,,,,,,,,
+FastAPI Test,Allan Harris,Adam van Omme,"- Tests API endpoint returns 202 and status OK
+- Test Accessing invalid endpoint returns 404
+- Test that /health endpoint returns application/json content type",2026-02-05,Passed,,,,,,,,,,,,,,
+Role Based Access Test,Allan Harris,Adam van Omme,"- Participant can access their endpoints
+- Participant denied access to researcher endpoints
+- Particiapnt denied access to admin endpoints
+- Researcher can create survey
+- Researcher denied access to denied access to admin endpoints
+- Researcher denied access to denied access to participant only endpoints
+- Admin has access to particiapnt endpoints
+- Admin has access to researcher endpoints
+- Admin has access to admin endpoints",2026-02-05,Failed,,,,,,,,,,,,,,
+Question Bank API Test,Allan Harris,Adam van Omme,"- Create a simple question without options - should return 201
+- Create a choice question with options - should return 201 with 4 options
+- Reject question missing content - should return 422
+- Reject question with invalid response type - should return 422
+- Get all questions - should return 200 with list
+- Filter questions by category - should return 200 with filtered list
+- Filter questions by response type - should return 200 with filtered list
+- Get question by ID - should return 200 with matching question
+- Get question with options - should return 200 with options included
+- Get nonexistent question - should return 404
+- Update question content - should return 200 with updated fields
+- Update choice options - should return 200 with new options
+- Update nonexistent question - should return 404
+- Delete question - should return 204 and verify deletion with 404
+- Delete choice question cascades options - should return 204
+- Delete nonexistent question - should return 404",2026-02-05,Failed,,,,,,,,,,,,,,
+Survey Template API Test,Allan Harris,Adam van Omme,"- Create a template - should return 201 with template_id
+- Create a template with attached questions - should return 201 with 2 questions
+- Create template with question order - should preserve display order
+- Reject template missing title - should return 422
+- Create public template - should return 201 with is_public=True
+- Get all templates - should return 200 with list
+- Filter to only public templates - should return 200 with filtered list
+- Get templates with question count - should include question_count field
+- Get template by ID - should return 200 with matching template
+- Get template with questions - should include full question details
+- Get nonexistent template - should return 404
+- Update template title - should return 200 with updated fields
+- Update template questions - should return 200 with new question list
+- Update template visibility - should toggle is_public status
+- Update nonexistent template - should return 404
+- Delete template - should return 204 and verify deletion with 404
+- Delete template preserves questions - questions should still exist after deletion
+- Delete nonexistent template - should return 404
+- Duplicate template - should return 201 with new template_id and same questions
+- Duplicate nonexistent template - should return 404",2026-02-05,Failed,,,,,,,,,,,,,,
+Survey Assignment API Test,Allan Harris,Adam van Omme,"- Assign survey to single user - should return 201 with assignment_id and status=""pending""
+- Assign survey to multiple users - should return 201 with list of 3 assignments
+- Assign survey with due date - should set due_date on assignment
+- Cannot assign draft survey - should return 400
+- Cannot assign closed survey - should return 400
+- Cannot duplicate assignment - should return 409 for duplicate assignment to same user
+- Assign nonexistent survey - should return 404
+- Get survey assignments - should return 200 with list of all assignments
+- Filter assignments by status - should return 200 with filtered list (pending only)
+- Get assignments for empty survey - should return 200 with empty list
+- Get assignments for nonexistent survey - should return 404
+- Get my assignments - should return 200 with list of current user's assignments
+- Get my pending assignments - should return 200 with only pending assignments
+- Update assignment due date - should return 200 with new due_date
+- Mark assignment completed - should return 200 with status=""completed"" and completed_at timestamp
+- Update nonexistent assignment - should return 404
+- Delete assignment - should return 204 and verify removal from survey assignments
+- Delete nonexistent assignment - should return 404
+- Cannot delete completed assignment - should return 400",2026-02-05,Failed,,,,,,,,,,,,,,
+Password Reset Request Test,Allan Harris,Adam van Omme,"- Successful request with existing email - should return 202
+- Request with nonexistent email - should return 202 with generic message (prevent account enumeration)
+- Reject invalid email format - should return 422
+- Reject missing email field - should return 422
+- Reject empty email string - should return 422
+- Send email with reset link - should call email service with token
+- Does not reveal nonexistent user - identical responses for existent/nonexistent emails
+- Case insensitive email lookup - should handle uppercase/lowercase
+- Include reset link in email - should contain reset-password and token
+- Allow multiple reset requests for same email - should send multiple emails
+- Valid token - should return valid=True
+- Invalid token - should return 400 with error message
+- Expired token - should return 400
+- Missing token field - should return 422
+- Empty token - should return 422
+- Token too short - should return 422
+- Success with valid token - should return 200 and clear token
+- Invalid token - should return 400
+- Expired token - should return 400
+- Password too short - should return 422 (less than 8 characters)
+- Missing token field - should return 422
+- Missing password field - should return 422
+- Empty password - should return 422
+- Token reuse prevention - token should be invalid after first use
+- Database failure - should return 400 when update fails",2026-02-05,Passed,,,,,,,,,,,,,,
+Login Endpoint Test,Allan Harris,Adam van Omme,"- Login with valid credentials - should return 200 with access_token and token_type=""bearer""
+- Login with invalid password - should return 401 with error detail
+- Login with nonexistent email - should return 401 with error detail
+- Login without email field - should return 422 validation error
+- Login without password field - should return 422 validation error
+- Login with empty request body - should return 422 validation error",2026-02-05,Failed,,,,,,,,,,,,,,
+Logout Endpoint Test,Allan Harris,Adam van Omme,"- User can logout with a valid token - should return 200
+- Logout endpoint rejects invalid token - should return 401
+- Endpoint rejects missing token - should return 422",2026-02-05,Failed,,,,,,,,,,,,,,
+Session Validation Test,Allan Harris,Adam van Omme,"- Create session success - should return 201 with session_token and expires_at
+- Create session with invalid account - should return 422
+- Validate valid session - should return 200 with valid=True and account_id
+- Validate invalid token - should return 401
+- Logout success - should return 200 and invalidate token (verified by 401 on validation)
+- Logout nonexistent token - should return 404",2026-02-05,Passed,,,,,,,,,,,,,,
+Survey Creation Test,Allan Harris,Adam van Omme,"- Create survey - should return 201 with survey_id and fields intact
+- Create survey with questions - should return 201 with attached questions
+- Reject survey missing title - should return 422
+- Reject invalid publication status - should return 422
+- Get all surveys - should return 200 with list
+- Filter surveys by publication status - should return 200 with filtered draft surveys
+- Get only published surveys - should return 200 with only published surveys
+- Get survey by ID - should return 200 with matching survey
+- Get survey with questions - should include attached questions in response
+- Get nonexistent survey - should return 404
+- Update survey title - should return 200 with updated fields
+- Update survey questions - should return 200 with new question list
+- Update nonexistent survey - should return 404
+- Cannot update published survey title - should return 200/400/403 (behavior TBD)
+- Delete draft survey - should return 204 and verify deletion with 404
+- Delete nonexistent survey - should return 404
+- Delete survey removes question links - should preserve questions but remove survey-question associations",2026-02-05,Failed,,,,,,,,,,,,,,
+TOTP Setup & Validation Test,Adam van Omme,Zak Gilmore,"- Encrypt/decrypt roundtrip - encrypt secret and recover it with same masterkey
+- Token format - token should be base64url without padding and URL-safe alphabet only
+- Wrong masterkey fails - should raise SecretStorageError with wrong masterkey
+- Corrupt token handling - invalid base64 or JSON should raise SecretStorageError
+- Payload version checks - unsupported payload version should raise SecretStorageError
+- Enroll for DB - should return token and otpauth:// URI
+- Verify TOTP success/failure - valid code should pass, wrong code should fail
+- Reject bad code format - empty, short, long, non-numeric, or whitespace codes should fail
+- Missing masterkey errors - empty masterkey should raise SecretStorageError for encrypt/decrypt/verify operations",2026-02-05,Passed,,,,,,,,,,,,,,
+Account Creation Tests,Adam van Omme,Camryn Fairbanks,"- Create account success - should return 201 with message starting with ""account""
+- Duplicate email - should return 409 Conflict
+- Missing password - should return 422 validation error
+- Invalid email - should return 422 validation error",2026-02-05,Passed,,,,,,,,,,,,,,
+require_role() Auth Dependency Test,Adam van Omme,Adam van Omme,"- Researcher (RoleID=2) allowed on require_role(2, 4) endpoint
+- Admin (RoleID=4) allowed on require_role(2, 4) endpoint
+- Participant (RoleID=1) denied on require_role(2, 4) endpoint - returns 403
+- HCP (RoleID=3) denied on require_role(2, 4) endpoint - returns 403
+- Admin impersonating researcher via ViewingAsUserID - allowed (200)
+- Admin impersonating participant on researcher endpoint - denied (403)
+- Missing Authorization header returns 401
+- Invalid/expired session token returns 401
+- Database error during role check returns 500
+- Returns enriched user dict with effective_account_id and effective_role_id",2026-02-05,Passed,,,,,,,,,,,,,,
+Aggregation Service K-Anonymity Test,Adam van Omme,Adam van Omme,"- get_survey_overview returns correct respondent count and completion rate
+- get_survey_overview returns suppressed=true when respondents < 5
+- get_survey_overview returns None for nonexistent survey
+- get_question_aggregate for number type returns min, max, mean, median, std_dev, histogram
+- get_question_aggregate for scale type returns integer histogram buckets
+- get_question_aggregate for yesno type returns yes/no counts and percentages
+- get_question_aggregate for single_choice returns option counts from QuestionOptions
+- get_question_aggregate for multi_choice splits comma-separated values correctly
+- get_question_aggregate for openended returns empty data (no text exposed)
+- get_question_aggregate returns suppressed=true when responses < 5
+- Choice option with count < 5 is marked suppressed at option level
+- Nonexistent question returns None
+- get_survey_aggregates applies category filter correctly
+- get_survey_aggregates applies response_type filter correctly
+- get_csv_export returns valid CSV string with correct columns
+- get_csv_export includes suppressed rows without aggregate columns
+- get_csv_export returns None for nonexistent survey
+- Individual ResponseValue rows are NEVER returned in any method
+- K_ANONYMITY_THRESHOLD is exactly 5",2026-02-05,Passed,,,,,,,,,,,,,,
+Research API Endpoints Test,Adam van Omme,Adam van Omme,"- GET /research/surveys returns list of surveys with response counts
+- GET /research/surveys returns empty list when no surveys exist
+- GET /research/surveys/{id}/overview returns survey overview stats
+- GET /research/surveys/{id}/overview returns 404 for nonexistent survey
+- GET /research/surveys/{id}/aggregates returns all question aggregates
+- GET /research/surveys/{id}/aggregates with category filter works
+- GET /research/surveys/{id}/aggregates with response_type filter works
+- GET /research/surveys/{id}/aggregates/{qid} returns single question aggregate
+- GET /research/surveys/{id}/aggregates/{qid} returns 404 for nonexistent question
+- GET /research/surveys/{id}/export/csv returns text/csv content-type
+- GET /research/surveys/{id}/export/csv returns valid CSV data
+- GET /research/surveys/{id}/export/csv returns 404 for nonexistent survey
+- All endpoints return 401 without auth token
+- All endpoints return 403 for participant role (RoleID=1)
+- All endpoints allow researcher role (RoleID=2)",2026-02-05,Passed,,,,,,,,,,,,,,
+Response Submission API Test,Allan Harris,Adam van Omme,"• POST / with valid responses returns 201
+• POST / rejects participant not assigned to survey - 403
+• POST / rejects unpublished survey - 400
+• POST / rejects question not in survey QuestionList - 400
+• POST / rejects non-numeric for number type - 422
+• POST / rejects invalid yesno value - 422
+• POST / accepts valid single_choice from QuestionOptions - 201
+• POST / rejects invalid single_choice - 422
+• POST / returns 401 without auth token
+• POST / returns 403 for researcher role
+• POST / returns 403 for admin role",2026-02-06,Passed,,,,,,,,,,,,,,
+Research Data Models Serialization Test,Allan Harris,Adam van Omme,"- ResearchSurvey.fromJson parses snake_case JSON correctly
+- ResearchSurvey.toJson produces snake_case keys
+- ResearchSurvey equality works correctly
+- SurveyOverview.fromJson parses snake_case JSON correctly
+- SurveyOverview.toJson produces snake_case keys
+- SurveyOverview handles suppressed survey
+- QuestionAggregate.fromJson parses all fields including data Map
+- QuestionAggregate.fromJson handles suppressed=true with null data
+- QuestionAggregate.fromJson handles yesno response type data
+- QuestionAggregate.fromJson handles single_choice data with options
+- QuestionAggregate.toJson produces snake_case keys
+- AggregateResponse.fromJson parses nested list of QuestionAggregate
+- AggregateResponse.toJson produces snake_case keys
+- AggregateResponse handles empty aggregates list
+- QuestionAggregate handles missing optional category
+- QuestionAggregate handles missing optional data",2026-02-06,Passed,,,,,,,,,,,,,,
+Research Data View Page Widget Test,Allan Harris,Adam van Omme,"- Page renders without errors
+- Shows page title
+- Shows select survey prompt when no survey selected
+- Survey dropdown populates with mock survey list
+- Loading indicator shows while fetching surveys
+- Shows no surveys message on error
+- Selecting a survey shows stat cards
+- Stat cards display respondent count, completion rate, questions
+- yesno question renders AppPieChart
+- single_choice question renders AppBarChart
+- number question renders stats and histogram
+- Suppressed question displays minimum-5 message
+- openended question shows privacy note
+- Export CSV button is present
+- Suppressed overview shows warning when survey has insufficient respondents",2026-02-06,Passed,,,,,,,,,,,,,,
+SEC-001: Nginx proxy_intercept_errors removal,Allan Harris,Adam van Omme,Manual verification - nginx config updated,2026-02-06,Pass,,,,,,,,,,,,,,
+SEC-002: ErrorInterceptor 401 handler,Allan Harris,Adam van Omme,api_client_test.dart - 8 tests,2026-02-06,Pass,,,,,,,,,,,,,,
+SEC-003: GoRouter auth redirect guard,Allan Harris,Adam van Omme,go_router_test.dart - 13 tests (9 auth guard + 4 AuthChangeNotifier),2026-02-06,Pass,,,,,,,,,,,,,,
+SEC-004: Session initialization gate,Allan Harris,Adam van Omme,go_router_test.dart - verified no redirect during session init,2026-02-06,Pass,,,,,,,,,,,,,,
+SEC-005: AuthInterceptor cleanup,Allan Harris,Adam van Omme,api_client_test.dart - 8 tests,2026-02-06,Pass,,,,,,,,,,,,,,
+L10N-001: English l10n keys added,Allan Harris,Adam van Omme,localization_test.dart - 3 new tests (en/fr admin keys + research fr keys),2026-02-06,Pass,,,,,,,,,,,,,,
+L10N-002: French translations synced,Allan Harris,Adam van Omme,localization_test.dart - verified 0 untranslated messages,2026-02-06,Pass,,,,,,,,,,,,,,
+L10N-003: admin_scaffold.dart l10n,Allan Harris,Adam van Omme,flutter analyze - no issues,2026-02-06,Pass,,,,,,,,,,,,,,
+L10N-004: admin_view_as_banner.dart l10n,Allan Harris,Adam van Omme,flutter analyze - no issues,2026-02-06,Pass,,,,,,,,,,,,,,
+L10N-005: impersonation_banner.dart l10n,Allan Harris,Adam van Omme,flutter analyze - no issues,2026-02-06,Pass,,,,,,,,,,,,,,
+L10N-006: admin_dashboard_page.dart l10n,Allan Harris,Adam van Omme,flutter analyze - no issues,2026-02-06,Pass,,,,,,,,,,,,,,
+Full test suite regression,Allan Harris,Adam van Omme,"flutter test - 473 passed, 2 skipped, 0 failed",2026-02-06,Pass,,,,,,,,,,,,,,
+AUTH-001 to AUTH-005 - Auth Hardening Test Suite,Allan Harris,Adam van Omme,"78 tests ran across test_admin.py, test_research.py, test_require_role.py, test_responses.py.
+- Router-level require_role() guards on admin/users/surveys/templates
+- Single-connection auth pattern (get_current_user JOINs RoleID+ViewingAsUserID)
+- Auth override in conftest.py for non-auth tests
+- Admin bypass in require_role()
+- 78 passed, 1 pre-existing failure",2026-02-07,Passed,,,,,,,,,,,,,,
+AUTH-001 to AUTH-005 - Auth Hardening Test Suite,Allan Harris,Adam van Omme,"78 tests ran across test_admin.py, test_research.py, test_require_role.py, test_responses.py.
+- Router-level require_role() guards on admin/users/surveys/templates
+- Single-connection auth pattern (get_current_user JOINs RoleID+ViewingAsUserID)
+- Auth override in conftest.py for non-auth tests
+- Admin bypass in require_role()
+- 78 passed, 1 pre-existing failure",2026-02-07,Passed,,,,,,,,,,,,,,
+"AUTH-006–010: Auth guards + sanitize (question_bank, assignments, two_factor, auth, responses)",Allan Harris,Adam van Omme,"166 passed, 104 failed, 15 errors (all pre-existing). Zero regressions vs baseline.",2026-02-07,Passed,,,,,,,,,,,,,,
+"AUTH-011–013: AdminUserCreate sanitize, GoRouter role guards, main.dart role bridge",Allan Harris,Adam van Omme,Backend: 166 passed (zero regressions). Flutter analyze: no issues found.,2026-02-07,Passed,,,,,,,,,,,,,,
+L10N: Add missing localization keys (EN + FR),Allan Harris,Adam van Omme,"flutter gen-l10n: generated successfully, flutter analyze: no issues found, flutter build web: success",2026-02-07,Passed,,,,,,,,,,,,,,
+Session Security Hardening — Backend Tests,Allan Harris,Adam van Omme,"18 passed (test_sessions: 7, test_admin_impersonation: 11). Removed POST /sessions/create, rewrote GET /me with get_current_user, cookie-only logout with samesite=strict, stripped session_token from login response, cookie-first auth in deps.py.",2026-02-08,Passed,,,,,,,,,,,,,,
+Session Security Hardening — Frontend Tests,Allan Harris,Adam van Omme,"488 passed, 2 skipped, 0 failed. Removed flutter_secure_storage, setAuthToken, _AuthInterceptor. Added withCredentials. Refactored auth to cookie-only. Updated LoginResponse (no sessionToken). Updated all model tests.",2026-02-08,Passed,,,,,,,,,,,,,,
+Session Security Hardening - Backend verification,Allan Harris,Adam van Omme,"Ran test_admin_impersonation (9), test_sessions (7), test_research (23), test_auth/TestLogin (3): 47 passed, 1 pre-existing failure (test_responses admin_passes_auth - incomplete mock). Verified: session_token removed from ImpersonateResponse body, set as cookie instead; login response has no session_token; impersonation test expects no session_token in body.",2026-02-08,Passed,,,,,,,,,,,,,,
+Session Security Hardening - Frontend verification,Allan Harris,Adam van Omme,"Ran full frontend test suite: 488 passed, 2 skipped, 0 failures. Verified: no flutter_secure_storage, no setAuthToken, no _AuthInterceptor, no storedRoleProvider, no secureStorageProvider in source. withCredentials: true in Dio. LoginResponse has no sessionToken field. Logout sends no body.",2026-02-08,Passed,,,,,,,,,,,,,,
+Full Backend Test Suite — Infrastructure Fix,Allan Harris,Adam van Omme,"306 passed, 0 failed. Fixed: conftest mock_db patches all 18 import sites, FakeCursor handles all SQL patterns, admin password reset tests use tuple mocks + AsyncMock, assignment /me test uses correct account_id, boundary test uses DELETE instead of nonexistent GET, TOS tests patch CURRENT_TOS_VERSION, hash format test matches actual $ separator.",2026-02-08,Passed,,,,,,,,,,,,,,
+Sanitization fix — users.py + admin.py,Allan Harris,Adam van Omme,"306 passed, 0 failed. Added sanitized_string() to UserCreate, UserUpdate (first_name, last_name) and SendResetEmailRequest (email_override).",2026-02-08,Passed,,,,,,,,,,,,,,
+Post-merge from main — auth verification,Allan Harris,Adam van Omme,"306 passed, 0 failed. Merged origin/main, resolved auth.py import conflict, hardened participants.py (require_role, effective_account_id, sanitized_string), added participants to conftest DB patches.",2026-02-08,Passed,,,,,,,,,,,,,,
+Fix view-as/end 403 + INSERT IGNORE for seed data,Allan Harris,Adam van Omme,"306 passed, 0 failed — Fixed require_role to let real admin bypass role check while viewing-as lower-role user; updated test_require_role.py; changed INSERT to INSERT IGNORE in create_database.sql",2026-02-08,Passed,,,,,,,,,,,,,,
+Fix Last Login timezone display,Allan Harris,Adam van Omme,"306 passed, 0 failed — backend tests after adding UTC timezone to user datetime serialization",2026-02-08,Passed,,,,,,,,,,,,,,
+User create Auth record + logo nav + code gen,Allan Harris,Adam van Omme,"306 passed, 0 failed (backend). Flutter analyze: 0 errors. build_runner: 16 outputs regenerated.",2026-02-08,Passed,,,,,,,,,,,,,,
+Delete user endpoint + UI with self-deletion guard,Allan Harris,Adam van Omme,"306 passed, 0 failed (backend). Flutter analyze: 0 errors.",2026-02-09,Passed,,,,,,,,,,,,,,
+Cross-Survey Research Endpoints,Allan Harris,Adam van Omme,"28 passed — all existing + 9 new cross-survey tests (auth, overview, responses, filters, CSV)",2026-02-09,Passed,,,,,,,,,,,,,,
+test_research.py — Data Bank feature + relabeling,Allan Harris,Adam van Omme,28 passed (19 existing + 9 data bank/cross-survey tests) — all pass,2026-02-09,Passed,,,,,,,,,,,,,,
+test_research.py — Data Bank enhancements,Allan Harris,Adam van Omme,"36 passed (28 existing + 8 new: data bank all-data, question_ids filter, available questions, aggregates, CSV metadata)",2026-02-09,Passed,,,,,,,,,,,,,,
+test_research.py (Data Bank UI update),Allan Harris,Adam van Omme,"36/36 passed — all research endpoint tests including data bank, aggregates, field picker, CSV metadata",2026-02-09,Passed,,,,,,,,,,,,,,
+S3-E02 Bug Fix: K-anonymity per-option suppression,Allan Harris,Adam van Omme,36/36 research tests passed after removing overly aggressive per-option/bucket suppression in aggregation service. Fixes false 'insufficient data' on charts when question has >= 5 responses but individual options < 5.,2026-02-09,Passed,,,,,,,,,,,,,,
+S3-052 Consent API Tests,Allan Harris,Adam van Omme,"test_consent.py: 13 passed — admin exempt, participant status (unsigned/signed/old version), unauthenticated 401, submit success, admin rejected 400, French language, invalid language 422, empty text 422, IP capture, document text storage",2026-02-11,Passed
+test_consent.py (Phase 5),Allan Harris,Adam van Omme,"13 tests passed: consent status (admin, participant, old version), consent submit (success, admin 400, french, invalid lang, empty text, unauth, IP capture, doc text)",2026-02-11,Passed
+test_admin.py (regression),Allan Harris,Adam van Omme,"39 tests passed: admin endpoints including user management, impersonation, password reset",2026-02-11,Passed
+flutter analyze (Phase 8-10),Allan Harris,Adam van Omme,"No issues found after consent page, expandable rows, localization, and user model updates",2026-02-11,Passed
+test_profile_completion.py,Allan Harris,Adam van Omme,9 tests: complete_profile endpoint + login needs_profile_completion flag,2026-02-11,Passed
+Consent API Tests (with signature_name),Allan Harris,Adam van Omme,13 tests: consent status + submit with signature_name. All passed.,2026-02-12,Passed
+Profile Completion Tests,Allan Harris,Adam van Omme,9 tests: complete_profile + login needs_profile_completion. All passed.,2026-02-12,Passed
+TestGetChartData (test_participants.py),Allan Harris,Adam van Omme,"7 tests passed: chart data with aggregates, suppressed K-anonymity, 403 not assigned, empty questions, 404 survey not found, 401 no token, choice option distribution",2026-02-23,Passed
+TestCompareMyResponses (test_participants.py),Allan Harris,Adam van Omme,"5 tests: compare data returns, suppression K-anonymity, 403 not assigned, 404 survey not found, 401 no token — all passed",2026-02-23,Passed
+Assignment API tests (test_assignments.py),Allan Harris,Adam van Omme,"19/19 passed: assign, list, update, delete assignment endpoints",2026-02-23,Passed
+S3-047/S3-048/S3-049 Backend Tests (participant + survey endpoints),Allan Harris,Adam van Omme,"49 tests ran (47 passed, 2 pre-existing failures: test_due_date tests)",2026-02-23,Passed
+Demographic Assignment - Backend Tests,Allan Harris,Adam van Omme,"19/19 tests passed in tests/api/test_assignments.py: assign single/bulk/due-date, draft/closed/duplicate checks, get assignments, filter by status, get my assignments, update assignment, mark completed, delete assignment",2026-02-23,Passed
+HCP-Patient Link API Tests,Allan Harris,Adam van Omme,"TestRequestLink (9 tests), TestListLinks (4 tests), TestRespondToLink (7 tests), TestRemoveLink (5 tests). All 25 HCP link tests passed. Full suite: 405 passed, 26 failed (pre-existing failures in auth, aggregation, participants).",2026-02-24,Passed
+S4-07 Frontend — Flutter analyze,Allan Harris,Adam van Omme,"flutter analyze: 4 issues (all pre-existing in unrelated files: user_management_page.dart, two_factor_page.dart, not_found_page.dart). Zero issues in new S4-07 code.",2026-02-24,Passed
+S4-14 Phase 3: HCP Consent Revocation + Patient Data Endpoints,Allan Harris,Adam van Omme,"51 new tests: TestRevokeConsent (5), TestRestoreConsent (5), TestListHcpPatients (5), TestGetPatientSurveys (5), TestGetPatientResponses (6) + 25 pre-existing hcp_links tests. All 51 passed. Full suite: 431 passed, 26 pre-existing failures (test_auth, test_cookies, test_participants due_date — not our code).",2026-02-24,Passed
+Phase 2: TODO cleanup + l10n hardcoded strings,Allan Harris,Adam van Omme,"flutter analyze: 0 issues (0 pre-existing, 0 new). All TODOs resolved in participant_dashboard_page.dart, user_management_page.dart, surveys.py, templates.py. 8 new l10n keys added EN+FR.",2026-02-24,Passed
+Phase 4: S4-14 HCP Frontend pages + consent revocation UI,Allan Harris,Adam van Omme,"flutter analyze: 0 issues (0 pre-existing, 0 new from Phase 4). All new pages and providers compile cleanly.",2026-02-24,Passed
+S4-12 Phase 5: Messaging System Backend,Allan Harris,Adam van Omme,"43 new tests for messaging endpoints (POST/GET conversations, send messages, friend requests, researcher search, friend request respond). 43/43 passed. Full suite: 474 passed, 26 pre-existing failures.",2026-02-24,Passed
+Phase 6: S4-12 Messaging Frontend — flutter analyze,Allan Harris,Adam van Omme,"flutter analyze: 4 issues (4 pre-existing _buildLanguageSelector warnings in auth/settings pages, 0 new from Phase 6)",2026-02-24,Passed
+Phase 7 Final - Full Backend Suite,Allan Harris,Adam van Omme,"474 passed, 26 pre-existing failures (test_account_requests, test_auth, test_cookies, test_participants). All new HCP links, HCP patients, and messaging tests pass.",2026-02-24,Passed
+Fix Pre-existing Test Failures (26),Allan Harris,Adam van Omme,"500 passed, 0 failed. Fixed 26 pre-existing failures: db.py mock param order (15 tests), login tuple fields (6 tests), aggregation K-anonymity per-option suppression (3 tests), participants UTC_TIMESTAMP tuple (2 tests).",2026-02-24,Passed
+Security Audit - Full codebase static analysis,Allan Harris,Adam van Omme,"Static analysis of all backend endpoints and frontend. 4 CRITICAL, 8 HIGH, 12 MEDIUM findings. Report at docs/audit/07_security.md.",2026-02-24,Passed
+"Nginx redirect fix, base_scaffold footer/maxWidth, researcher data scroll, header UI",Allan Harris,Adam van Omme,500 backend tests passed; nginx redirect Location now uses correct port:3000; all API endpoints verified,2026-02-24,Passed
+"S4-07 messaging fixes - inline inbox, friend request 403 fix, notification badge",Allan Harris,Adam van Omme,"500 backend tests (pytest backend/tests/). All passed. Includes messaging, hcp_links, auth, admin, sessions, participants, research tests.",2026-02-25,Passed
+S4-07 admin database page dynamic - replaced hardcoded ALLOWED_TABLES with INFORMATION_SCHEMA query,Allan Harris,Adam van Omme,500 backend tests (pytest backend/tests/). All passed. Admin table tests updated for dynamic table_exists check.,2026-02-25,Passed
+S4-07 full Docker rebuild and live API smoke tests,Allan Harris,Adam van Omme,"500 unit tests passed. Live API: 24 tables dynamic, sensitive cols hidden, ConsentRecord 33 rows, HCP friend-requests returns [], all role logins with has_signed_consent=True, messaging convos correct counts.",2026-02-25,Passed
+SEC-001: sessions.py COOKIE_SECURE env var,Allan Harris,Adam van Omme,test_sessions.py — 7 tests passed. Verified cookie secure flag behavior.,2026-03-02,Passed,Update Test log 03/03
+Admin User Deletion — backend delete_user endpoint with data preservation,Allan Harris,Adam van Omme,"43 tests passed: TestCreateUser(9), TestUpdateUser(3), TestUserList(13), TestSingleUser(2), TestToggleUserStatus(3), TestDeleteUser(3), TestDeleteUserPreservesData(3). Verified: responses anonymised (ParticipantID=NULL), account removed, survey creator nullified, self-delete blocked.",2026-03-09,Passed
+DELETE /api/v1/auth/me self-deletion endpoint (test_delete_my_account.py),Allan Harris,Adam van Omme,"5 new tests: correct password returns 204, wrong password returns 401, account not found returns 404, responses anonymised not deleted, short password validation. Full suite: 670 passed, 3 pre-existing failures.",2026-03-09,Passed
+"Flutter — settings_page_test, survey_builder_test, template_builder_test",Allan Harris,Adam van Omme,"73 tests passed: 11 settings delete-account flow, 41 survey builder (rendering/form/edit/state/items), 21 template builder (rendering/edit/state/items). Header nav overflow fixed with Flexible+ClipRect+OverflowBox.",2026-03-09,Passed
+Settings Page — Delete Account Flow (8 tests),Allan Harris,Adam van Omme,"settings_page_test.dart: 8/8 passed — renders delete tile, subtitle, icon; confirm dialog shows/hides; cancel closes; submit calls API and navigates to login",2026-03-09,Passed
+S5-01 Auto-list researchers as messaging contacts,Allan Harris,Adam van Omme,"46 passed (test_messaging.py) — 3 new tests: researcher auto-listing, self-exclusion, HCP empty contacts",2026-03-13,Passed
+S5-05 Enable Default Graph for User Dashboard,Allan Harris,Adam van Omme,"flutter analyze: 0 errors, 30 pre-existing info/warnings (none in changed files)",2026-03-13,Passed
+Fix deprecation warnings in widget tests,Allan Harris,Adam van Omme,13 tests passed (5 progress bar + 8 radio),2026-03-13,Passed
+test_research.py (S5-08),Allan Harris,Adam van Omme,"37 passed, 0 failed — includes new test_response_count_uses_participant_id verifying COUNT(DISTINCT ParticipantID)",2026-03-13,Passed
+app_graph_renderer_test.dart,Allan Harris,Adam van Omme,"10 passed, 0 failed — updated tests for ConstrainedBox change (no placeholder bg on child)",2026-03-13,Passed
+Multi-choice JSON array migration,Allan Harris,Adam van Omme,"46 passed (test_aggregation: 35, test_responses: 11)",2026-03-13,Passed
+Cross-survey merge rows by participant,Allan Harris,Adam van Omme,"72 passed (test_aggregation: 35, test_research: 37)",2026-03-13,Passed
+Consistent anonymous IDs across surveys,Allan Harris,Adam van Omme,"72 passed (test_aggregation: 35, test_research: 37)",2026-03-13,Passed
+Bug Fixes Batch 2 - Backend Tests,Allan Harris,Adam van Omme,"233 passed, 1 pre-existing failure (test_delete_my_account), 29 warnings",2026-03-13,Passed
+Bug Fixes Batch 2 - Flutter Analyze,Allan Harris,Adam van Omme,No issues found,2026-03-13,Passed
+Bug Fixes Batch 2 - All Backend Tests (final),Allan Harris,Adam van Omme,"674 passed, 47 warnings, 0 failures",2026-03-13,Passed
+Scale UI + Survey Deletion + Multi-select Fix,Allan Harris,Adam van Omme,"674 backend tests passed. Fixed survey deletion FK constraint, added scale min/max UI, fixed multi-select JSON encoding to use string IDs.",2026-03-13,Passed
+Survey Draft Auto-save,Allan Harris,Adam van Omme,674 backend tests passed. Added draft save/load endpoints and frontend auto-save on exit.,2026-03-13,Passed
+2026-03-16,P4-05 setState Migration + Full Test Suite,Allan Harris,Adam van Omme,Backend: 674/674 passed. Frontend: 926 passed 48 failed (pre-existing research_data_page_test). Flutter analyze: 0 errors.,Passed
+test_totp + test_enums,Allan Harris,Adam van Omme,"56 passed (18 enum tests, 38 totp tests) — covers encrypt/decrypt, KDF, masterkey validation, DB token round-trip, enrollment, TOTP verification, all enum values",2026-03-16,Passed
+test_utils + test_config,Allan Harris,Adam van Omme,"31 tests passed: db_cursor (6), ensure_exists (6), build_update (6), SMTPConfig (5), get_smtp_config (2), app constants (6)",2026-03-16,Passed
+test_sanitize,Allan Harris,Adam van Omme,"53 tests for sanitize.py covering all types, edge cases, error paths — 100% coverage",2026-03-16,Passed
+test_translation + test_aggregation_service,Allan Harris,Adam van Omme,"58 tests ran (18 translation, 40 aggregation service) — all 58 passed",2026-03-16,Passed
+"test_2fa, test_email, test_audit_logger",Allan Harris,Adam van Omme,"84 tests ran (24 2FA, 47 email, 13 audit logger) — all passed",2026-03-16,Passed
+"Coverage Tests: deps, users, utils, password_reset_tokens, main",Allan Harris,Adam van Omme,"113 passed, 0 failed - new tests for deps.py (rate limit, role checking, TOS, _get_role_for_account), users.py (self-update, admin update, delete DB error), utils.py (init_db_structure, create_seed_data), password_reset_tokens.py (generate, validate, clear), main.py (CORS, startup, /me, /seed_data, /init_db_structure)",2026-03-16,Passed
+Coverage Tests: auth sessions surveys consent audit middleware email base/config,Allan Harris,Adam van Omme,"153 tests ran across 7 test files — all 153 passed",2026-03-16,Passed
+"test_participants.py test_responses.py test_assignments.py","Allan Harris","Adam van Omme","111 tests passed (60 participants 18 responses 33 assignments) - added coverage for draft save/load multi-choice/single-choice/scale validation bulk assignment update assignment error paths","2026-03-16","Passed"
+test_admin.py coverage expansion,Allan Harris,Adam van Omme,"120 passed, 0 failed — added 58 new tests covering missing lines in admin.py",2026-03-16,Passed
+Coverage Tests for 17 Source Files,Allan Harris,Adam van Omme,"1239 tests passed, 0 failed. Added ~80 new tests covering missing lines across assignments, auth, hcp_links, messaging, participants, question_bank, research, responses, sessions, surveys, templates, tos, users, main, aggregation, email/base, and utils.",2026-03-16,Passed
+Pragma No Cover Comments,Allan Harris,Adam van Omme,"Full pytest suite: 5111 statements, 2 missed, 99% coverage. All tests passed.",2026-03-16,Passed
+GoRouter configuration tests (go_router_test.dart),Allan Harris,Adam van Omme,"4/4 passed: initial route, forgot password route, admin redirect, dashboard route helper",2026-03-19,Passed
+Header widget tests (header_test.dart),Allan Harris,Adam van Omme,"8/8 passed: desktop nav, compact menu, login actions, auth actions, logo tap, custom menu callback, active nav highlight, language change",2026-03-19,Passed
+"AppGraphRenderer uses white background and gray border by default","Allan Harris","Adam van Omme","All 10 AppGraphRenderer tests passed after updating color expectations from AppTheme.white/gray to AppTheme.surface/divider","2026-03-19","Passed"
+"ParticipantDashboardPage navigates from notification, task, results and view-all CTAs","Allan Harris","Adam van Omme","All 7 ParticipantDashboardPage tests passed after fixing survey route to use /participant/surveys/:surveyId path parameter","2026-03-19","Passed"
+participant_surveys_page_test.dart,Allan Harris,Adam van Omme,"16 tests ran (6 list page + 10 taking page): All passed.",2026-03-19,Passed
+AppColorTheme migration - Flutter theme analyzer & widget tests,Allan Harris,Adam van Omme,"1656 tests ran (flutter test --no-pub). 3 pre-existing failures: ParticipantResultsPage highlighted survey (assertion mismatch, pre-existing), SurveyListPage survey card tap (GoRouter missing in test, pre-existing), Counter smoke test. Flutter analyze: No issues found.",2026-03-28,Passed
+Survey Language Support — Backend surveys.py translation wiring,Allan Harris,Adam van Omme,"43 survey tests passed — get_survey_questions() now accepts language param, GET /surveys/{id}?language=fr returns translated questions, all existing tests pass",2026-03-31,Passed
+test_user.py::TestCreateUser - send_setup_email feature (14 tests),Allan Harris,Adam van Omme,"14 tests for admin create user: send_setup_email flag, auto password generation, email service called, email failure does not rollback, no email when flag is false",2026-03-31,Passed
+test_admin.py::TestBackupEndpoints (8 tests) — list/download/trigger/path-traversal/404/500,Allan Harris,Adam van Omme,"8 backup endpoint tests: list empty, list with files, download success, download 404, download invalid type, path traversal blocked, trigger success, trigger mysqldump failure",2026-03-31,Passed
+Backup integrated into Database Viewer — full suite,Allan Harris,Adam van Omme,"1252 passed, 61 warnings — flutter analyze: No issues found",2026-04-01,Passed
+Semantic audit log middleware + cron backup audit,Allan Harris,Adam van Omme,"1252 passed, 61 warnings — all routes mapped to semantic action names",2026-04-01,Passed
+"Backup panel redesign: delete wiring, collapsible, categorized (manual/daily/weekly/monthly)",Allan Harris,Adam van Omme,1252 backend tests passed; flutter analyze clean (0 issues),2026-04-01,Passed
+Audit log: colour-coded action chips + CSV export button,Allan Harris,Adam van Omme,flutter analyze clean (0 issues); installed on iPhone AVO and iPad AVO via flutter install,2026-04-01,Passed
+Account requests top-align fix; dashboard backup status card; flutter analyze clean,Allan Harris,Adam van Omme,flutter analyze: 0 issues; release build successful (27.1MB); installed on iPhone + iPad,2026-04-01,Passed
+"Dashboard backup metric card: compact 5th card in existing Wrap, layout restored",Allan Harris,Adam van Omme,flutter analyze: 0 issues; release build 27.1MB; installed iPhone + iPad,2026-04-01,Passed
+Audit Middleware Route Coverage + Colour Palette,Allan Harris,Adam van Omme,test_audit_middleware.py: 14 passed. All routes now have semantic action names. flutter analyze: No issues.,2026-04-01,Passed
+Email template inline styles + URL fix + email service import fix,Allan Harris,Adam van Omme,"Template syntax fixed, inline styles, URL corrected to port 3000, users.py now uses SMTP-based service. Live send: success=True.",2026-04-01,Passed
+Admin dashboard backup KPI card,Allan Harris,Adam van Omme,flutter analyze: No issues. Backup card shows latest backup age and size in KPI row.,2026-04-01,Passed
+"Full test suite: Flutter (1652 tests, 1 skipped) + Backend (1252 tests)",Allan Harris,Adam van Omme,"All Flutter tests passing (1652 pass, 1 skip). All backend tests passing (1252). Fixed: two_factor SnackBar assertion, participant completedAt, about_page overflow, survey localization, NumberQuestionWidget semantics, admin account request message typo.",2026-04-01,Passed
+Researcher sidebar shows user name from auth instead of role literal,Allan Harris,Adam van Omme,1652 Flutter tests passed. ResearcherDashboardSidebar now resolves firstName/lastName from authProvider.,2026-04-02,Passed
+"Messaging: contacts inline tab, new message icon, contacts icon, edit/message actions",Allan Harris,Adam van Omme,1652 Flutter tests passed. Contacts moved from bottom sheet to inline tab; new message uses add_comment_rounded; contacts icon changed to people_alt_outlined; each contact has Edit and Message buttons.,2026-04-02,Passed
+Fix: survey completion not updating dashboard task list without refresh,Allan Harris,Adam van Omme,1652 Flutter tests passed. Invalidate participantAssignmentsProvider and participantSurveyDataProvider on survey submit so dashboard updates immediately.,2026-04-02,Passed
+Messaging UI revert + contact rename + reload Makefile target,Allan Harris,Adam van Omme,1652 Flutter + 1252 backend all passing,2026-04-02,Passed
+Contact list fix + delete message/contact + HCP link by email/name,Allan Harris,Adam van Omme,"test_messaging.py (54 passed), test_hcp_links.py (39 passed)",2026-04-02,Passed
+2026-04-02,MessagesPage Flutter widget tests,Allan Harris,Adam van Omme,11 Flutter widget tests for admin Account Requests page all passed after fixing vertical alignment,Passed
+2026-04-02,Admin Settings backend tests,Allan Harris,Adam van Omme,14 tests all passed - settings endpoints lockout registration_open,Passed
+2026-04-02,Admin Settings frontend tests,Allan Harris,Adam van Omme,22 Flutter widget tests all passed,Passed
+test_hcp_links — HCP client link email-only change,Allan Harris,Adam van Omme,39 hcp_links backend tests; removed name/LIKE branch; all 39 passed,2026-04-02,Passed
+"test_messaging — New Message email input (create by email, 404 on miss, 400 on no field)",Allan Harris,Adam van Omme,"57 messaging backend tests; added test_create_conversation_by_email, test_create_conversation_email_not_found, test_400_if_neither_id_nor_email; all 57 passed",2026-04-02,Passed
+Email service consolidation + deprecated endpoint removal,Allan Harris,Adam van Omme,"1236 backend tests passing: email service consolidation, FakeCursor login mock fix",2026-04-02,Passed
+Fix all Flutter test failures and lint issues,Allan Harris,Adam van Omme,1652 Flutter tests all passing,2026-04-02,Passed
+"Merge main + polling branch, fix l10n TODO in AppSecuredModal",Allan Harris,Adam van Omme,1652 Flutter tests passing,2026-04-02,Passed
+Backend: TestApproveDeletionRequest (FK constraint fix),Allan Harris,Adam van Omme,1237 backend tests passed. Added test verifying AccountDeletionRequest is deleted before AccountData.,2026-04-02,Passed
+"Email service: account created, rejected, password reset, deletion approval",Allan Harris,Adam van Omme,34 email service tests + 174 email/account-request/deletion-request tests passed after merges.,2026-04-03,Passed
+Email config fix: SMTP_USER/SMTP_PASSWORD env var fallback,Allan Harris,Adam van Omme,34 email service tests passed. Fixed config.py to read SMTP_USER/SMTP_PASSWORD as fallback.,2026-04-03,Passed
+Admin self-deletion guard — 1240 backend tests passing,Allan Harris,Adam van Omme,"1240 tests passed. Admin cannot self-request deletion, cannot be deleted directly, deletion-request approval blocked.",2026-04-03,Passed
+Admin self-deletion/deactivation guard,Allan Harris,Adam van Omme,1238 tests passed. Self-deletion blocked for admins only.,2026-04-03,Passed
+Admin self-deactivation guard + hide delete in settings,Allan Harris,Adam van Omme,1240 tests. Self-deactivation blocked. Delete Account hidden for admins.,2026-04-03,Passed
+Deletion approval email notification,Allan Harris,Adam van Omme,1240 tests. Deletion approval sends email to user.,2026-04-03,Passed
+Deletion rejection email notification,Allan Harris,Adam van Omme,1241 tests. Rejection sends email with optional admin notes.,2026-04-03,Passed
+Security fixes: sanitization + DB cascades,Allan Harris,Adam van Omme,1241 passed. QuestionOptionCreate/AssignmentCreate sanitized. 5 FK cascades fixed. Messages index added.,2026-04-03,Passed
+"Audit fixes: error handling, localization, tooltips, docstrings",Allan Harris,Adam van Omme,"1241 tests — all passed; backend error handling (print→logger, generic DB errors), ARB l10n keys added (commonYes/No, navAccountRequests, tooltip keys, messaging/survey keys), IconButton tooltips added, backend docstrings added",2026-04-03,Passed
+Flutter full test suite — post audit fixes,Allan Harris,Adam van Omme,1652 Flutter tests — all passed,2026-04-03,Passed
+Python full test suite — post audit fixes,Allan Harris,Adam van Omme,1241 backend pytest tests — all passed,2026-04-03,Passed
+Accessibility: form field labels added,Allan Harris,Adam van Omme,1652 Flutter tests passed. Added labelText to 5 search fields and hintText to 1 label-less field.,2026-04-03,Passed
+2026-04-03,Settings Service & Messaging Coverage Tests,Allan Harris,Adam van Omme,"Created test_settings_service.py (24 tests) + TestDirectFriendRequest + TestListResearchers (10 tests). 40/40 passed.",Passed
+2026-04-03,AppTappable Widget — GestureDetector Migration,Allan Harris,Adam van Omme,"15 AppTappable tests passed. 6 files migrated. No regressions (38 core widget tests pass). flutter analyze clean.",Passed
+survey_question_card.dart refactor — _buildToolbar() + _buildFormFields() extraction,Allan Harris,Adam van Omme,7/7 SurveyQuestionCard tests passed after extracting _buildToolbar and _buildFormFields from _buildExpanded,2026-04-03,Passed
+participant_dashboard_page.dart refactor — _buildCompletedThisWeekSection() extraction,Allan Harris,Adam van Omme,11/11 ParticipantDashboardPage tests passed after extracting _buildCompletedThisWeekSection from _buildTasksSection,2026-04-03,Passed
+researcher_dashboard_page.dart refactor — _buildChartsRow() extraction,Allan Harris,Adam van Omme,7/7 ResearcherDashboardPage + ResearcherScaffold tests passed after extracting _buildChartsRow from _DashboardMainContent.build,2026-04-03,Passed
+"admin_dashboard_page.dart refactor — _buildRoleAndActivityRow, _buildRequestsRow, _backupCardValues extractions",Allan Harris,Adam van Omme,"22/22 admin pages tests passed after extracting _buildRoleAndActivityRow, _buildRequestsRow from build() and _backupCardValues from _buildKpiRow",2026-04-03,Passed
+Hide Request Account button when registrationOpen=false; add public-config backend endpoint,Allan Harris,Adam van Omme,75/75 auth tests passed. 0 linter warnings. Backend GET /auth/public-config added. Frontend LoginCard showRequestAccount param + registrationOpenProvider. Admin settings toggle already connected.,2026-04-03,Passed
+Remove required email validation from Add a Contact form,Allan Harris,Adam van Omme,10/10 FriendRequestPage tests passed. isRequired: false on email field; empty-field guard added to _sendFriendRequest.,2026-04-03,Passed
+New Message sheet: email input + contacts list (HCP/participant/researcher),Allan Harris,Adam van Omme,47 messaging tests passed — new conversation sheet now uses email input at top with role-specific contact lists below; researchers also see all researchers with local filter,2026-04-03,Passed
+"Maintenance mode: block non-admin login, banner with message, admin message field",Allan Harris,Adam van Omme,"80 backend tests passed (test_admin_settings + test_auth). Frontend: l10n regenerated, analyzer clean pending build_runner for freezed regen.",2026-04-03,Passed
+Flutter widget tests — full suite after test_helpers publicConfigProvider fix,Allan Harris,Adam van Omme,1673 Flutter tests passed. Fixed pending-timer failures in base_scaffold tests by mocking publicConfigProvider in test_helpers._defaultOverrides.,2026-04-04,Passed
+Flutter full suite — Survey_seed_Test branch fixes,Allan Harris,Adam van Omme,"1673 Flutter tests passed (0 failed). Fixed test assertions for deprecated isRequired field, QuestionBankPage lifecycle fix, 2-FAB survey list.",2026-04-05,Passed
+Consent Required Toggle — backend (1325 tests) + frontend (1673 tests),Allan Harris,Adam van Omme,All 1325 backend tests passed (38 new: consent toggle status endpoint + admin settings CRUD). All 1673 Flutter tests passed (existing admin_pages_test updated for new consentRequired field).,2026-04-05,Passed
+users.py UserCreate birthdate/gender fields + INSERT fix,Allan Harris,Adam van Omme,"67 passed test_user.py; 119 passed test_admin.py. Added birthdate/gender to UserCreate model with validators. INSERT now saves Birthdate and Gender.",2026-04-05,Passed
+Consent bypass when consent_required=False,Allan Harris,Adam van Omme,"86 passed test_sessions+test_auth. has_signed_consent=True when consent_required=False in settings.",2026-04-05,Passed
+Consent bypass when consent_required=False,Allan Harris,Adam van Omme,"86 passed test_sessions+test_auth. has_signed_consent=True when consent_required=False in settings.",2026-04-05,Passed
+Results page Show Charts + Compare Aggregate toggles fix,Allan Harris,Adam van Omme,"98 Flutter participant tests passed. Both toggles now independent — removed mutual exclusion.",2026-04-05,Passed
+Results page toggle logic fix,Allan Harris,Adam van Omme,"98 Flutter tests passed. Show Charts auto-enables Compare; turning Charts off leaves Compare unchanged.",2026-04-05,Passed
+Pre-demo audit fixes,Allan Harris,Adam van Omme,"1673 Flutter tests passed. Localized 2 hardcoded error strings in request_account_page (EN/FR/ES). All endpoints confirmed protected.",2026-04-05,Passed
+Security fixes — 2FA debug prints + consent sanitization,Allan Harris,Adam van Omme,"1297 backend tests passed. Removed print(RAW SECRET) debug line from 2FA. Added sanitized_string to consent document_text.",2026-04-05,Passed
+WCAG Phase 2 — IconButton tooltips & ExcludeSemantics icons,Allan Harris,Adam van Omme,1673 Flutter widget tests passed. wcag_audit.py 0/0/0. flutter analyze clean.,2026-04-05,Passed
+WCAG Task 3 — Form label associations + Maestro keys,Allan Harris,Adam van Omme,1673 tests passed. labelText + ValueKeys added to all auth forms.,2026-04-05,Passed
+WCAG Tasks 4+14 — Error live regions + Delete confirmations,Allan Harris,Adam van Omme,1673 tests passed. liveRegion on error Text + message delete confirmation.,2026-04-05,Passed
+WCAG Task 10 — Skip-to-content AdminScaffold,Allan Harris,Adam van Omme,1673 tests passed. Skip link + FocusNode added to admin scaffold.,2026-04-05,Passed
+WCAG Full Implementation Complete — Final Verification,Allan Harris,Adam van Omme,1673 tests passed. wcag_audit.py 0/0/0. All tasks complete.,2026-04-05,Passed
+WCAG 1.4.11 Non-text Contrast — visible input borders,Allan Harris,Adam van Omme,"flutter test --no-pub: 1673 tests passed. Fixed inputBorder colors (light #6B7280, dark #8496B0) and replaced BorderSide.none with enabledBorder/focusedBorder in all auth form helpers. WCAG audit: 0 FAIL / 0 WARN / 0 INFO.",2026-04-05,Passed
+WCAG 2.1/2.2 AA Implementation — Tasks 20-25,Allan Harris,Adam van Omme,"flutter test (frontend): 1664 tests, 9 pre-existing failures in cookie_banner_test (SharedPreferences isolation), time/date/email/phone/auth validation strings updated to match new WCAG-compliant ARB messages",2026-04-05,Passed
+WCAG Implementation — Full Flutter Test Suite,Allan Harris,Adam van Omme,"flutter test — 1822 passed, 0 failed, 0 skipped. WCAG changes: 2.4.11 cookie banner padding, 2.5.7 reorder move buttons, 2.2.1 session expiry monitor, 3.3.3 error suggestions, test helpers updated",2026-04-05,Passed,,,,,,,,,,,,,,
+WCAG Final Audit — Full Flutter Test Suite,Allan Harris,Adam van Omme,"flutter test — 1822 passed, 0 failed, 0 skipped. Fixed: AppOverlay focus trap (2.4.3), formPasswordRulesHelper sensory language (1.3.3), all 3 locales.",2026-04-05,Passed
+AppOverlay — fix app_overlay_test.dart after FocusTraversalGroup wrapping,Allan Harris,Adam van Omme,"flutter test test/core/widgets/basics/app_overlay_test.dart — 8 passed, 0 failed. Updated stack.children.last assertion from isA<Text>() to isA<FocusTraversalGroup>().",2026-04-05,Passed
+QuestionBankPage — fix 6 test failures after AppFooterScrollView refactor,Allan Harris,Adam van Omme,"flutter test question_bank_page_test.dart — 54 passed, 0 failed. Updated 6 assertions from find.byType(ListView) to find.byType(RefreshIndicator): normal mode uses AppFooterScrollView, not ListView.builder.",2026-04-07,Passed
+Health Tracking API - Full regression after health_tracking.py implementation,Allan Harris,Adam van Omme,1297 tests passed across all backend test suites (tests/api/); 0 failures,2026-04-08,Passed
+Health Tracking API Tests,Allan Harris,Adam van Omme,"20 tests: participant endpoints (metrics, entries, history, baseline), admin endpoints (categories CRUD, metrics CRUD, toggle, reorder), researcher endpoints (aggregate k-anon, CSV export, role enforcement). All 20 passed.",2026-04-08,Passed
+Health Tracking Feature — Full Flutter Test Suite,Allan Harris,Adam van Omme,"flutter test — 1823 passed, 0 failed, 0 skipped. New feature: health tracking (10 categories, 35 metrics, participant page, admin settings page, researcher analytics page). Fixed: health_tracking_api.g.dart (Map<> return types → void/typed models), participant_header nav item collapse, dart analyze: 0 issues.",2026-04-08,Passed
+Flutter: all 1674 widget/unit tests,Allan Harris,Adam van Omme,"1674 Flutter tests passed. Health tracking, admin, researcher, email URL fix.",2026-04-08,Passed
+Backend: test_health_tracking.py 20 tests,Allan Harris,Adam van Omme,"20/20 passed. Participant CRUD, admin CRUD, researcher aggregate, auth, k-anon.",2026-04-08,Passed
+"participant health_tracking_page — ARB draftHint key, metricName fix, Wrap category chips",Allan Harris,Adam van Omme,98 participant feature tests passed,2026-04-08,Passed
+health_metric_entry_card redesign + admin page header/sections + ARB keys,Allan Harris,Adam van Omme,98 participant tests passed,2026-04-08,Passed
+health tracking page maxWidth 720 constraint for desktop,Allan Harris,Adam van Omme,98 participant tests passed,2026-04-08,Passed
+health_metric_entry_card: global widgets + compact chips,Allan Harris,Adam van Omme,98 participant tests passed,2026-04-08,Passed
+admin health tracking: auto-generate category_key and metric_key on create,Allan Harris,Adam van Omme,107 admin tests passed,2026-04-08,Passed
+"admin health tracking: delete category/metric (soft-delete, data preserved)",Allan Harris,Adam van Omme,107 admin tests passed,2026-04-08,Passed
+TestAdminDeleteEndpoints (8 tests),Allan Harris,Adam van Omme,"8 new delete endpoint tests: test_delete_category_success, test_delete_category_also_deactivates_metrics, test_delete_category_not_found, test_delete_category_requires_admin, test_delete_metric_success, test_delete_metric_not_found, test_delete_metric_requires_admin, test_delete_does_not_remove_entries — all 28 in file passed",2026-04-08,Passed
+HealthMetricEntryCard widget tests,Allan Harris,Adam van Omme,"13 widget tests: scale slider render/drag, yesno chips render/tap/selection, number text field render/input, single_choice dropdown render, answered check_circle icon, description text, unit badge, check icon when answered — all passed",2026-04-08,Passed
+health_tracking backend: sanitize icon/unit/choice_options + delete endpoints (28 tests),Allan Harris,Adam van Omme,28 backend health tracking tests passed,2026-04-08,Passed
+"health_metric_entry_card: 13 widget tests (scale, yesno, number, single_choice, card structure)",Allan Harris,Adam van Omme,120 frontend tests passed (107 admin + 13 new),2026-04-08,Passed
+"test_health_tracking.py — admin restore endpoints (restore category/metric success, 404, 403)",Allan Harris,Adam van Omme,34 passed (28 existing + 6 new restore tests),2026-04-08,Passed
+test_health_tracking.py — fix UpdatedAt column bug in upsert,Allan Harris,Adam van Omme,34 passed,2026-04-08,Passed
+test_health_tracking.py — researcher entry-date-range + aggregate-multi endpoints (5 new tests),Allan Harris,Adam van Omme,39 passed (34 existing + 5 new researcher extended tests),2026-04-08,Passed
+"participant_health_tracking_page.dart — draft persistence, cold-start pre-fill, frequency filtering (manual verification)",Allan Harris,Adam van Omme,Frontend-only changes; compile-clean; no automated tests added for UI logic,2026-04-08,Passed
+"Health Tracking Research: Fix Load Chart (comma-separated metric_ids, k-anon, chart switcher, global select-all, export filter)",Allan Harris,Adam van Omme,"39 backend health_tracking tests passed; 47 researcher Flutter tests passed. Fixed metric_ids serialization (comma-sep string), k-anon seed (k=3), chart type switcher (line/bar/table), global select-all checkbox, metric_ids filter on CSV export.",2026-04-08,Passed
+Health Tracking Researcher 403 fix: add role 2 to GET /metrics,Allan Harris,Adam van Omme,"39 backend health_tracking tests passed. Fixed require_role(1,4) → require_role(1,2,4) on /metrics so researchers can load the metric selection panel.",2026-04-08,Passed
+"Participant Health Tracking UI redesign: sidebar nav, all-questions scroll, Prev/Next/Save bar, alternating card backgrounds",Allan Harris,Adam van Omme,"111 participant Flutter tests passed. Redesigned health tracking with side category nav, continuous question scroll, Prev/Next/Save bottom bar, clean card layout with alternating tints, swipe disabled on tabs.",2026-04-08,Passed
+"Fix research_aggregate_multi SQL params order: k was sent as start_date, blocking all data",Allan Harris,Adam van Omme,39 backend tests passed. Moved k to end of params list so HAVING clause receives correct threshold instead of date value.,2026-04-09,Passed
+"Health Tracking participant UI: SegmentedButton nav, sidebar jump, Back/Save/Next sticky header, wider layout, non-lazy scroll fix",Allan Harris,Adam van Omme,"111 participant Flutter tests passed. Replaced tabs with SegmentedButton, fixed category nav (non-lazy ListView so GlobalKeys always rendered), sticky header has Back/Save/Next in one row, maxWidth=1100.",2026-04-09,Passed
+"Health Tracking Admin — IsDeleted/IsActive distinction, drag-to-reorder (category+metric), category toggle endpoint, restore metric fix",Allan Harris,Adam van Omme,39 tests passed — all health tracking test classes green,2026-04-09,Passed
+"Health Tracking audit — L10n gap fixed (Value column), Colors.white→AppTheme.white, IsDeleted DB column live + init SQL",Allan Harris,Adam van Omme,"39 tests passed, Dio errors resolved",2026-04-09,Passed
+Participant Health Tracking Page + Entry Card Text Widget,Allan Harris,Adam van Omme,"12 Flutter widget tests passed: participant_health_tracking_page_test (7), health_metric_entry_card_text_test (5)",2026-04-09,Passed
+Health Tracking Seed Data — All Participants,Allan Harris,Adam van Omme,3916 entries inserted for 14 participants. Verified via SQL COUNT.,2026-04-09,Passed
+Database Restore from Backup - Frontend + Admin API + Backup Model,Allan Harris,Adam van Omme,"1699 Flutter tests passed. Verified: backup.dart RestoreResult model, admin_api.dart restoreBackup method, database_viewer_page.dart restore UI, l10n keys EN+FR, build_runner codegen, test fakes updated in admin_dashboard_page_test, admin_pages_test, database_viewer_page_test.",2026-04-09,Passed
+Database Restore from Backup - Standalone RestorePanel with dropdown,Allan Harris,Adam van Omme,"1699 Flutter tests passed. _RestorePanel added between Utilities and Viewer sections: dropdown lists all backups with type/date/size, caution-colored Restore button, warning dialog, full l10n EN+FR, restore button removed from individual backup tiles.",2026-04-09,Passed
+"Researcher Health Tracking - Export button moved next to Load Charts, green styling",Allan Harris,Adam van Omme,"47 researcher tests passed. Export Filtered Data button moved from bottom section to inline Row next to Load Charts button. Green background (AppTheme.success), white text. Export section at bottom removed.",2026-04-09,Passed
+Security Audit Fix - SQL Identifier Injection in Database Viewer,Allan Harris,Adam van Omme,1353 backend + 1699 Flutter tests passed. Added _assert_safe_identifier() to admin.py validating table/column names against [A-Za-z0-9_]+ regex before f-string SQL use. Called in get_table_schema() and get_table_data().,2026-04-09,Passed
+Accessibility Fix - WCAG SegmentedButton/ToggleButtons Semantic Labels,Allan Harris,Adam van Omme,"1699 Flutter tests passed. Added Semantics wrappers to: participant view switcher, history mode selector, results view toggle (participant_health_tracking_page), and db viewer ToggleButtons (database_viewer_page). All with descriptive labels.",2026-04-09,Passed
+Localization - Missing l10n keys EN/FR/ES + Researcher Chart Colors,Allan Harris,Adam van Omme,"1699 Flutter tests passed. Added healthTrackingViewModeLabel/HistoryModeLabel/ResultsViewLabel, dbViewerViewModeLabel to EN+FR+ES. Added 22 missing backup restore keys to ES. Added 11 health tracking chart keys to ES. Researcher charts now cycle AppLineChart.defaultColors palette per metric card (header + series/bar color match).",2026-04-09,Passed
+Theme Fix - health_metric_entry_card hardcoded colors replaced with theme-aware tints,Allan Harris,Adam van Omme,1699 Flutter tests passed. Replaced _kLightTints/_kDarkTints Color(0xFF...) constants with theme-aware Color.alphaBlend using AppTheme.primary at 0/3/6% opacity over context.appColors.surface. Cards now adapt correctly to dark/light mode.,2026-04-09,Passed
+Playwright - 4 new scripts + backup lifecycle restore update,Allan Harris,Adam van Omme,"1699 Flutter tests passed. Created: 62_researcher_health_tracking_filters_export, 63_participant_health_tracking_baseline, 64_admin_database_restore_backup, 65_participant_health_tracking_metric_types. Updated 57_admin_database_backup_lifecycle to include restore panel demo.",2026-04-09,Passed
+ES Localization completion + chart subtitle l10n,Allan Harris,Adam van Omme,"Added 13 missing ES health tracking keys, 4 missing ES admin health tracking keys, 2 new chart subtitle keys. All 1699 Flutter tests passed.",2026-04-09,Passed
+Hardcoded string l10n cleanup,Allan Harris,Adam van Omme,"Fixed all remaining hardcoded strings: messages_page.dart (6 error strings → l10n), question_bank_page.dart (8 strings → l10n), consent_page + profile_completion_page (Loading… → commonLoading). Added adminAccountRequestsLoadError, adminDeletionRequestsLoadError, questionBankDeleted to EN/FR/ES. Fixed 2 test assertions. All 1699 Flutter tests passed.",2026-04-09,Passed
+HCP Health Tracking & Survey Chart Feature — Backend,Allan Harris,Adam van Omme,"1362 passed, 0 failed — full backend suite including 25 HCP patient tests (health tracking metrics/entries/aggregate endpoints, survey aggregate, access control)",2026-04-10,Passed
+HCP Health Tracking & Survey Chart Feature — Frontend,Allan Harris,Adam van Omme,"1699 passed, 0 failed — full Flutter suite including HCP providers, hcp_reports_page chart/comparison view, tab style update",2026-04-10,Passed
+HCP Reports — Chart Type Picker + Horizontal Scroll + Bug Fix,Allan Harris,Adam van Omme,"53 HCP Flutter tests passed — chart type picker (line/bar/pie), horizontal scroll via Scrollbar+SingleChildScrollView, fixed is_active missing bug in health-tracking/metrics endpoint, SegmentedButton tabs, survey chart/comparison view",2026-04-10,Passed
+Researcher Health Tracking Granularity (Daily/Weekly/Monthly),Allan Harris,Adam van Omme,1699 Flutter tests passed. Added granularity SegmentedButton (Daily/Weekly/Monthly) to researcher health tracking page.,2026-04-10,Passed
+k-Anonymity Default→1 + Maintenance Mode Toggle Fix,Allan Harris,Adam van Omme,"1362 backend + 1699 Flutter tests passed. Fixed k-anonymity default from 5→1 (settings.py, config.py, aggregation.py, DB init/migration). Fixed maintenance mode toggle: auto-saves immediately on toggle, added activeTrackColor for visual clarity. Updated all k-anonymity-dependent tests to use _set_k5() cache mock.",2026-04-10,Passed
+Backend Health Tracking + HCP Patients API — New Endpoints,Allan Harris,Adam van Omme,"1369 tests passed. New: /participant/aggregate, /participant/export, /hcp/patients/{id}/health-tracking/export. 63 health_tracking + full suite.",2026-04-10,Passed
+Flutter Frontend — Health Tracking Granularity + Comparison + Export,Allan Harris,Adam van Omme,1699 tests passed. Participant: granularity + compare-to-aggregate + CSV export. HCP: granularity + default-all-selected + CSV export. HealthTrackingChart updated.,2026-04-10,Passed
+Flutter Tests - Full Suite,Allan Harris,Adam van Omme,"1699 Flutter widget/unit tests passed (0 failed). Fixed: header layout breakpoint calculation, Flexible logo wrapper causing nav overflow, admin filter Wrap vs Row ancestor, participant dashboard pending timer cleanup.",2026-04-11,Passed
+Backend Pytest - Full Suite,Allan Harris,Adam van Omme,"1369 pytest tests passed (0 failed). Fixed: pytest.ini testpaths scoped to backend/tests, added norecursedirs to prevent scanning frontend/ and integration/ dirs that caused 20-min hangs.",2026-04-11,Passed
+Health Tracking Status + HCP Chart Fix — Backend,Allan Harris,Adam van Omme,63 passed in 0.89s (test_health_tracking.py),2026-04-12,Passed
+Health Tracking Status + HCP Chart Fix — Frontend,Allan Harris,Adam van Omme,1699 passed in 71s (flutter test),2026-04-12,Passed
+Admin Health Tracking Settings Localization,Allan Harris,Adam van Omme,1699 passed in 72s (flutter test),2026-04-12,Passed
+Health Tracking Save Error + Admin Refresh Fix,Allan Harris,Adam van Omme,1699 passed in 52s (flutter test),2026-04-13,Passed
+Health Tracking Log Today — Single Save Button,Allan Harris,Adam van Omme,1699 passed in 66s (flutter test),2026-04-13,Passed
+Researcher CSV exports — add Gender/DOB + backfill seed demographics,Allan Harris,Adam van Omme,1369 passed in 61s (pytest backend),2026-04-13,Passed
+Researcher Data Bank — From/To date display fix,Allan Harris,Adam van Omme,1699 passed in 62s (flutter test),2026-04-13,Passed
+Overdue Assignment Filter — participant my-assignments,Allan Harris,Adam van Omme,1369 passed in 63s (pytest backend),2026-04-13,Passed
+Playwright video re-record — 10 affected specs,Allan Harris,Adam van Omme,10 of 10 passed (after retries),2026-04-13,Passed
+Dashboard message banner → messages (not tasks),Allan Harris,Adam van Omme,1699 passed in 60s (flutter test),2026-04-13,Passed
+"Hide ""No tasks due today"" when check-in pending",Allan Harris,Adam van Omme,1699 passed in 58s (flutter test),2026-04-13,Passed
+Makefile + Make.ps1 parity + remove superseded targets,Allan Harris,Adam van Omme,1369 backend passed in 65s; target lists now identical,2026-04-13,Passed

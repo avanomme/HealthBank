@@ -1,0 +1,76 @@
+@startuml HealthBank_Participant_Survey_Sequence
+!theme plain
+skinparam sequenceArrowColor #2C76BF
+skinparam sequenceLifeLineBorderColor #595959
+skinparam sequenceParticipantBorderColor #1A1A2E
+skinparam sequenceParticipantBackgroundColor #EBF4FF
+skinparam shadowing false
+autoactivate off
+
+title HealthBank — Participant Completes a Survey
+
+actor       "Participant"      as P
+participant "Flutter App"      as APP
+participant "FastAPI\n/api/v1" as API
+database    "MySQL"            as DB
+
+== Open Assigned Survey ==
+
+P -> APP : Navigate to Tasks / Dashboard
+APP -> API : GET /api/v1/assignments?status=pending
+API -> DB  : SELECT SurveyAssignment JOIN Survey\nWHERE AccountID=? AND Status='pending'
+DB --> API : list of assignments
+API --> APP : List<SurveyAssignment>
+APP --> P  : Show pending task cards
+
+P -> APP : Tap "Do Task" on a survey
+APP -> API : GET /api/v1/surveys/{id}/questions
+API -> DB  : SELECT QuestionBank, QuestionOptions, QuestionList\nWHERE SurveyID=? ORDER BY DisplayOrder
+DB --> API : questions with options
+API --> APP : List<Question>
+APP --> P  : Render question form\n(scale / yesno / single_choice / multi_choice / number / openended)
+
+== Answer & Draft Save ==
+
+P -> APP : Fill in answers as they go
+APP -> API : POST /api/v1/responses/draft\n{ assignment_id, responses: [...] }
+API -> DB  : UPDATE SurveyAssignment\nSET DraftResponses = ?\nWHERE AssignmentID = ?
+DB --> API : 1 row updated
+API --> APP : 200 { "saved": true }
+APP --> P  : Silent autosave (no UI interruption)
+
+note over P, APP : Participant can close app and return.\nDraft is restored from SurveyAssignment.DraftResponses.
+
+== Final Submission ==
+
+P -> APP : Tap "Submit"
+APP -> APP : Validate all required questions answered
+alt Required question missing
+  APP --> P : Highlight unanswered question\n"This question is required"
+else All required answered
+  APP -> API : POST /api/v1/responses\n{ assignment_id,\n  responses: [{ question_id, value }] }
+  API -> DB  : BEGIN TRANSACTION\nINSERT INTO Responses (SurveyID, ParticipantID,\n  QuestionID, ResponseValue)\nFOR EACH response\nUPDATE SurveyAssignment\n  SET Status='completed', CompletedAt=NOW()\nCOMMIT
+  DB --> API : responses stored, assignment updated
+  API --> APP : 201 { "submitted": true }
+  APP --> P  : "Survey completed!" confirmation
+  APP --> P  : Redirect to Results page
+end
+
+== View Results ==
+
+P -> APP : Navigate to Results
+P -> APP : Select completed survey
+APP -> API : GET /api/v1/responses/{survey_id}
+API -> DB  : SELECT ResponseValue, QuestionContent, ResponseType\nFROM Responses JOIN QuestionBank\nWHERE ParticipantID=? AND SurveyID=?
+DB --> API : participant responses
+API --> APP : List<ResponseSummary>
+APP --> P  : Show own responses
+
+P -> APP : Toggle "Compare to Aggregate"
+APP -> API : GET /api/v1/research/surveys/{id}/aggregates
+API -> DB  : SELECT per-question aggregate stats\nHAVING COUNT(DISTINCT ParticipantID) >= k
+DB --> API : aggregates (suppressed where < k)
+API --> APP : AggregateResponse
+APP --> P  : Show side-by-side own vs. aggregate\n(suppressed questions show k-anon notice)
+
+@enduml

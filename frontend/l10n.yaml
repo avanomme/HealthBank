@@ -1,0 +1,26 @@
+# Localization configuration for HealthBank
+# See: https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalization
+
+# Directory containing the ARB translation files
+arb-dir: lib/src/core/l10n/arb
+
+# Template ARB file (English is the source language)
+template-arb-file: app_en.arb
+
+# Output location for generated Dart files
+output-localization-file: app_localizations.dart
+output-dir: lib/src/core/l10n/generated
+
+# Class name for the generated localizations
+output-class: AppLocalizations
+
+# Use deferred loading for localizations (better for web)
+use-deferred-loading: false
+
+# Nullable getter (set to false for non-null safety)
+nullable-getter: false
+
+supported-locales:
+  - en
+  - fr
+  - es

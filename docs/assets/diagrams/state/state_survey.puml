@@ -1,0 +1,51 @@
+@startuml HealthBank_Survey_State
+!theme plain
+skinparam stateBorderColor #2C76BF
+skinparam stateBackgroundColor #EBF4FF
+skinparam stateArrowColor #1A1A2E
+skinparam shadowing false
+
+title HealthBank — Survey Lifecycle State Diagram
+
+[*] --> Draft : Researcher creates survey
+
+state Draft {
+  [*] --> Editing
+  Editing --> Editing : Add / remove / reorder questions\nEdit title & description
+  Editing --> Previewing : Preview
+  Previewing --> Editing : Back to edit
+}
+
+Draft --> Published : Researcher publishes\n(POST /surveys/{id}/publish)
+Draft --> [*] : Researcher deletes draft
+
+Published --> Closed : Researcher closes\n(POST /surveys/{id}/close)\nor EndDate reached
+
+state Published {
+  [*] --> AssignmentOpen
+  AssignmentOpen --> AssignmentOpen : Assign to new participants
+  AssignmentOpen --> AssignmentOpen : Participants submit responses
+}
+
+state Closed {
+  [*] --> ReadOnly
+  ReadOnly : No new responses accepted
+  ReadOnly : Existing responses readable
+  ReadOnly : Data exportable by researcher
+}
+
+Closed --> [*]
+
+note right of Published
+  SurveyAssignment per participant:
+  pending → completed (on submit)
+  pending → expired (past DueDate)
+end note
+
+note right of Draft
+  Publication status stored in
+  Survey.PublicationStatus:
+  'draft' | 'published' | 'closed'
+end note
+
+@enduml

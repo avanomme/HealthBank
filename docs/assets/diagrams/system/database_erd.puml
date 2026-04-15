@@ -1,0 +1,312 @@
+@startuml HealthBank_Database_ERD
+!theme plain
+skinparam linetype ortho
+skinparam EntityBorderColor #2C76BF
+skinparam EntityBackgroundColor #EBF4FF
+skinparam ArrowColor #595959
+skinparam shadowing false
+hide methods
+hide circle
+
+title HealthBank — Entity Relationship Diagram
+
+' ── Auth & Account ──────────────────────────────────────────────────────────
+entity "Auth" as AUTH {
+  * AuthID : INT <<PK>>
+  --
+  PasswordHash : VARCHAR(255)
+  MustChangePassword : TINYINT
+  FailedAttempts : INT
+  LockoutUntil : DATETIME
+}
+
+entity "Roles" as ROLES {
+  * RoleID : INT <<PK>>
+  --
+  RoleName : VARCHAR(50)
+  Description : TEXT
+}
+
+entity "AccountData" as ACCT {
+  * AccountID : INT <<PK>>
+  --
+  AuthID : INT <<FK>>
+  RoleID : INT <<FK>>
+  FirstName : VARCHAR(64)
+  LastName : VARCHAR(64)
+  Email : VARCHAR(255)
+  DateOfBirth : DATE
+  Gender : VARCHAR(32)
+  IsActive : TINYINT
+  CreatedAt : DATETIME
+}
+
+entity "Sessions" as SESS {
+  * SessionID : INT <<PK>>
+  --
+  AccountID : INT <<FK>>
+  ViewingAsUserID : INT <<FK, nullable>>
+  TokenHash : TEXT
+  CreatedAt : DATETIME
+  ExpiresAt : DATETIME
+  IpAddress : VARCHAR(50)
+  UserAgent : VARCHAR(255)
+}
+
+entity "TwoFactor" as TOTP {
+  * TwoFactorID : INT <<PK>>
+  --
+  AccountID : INT <<FK>>
+  TotpSecret : TEXT (encrypted)
+  IsEnabled : TINYINT
+  CreatedAt : DATETIME
+}
+
+' ── Survey Domain ────────────────────────────────────────────────────────────
+entity "Survey" as SURV {
+  * SurveyID : INT <<PK>>
+  --
+  Title : VARCHAR(255)
+  Description : TEXT
+  CreatorID : INT <<FK>>
+  PublicationStatus : ENUM
+  StartDate : DATETIME
+  EndDate : DATETIME
+  CreatedAt : DATETIME
+}
+
+entity "QuestionBank" as QB {
+  * QuestionID : INT <<PK>>
+  --
+  Title : VARCHAR(128)
+  QuestionContent : TEXT
+  ResponseType : ENUM
+  IsRequired : TINYINT
+  Category : VARCHAR(64)
+  CreatedAt : DATETIME
+}
+
+entity "QuestionOptions" as QOPT {
+  * OptionID : INT <<PK>>
+  --
+  QuestionID : INT <<FK>>
+  OptionText : VARCHAR(255)
+  DisplayOrder : INT
+}
+
+entity "QuestionList" as QLIST {
+  * ID : INT <<PK>>
+  --
+  SurveyID : INT <<FK>>
+  QuestionID : INT <<FK>>
+  DisplayOrder : INT
+}
+
+entity "SurveyAssignment" as SA {
+  * AssignmentID : INT <<PK>>
+  --
+  SurveyID : INT <<FK>>
+  AccountID : INT <<FK>>
+  Status : ENUM
+  AssignedAt : DATETIME
+  DueDate : DATETIME
+  CompletedAt : DATETIME
+  DraftResponses : JSON
+}
+
+entity "Responses" as RESP {
+  * ResponseID : INT <<PK>>
+  --
+  SurveyID : INT <<FK>>
+  ParticipantID : INT <<FK>>
+  QuestionID : INT <<FK>>
+  ResponseValue : VARCHAR(255)
+}
+
+entity "SurveyTemplate" as TMPL {
+  * TemplateID : INT <<PK>>
+  --
+  Title : VARCHAR(255)
+  CreatorID : INT <<FK>>
+  IsPublic : TINYINT
+}
+
+' ── Health Tracking ──────────────────────────────────────────────────────────
+entity "TrackingCategory" as TCAT {
+  * CategoryID : INT <<PK>>
+  --
+  CategoryKey : VARCHAR(64) <<UNIQUE>>
+  DisplayName : VARCHAR(128)
+  Icon : VARCHAR(64)
+  DisplayOrder : INT
+  IsActive : TINYINT
+  IsDeleted : TINYINT
+}
+
+entity "TrackingMetric" as TMET {
+  * MetricID : INT <<PK>>
+  --
+  CategoryID : INT <<FK>>
+  MetricKey : VARCHAR(64) <<UNIQUE>>
+  DisplayName : VARCHAR(128)
+  MetricType : ENUM
+  Unit : VARCHAR(32)
+  ScaleMin : INT
+  ScaleMax : INT
+  ChoiceOptions : JSON
+  Frequency : ENUM
+  DisplayOrder : INT
+  IsActive : TINYINT
+  IsBaseline : TINYINT
+  IsDeleted : TINYINT
+}
+
+entity "TrackingEntry" as TENT {
+  * EntryID : INT <<PK>>
+  --
+  ParticipantID : INT <<FK>>
+  MetricID : INT <<FK>>
+  Value : TEXT
+  Notes : TEXT
+  EntryDate : DATE
+  IsBaseline : TINYINT
+  CreatedAt : DATETIME
+  <<UNIQUE: ParticipantID+MetricID+EntryDate>>
+}
+
+' ── HCP Linking ──────────────────────────────────────────────────────────────
+entity "HcpPatientLink" as HCPL {
+  * LinkID : INT <<PK>>
+  --
+  HcpID : INT <<FK>>
+  PatientID : INT <<FK>>
+  Status : ENUM
+  RequestedBy : ENUM
+  ConsentRevoked : TINYINT
+  RequestedAt : DATETIME
+}
+
+' ── Messaging ────────────────────────────────────────────────────────────────
+entity "Conversations" as CONV {
+  * ConversationID : INT <<PK>>
+  --
+  CreatedAt : DATETIME
+}
+
+entity "ConversationParticipants" as CONVP {
+  * ID : INT <<PK>>
+  --
+  ConversationID : INT <<FK>>
+  AccountID : INT <<FK>>
+}
+
+entity "Messages" as MSG {
+  * MessageID : INT <<PK>>
+  --
+  ConversationID : INT <<FK>>
+  SenderID : INT <<FK>>
+  Content : TEXT
+  SentAt : DATETIME
+}
+
+entity "Friendships" as FRIEND {
+  * FriendshipID : INT <<PK>>
+  --
+  RequestorID : INT <<FK>>
+  RecipientID : INT <<FK>>
+  Status : ENUM
+  CreatedAt : DATETIME
+}
+
+' ── Admin & System ───────────────────────────────────────────────────────────
+entity "SystemSettings" as SSET {
+  * SettingKey : VARCHAR(128) <<PK>>
+  --
+  SettingValue : TEXT
+  UpdatedBy : INT <<FK>>
+  UpdatedAt : DATETIME
+}
+
+entity "AuditEvent" as AUDIT {
+  * EventID : INT <<PK>>
+  --
+  ActorAccountID : INT <<FK, nullable>>
+  Action : VARCHAR(128)
+  ResourceType : VARCHAR(64)
+  ResourceID : VARCHAR(64)
+  HttpMethod : VARCHAR(10)
+  Path : VARCHAR(512)
+  Status : VARCHAR(20)
+  HttpStatus : INT
+  IpAddress : VARCHAR(50)
+  DurationMs : INT
+  CreatedAt : DATETIME
+}
+
+entity "ConsentRecord" as CONS {
+  * ConsentID : INT <<PK>>
+  --
+  AccountID : INT <<FK>>
+  ConsentVersion : VARCHAR(32)
+  SignatureName : VARCHAR(128)
+  DocumentText : TEXT
+  IpAddress : VARCHAR(50)
+  CreatedAt : DATETIME
+}
+
+entity "AccountRequest" as AREQ {
+  * RequestID : INT <<PK>>
+  --
+  Email : VARCHAR(255)
+  FirstName : VARCHAR(64)
+  LastName : VARCHAR(64)
+  RequestedRole : INT
+  Status : ENUM
+  AdminNotes : TEXT
+  CreatedAt : DATETIME
+}
+
+entity "DeletionRequest" as DREQ {
+  * RequestID : INT <<PK>>
+  --
+  AccountID : INT <<FK>>
+  Status : ENUM
+  RequestedAt : DATETIME
+  ProcessedAt : DATETIME
+}
+
+' ── Relationships ────────────────────────────────────────────────────────────
+AUTH     ||--o| ACCT    : "1 Auth per account"
+ROLES    ||--o{ ACCT    : "role"
+ACCT     ||--o{ SESS    : "sessions"
+ACCT     ||--o| TOTP    : "2FA config"
+
+ACCT     ||--o{ SA      : "assignments"
+SURV     ||--o{ SA      : "assigned to"
+SURV     ||--o{ QLIST   : "questions"
+QB       ||--o{ QLIST   : "in surveys"
+QB       ||--o{ QOPT    : "options"
+SA       ||--o{ RESP    : "responses"
+QB       ||--o{ RESP    : "answered"
+ACCT     ||--o{ SURV    : "creator"
+ACCT     ||--o{ TMPL    : "creator"
+
+TCAT     ||--o{ TMET    : "metrics"
+TMET     ||--o{ TENT    : "entries"
+ACCT     ||--o{ TENT    : "participant"
+
+ACCT     ||--o{ HCPL    : "HCP"
+ACCT     ||--o{ HCPL    : "patient"
+
+CONV     ||--o{ CONVP   : "participants"
+ACCT     ||--o{ CONVP   : "in conversations"
+CONV     ||--o{ MSG     : "messages"
+ACCT     ||--o{ MSG     : "sender"
+ACCT     ||--o{ FRIEND  : "requestor"
+ACCT     ||--o{ FRIEND  : "recipient"
+
+ACCT     ||--o{ CONS    : "consent records"
+ACCT     ||--o{ DREQ    : "deletion requests"
+ACCT     ||--o| AUDIT   : "actor"
+
+@enduml

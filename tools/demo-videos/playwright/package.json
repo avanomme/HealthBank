@@ -1,0 +1,12 @@
+{
+  "name": "healthbank-demo-videos",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "demo": "playwright test",
+    "demo:headed": "playwright test --headed"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0"
+  }
+}

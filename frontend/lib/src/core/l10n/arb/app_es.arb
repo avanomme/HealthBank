@@ -1,0 +1,2913 @@
+{
+  "@@locale": "es",
+  "@@last_modified": "2026-02-07",
+  "@@_COMMON_ACTIONS": "Common action buttons and labels",
+  "commonActions": "Acciones",
+  "commonBack": "Volver",
+  "commonCancel": "Cancelar",
+  "commonClear": "Borrar",
+  "commonClose": "Cerrar",
+  "commonConfirm": "Confirmar",
+  "commonContactUs": "Contáctenos",
+  "commonCopyright": "© 2025 HealthBank. Todos los derechos reservados.",
+  "commonDate": "Fecha",
+  "commonDelete": "Eliminar",
+  "commonDescription": "Descripción",
+  "commonDone": "Listo",
+  "commonEdit": "Editar",
+  "commonEmail": "Correo electrónico",
+  "commonEndDate": "Fecha de fin",
+  "commonErrorWithDetail": "Error: {detail}",
+  "@commonErrorWithDetail": {
+    "placeholders": {
+      "detail": {
+        "type": "String"
+      }
+    }
+  },
+  "commonFilter": "Filtrar",
+  "commonHidePassword": "Ocultar contraseña",
+  "commonLoading": "Cargando...",
+  "commonName": "Nombre",
+  "commonNext": "Siguiente",
+  "commonNo": "No",
+  "commonOff": "Desactivado",
+  "commonOn": "Activado",
+  "commonPassword": "Contraseña",
+  "commonPrivacyPolicy": "Política de privacidad",
+  "commonRefresh": "Actualizar",
+  "commonRetry": "Reintentar",
+  "commonSave": "Guardar",
+  "commonSaving": "Guardando…",
+  "commonSearch": "Buscar",
+  "commonSeeMore": "Ver más",
+  "commonShowPassword": "Mostrar contraseña",
+  "commonStartDate": "Fecha de inicio",
+  "commonStatus": "Estado",
+  "commonSubmit": "Enviar",
+  "commonTermsOfService": "Condiciones de uso",
+  "commonTime": "Hora",
+  "commonTitle": "Título",
+  "commonType": "Tipo",
+  "commonViewAll": "Ver todo",
+  "commonYes": "Sí",
+  "@@_COMMON_STATUS": "Status indicators",
+  "statusActive": "Activo",
+  "statusCompleted": "Completado",
+  "statusInactive": "Inactivo",
+  "statusInProgress": "En progreso",
+  "statusPending": "Pendiente",
+  "@@_COMMON_ERRORS": "Error messages",
+  "errorGeneric": "Algo salió mal. Por favor, inténtelo de nuevo.",
+  "errorNetwork": "Error de red. Verifique su conexión.",
+  "errorNotFound": "No encontrado.",
+  "errorUnauthorized": "No está autorizado para realizar esta acción.",
+  "@@_COMMON_VALIDATION": "Form validation messages",
+  "formConfirmPasswordLabel": "Confirmar contraseña",
+  "formConfirmPasswordMismatch": "Las contraseñas deben coincidir exactamente.",
+  "formConfirmPasswordMustMatch": "La contraseña de confirmación debe coincidir exactamente con la contraseña creada.",
+  "formCreatePasswordLabel": "Crear contraseña",
+  "formDateValidationError": "Introduzca una fecha válida en formato AAAA-MM-DD (p.ej. 2024-01-15).",
+  "formEmailValidationError": "Introduzca una dirección de correo electrónico válida (p.ej. nombre@ejemplo.com).",
+  "formPasswordCheckTitle": "Verificación de contraseña",
+  "formPasswordRuleAscii": "Use solo letras ASCII, dígitos y símbolos comunes.",
+  "formPasswordRuleLowercase": "Al menos una letra minúscula.",
+  "formPasswordRuleMax32": "Máximo 32 caracteres.",
+  "formPasswordRuleMin8": "Mínimo 8 caracteres.",
+  "formPasswordRuleNoEmail": "No debe contener fragmentos similares a un correo electrónico (por ejemplo, usuario@dominio.com).",
+  "formPasswordRuleNumberOrSymbol": "Al menos un número o símbolo.",
+  "formPasswordRulesError": "La contraseña no cumple las reglas requeridas.",
+  "formPasswordRulesHelper": "Su contraseña debe cumplir todos los siguientes requisitos:",
+  "formPasswordRuleUppercase": "Al menos una letra mayúscula.",
+  "formPhoneHint": "Número de teléfono",
+  "formPhoneValidationError": "Introduzca un número de teléfono válido incluido el código de país.",
+  "formSecuredPasswordVerificationFailed": "Error en la verificación de contraseña.",
+  "formTimeValidationError": "Introduzca una hora válida en formato HH:MM (p.ej. 09:30).",
+  "validationInvalidEmail": "Introduzca una dirección de correo electrónico válida (p.ej. nombre@ejemplo.com).",
+  "validationInvalidPassword": "La contraseña debe tener al menos 8 caracteres.",
+  "validationRequired": "Este campo es obligatorio. Por favor, introduzca un valor.",
+  "@@_COMMON_CONFIRMATIONS": "Confirmation dialogs",
+  "confirmCancel": "¿Está seguro de que desea cancelar?",
+  "confirmDelete": "¿Está seguro de que desea eliminar esto?",
+  "confirmUnsavedChanges": "Tiene cambios sin guardar. ¿Está seguro de que desea salir?",
+  "@@_COMMON_CONTACT": "Contact / footer / about / help",
+  "aboutPageBody": "HealthBank es una plataforma segura de datos de salud personales desarrollada en la Universidad de la Isla del Príncipe Eduardo (UIPE). Conecta a participantes, profesionales de salud e investigadores en un entorno que cumple con la privacidad para la investigación de salud aprobada.\n\nLos participantes pueden completar encuestas de salud y contribuir datos a proyectos de investigación a los que han dado su consentimiento. Los profesionales de salud pueden supervisar la participación y los datos de salud de los pacientes bajo su cuidado. Los investigadores solo acceden a resultados agregados y desidentificados — los datos individuales de los participantes nunca se exponen en los resultados de investigación.\n\nToda recopilación de datos se rige por el consentimiento informado y se realiza de acuerdo con la legislación federal y provincial canadiense aplicable, incluyendo PIPEDA y PHIPA. HealthBank es una iniciativa académica dedicada al avance de la investigación en salud en beneficio de todos los canadienses.",
+  "aboutPageTitle": "Acerca de HealthBank",
+  "contactSupportEmailLabel": "Correo del soporte",
+  "contactSupportHoursLabel": "Horario",
+  "contactSupportHoursValue": "De lunes a viernes, de 9:00 a. m. a 5:00 p. m. (ET)",
+  "contactSupportIntro": "Comuníquese con nuestro equipo de soporte para obtener ayuda con su cuenta, problemas técnicos o preguntas generales sobre HealthBank.",
+  "contactSupportNote": "Incluya el correo de su cuenta y un breve resumen del problema para que podamos responder más rápido.",
+  "footerHelpAndServices": "Ayuda y servicios",
+  "footerHowToUse": "Cómo usar HealthBank",
+  "footerLegal": "Legal",
+  "footerPrivacy": "Privacidad",
+  "footerTermsOfUse": "Condiciones de uso",
+  "helpFaq1Body": "Las cuentas son creadas por un administrador de HealthBank o un profesional de salud. Si cree que debería tener acceso, comuníquese con su proveedor de atención médica o el coordinador de investigación que supervisa su estudio. Recibirá un correo electrónico con instrucciones para configurar su contraseña y completar su perfil.",
+  "helpFaq1Title": "¿Cómo creo una cuenta?",
+  "helpFaq2Body": "Después de iniciar sesión, navegue a la sección de Encuestas desde su panel de control. Seleccione una encuesta disponible y siga las instrucciones en pantalla. Sus respuestas se guardan automáticamente a medida que avanza, y puede regresar a una encuesta incompleta en cualquier momento. Comuníquese con su coordinador de estudio si tiene preguntas sobre una encuesta específica.",
+  "helpFaq2Title": "¿Cómo completo una encuesta de salud?",
+  "helpFaq3Body": "Sus datos de salud personales son estrictamente confidenciales. Solo su profesional de salud asignado y los administradores autorizados pueden ver sus respuestas individuales. Los investigadores solo acceden a datos agregados y desidentificados — su nombre y datos personales nunca son visibles en los resultados de investigación. Consulte nuestra Política de Privacidad para obtener todos los detalles.",
+  "helpFaq3Title": "¿Quién puede ver mis datos?",
+  "homePagePlaceHolderText": "HealthBank es una plataforma segura y centrada en la privacidad para la recopilación de datos de salud personales e investigación. Los participantes completan encuestas y comparten datos de salud para apoyar investigaciones significativas. Los profesionales de salud supervisan la participación de los pacientes. Los investigadores acceden a resultados agregados y desidentificados, nunca a registros individuales.\n\nTodos los datos se recopilan con consentimiento informado y están protegidos de acuerdo con la ley canadiense de privacidad (PIPEDA). Inicie sesión para acceder a su panel de control, o solicite una cuenta para unirse a la comunidad HealthBank.",
+  "@@_COMMON_UI": "Generic UI bits (tooltips, pagination, accessibility, headers, charts, themes, dashboards, roles, sessions, cookies, maintenance, etc.)",
+  "a11ySkipToContent": "Ir al contenido principal",
+  "accessibilitySkipToMain": "Ir al contenido principal",
+  "changePasswordButton": "Cambiar contraseña",
+  "changePasswordConfirm": "Confirmar nueva contraseña",
+  "changePasswordCurrent": "Contraseña actual",
+  "changePasswordMinLength": "La contraseña debe tener al menos 8 caracteres",
+  "changePasswordMismatch": "Las contraseñas no coinciden",
+  "changePasswordNew": "Nueva contraseña",
+  "changePasswordRequired": "Este campo es obligatorio",
+  "changePasswordSameAsOld": "La nueva contraseña debe ser diferente a la contraseña actual",
+  "changePasswordSubtitle": "Debe cambiar su contraseña antes de continuar",
+  "changePasswordSuccess": "Contraseña cambiada exitosamente",
+  "changePasswordTitle": "Cambiar contraseña",
+  "chartNoData": "No hay datos disponibles",
+  "chartTableCount": "Cantidad",
+  "chartTableLabel": "{title} — tabla de datos",
+  "@chartTableLabel": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "chartTableOption": "Opción",
+  "chartTablePercent": "Porcentaje",
+  "cookieAccept": "Aceptar",
+  "cookieBody": "Este sitio web utiliza cookies esenciales para mantener sesiones de inicio de sesión seguras. Al continuar usando el sitio, acepta su uso.",
+  "cookieTitle": "Cookies",
+  "dashboardGraphClearSelection": "Borrar",
+  "dashboardGraphMyResults": "Mis resultados",
+  "dashboardGraphNoCompletedSurveys": "Aún no hay encuestas completadas. Complete una encuesta para ver sus datos aquí.",
+  "dashboardGraphNoSelection": "Seleccione una encuesta y una pregunta para ver sus datos",
+  "dashboardGraphQuestionLabel": "Pregunta",
+  "dashboardGraphSelectQuestion": "Seleccionar una pregunta",
+  "dashboardGraphSelectSurvey": "Seleccionar una encuesta",
+  "dashboardGraphSettingsTitle": "Configuración del gráfico",
+  "dashboardGraphSurveyLabel": "Encuesta",
+  "deactivatedNoticeMessage": "Su cuenta ha sido desactivada. Si cree que esto es un error, comuníquese con soporte.",
+  "deactivatedNoticeReturnToLogin": "Volver al inicio de sesión",
+  "deactivatedNoticeTitle": "Cuenta desactivada",
+  "headerMenu": "Menú",
+  "headerUnreadNotifications": "Notificaciones no leídas",
+  "maintenanceBannerMessage": "El sistema está actualmente en mantenimiento y se espera que esté disponible a las {time}. Pedimos disculpas por las molestias.",
+  "@maintenanceBannerMessage": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "maintenanceBannerMessageNoTime": "El sistema está actualmente en mantenimiento. Pedimos disculpas por las molestias.",
+  "maintenanceBannerTitle": "Sistema en mantenimiento",
+  "notFound404Heading": "404 - Página no encontrada",
+  "notFoundDescription": "La página que busca no existe.",
+  "notFoundPageTitle": "Página no encontrada",
+  "paginationPageOf": "Page {current} of {total}",
+  "@paginationPageOf": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "reorderMoveDown": "Bajar",
+  "reorderMoveUp": "Subir",
+  "roleAdmin": "Administrador",
+  "roleHcp": "Profesional de la salud",
+  "roleParticipant": "Participante",
+  "roleResearcher": "Investigador",
+  "semanticLogoNavigate": "Logo de HealthBank, ir al panel",
+  "sessionExpiryExtend": "Permanecer conectado",
+  "sessionExpiryExtended": "Sesión extendida.",
+  "sessionExpiryLogout": "Cerrar sesión",
+  "sessionExpiryMessage": "Su sesión expirará en 5 minutos. ¿Desea permanecer conectado?",
+  "sessionExpiryTitle": "Sesión por expirar",
+  "themePresetClassicCream": "Crema clásico",
+  "themePresetClassicCreamDesc": "Chrome marfil cálido",
+  "themePresetClassicGrey": "Gris clásico",
+  "themePresetClassicGreyDesc": "Chrome gris frío",
+  "themePresetDark": "Oscuro",
+  "themePresetDarkDesc": "Modo oscuro moderno",
+  "themePresetModern": "Moderno",
+  "themePresetModernDesc": "Superficies planas limpias",
+  "tooltipBarChart": "Gráfico de barras",
+  "tooltipClearFilter": "Limpiar filtro",
+  "tooltipClearSearch": "Borrar búsqueda",
+  "tooltipClose": "Cerrar",
+  "tooltipCloseModal": "Cerrar",
+  "tooltipCollapseSidebar": "Contraer barra lateral",
+  "tooltipDismissNotification": "Cerrar notificación",
+  "tooltipExpandSidebar": "Expandir barra lateral",
+  "tooltipGoBack": "Volver",
+  "tooltipLineChart": "Gráfico de líneas",
+  "tooltipNextPage": "Página siguiente",
+  "tooltipPickDate": "Seleccionar fecha",
+  "tooltipPickTime": "Seleccionar hora",
+  "tooltipPieChart": "Gráfico circular",
+  "tooltipPreviousPage": "Página anterior",
+  "tooltipRemoveOption": "Eliminar opción",
+  "tooltipTableView": "Vista de tabla",
+  "tooltipTogglePasswordVisibility": "Mostrar/ocultar contraseña",
+  "@@_AUTH": "Authentication: login, logout, register, forgot/reset password, profile menu",
+  "auth2faCodeHint": "123456",
+  "auth2faConfirm2fa": "Confirmar 2FA",
+  "auth2faEnrollAndRetrieveProvisioningUri": "Inscriba su cuenta y obtenga el URI de aprovisionamiento (usado para el código QR).",
+  "auth2faEnrollApi": "Inscribirse",
+  "auth2faEnterCodeFromAuthenticator": "Ingrese el código de 6 dígitos de su aplicación de autenticación",
+  "auth2faEnterCodeToFinishSignin": "Ingrese el código de 6 dígitos para finalizar el inicio de sesión.",
+  "auth2faErrorEnrollFailed": "Error al inscribir 2FA. Por favor, inténtelo de nuevo.",
+  "auth2faErrorVerifyFailed": "Error al verificar 2FA. Por favor, inténtelo de nuevo.",
+  "auth2faPleaseLoginFirstToEnroll": "Por favor, inicie sesión primero para inscribir 2FA.",
+  "auth2faTitle": "Autenticación de dos factores (2FA)",
+  "auth2faVerify": "Verificar",
+  "authEmailInvalid": "Ingrese un correo electrónico válido",
+  "authEmailRequired": "Introduzca su dirección de correo electrónico.",
+  "authForgotPasswordBackToLogin": "Volver al inicio de sesión",
+  "authForgotPasswordButton": "Enviar enlace de restablecimiento",
+  "authForgotPasswordSubtitle": "Ingrese su correo electrónico para recibir un enlace de restablecimiento",
+  "authForgotPasswordSuccess": "Enlace de restablecimiento enviado a su correo electrónico",
+  "authForgotPasswordTitle": "Contraseña olvidada",
+  "authLoggingIn": "Iniciando sesión...",
+  "authLoggingOut": "Cerrando sesión...",
+  "authLoginButton": "Iniciar sesión",
+  "authLoginEmail": "Correo electrónico",
+  "authLoginError": "Correo electrónico o contraseña inválidos",
+  "authLoginForgotPassword": "¿Contraseña olvidada?",
+  "authLoginNoAccount": "¿No tiene una cuenta?",
+  "authLoginPassword": "Contraseña",
+  "authLoginRememberMe": "Recordarme",
+  "authLoginSignUp": "Registrarse",
+  "authLoginSubtitle": "Ingrese sus credenciales para acceder a su cuenta",
+  "authLoginTitle": "Iniciar sesión",
+  "authLogout": "Cerrar sesión",
+  "authLogoutMessage": "Ha cerrado sesión exitosamente.\nHaga clic en el botón Volver para\nregresar a la página de inicio de sesión.",
+  "authLogoutReturn": "Volver",
+  "authLogoutReturnToLogin": "Volver al inicio de sesión",
+  "authLogoutTitle": "Cierre de sesión exitoso",
+  "authMaintenanceModeAdminNote": "Las cuentas de administrador aún pueden iniciar sesión.",
+  "authMaintenanceModeDefaultMessage": "El sistema no está disponible temporalmente por mantenimiento programado.",
+  "authMaintenanceModeLoginError": "El sistema está en mantenimiento. Solo los administradores pueden iniciar sesión.",
+  "authMaintenanceModeTitle": "Mantenimiento del sistema",
+  "authNewHereRequestAccount": "¿Nuevo aquí? Solicite una cuenta",
+  "authNotifications": "Notificaciones",
+  "authPasswordRequired": "Introduzca su contraseña.",
+  "authPleaseLogIn": "Por favor, inicie sesión para continuar.",
+  "authProfile": "Perfil",
+  "authRegisterButton": "Crear cuenta",
+  "authRegisterConfirmPassword": "Confirmar contraseña",
+  "authRegisterFirstName": "Nombre",
+  "authRegisterHaveAccount": "¿Ya tiene una cuenta?",
+  "authRegisterLastName": "Apellido",
+  "authRegisterLogin": "Iniciar sesión",
+  "authRegisterPasswordMismatch": "Las contraseñas no coinciden",
+  "authRegisterSubtitle": "Ingrese sus datos para crear una cuenta",
+  "authRegisterTitle": "Crear cuenta",
+  "authResetPasswordButton": "Restablecer contraseña",
+  "authResetPasswordConfirmPassword": "Confirmar nueva contraseña",
+  "authResetPasswordConfirmRequired": "Por favor, confirme su contraseña",
+  "authResetPasswordInvalidLinkMessage": "Este enlace de restablecimiento es inválido o ha expirado. Solicite uno nuevo.",
+  "authResetPasswordInvalidLinkTitle": "Enlace de restablecimiento inválido",
+  "authResetPasswordNewPassword": "Nueva contraseña",
+  "authResetPasswordSubtitle": "Ingrese su nueva contraseña",
+  "authResetPasswordSuccess": "Contraseña restablecida exitosamente",
+  "authResetPasswordSuccessMessage": "Su contraseña ha sido restablecida exitosamente.",
+  "authResetPasswordSuccessTitle": "Restablecimiento de contraseña exitoso",
+  "authResetPasswordTitle": "Restablecer contraseña",
+  "authSettings": "Configuración",
+  "authWelcomeTo": "Bienvenido a HealthBank.",
+  "@@_ACCOUNT_REQUEST": "Account request / signup flow",
+  "accountEditError404": "Cuenta no encontrada. Puede haber sido eliminada.",
+  "accountEditError409": "Este correo electrónico ya está en uso por otra cuenta.",
+  "accountEditError422": "Datos inválidos. Verifique todos los campos.",
+  "accountEditErrorNetwork": "Error de red. Verifique su conexión.",
+  "accountEditErrorServer": "Ocurrió un error en el servidor. Por favor, inténtelo de nuevo.",
+  "accountEditSaving": "Guardando...",
+  "accountEditSuccess": "Usuario actualizado exitosamente.",
+  "accountEditValidationEmail": "Ingrese una dirección de correo electrónico válida.",
+  "accountEditValidationName": "El nombre no puede estar vacío.",
+  "requestAccountBackToLogin": "Volver al inicio de sesión",
+  "requestAccountBirthdate": "Fecha de nacimiento",
+  "requestAccountDuplicateEmail": "Ya existe una cuenta con este correo electrónico",
+  "requestAccountDuplicatePending": "Ya hay una solicitud pendiente para este correo electrónico",
+  "requestAccountEmail": "Correo electrónico",
+  "requestAccountEmailRequired": "El correo electrónico es obligatorio",
+  "requestAccountError": "No se puede enviar la solicitud. Por favor, inténtelo de nuevo.",
+  "requestAccountFirstName": "Nombre",
+  "requestAccountFirstNameRequired": "El nombre es obligatorio",
+  "requestAccountGender": "Género",
+  "requestAccountGenderFemale": "Femenino",
+  "requestAccountGenderMale": "Masculino",
+  "requestAccountGenderNonBinary": "No binario",
+  "requestAccountGenderOther": "Otro",
+  "requestAccountGenderOtherSpecify": "Por favor especifique",
+  "requestAccountGenderPreferNotToSay": "Prefiero no decirlo",
+  "requestAccountLastName": "Apellido",
+  "requestAccountLastNameRequired": "El apellido es obligatorio",
+  "requestAccountRole": "Seleccionar rol",
+  "requestAccountRoleHcp": "Proveedor de atención médica",
+  "requestAccountRoleParticipant": "Participante",
+  "requestAccountRoleRequired": "Por favor seleccione un rol",
+  "requestAccountRoleResearcher": "Investigador",
+  "requestAccountSubmit": "Enviar solicitud",
+  "requestAccountSubtitle": "Complete este formulario para solicitar una cuenta",
+  "requestAccountSuccess": "Su solicitud ha sido enviada. Recibirá un correo electrónico cuando su cuenta sea aprobada.",
+  "requestAccountTitle": "Solicitar cuenta",
+  "requestAccountTooManyRequests": "Demasiadas solicitudes. Por favor, inténtelo de nuevo más tarde.",
+  "@@_PASSWORD_RESET": "Password reset / change flows",
+  "resetPasswordCopied": "Contraseña copiada al portapapeles",
+  "resetPasswordCopy": "Copiar al portapapeles",
+  "resetPasswordEmailAddress": "Dirección de correo electrónico",
+  "resetPasswordEmailHint": "Ingrese un correo electrónico alternativo",
+  "resetPasswordEmailInvalid": "Ingrese una dirección de correo electrónico válida",
+  "resetPasswordEmailRequired": "El correo electrónico es obligatorio",
+  "resetPasswordEmailSubtitle": "Enviar la contraseña temporal al usuario por correo electrónico",
+  "resetPasswordGenerate": "Generar contraseña aleatoria",
+  "resetPasswordHint": "Ingrese una contraseña o genere una",
+  "resetPasswordMinLength": "La contraseña debe tener al menos 8 caracteres",
+  "resetPasswordModalTitle": "Restablecer contraseña",
+  "resetPasswordNewPassword": "Nueva contraseña",
+  "resetPasswordRequired": "La contraseña es obligatoria",
+  "resetPasswordResetting": "Restableciendo...",
+  "resetPasswordSendEmail": "Enviar notificación por correo electrónico",
+  "resetPasswordSuccessEmail": "Contraseña restablecida y correo enviado exitosamente",
+  "resetPasswordSuccessNoEmail": "Contraseña restablecida exitosamente",
+  "resetPasswordUseAlternate": "Usar correo electrónico alternativo",
+  "@@_PROFILE": "User profile / completion",
+  "profileBirthdate": "Fecha de nacimiento",
+  "profileCompletionBirthdate": "Fecha de nacimiento",
+  "profileCompletionBirthdateRequired": "La fecha de nacimiento es obligatoria",
+  "profileCompletionError": "Error al guardar el perfil. Por favor, inténtelo de nuevo.",
+  "profileCompletionGender": "Género",
+  "profileCompletionGenderFemale": "Femenino",
+  "profileCompletionGenderMale": "Masculino",
+  "profileCompletionGenderNonBinary": "No binario",
+  "profileCompletionGenderOther": "Otro",
+  "profileCompletionGenderPreferNotToSay": "Prefiero no decirlo",
+  "profileCompletionGenderRequired": "La selección de género es obligatoria",
+  "profileCompletionSubmit": "Continuar",
+  "profileCompletionSubtitle": "Por favor, proporcione la siguiente información para completar la configuración de su cuenta.",
+  "profileCompletionTitle": "Complete su perfil",
+  "profileEditInformation": "Editar",
+  "profileEmail": "Correo electrónico",
+  "profileEmailInvalid": "Ingrese un correo electrónico válido",
+  "profileEmailRequired": "El correo electrónico es obligatorio",
+  "profileFirstName": "Nombre",
+  "profileFirstNameRequired": "El nombre es obligatorio",
+  "profileGender": "Género",
+  "profileLastName": "Apellido",
+  "profileLastNameRequired": "El apellido es obligatorio",
+  "profileLoadError": "Error al cargar el perfil.",
+  "profileRole": "Role: {role}",
+  "@profileRole": {
+    "placeholders": {
+      "role": {
+        "type": "String"
+      }
+    }
+  },
+  "profileSaveChanges": "Guardar cambios",
+  "profileSubtitle": "Administre su información de cuenta personal",
+  "profileTitle": "Perfil",
+  "profileUpdateError": "Error al actualizar el perfil.",
+  "profileUpdateSuccess": "Perfil actualizado exitosamente.",
+  "@@_NAVIGATION": "Navigation labels",
+  "navAbout": "Acerca de",
+  "navAccountRequests": "Solicitudes de cuenta",
+  "navAuditLog": "Registro de auditoría",
+  "navBackup": "Copias de seguridad",
+  "navChangePassword": "Cambiar contraseña",
+  "navClients": "Clientes",
+  "navCompleteProfile": "Completar perfil",
+  "navConsent": "Consentimiento",
+  "navDashboard": "Panel",
+  "navDashboardV2": "Panel v2",
+  "navData": "Datos",
+  "navDatabase": "Base de datos",
+  "navDatabaseViewer": "Visor de base de datos",
+  "navDeletionQueue": "Cola de eliminación",
+  "navErrorPage": "Página de error",
+  "navForgotPassword": "Contraseña olvidada",
+  "navFriends": "Amigos",
+  "navHealthTracking": "Seguimiento de salud",
+  "navHelp": "Ayuda",
+  "navHome": "Inicio",
+  "navLogin": "Iniciar sesión",
+  "navMessages": "Mensajes",
+  "navMySurveys": "Mis encuestas",
+  "navNewMessage": "Nuevo mensaje",
+  "navNewSurvey": "Nueva encuesta",
+  "navNewTemplate": "Nueva plantilla",
+  "navPageNavigator": "Navegador de páginas",
+  "navParticipants": "Participantes",
+  "navQuestionBank": "Banco de preguntas",
+  "navReports": "Informes",
+  "navRequestAccount": "Solicitar cuenta",
+  "navResetPassword": "Restablecer contraseña",
+  "navResults": "Resultados",
+  "navSettings": "Configuración",
+  "navSurveys": "Encuestas",
+  "navTasks": "Tareas",
+  "navTemplates": "Plantillas",
+  "navTickets": "Tickets",
+  "navUiTest": "Prueba de interfaz",
+  "navUserManagement": "Gestión de usuarios",
+  "@@_CONSENT": "Consent form and revocation",
+  "consentCheckboxLabel": "He leído, entiendo y acepto los términos de este formulario de consentimiento.",
+  "consentDateLabel": "Fecha",
+  "consentDocumentHcp": "ACUERDO DE ACCESO A DATOS Y CONFIDENCIALIDAD DEL PROFESIONAL DE LA SALUD\n\nPlataforma: HealthBank — Datos de Salud Personal\n\n(El documento completo del acuerdo se muestra en la aplicación)",
+  "consentDocumentParticipant": "FORMULARIO DE CONSENTIMIENTO INFORMADO DEL PARTICIPANTE\n\nTítulo del estudio: HealthBank — Recopilación y Análisis de Datos de Salud Personal\n\n(El documento completo de consentimiento se muestra en la aplicación)",
+  "consentDocumentResearcher": "ACUERDO DE USO DE DATOS Y CONFIDENCIALIDAD DEL INVESTIGADOR\n\nPlataforma: HealthBank — Recopilación de Datos de Salud Personal\n\n(El documento completo del acuerdo se muestra en la aplicación)",
+  "consentElectronicSignatureNotice": "Al escribir su nombre en el campo de firma y marcar la casilla de acuerdo, reconoce que su firma electrónica tiene la misma validez legal que una firma manuscrita.",
+  "consentErrorGeneric": "Error al enviar el consentimiento. Por favor, inténtelo de nuevo.",
+  "consentHcpTitle": "Acuerdo de confidencialidad del profesional de la salud",
+  "consentPageSubtitle": "Por favor, revise y acepte el formulario de consentimiento para continuar.",
+  "consentPageTitle": "Formulario de consentimiento",
+  "consentParticipantTitle": "Consentimiento informado del participante",
+  "consentRecordDocumentLanguage": "Idioma del documento",
+  "consentRecordIpAddress": "Dirección IP",
+  "consentRecordSignatureName": "Firma",
+  "consentRecordSignedAt": "Firmado el",
+  "consentRecordTitle": "Detalles del registro de consentimiento",
+  "consentRecordUserAgent": "Agente de usuario",
+  "consentResearcherTitle": "Acuerdo de confidencialidad del investigador",
+  "consentRestoreHcpAccess": "Restaurar acceso del proveedor de salud",
+  "consentRestoreSuccess": "Acceso del proveedor de salud restaurado",
+  "consentRevokeConfirmBody": "This will prevent {hcpName} from viewing your health data. You can restore access later.",
+  "@consentRevokeConfirmBody": {
+    "placeholders": {
+      "hcpName": {
+        "type": "String"
+      }
+    }
+  },
+  "consentRevokeConfirmTitle": "¿Revocar acceso del proveedor de salud?",
+  "consentRevokeError": "Error al actualizar el consentimiento. Por favor, inténtelo de nuevo.",
+  "consentRevokeHcpAccess": "Revocar acceso del proveedor de salud",
+  "consentRevokeSuccess": "Acceso del proveedor de salud revocado",
+  "consentSignatureDisclaimer": "Al escribir su nombre legal completo en el campo de firma, confirma que esto constituye su firma electrónica y su acuerdo con los términos anteriores.",
+  "consentSignatureHint": "Escriba su nombre legal completo",
+  "consentSignatureLabel": "Firma electrónica",
+  "consentStatusNotSigned": "Consentimiento no firmado",
+  "consentStatusSigned": "Consentimiento firmado",
+  "consentStatusSignedAt": "Signed: {date}",
+  "@consentStatusSignedAt": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "consentStatusVersion": "Version: {version}",
+  "@consentStatusVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "consentSubmitButton": "Acepto y envío",
+  "consentViewRecord": "Ver registro de consentimiento",
+  "@@_PARTICIPANT": "Participant dashboard, surveys, results, charts, comparisons",
+  "participantAvailableSurveys": "Encuestas disponibles",
+  "participantCategoryLabel": "Categoría",
+  "participantChartDistribution": "Distribución",
+  "participantChartError": "No se pudieron cargar los datos del gráfico.",
+  "participantChartLoading": "Cargando gráficos...",
+  "participantChartMean": "Promedio",
+  "participantChartMedian": "Mediana",
+  "participantChartNo": "No",
+  "participantChartNoData": "No hay datos de gráfico disponibles.",
+  "participantChartSuppressed": "Datos agregados ocultos por privacidad (menos de 5 encuestados).",
+  "participantChartToggle": "Mostrar gráficos",
+  "participantChartYes": "Sí",
+  "participantChartYourAnswer": "Su respuesta",
+  "participantChartYourValue": "Su valor",
+  "participantClickToView": "Haga clic para ver",
+  "participantCollapseSurvey": "Ocultar detalles",
+  "participantCompareAggregate": "Agregado",
+  "participantCompareError": "No se pudieron cargar los datos de comparación.",
+  "participantCompareLoading": "Cargando comparación...",
+  "participantCompareMostCommon": "Más común",
+  "participantCompareNoData": "No hay datos de comparación disponibles.",
+  "participantCompareToggle": "Comparar con el agregado",
+  "participantCompletedOn": "Completed {date}",
+  "@participantCompletedOn": {
+    "placeholders": {
+      "date": {}
+    }
+  },
+  "participantCompletedSurveys": "Encuestas completadas",
+  "participantCompletedThisWeek": "Completado esta semana",
+  "participantContinueSurvey": "Continuar encuesta",
+  "participantDashboardDescription": "Revise sus gráficos y diagramas.",
+  "participantDoTask": "Realizar tarea",
+  "participantDownloadResults": "Descargar resultados",
+  "participantDueOn": "Due on {date}",
+  "@participantDueOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "participantDueToday": "Vence hoy",
+  "participantDueTodayAt": "Due today at {time}",
+  "@participantDueTodayAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "participantExpandSurvey": "Mostrar detalles",
+  "participantGraphPlaceholder": "Marcador de gráfico",
+  "participantGraphTitle1": "Título del gráfico 1",
+  "participantGraphTitle2": "Título del gráfico 2",
+  "participantLinkedHcps": "Profesionales sanitarios vinculados",
+  "participantLoadingResults": "Cargando sus datos...",
+  "participantMyResults": "Mis resultados",
+  "participantMySurveys": "Mis encuestas",
+  "participantMyTasks": "Mis tareas",
+  "participantNewMessages": "{count, plural, =1{You have 1 new message.\nClick to here to view.} other{You have {count} new messages.\nClick to here to view.}}",
+  "@participantNewMessages": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "participantNoDueDate": "Sin fecha límite",
+  "participantNoResults": "Aún no ha completado ninguna encuesta.",
+  "participantNoResultsYet": "Aún no hay resultados disponibles",
+  "participantNoSurveys": "Aún no tiene encuestas asignadas.",
+  "participantNoSurveysSubtitle": "Revise las encuestas asignadas y continúe cualquier borrador guardado aquí.",
+  "participantNoTasksDueToday": "No hay tareas para hoy",
+  "participantNotificationMessage": "{count, plural, =1{You have 1 new message.\nClick to here to view.} other{You have {count} new messages.\nClick to here to view.}}",
+  "@participantNotificationMessage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "participantOverdueSince": "Overdue since {date}",
+  "@participantOverdueSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "participantOverdueTasksSummary": "{count, plural, =1{1 task is overdue} other{{count} tasks are overdue}}",
+  "@participantOverdueTasksSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "participantPlaceholder": "(Marcador de posición)",
+  "participantQuestionCount": "{count, plural, =1{1 question} other{{count} questions}}",
+  "@participantQuestionCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "participantQuickInsightsCaughtUpBadge": "Está al día",
+  "participantQuickInsightsCaughtUpMessage": "Está al día. No hay encuestas pendientes en este momento.",
+  "participantQuickInsightsCompletedOn": "Completed on {date}",
+  "@participantQuickInsightsCompletedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "participantQuickInsightsMostRecentTitle": "Encuesta más reciente completada",
+  "participantQuickInsightsNoCompletedYet": "Aún no hay encuestas completadas. Una vez que complete una, aparecerá aquí.",
+  "participantQuickInsightsTitle": "Perspectivas rápidas",
+  "participantQuickInsightsViewInResults": "Ver en resultados",
+  "participantRemainingTasks": "{count, plural, =1{1 Remaining Task} other{{count} Remaining Tasks}}",
+  "@participantRemainingTasks": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "participantRemainingTasksForToday": "Remaining tasks for today: {count}",
+  "@participantRemainingTasksForToday": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "participantRepeatsEvery": "Repeats every {days} days",
+  "@participantRepeatsEvery": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "participantResponseLabel": "Su respuesta",
+  "participantResultsError": "No se pudieron cargar sus datos. Por favor, inténtelo de nuevo.",
+  "participantResultsTitle": "Mis datos",
+  "participantResumeSurvey": "Retomar encuesta",
+  "participantRetry": "Reintentar",
+  "participantStartSurvey": "Iniciar encuesta",
+  "participantSurveyCompleted": "Completado",
+  "participantSurveyDueDate": "Due: {date}",
+  "@participantSurveyDueDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "participantSurveyLoadError": "No se pudieron cargar las encuestas. Por favor, inténtelo de nuevo.",
+  "participantSurveyStatusCompleted": "Completado",
+  "participantSurveyStatusExpired": "Vencida",
+  "participantSurveyStatusIncomplete": "Incompleto",
+  "participantSurveyStatusPending": "Pendiente",
+  "participantTaskProgress": "Progreso de tareas",
+  "participantTaskProgressLabel": "Su progreso de tareas:",
+  "participantTasksCompleted": "{completed} out of {total} tasks completed",
+  "@participantTasksCompleted": {
+    "placeholders": {
+      "completed": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "participantTasksCompletedLabel": "{completed} out of {total} tasks completed",
+  "@participantTasksCompletedLabel": {
+    "placeholders": {
+      "completed": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "participantTasksCompletedThisWeekSummary": "{completed} of {total} current tasks completed this week",
+  "@participantTasksCompletedThisWeekSummary": {
+    "placeholders": {
+      "completed": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "participantUnknownSurvey": "Encuesta",
+  "participantViewAllTasks": "Ver todas las tareas",
+  "participantViewResults": "Ver resultados",
+  "participantWelcomeGreeting": "Welcome, {name}. How are you today?",
+  "@participantWelcomeGreeting": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "participantWelcomeMessage": "Welcome, {name}. How are you today?",
+  "@participantWelcomeMessage": {
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "John"
+      }
+    }
+  },
+  "participantYourTaskProgress": "Su progreso de tareas:",
+  "@@_PARTICIPANT_TODO": "Participant tasks / to-do",
+  "todoAlertsTitle": "Acción requerida",
+  "todoCompletedSummaryTitle": "Su progreso",
+  "todoConsentRequired": "Su consentimiento necesita renovarse. Por favor, revise y firme.",
+  "todoDueSoonLabel": "Por vencer",
+  "todoHcpAccept": "Aceptar",
+  "todoHcpDecline": "Rechazar",
+  "todoHcpLinkAccepted": "Conexión aceptada",
+  "todoHcpLinkDeclined": "Conexión rechazada",
+  "todoHcpLinkError": "Error al responder. Por favor, inténtelo de nuevo.",
+  "todoHcpLinkRequest": "{hcpName} has requested to track your health data.",
+  "@todoHcpLinkRequest": {
+    "placeholders": {
+      "hcpName": {
+        "type": "String"
+      }
+    }
+  },
+  "todoNoTasks": "No tiene tareas pendientes.",
+  "todoOverdueLabel": "Vencido",
+  "todoPageTitle": "Mis tareas",
+  "todoPendingSurveysTitle": "Encuestas pendientes",
+  "todoProfileIncomplete": "Su perfil está incompleto. Por favor, agregue su nombre.",
+  "todoRefreshing": "Actualizando...",
+  "todoStartSurvey": "Iniciar encuesta",
+  "todoViewResults": "Ver resultados",
+  "@@_HEALTH_TRACKING": "Health tracking (participant + research analytics)",
+  "healthCheckInTaskAction": "Comenzar revisión",
+  "healthCheckInTaskCompletedToday": "Completado hoy",
+  "healthCheckInTaskDueText": "Para hoy",
+  "healthCheckInTaskProgress": "{completed}/{total} preguntas respondidas",
+  "@healthCheckInTaskProgress": {
+    "placeholders": {
+      "completed": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "healthCheckInTaskRepeat": "Diario",
+  "healthCheckInTaskTitle": "Revisión diaria de salud",
+  "healthTrackingAggregateUnavailable": "Comparación de población no disponible (datos insuficientes).",
+  "healthTrackingAllCategories": "Todas las categorías",
+  "healthTrackingAverageLabel": "Prom",
+  "healthTrackingAverageTitle": "Valor promedio en el tiempo",
+  "healthTrackingAvgValue": "Valor prom.",
+  "healthTrackingBaselineBanner": "Registre su punto de partida: ingrese los valores de hoy como su línea de base de salud.",
+  "healthTrackingCategory": "Categoría",
+  "healthTrackingChartBar": "Gráfico de barras",
+  "healthTrackingChartEntries": "{count, plural, one{{count} entrada} other{{count} entradas}}",
+  "@healthTrackingChartEntries": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "healthTrackingChartError": "No se pudieron cargar los datos del gráfico.",
+  "healthTrackingChartLine": "Gráfico de líneas",
+  "healthTrackingChartPie": "Gráfico circular",
+  "healthTrackingCharts": "Gráficos",
+  "healthTrackingChartTypeLabel": "Tipo de gráfico",
+  "healthTrackingChartYesNoHint": "Sí = 1 / No = 0",
+  "healthTrackingClearAllMetrics": "Borrar todo",
+  "healthTrackingClearSelection": "Borrar",
+  "healthTrackingCollapseCategory": "Contraer categoría",
+  "healthTrackingCompareToAggregate": "Comparar con el agregado",
+  "healthTrackingDraftHint": "{count, plural, one{{count} respuesta completada} other{{count} respuestas completadas}}",
+  "@healthTrackingDraftHint": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "healthTrackingEnterText": "Ingrese su respuesta",
+  "healthTrackingEnterValue": "Ingrese un valor",
+  "healthTrackingExpandCategory": "Expandir categoría",
+  "healthTrackingExportError": "Error al exportar: {error}",
+  "@healthTrackingExportError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "healthTrackingExportFiltered": "Exportar datos filtrados",
+  "healthTrackingExporting": "Exportando…",
+  "healthTrackingExportOwnData": "Exportar mis datos (CSV)",
+  "healthTrackingFilters": "Filtros",
+  "healthTrackingGranularityDaily": "Diario",
+  "healthTrackingGranularityLabel": "Granularidad",
+  "healthTrackingGranularityMonthly": "Mensual",
+  "healthTrackingGranularityWeekly": "Semanal",
+  "healthTrackingHideFilters": "Ocultar filtros",
+  "healthTrackingHistory": "Historial",
+  "healthTrackingHistoryAll": "Todas las entradas",
+  "healthTrackingHistoryByCategory": "Por categoría",
+  "healthTrackingHistoryByMetric": "Por métrica",
+  "healthTrackingHistoryDateFrom": "Desde",
+  "healthTrackingHistoryDateTo": "Hasta",
+  "healthTrackingHistoryModeLabel": "Modo de vista del historial",
+  "healthTrackingHistoryNoEntries": "No se encontraron entradas para el período seleccionado.",
+  "healthTrackingHistoryTruncated": "Mostrando las 100 entradas más recientes.",
+  "healthTrackingLoadChart": "Cargar gráfico",
+  "healthTrackingLogToday": "Registrar hoy",
+  "healthTrackingMetric": "Métrica",
+  "healthTrackingMetricsError": "No se pudieron cargar las métricas.",
+  "healthTrackingMonthlySection": "REVISIÓN MENSUAL",
+  "healthTrackingMultiChartTitle": "Valores promedio en el tiempo",
+  "healthTrackingMyDataOnly": "Solo mis datos",
+  "healthTrackingNMetricsSelected": "{count} seleccionada(s)",
+  "@healthTrackingNMetricsSelected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "healthTrackingNoData": "Sin datos aún",
+  "healthTrackingNoMetrics": "No hay métricas disponibles.",
+  "healthTrackingParticipants": "Participantes",
+  "healthTrackingRecentEntries": "Entradas recientes",
+  "healthTrackingResearchCategories": "Resumen de categorías",
+  "healthTrackingResearchDeepDive": "Análisis detallado de métricas",
+  "healthTrackingResearchExport": "Exportar CSV de seguimiento de salud",
+  "healthTrackingResearchNoData": "No hay datos disponibles para los filtros seleccionados.",
+  "healthTrackingResearchTitle": "Análisis de seguimiento de salud",
+  "healthTrackingResultsViewLabel": "Ver resultados como tabla o gráfico",
+  "healthTrackingSave": "Guardar entradas",
+  "healthTrackingSaveError": "Error al guardar las entradas. Por favor, inténtelo de nuevo.",
+  "healthTrackingSaveSuccess": "Entradas guardadas con éxito.",
+  "healthTrackingSelectAll": "Todo",
+  "healthTrackingSelectAllMetrics": "Seleccionar todo",
+  "healthTrackingSelectCategoryAll": "Seleccionar todo en la categoría",
+  "healthTrackingSelectMetric": "Seleccionar una métrica",
+  "healthTrackingSelectMetrics": "Seleccionar métricas",
+  "healthTrackingSelectMetricsHint": "Seleccione al menos una métrica para cargar el gráfico",
+  "healthTrackingSelectMetricTooltip": "Seleccione una métrica para cargar los datos",
+  "healthTrackingShowFilters": "Mostrar filtros",
+  "healthTrackingTitle": "Seguimiento de salud",
+  "healthTrackingValueColumn": "Valor",
+  "healthTrackingViewChart": "Vista de gráfico",
+  "healthTrackingViewModeLabel": "Modo de vista: registrar hoy o historial",
+  "healthTrackingViewTable": "Vista de tabla",
+  "healthTrackingWeeklySection": "REVISIÓN SEMANAL",
+  "healthTrackingXofYMetrics": "{selected} de {total} métricas",
+  "@healthTrackingXofYMetrics": {
+    "placeholders": {
+      "selected": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "@@_SURVEY": "Survey list, builder, assignment, dialogs, preview",
+  "surveyAssignAge3044": "30–44",
+  "surveyAssignAge4559": "45–59",
+  "surveyAssignAge60Plus": "60 y más",
+  "surveyAssignAgeAny": "Cualquiera",
+  "surveyAssignAgeMaxLabel": "Edad máxima",
+  "surveyAssignAgeMinLabel": "Edad mínima",
+  "surveyAssignAgeRangeLabel": "Rango de edad",
+  "surveyAssignAgeUnder30": "Menos de 30",
+  "surveyAssignAgeValidationInteger": "La edad debe ser un número entero.",
+  "surveyAssignAgeValidationNonNegative": "La edad no puede ser negativa.",
+  "surveyAssignAgeValidationRange": "La edad mínima debe ser menor o igual a la edad máxima.",
+  "surveyAssignAgeValidationRequired": "La edad es obligatoria.",
+  "surveyAssignAgeValidationUpperBound": "Age must be {max} or less.",
+  "@surveyAssignAgeValidationUpperBound": {
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyAssignBulkResult": "Targeted: {totalTargeted} • Assigned: {assigned} • Skipped: {skipped}",
+  "@surveyAssignBulkResult": {
+    "placeholders": {
+      "totalTargeted": {
+        "type": "int"
+      },
+      "assigned": {
+        "type": "int"
+      },
+      "skipped": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyAssignBulkSuccess": "Encuesta asignada exitosamente",
+  "surveyAssignButton": "Asignar ahora",
+  "surveyAssignClearDueDate": "Borrar fecha límite",
+  "surveyAssignDueDate": "Fecha límite (opcional)",
+  "surveyAssignErrorAlready": "Este participante ya está asignado.",
+  "surveyAssignErrorGeneral": "Error al asignar la encuesta.",
+  "surveyAssignErrorLoad": "No se pudieron cargar las asignaciones.",
+  "surveyAssignErrorNotPublished": "Solo las encuestas publicadas pueden asignarse.",
+  "surveyAssignGenderAll": "Todos",
+  "surveyAssignGenderAny": "Cualquiera",
+  "surveyAssignGenderFemale": "Femenino",
+  "surveyAssignGenderLabel": "Género",
+  "surveyAssignGenderMale": "Masculino",
+  "surveyAssignGenderNonBinary": "No binario",
+  "surveyAssignGenderOther": "Otro",
+  "surveyAssignGenderUnspecified": "No especificado",
+  "surveyAssignLoading": "Cargando asignaciones...",
+  "surveyAssignmentDelete": "Eliminar",
+  "surveyAssignmentDeleteConfirm": "¿Eliminar esta asignación?",
+  "surveyAssignmentDeleteError": "Error al eliminar la asignación.",
+  "surveyAssignmentDeleteSuccess": "Asignación eliminada.",
+  "surveyAssignmentDueDate": "Due: {date}",
+  "@surveyAssignmentDueDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyAssignments": "Asignaciones actuales",
+  "surveyAssignmentsEmpty": "Aún no hay participantes asignados.",
+  "surveyAssignmentStatusCompleted": "Completado",
+  "surveyAssignmentStatusExpired": "Vencida",
+  "surveyAssignmentStatusPending": "Pendiente",
+  "surveyAssignSuccess": "Encuesta asignada exitosamente",
+  "surveyAssignSummaryCompleted": "{count} completed",
+  "@surveyAssignSummaryCompleted": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyAssignSummaryExpired": "{count} expired",
+  "@surveyAssignSummaryExpired": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyAssignSummaryNone": "Aún no hay asignaciones",
+  "surveyAssignSummaryPending": "{count} pending",
+  "@surveyAssignSummaryPending": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyAssignSummaryTotal": "{count} assigned",
+  "@surveyAssignSummaryTotal": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyAssignTargetAll": "Todos los participantes",
+  "surveyAssignTargetDemographic": "Por demografía",
+  "surveyAssignTargetLabel": "Asignar a",
+  "surveyAssignTitle": "Asignar encuesta",
+  "surveyBuilderAddNewQuestion": "Agregar nueva pregunta",
+  "surveyBuilderAddQuestions": "Agregar preguntas",
+  "surveyBuilderAddQuestionsFirst": "Por favor, agregue al menos una pregunta antes de publicar",
+  "surveyBuilderAutoSaveFailed": "Error al guardar",
+  "surveyBuilderAutoSaveRetry": "Reintentar",
+  "surveyBuilderAutoSaveSaved": "Guardado",
+  "surveyBuilderAutoSaveSaving": "Guardando...",
+  "surveyBuilderAutoSaveUnsaved": "Sin guardar",
+  "surveyBuilderBack": "Volver",
+  "surveyBuilderDescriptionHint": "Describa el propósito de esta encuesta",
+  "surveyBuilderDescriptionLabel": "Descripción (opcional)",
+  "surveyBuilderDragToReorder": "Arrastrar para reordenar",
+  "surveyBuilderEditTitle": "Editar encuesta",
+  "surveyBuilderEmptyStateSubtitle": "Agregue preguntas para crear su encuesta",
+  "surveyBuilderEmptyStateTitle": "Aún no hay preguntas",
+  "surveyBuilderEndDate": "Fecha de finalización",
+  "surveyBuilderFailedToLoadQuestions": "Error al cargar las preguntas",
+  "surveyBuilderHideQuestionBank": "Ocultar banco de preguntas",
+  "surveyBuilderImportDialogAddSelected": "Add Selected ({count})",
+  "@surveyBuilderImportDialogAddSelected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyBuilderImportDialogAlreadyAdded": "Ya agregado",
+  "surveyBuilderImportDialogSearch": "Buscar preguntas...",
+  "surveyBuilderImportDialogTitle": "Importar del banco de preguntas",
+  "surveyBuilderImportFromBank": "Importar del banco de preguntas",
+  "surveyBuilderNewTitle": "Nueva encuesta",
+  "surveyBuilderNoQuestions": "Aún no se han agregado preguntas",
+  "surveyBuilderNoQuestionsInBank": "Aún no hay preguntas en el banco",
+  "surveyBuilderPreview": "Vista previa de la encuesta",
+  "surveyBuilderPublish": "Publicar",
+  "surveyBuilderPublishConfirmMessage": "Una vez publicada, la encuesta estará disponible para asignación a los participantes. ¿Está seguro de que desea publicarla?",
+  "surveyBuilderPublishedSuccess": "Encuesta publicada exitosamente",
+  "surveyBuilderQuestionAdded": "Added: {title}",
+  "@surveyBuilderQuestionAdded": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyBuilderQuestionBank": "Banco de preguntas",
+  "surveyBuilderQuestionCardCancelEdit": "Cancelar edición",
+  "surveyBuilderQuestionCardConfirm": "Confirmar pregunta",
+  "surveyBuilderQuestionCardCreateFailed": "Error al crear la pregunta",
+  "surveyBuilderQuestionCardEdit": "Editar pregunta",
+  "surveyBuilderQuestionCardPlaceholder": "Escriba su pregunta aquí",
+  "surveyBuilderQuestionCardSave": "Guardar cambios",
+  "surveyBuilderQuestionCardUpdateFailed": "Error al actualizar la pregunta",
+  "surveyBuilderQuestionsCount": "Questions ({count})",
+  "@surveyBuilderQuestionsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyBuilderQuestionsImported": "{count, plural, =1{1 question imported} other{{count} questions imported}}",
+  "@surveyBuilderQuestionsImported": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyBuilderRemoveQuestion": "Eliminar pregunta",
+  "surveyBuilderSavedAsDraft": "Encuesta guardada como borrador",
+  "surveyBuilderSaveDraft": "Guardar borrador",
+  "surveyBuilderSelectDate": "Seleccionar fecha",
+  "surveyBuilderSelectFromPanel": "Seleccionar preguntas de la lista disponible",
+  "surveyBuilderShowQuestionBank": "Mostrar banco de preguntas",
+  "surveyBuilderStartDate": "Fecha de inicio",
+  "surveyBuilderStartFromTemplate": "Comenzar desde plantilla",
+  "surveyBuilderTapToAdd": "Toque \"Agregar preguntas\" para seleccionar del banco de preguntas",
+  "surveyBuilderTapToAddQuestion": "Toque una pregunta para agregarla a su encuesta",
+  "surveyBuilderTemplateLoaded": "Loaded template: {title}",
+  "@surveyBuilderTemplateLoaded": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyBuilderTitleHint": "Ingrese un título descriptivo",
+  "surveyBuilderTitleLabel": "Título de la encuesta *",
+  "surveyBuilderTitleRequired": "El título es obligatorio",
+  "surveyBuilderUntitledSurvey": "Encuesta sin título",
+  "surveyBuilderUpdatedSuccess": "Encuesta actualizada exitosamente",
+  "surveyBuilderUpdateSurvey": "Actualizar encuesta",
+  "surveyCardAssign": "Asignar",
+  "surveyCardClose": "Cerrar",
+  "surveyCardDelete": "Eliminar",
+  "surveyCardEdit": "Editar",
+  "surveyCardPublish": "Publicar",
+  "surveyCardViewStatus": "Ver estado de la encuesta",
+  "surveyCloseButton": "Cerrar encuesta",
+  "surveyClosedSuccess": "Encuesta cerrada",
+  "surveyCloseFailed": "Failed to close survey: {error}",
+  "@surveyCloseFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyCloseMessage": "Cerrar la encuesta impedirá nuevas respuestas. ¿Está seguro de que desea cerrarla?",
+  "surveyCloseTitle": "Cerrar encuesta",
+  "surveyDeleteConfirm": "Are you sure you want to delete \"{title}\"?\n\nExisting responses will be preserved for research purposes. This action cannot be undone.",
+  "@surveyDeleteConfirm": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyDeletedSuccess": "Encuesta eliminada",
+  "surveyDeleteFailed": "Failed to delete: {error}",
+  "@surveyDeleteFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyDeleteTitle": "Eliminar encuesta",
+  "surveyListAllSurveys": "Todas las encuestas",
+  "surveyListClearAll": "Borrar todo",
+  "surveyListClosed": "Cerrada",
+  "surveyListCreateSurvey": "Crear encuesta",
+  "surveyListDateFrom": "From {date}",
+  "@surveyListDateFrom": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyListDateUntil": "Until {date}",
+  "@surveyListDateUntil": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyListDrafts": "Borradores",
+  "surveyListFailedToLoad": "Error al cargar las encuestas",
+  "surveyListFiltersLabel": "Filtros: ",
+  "surveyListNewSurvey": "Nueva encuesta",
+  "surveyListNoMatchFilters": "Ninguna encuesta coincide con sus filtros",
+  "surveyListNoSurveys": "Aún no hay encuestas",
+  "surveyListPublished": "Publicada",
+  "surveyListQuestionCount": "{count} questions",
+  "@surveyListQuestionCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyListSearchPlaceholder": "Buscar encuestas...",
+  "surveyListStatus": "Estado",
+  "surveyListStatusLabel": "Status: {status}",
+  "@surveyListStatusLabel": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyListTitle": "Encuestas",
+  "surveyNumberQuestionHint": "Ingrese un número",
+  "surveyOpenEndedHint": "Ingrese su respuesta",
+  "surveyPreviewAddQuestions": "Agregue preguntas para ver cómo lucirá su encuesta",
+  "surveyPreviewFooterNote": "Esta es una vista previa. Las respuestas no se guardan.",
+  "surveyPreviewLabel": "Vista previa de la encuesta",
+  "surveyPreviewNoQuestions": "No hay preguntas en esta encuesta",
+  "surveyPreviewNote": "Esta es una vista previa. Las respuestas no se guardan.",
+  "surveyPreviewQuestionNumber": "Question {number}",
+  "@surveyPreviewQuestionNumber": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyPreviewScaleHigh": "Alto",
+  "surveyPreviewScaleLow": "Bajo",
+  "surveyPreviewUnsupportedType": "Unsupported question type: {type}",
+  "@surveyPreviewUnsupportedType": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyPublishButton": "Publicar",
+  "surveyPublishedSuccess": "Encuesta publicada exitosamente",
+  "surveyPublishFailed": "Failed to publish: {error}",
+  "@surveyPublishFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyPublishMessage": "Una vez publicada, la encuesta estará disponible para asignación. ¿Está seguro de que desea publicarla?",
+  "surveyPublishTitle": "Publicar encuesta",
+  "surveyStatusAssignedTotal": "Total asignado",
+  "surveyStatusAssignmentAnalytics": "Análisis de asignaciones",
+  "surveyStatusChartTitle": "Desglose del estado de asignaciones",
+  "surveyStatusClosed": "Cerrada",
+  "surveyStatusDraft": "Borrador",
+  "surveyStatusEndDate": "Fecha de finalización",
+  "surveyStatusNoDate": "No establecido",
+  "surveyStatusPageTitle": "Estado de la encuesta",
+  "surveyStatusPublished": "Publicada",
+  "surveyStatusStartDate": "Fecha de inicio",
+  "surveySubmitErrorAlreadySubmitted": "Ya completó esta encuesta.",
+  "surveySubmitErrorExpired": "Esta encuesta ha vencido y ya no se puede enviar.",
+  "surveySubmitErrorGeneral": "Error al enviar la encuesta. Por favor, inténtelo de nuevo.",
+  "surveySubmitErrorNotAssigned": "No está asignado a esta encuesta.",
+  "surveySubmitErrorNotFound": "Encuesta no encontrada.",
+  "surveySubmitErrorNotPublished": "Esta encuesta ya no acepta respuestas.",
+  "surveySubmitErrorServer": "Ocurrió un error en el servidor. Por favor, inténtelo más tarde.",
+  "surveySubmitSuccess": "¡Encuesta enviada exitosamente!",
+  "surveyTakingBackToSurveys": "Volver a encuestas",
+  "surveyTakingCancel": "Cancelar",
+  "surveyTakingClosed": "Esta encuesta ya no acepta respuestas.",
+  "surveyTakingConfirmSubmitMessage": "No podrá editar sus respuestas después de enviarlas.",
+  "surveyTakingConfirmSubmitTitle": "¿Enviar encuesta?",
+  "surveyTakingExpired": "Esta encuesta ha vencido.",
+  "surveyTakingLoadingQuestions": "Cargando preguntas...",
+  "surveyTakingNetworkError": "Error de red. Verifique su conexión e inténtelo de nuevo.",
+  "surveyTakingProgress": "{current} of {total}",
+  "@surveyTakingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyTakingQuestionCount": "{count, plural, =1{1 question} other{{count} questions}}",
+  "@surveyTakingQuestionCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyTakingRequired": "* Obligatorio",
+  "surveyTakingRequiredError": "Esta pregunta es obligatoria.",
+  "surveyTakingRetry": "Reintentar",
+  "surveyTakingSubmit": "Enviar",
+  "surveyTakingSubmitting": "Enviando...",
+  "surveyTakingTitle": "Responder encuesta",
+  "surveyTakingValidationError": "Por favor, responda todas las preguntas obligatorias antes de enviar.",
+  "@@_QUESTION": "Question bank, cards, forms, categories, types, responses",
+  "questionBankAddCount": "Add ({count})",
+  "@questionBankAddCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "questionBankAddQuestion": "Agregar pregunta",
+  "questionBankAllCategories": "Todas las categorías",
+  "questionBankAllTypes": "Todos los tipos",
+  "questionBankCategoryDemographics": "Demografía",
+  "questionBankCategoryLabel": "Category: {category}",
+  "@questionBankCategoryLabel": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "questionBankCategoryLifestyle": "Estilo de vida",
+  "questionBankCategoryMentalHealth": "Salud mental",
+  "questionBankCategoryPhysicalHealth": "Salud física",
+  "questionBankCategorySymptoms": "Síntomas",
+  "questionBankClearAll": "Borrar todo",
+  "questionBankClearFilters": "Borrar filtros",
+  "questionBankDeleteConfirm": "Are you sure you want to delete \"{title}\"?\n\nThis action cannot be undone.",
+  "@questionBankDeleteConfirm": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "questionBankDeleted": "Pregunta eliminada",
+  "questionBankDeleteTitle": "Eliminar pregunta",
+  "questionBankFailedToDelete": "Failed to delete: {error}",
+  "@questionBankFailedToDelete": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "questionBankFailedToDuplicate": "Failed to duplicate: {error}",
+  "@questionBankFailedToDuplicate": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "questionBankFailedToLoad": "Error al cargar las preguntas",
+  "questionBankFilterCategory": "Categoría",
+  "questionBankFiltersLabel": "Filtros: ",
+  "questionBankFilterType": "Tipo",
+  "questionBankNewQuestion": "Nueva pregunta",
+  "questionBankNoMatchFilters": "Ninguna pregunta coincide con sus filtros",
+  "questionBankNoQuestions": "Aún no hay preguntas",
+  "questionBankQuestionDeleted": "Pregunta eliminada",
+  "questionBankQuestionDuplicated": "Pregunta duplicada",
+  "questionBankSearchLabel": "Search: \"{query}\"",
+  "@questionBankSearchLabel": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "questionBankSearchPlaceholder": "Buscar preguntas...",
+  "questionBankSelectQuestions": "Seleccionar preguntas",
+  "questionBankTitle": "Banco de preguntas",
+  "questionBankTypeLabel": "Type: {type}",
+  "@questionBankTypeLabel": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "questionCardDelete": "Eliminar",
+  "questionCardDuplicate": "Duplicar",
+  "questionCardEdit": "Editar",
+  "questionCardRequired": "Obligatorio",
+  "questionCategoryGeneral": "General",
+  "questionCategoryLifestyle": "Estilo de vida",
+  "questionCategoryMentalHealth": "Salud mental",
+  "questionCategoryNutrition": "Nutrición",
+  "questionCategoryOther": "Otro",
+  "questionCategoryPhysicalHealth": "Salud física",
+  "questionFormAddOption": "Agregar opción",
+  "questionFormCategoryHint": "p. ej., Salud, Estilo de vida, Demografía",
+  "questionFormCategoryLabel": "Categoría (opcional)",
+  "questionFormCreate": "Crear",
+  "questionFormEditTitle": "Editar pregunta",
+  "questionFormMinOptionsRequired": "Se requieren mínimo 2 opciones",
+  "questionFormNewTitle": "Nueva pregunta",
+  "questionFormOptionLabel": "Option {number}",
+  "@questionFormOptionLabel": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "questionFormOptionsLabel": "Opciones *",
+  "questionFormProvideOptions": "Por favor, proporcione al menos 2 opciones",
+  "questionFormQuestionHint": "Ingrese el texto de la pregunta",
+  "questionFormQuestionLabel": "Pregunta *",
+  "questionFormQuestionRequired": "El texto de la pregunta es obligatorio",
+  "questionFormRemoveOption": "Eliminar opción",
+  "questionFormRequiredLabel": "Obligatorio",
+  "questionFormRequiredSubtitle": "Los participantes deben responder esta pregunta",
+  "questionFormScaleMax": "Máx",
+  "questionFormScaleMin": "Mín",
+  "questionFormScaleRange": "Rango de escala",
+  "questionFormTitleHint": "Título descriptivo breve",
+  "questionFormTitleLabel": "Título (opcional)",
+  "questionFormTypeLabel": "Tipo de pregunta *",
+  "questionNo": "No",
+  "questionTypeMultiChoice": "Opción múltiple",
+  "questionTypeNumber": "Número",
+  "questionTypeOpenEnded": "Respuesta abierta",
+  "questionTypeScale": "Escala",
+  "questionTypeSingleChoice": "Opción única",
+  "questionTypeText": "Texto",
+  "questionTypeYesNo": "Sí/No",
+  "questionYes": "Sí",
+  "@@_TEMPLATE": "Survey templates: list, builder, preview",
+  "templateBuilderAddQuestions": "Agregar preguntas",
+  "templateBuilderAddQuestionsHint": "Toque \"Agregar preguntas\" para seleccionar del banco de preguntas",
+  "templateBuilderBack": "Volver",
+  "templateBuilderCreatedSuccess": "Plantilla creada exitosamente",
+  "templateBuilderDescriptionHint": "Describa el propósito de esta plantilla",
+  "templateBuilderDescriptionLabel": "Descripción (opcional)",
+  "templateBuilderEditTitle": "Editar plantilla",
+  "templateBuilderNewTitle": "Nueva plantilla",
+  "templateBuilderNoQuestions": "Aún no se han agregado preguntas",
+  "templateBuilderPublicLabel": "Plantilla pública",
+  "templateBuilderPublicSubtitle": "Permitir que otros investigadores usen esta plantilla",
+  "templateBuilderQuestionOptionalSubtitle": "Esta pregunta será opcional en las encuestas creadas a partir de esta plantilla.",
+  "templateBuilderQuestionRequiredSubtitle": "Esta pregunta deberá responderse en las encuestas creadas a partir de esta plantilla.",
+  "templateBuilderQuestionsCount": "Questions ({count})",
+  "@templateBuilderQuestionsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "templateBuilderRemoveQuestion": "Eliminar pregunta",
+  "templateBuilderSave": "Guardar",
+  "templateBuilderTitleHint": "Ingrese un título descriptivo",
+  "templateBuilderTitleLabel": "Título de la plantilla *",
+  "templateBuilderTitleRequired": "El título es obligatorio",
+  "templateBuilderUpdatedSuccess": "Plantilla actualizada exitosamente",
+  "templateCardCreateSurvey": "Crear encuesta",
+  "templateCardDelete": "Eliminar",
+  "templateCardDuplicate": "Duplicar",
+  "templateCardEdit": "Editar",
+  "templateCardPreview": "Vista previa",
+  "templateCardQuestionCount": "{count, plural, =1{1 question} other{{count} questions}}",
+  "@templateCardQuestionCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "templateListAllTemplates": "Todas las plantillas",
+  "templateListClearAll": "Borrar todo",
+  "templateListCreateSurveyFrom": "Create survey from: {title}",
+  "@templateListCreateSurveyFrom": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "templateListCreateTemplate": "Crear plantilla",
+  "templateListDeleteConfirm": "Are you sure you want to delete \"{title}\"?\n\nThis action cannot be undone.",
+  "@templateListDeleteConfirm": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "templateListDeleted": "Plantilla eliminada",
+  "templateListDeleteTitle": "Eliminar plantilla",
+  "templateListDuplicated": "Plantilla duplicada",
+  "templateListFailedToDelete": "Failed to delete: {error}",
+  "@templateListFailedToDelete": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "templateListFailedToDuplicate": "Failed to duplicate: {error}",
+  "@templateListFailedToDuplicate": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "templateListFailedToLoad": "Error al cargar las plantillas",
+  "templateListFailedToLoadTemplate": "Failed to load template: {error}",
+  "@templateListFailedToLoadTemplate": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "templateListFiltersLabel": "Filtros: ",
+  "templateListNewTemplate": "Nueva plantilla",
+  "templateListNoMatchFilters": "Ninguna plantilla coincide con sus filtros",
+  "templateListNoTemplates": "Aún no hay plantillas",
+  "templateListPrivate": "Privado",
+  "templateListPublic": "Público",
+  "templateListSearchPlaceholder": "Buscar plantillas...",
+  "templateListSelectTemplate": "Seleccionar plantilla",
+  "templateListTitle": "Plantillas",
+  "templateListVisibility": "Visibilidad",
+  "templateListVisibilityLabel": "Visibility: {visibility}",
+  "@templateListVisibilityLabel": {
+    "placeholders": {
+      "visibility": {
+        "type": "String"
+      }
+    }
+  },
+  "templatePreviewClose": "Cerrar",
+  "templatePreviewFooterNote": "Esta es una vista previa. Las respuestas no se guardan.",
+  "templatePreviewNoQuestions": "No hay preguntas en esta plantilla",
+  "templatePreviewQuestionNumber": "Question {number}",
+  "@templatePreviewQuestionNumber": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "templatePreviewScaleHigh": "Alto",
+  "templatePreviewScaleLow": "Bajo",
+  "templatePreviewSelectDate": "Seleccionar fecha",
+  "templatePreviewSelectTime": "Seleccionar hora",
+  "templatePreviewTitle": "Vista previa",
+  "templatePreviewUnsupportedType": "Unsupported question type: {type}",
+  "@templatePreviewUnsupportedType": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "@@_RESEARCHER": "Researcher dashboard, participant management, surveys, reports",
+  "researchAddFields": "Agregar campos",
+  "researchAllCategories": "Todas las categorías",
+  "researchAllTypes": "Todos los tipos",
+  "researchAvailableQuestions": "Campos de datos disponibles",
+  "researchCompletionRate": "Tasa de finalización",
+  "researchCrossAvgCompletion": "Finalización promedio",
+  "researchCrossDateFrom": "Desde",
+  "researchCrossDateTo": "To",
+  "researchCrossNoSurveysSelected": "Use + Agregar campos para seleccionar datos o filtre por encuesta para explorar",
+  "researchCrossSelectSurveys": "Seleccionar encuestas para extraer datos",
+  "researchCrossSuppressedSurveys": "{count, plural, =1{1 survey} other{{count} surveys}} excluded (fewer than 5 respondents)",
+  "@researchCrossSuppressedSurveys": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "researchCrossSurveyColumn": "Encuesta",
+  "researchCrossSurveysCount": "Encuestas",
+  "researchCrossTotalQuestions": "Total de preguntas",
+  "researchCrossTotalRespondents": "Total de encuestados",
+  "researchDataBankAnalysis": "Análisis",
+  "researchDataTitle": "Datos de investigación",
+  "researchDistribution": "Distribución",
+  "researcherActiveSurveys": "Encuestas activas",
+  "researcherAddParticipant": "Agregar participante",
+  "researcherAssignSurvey": "Asignar encuesta",
+  "researcherClosedSurveys": "Encuestas cerradas",
+  "researcherCreateSurvey": "Crear encuesta",
+  "researcherDashboardChartTitle1": "Encuestas recientes",
+  "researcherDashboardChartTitle2": "Título del gráfico 2",
+  "researcherDashboardChartTitle3": "Título del gráfico 3",
+  "researcherDashboardChartTitle4": "Título del gráfico 4",
+  "researcherDashboardGraphPlaceholder": "Marcador de gráfico",
+  "researcherDashboardGraphTitle1": "Recuento de respuestas de encuestas",
+  "researcherDashboardGraphTitle2": "Porcentajes de estado de encuestas",
+  "researcherDashboardKpiActiveSurveys": "Encuestas activas",
+  "researcherDashboardKpiAvgCompletion": "Finalización promedio",
+  "researcherDashboardKpiCompletedSurveys": "Encuestas completadas",
+  "researcherDashboardKpiTotalRespondents": "Total de encuestados",
+  "researcherDashboardPlaceholder": "Panel del investigador\n(Marcador de posición)",
+  "researcherDashboardSectionTitle1": "Resumen de estadísticas de encuestas",
+  "researcherDashboardSectionTitle2": "Título de sección 2",
+  "researcherDataAnalytics": "Análisis de datos",
+  "researcherDraftSurveys": "Encuestas en borrador",
+  "researcherEditSurvey": "Editar encuesta",
+  "researcherEnrolledParticipants": "Participantes inscritos",
+  "researcherExportData": "Exportar datos",
+  "researcherGenerateReport": "Generar informe",
+  "researcherParticipantDetails": "Detalles del participante",
+  "researcherParticipantList": "Lista de participantes",
+  "researcherParticipants": "Participantes",
+  "researcherPendingInvitations": "Invitaciones pendientes",
+  "researcherQuickActions": "Acciones rápidas",
+  "researcherRecentActivity": "Actividad reciente",
+  "researcherSurveyDetails": "Detalles de la encuesta",
+  "researcherSurveyList": "Lista de encuestas",
+  "researcherSurveyResponses": "Respuestas de la encuesta",
+  "researcherWelcomeBack": "Bienvenido de nuevo",
+  "researchExportCsv": "Exportar CSV",
+  "researchFilterCategory": "Categoría",
+  "researchFilterResponseType": "Tipo de respuesta",
+  "researchHistogram": "Histograma",
+  "researchMean": "Media",
+  "researchMedian": "Mediana",
+  "researchModeCrossSurvey": "Banco de datos",
+  "researchModeHealthTracking": "Seguimiento de salud",
+  "researchModeSingleSurvey": "Por encuesta",
+  "researchNo": "No",
+  "researchNoData": "No hay datos de respuesta disponibles para esta encuesta",
+  "researchNoSurveys": "No hay encuestas disponibles",
+  "researchOpenEndedNote": "Las respuestas abiertas no se muestran por privacidad",
+  "researchOptionCounts": "Recuento de opciones",
+  "researchQuestions": "Preguntas",
+  "researchRange": "Rango",
+  "researchRespondents": "Encuestados",
+  "researchResponses": "{count, plural, =1{1 response} other{{count} responses}}",
+  "@researchResponses": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "researchSearchQuestions": "Buscar campos...",
+  "researchSelectAll": "Seleccionar todo",
+  "researchSelectedFields": "{count, plural, =1{1 field selected} other{{count} fields selected}}",
+  "@researchSelectedFields": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "researchSelectSurvey": "Seleccionar una encuesta",
+  "researchStdDev": "Desv. estándar",
+  "researchSuppressed": "Insufficient responses (minimum {count} required)",
+  "@researchSuppressed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "researchTabAnalysis": "Análisis",
+  "researchTabDataTable": "Tabla de datos",
+  "researchYes": "Sí",
+  "@@_HCP": "HCP dashboard, clients/patients, surveys, reports, links",
+  "hcpActiveClients": "Clientes activos",
+  "hcpAddClient": "Agregar cliente",
+  "hcpAllPatients": "Todos los pacientes",
+  "hcpAssignSurvey": "Asignar encuesta",
+  "hcpClientDetails": "Detalles del cliente",
+  "hcpClientList": "Lista de clientes",
+  "hcpClientReports": "Informes de clientes",
+  "hcpClients": "Clientes",
+  "hcpClientSurveys": "Encuestas de clientes",
+  "hcpDashboardLinkedPatients": "Pacientes vinculados",
+  "hcpDashboardNoActivity": "No hay actividad reciente.",
+  "hcpDashboardPendingRequests": "Solicitudes pendientes",
+  "hcpDashboardTitle": "Panel del proveedor de atención médica",
+  "hcpDashboardWelcome": "Welcome, {name}",
+  "@hcpDashboardWelcome": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "hcpGenerateReport": "Generar informe",
+  "hcpHealthSummary": "Resumen de salud",
+  "hcpHtAggregateSeries": "Prom. población",
+  "hcpHtAggregateUnavailable": "Comparación de población no disponible (datos insuficientes).",
+  "hcpHtChartTypeBar": "Barras",
+  "hcpHtChartTypeLabel": "Tipo de gráfico",
+  "hcpHtChartTypeLine": "Línea",
+  "hcpHtChartTypePie": "Sectores",
+  "hcpHtClearAll": "Borrar todo",
+  "hcpHtExportCsv": "Exportar datos del paciente (CSV)",
+  "hcpHtFilters": "Filtros",
+  "hcpHtHideFilters": "Ocultar filtros",
+  "hcpHtLoadCharts": "Cargar gráficos",
+  "hcpHtLoadError": "Error al cargar los datos de seguimiento de salud.",
+  "hcpHtNMetricsSelected": "{count} seleccionada(s)",
+  "@hcpHtNMetricsSelected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "hcpHtNoEntries": "Este paciente no tiene entradas de seguimiento de salud para los filtros seleccionados.",
+  "hcpHtNoEntriesForMetric": "No hay entradas registradas para esta métrica en el período seleccionado.",
+  "hcpHtNoMetrics": "No hay métricas de seguimiento de salud configuradas.",
+  "hcpHtPatientSeries": "Paciente",
+  "hcpHtSelectAll": "Seleccionar todo",
+  "hcpHtSelectMetrics": "Seleccionar métricas",
+  "hcpHtSelectMetricsHint": "Seleccione al menos una métrica para cargar los gráficos.",
+  "hcpHtSelectPatientFirst": "Seleccione un paciente para ver sus datos de seguimiento de salud.",
+  "hcpHtShowFilters": "Mostrar filtros",
+  "hcpHtViewComparison": "Comparación",
+  "hcpHtViewMode": "Modo de vista",
+  "hcpHtViewModeLabel": "Modo de vista: solo paciente o comparación con la población",
+  "hcpHtViewPatient": "Solo paciente",
+  "hcpLinkEnterPatientEmail": "Correo electrónico del paciente",
+  "hcpLinkEnterPatientId": "Ingrese el ID de cuenta del paciente",
+  "hcpLinkErrorDuplicate": "Ya existe una solicitud de vinculación para este paciente.",
+  "hcpLinkErrorGeneral": "Error al enviar la solicitud. Por favor, inténtelo de nuevo.",
+  "hcpLinkErrorNotFound": "Cuenta de paciente no encontrada.",
+  "hcpLinkLinkedSince": "Linked since {date}",
+  "@hcpLinkLinkedSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "hcpLinkMyPatients": "Pacientes vinculados",
+  "hcpLinkNoPatients": "Aún no hay pacientes vinculados.",
+  "hcpLinkNoPending": "No hay solicitudes pendientes.",
+  "hcpLinkPageTitle": "Mis pacientes",
+  "hcpLinkPatientEmailHint": "ej. juan.smith@correo.com",
+  "hcpLinkPendingFrom": "Requested {date}",
+  "@hcpLinkPendingFrom": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "hcpLinkPendingRequests": "Solicitudes pendientes",
+  "hcpLinkRemove": "Eliminar",
+  "hcpLinkRemoveConfirm": "¿Eliminar esta vinculación de paciente?",
+  "hcpLinkRequestPatient": "Solicitar vinculación de paciente",
+  "hcpLinkRequestSent": "Solicitud de vinculación enviada",
+  "hcpPatientConsentRevoked": "Consentimiento revocado",
+  "hcpPatientLinkedSince": "Linked since {date}",
+  "@hcpPatientLinkedSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "hcpPatientNoSurveys": "No hay encuestas completadas.",
+  "hcpPatientSurveysTitle": "Encuestas completadas",
+  "hcpPatientViewSurveys": "Ver encuestas",
+  "hcpReportsError": "Error al cargar los datos del informe.",
+  "hcpReportsLoading": "Cargando informe...",
+  "hcpReportsNoPatients": "No hay pacientes vinculados para reportar.",
+  "hcpReportsNoSelection": "Seleccione un paciente y una encuesta para ver el informe.",
+  "hcpReportsNoSurveys": "Este paciente no tiene encuestas completadas.",
+  "hcpReportsSelectPatient": "Seleccionar un paciente",
+  "hcpReportsSelectSurvey": "Seleccionar una encuesta",
+  "hcpReportsTabHealthTracking": "Seguimiento de salud",
+  "hcpReportsTabSurveys": "Encuestas",
+  "hcpReportsTitle": "Informes de pacientes",
+  "hcpSurveyChartAggregate": "Prom. población",
+  "hcpSurveyChartAggUnavailable": "Comparación de población no disponible (datos insuficientes).",
+  "hcpSurveyChartComparison": "Comparación",
+  "hcpSurveyChartComparisonModeLabel": "Modo de comparación de gráficos",
+  "hcpSurveyChartNoNumeric": "No hay preguntas numéricas o de escala en este sondeo para graficar.",
+  "hcpSurveyChartPatient": "Paciente",
+  "hcpSurveyChartPatientOnly": "Solo paciente",
+  "hcpSurveyChartTitle": "Resultados del sondeo — {surveyTitle}",
+  "@hcpSurveyChartTitle": {
+    "placeholders": {
+      "surveyTitle": {
+        "type": "String"
+      }
+    }
+  },
+  "hcpSurveyHistory": "Historial de encuestas",
+  "hcpSurveyViewChart": "Gráficos",
+  "hcpSurveyViewModeLabel": "Modo de vista: tabla de respuestas o gráficos",
+  "hcpSurveyViewTable": "Respuestas",
+  "hcpTodaySchedule": "Agenda de hoy",
+  "hcpUnknown": "Profesional sanitario desconocido",
+  "hcpUpcomingAppointments": "Próximas citas",
+  "hcpWelcomeBack": "Bienvenido de nuevo",
+  "@@_MESSAGING": "Messaging, messages, tickets",
+  "messagesComingSoon": "Gestión de mensajes próximamente...",
+  "messagesTitle": "Mensajes",
+  "messagingAcceptRequest": "Aceptar",
+  "messagingAddColleague": "Agregar",
+  "messagingAdminAccountIdHint": "Ingrese el ID de cuenta numérico",
+  "messagingAdminAccountIdLabel": "ID de cuenta",
+  "messagingBrowseColleagues": "Explorar colegas",
+  "messagingBrowseColleaguesSubtitle": "Agregar investigadores de su institución",
+  "messagingColleagueAdded": "Solicitud de contacto enviada",
+  "messagingColleagueAddError": "No se pudo enviar la solicitud",
+  "messagingColleagueRequestSent": "Solicitud enviada",
+  "messagingContacts": "Contactos",
+  "messagingContactsTitle": "Mis contactos",
+  "messagingConversationTitle": "Conversación",
+  "messagingDeleteContact": "Eliminar contacto",
+  "messagingDeleteContactConfirm": "¿Eliminar este contacto? Puedes volver a añadirlo más tarde.",
+  "messagingDeleteMessage": "Eliminar mensaje",
+  "messagingDeleteMessageConfirm": "¿Está seguro de que desea eliminar este mensaje?",
+  "messagingEditContact": "Editar contacto",
+  "messagingEmailHint": "Ingrese un correo electrónico para iniciar una conversación",
+  "messagingEmailLabel": "Correo electrónico",
+  "messagingEmailNotFound": "No se encontró ninguna cuenta para ese correo",
+  "messagingEmailPermission": "No tienes permiso para enviar mensajes a este usuario",
+  "messagingError": "Error al cargar los mensajes.",
+  "messagingFriendAccepted": "Solicitud de amistad aceptada",
+  "messagingFriendDeclined": "Solicitud de amistad rechazada",
+  "messagingFriendEmailHint": "amigo@ejemplo.com",
+  "messagingFriendRequestEmail": "Dirección de correo electrónico del amigo",
+  "messagingFriendRequestError": "Error al enviar la solicitud. Por favor, inténtelo de nuevo.",
+  "messagingFriendRequestSend": "Enviar solicitud de amistad",
+  "messagingFriendRequestSent": "Si este usuario existe, se enviará una solicitud de amistad.",
+  "messagingFriendRequestTitle": "Agregar un amigo",
+  "messagingInboxTitle": "Mensajes",
+  "messagingIncomingRequests": "Solicitudes de amistad",
+  "messagingJustNow": "Ahora mismo",
+  "messagingLastMessage": "Último mensaje",
+  "messagingLoading": "Cargando mensajes...",
+  "messagingMessagePlaceholder": "Escriba un mensaje...",
+  "messagingNewConversationTitle": "Nueva conversación",
+  "messagingNoColleaguesFound": "No se encontraron investigadores",
+  "messagingNoContacts": "Aún no hay contactos. Agrega amigos para comenzar a enviar mensajes.",
+  "messagingNoConversations": "Aún no hay conversaciones.",
+  "messagingNoIncomingRequests": "No hay solicitudes de amistad pendientes.",
+  "messagingNoMessages": "Aún no hay mensajes. ¡Diga hola!",
+  "messagingNoRecipients": "No hay destinatarios disponibles.",
+  "messagingOpenConversationWith": "Abrir conversación con {name}",
+  "@messagingOpenConversationWith": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "messagingOrPickFromContacts": "O elige de tus contactos",
+  "messagingOrPickFromPatients": "O elige de tus pacientes",
+  "messagingRecipientFriend": "Mis contactos",
+  "messagingRecipientHcp": "Mi proveedor de atención médica",
+  "messagingRecipientPatient": "Un paciente",
+  "messagingRecipientResearcher": "Investigadores",
+  "messagingRejectRequest": "Rechazar",
+  "messagingSearchColleagues": "Buscar por nombre...",
+  "messagingSearchMinChars": "Ingrese al menos 2 caracteres para buscar.",
+  "messagingSearchResearchers": "Buscar investigadores...",
+  "messagingSelectConversation": "Seleccione una conversación para comenzar a chatear",
+  "messagingSelectRecipient": "Seleccionar un destinatario",
+  "messagingSend": "Enviar",
+  "messagingSendError": "Error al enviar el mensaje. Por favor, inténtelo de nuevo.",
+  "messagingSending": "Enviando...",
+  "messagingStartConversation": "Nuevo mensaje",
+  "messagingUnreadBadge": "{count} unread",
+  "@messagingUnreadBadge": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "messagingYou": "You",
+  "ticketPriorityHigh": "Alto",
+  "ticketPriorityLow": "Bajo",
+  "ticketPriorityMedium": "Medio",
+  "ticketsColumnCreated": "Creado",
+  "ticketsColumnId": "ID",
+  "ticketsColumnPriority": "Prioridad",
+  "ticketsColumnStatus": "Estado",
+  "ticketsColumnSubject": "Asunto",
+  "ticketStatusClosed": "Cerrada",
+  "ticketStatusOpen": "Abierto",
+  "ticketStatusPending": "Pendiente",
+  "ticketsTitle": "Tickets de soporte",
+  "@@_ADMIN": "Admin sidebar, user management, view-as, dashboard content, deletion, settings",
+  "adminAccountRequests": "Solicitudes de cuenta",
+  "adminAccountRequestsApprove": "Aprobar",
+  "adminAccountRequestsApproveConfirm": "¿Está seguro de que desea aprobar esta solicitud de cuenta? Se creará una cuenta para este usuario y recibirá un correo electrónico de bienvenida.",
+  "adminAccountRequestsApproved": "Aprobado",
+  "adminAccountRequestsApproved_msg": "Solicitud de cuenta aprobada exitosamente",
+  "adminAccountRequestsDate": "Enviado",
+  "adminAccountRequestsEmail": "Correo electrónico",
+  "adminAccountRequestsEmpty": "No se encontraron solicitudes de cuenta",
+  "adminAccountRequestsLoadError": "Error al cargar las solicitudes de cuenta",
+  "adminAccountRequestsName": "Nombre",
+  "adminAccountRequestsPending": "Pendiente",
+  "adminAccountRequestsReject": "Rechazar",
+  "adminAccountRequestsRejectConfirm": "¿Está seguro de que desea rechazar esta solicitud de cuenta?",
+  "adminAccountRequestsRejected": "Rechazado",
+  "adminAccountRequestsRejected_msg": "Solicitud de cuenta rechazada",
+  "adminAccountRequestsRejectNotes": "Notas de rechazo (opcional)",
+  "adminAccountRequestsRole": "Rol",
+  "adminAccountStatus": "Estado de la cuenta",
+  "adminAddUser": "Agregar usuario",
+  "adminAddUserDateOfBirth": "Fecha de nacimiento (opcional)",
+  "adminAddUserGender": "Género (opcional)",
+  "adminAddUserParticipantOptionals": "Detalles del participante (opcional)",
+  "adminAddUserSendSetupEmail": "Enviar correo de configuración de cuenta",
+  "adminAddUserSendSetupEmailHint": "Se generará una contraseña temporal y se enviará por correo al usuario",
+  "adminAssignTicket": "Asignar ticket",
+  "adminAuditLog": "Registro de auditoría",
+  "adminBackToAdmin": "Volver a administración",
+  "adminBackupDatabase": "Respaldar base de datos",
+  "adminClosedTickets": "Tickets cerrados",
+  "adminCloseTicket": "Cerrar ticket",
+  "adminCompose": "Redactar",
+  "adminDashboardAccountRequests": "Solicitudes de cuenta",
+  "adminDashboardActiveUsersDetail": "{count} active users",
+  "@adminDashboardActiveUsersDetail": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminDashboardAdminV2Preview": "Vista previa de Admin v2",
+  "adminDashboardAuditLog": "Registro de auditoría",
+  "adminDashboardBackupAgo": "hace",
+  "adminDashboardBackupNone": "Sin copias",
+  "adminDashboardDatabaseViewer": "Visor de base de datos",
+  "adminDashboardDraftCount": "{count} drafts",
+  "@adminDashboardDraftCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminDashboardFailedToLoad": "Error al cargar el panel",
+  "adminDashboardKpiActiveSurveys": "Encuestas activas",
+  "adminDashboardKpiDraftSurveys": "Encuestas en borrador",
+  "adminDashboardKpiLatestBackup": "Última copia de seguridad",
+  "adminDashboardKpiNew30d": "Nuevos (30 días)",
+  "adminDashboardKpiPendingDeletions": "Eliminaciones pendientes",
+  "adminDashboardKpiPendingRequests": "Solicitudes pendientes",
+  "adminDashboardKpiResponses": "Respuestas",
+  "adminDashboardKpiTotalResponses": "Total de respuestas",
+  "adminDashboardKpiTotalUsers": "Total de usuarios",
+  "adminDashboardManageUsers": "Administrar usuarios",
+  "adminDashboardNewIn30Days": "{count} new in 30 days",
+  "@adminDashboardNewIn30Days": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminDashboardNoActivity": "No hay actividad reciente",
+  "adminDashboardNoPendingRequests": "No hay solicitudes pendientes",
+  "adminDashboardNoUsers": "Aún no hay usuarios",
+  "adminDashboardPendingAccountAlert": "{count} pending account requests awaiting approval",
+  "@adminDashboardPendingAccountAlert": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminDashboardPendingAccountRequests": "Solicitudes de cuenta pendientes",
+  "adminDashboardPendingDeletionAlert": "{count} pending deletion requests",
+  "@adminDashboardPendingDeletionAlert": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminDashboardPendingDeletionRequests": "Solicitudes de eliminación pendientes",
+  "adminDashboardQuickLinks": "Accesos rápidos",
+  "adminDashboardRecentLogins": "Accesos recientes",
+  "adminDashboardRequestsPending": "{count} requests pending",
+  "@adminDashboardRequestsPending": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminDashboardTitle": "Panel de administración",
+  "adminDashboardTotalSurveysSubtitle": "{total} total",
+  "@adminDashboardTotalSurveysSubtitle": {
+    "placeholders": {
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "adminDashboardTotalUsersSubtitle": "{total} total (incl. inactive)",
+  "@adminDashboardTotalUsersSubtitle": {
+    "placeholders": {
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "adminDashboardUiTestPage": "Página de prueba de interfaz",
+  "adminDashboardUserDistribution": "Distribución de usuarios",
+  "adminDashboardUserDistributionByRole": "Distribución de usuarios por rol",
+  "adminDashboardUserRoles": "Roles de usuarios",
+  "adminDatabase": "Base de datos",
+  "adminDatabaseStatus": "Estado de la base de datos",
+  "adminDeleteUser": "Eliminar usuario",
+  "adminDeletionConfirmContent": "This will permanently delete {name}'s account. Their survey response data will be retained anonymously. This action cannot be undone.",
+  "@adminDeletionConfirmContent": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "adminDeletionConfirmTitle": "Eliminar cuenta permanentemente",
+  "adminDeletionError": "Failed to delete account: {error}",
+  "@adminDeletionError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "adminDeletionNoUsers": "No se encontraron usuarios.",
+  "adminDeletionRequestsApprove": "Aprobar eliminación",
+  "adminDeletionRequestsApproveConfirm": "Esto eliminará permanentemente la cuenta del usuario. Sus datos de encuesta se conservarán de forma anónima. Esta acción no se puede deshacer.",
+  "adminDeletionRequestsApproved_msg": "Cuenta eliminada permanentemente.",
+  "adminDeletionRequestsEmpty": "No se encontraron solicitudes de eliminación.",
+  "adminDeletionRequestsLoadError": "Error al cargar las solicitudes de eliminación",
+  "adminDeletionRequestsPendingAlert": "{count} account deletion {count, plural, =1{request} other{requests}} awaiting review",
+  "@adminDeletionRequestsPendingAlert": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminDeletionRequestsReject": "Rechazar",
+  "adminDeletionRequestsRejectConfirm": "La solicitud de eliminación será rechazada y la cuenta será reactivada.",
+  "adminDeletionRequestsRejected_msg": "Solicitud de eliminación rechazada — cuenta reactivada.",
+  "adminDeletionRequestsRejectNotes": "Motivo de rechazo (opcional)",
+  "adminDeletionRequestsRequested": "Solicitado",
+  "adminDeletionRequestsTab": "Solicitudes de eliminación",
+  "adminDeletionSelfForbidden": "No puede eliminar su propia cuenta.",
+  "adminDeletionSubtitle": "Eliminar cuentas de usuario de forma permanente. Los datos de respuesta de encuestas se conservan de forma anónima.",
+  "adminDeletionSuccess": "Cuenta eliminada exitosamente.",
+  "adminDeletionTitle": "Eliminación de usuarios",
+  "adminDisableAccount": "Desactivar cuenta",
+  "adminEditUser": "Editar usuario",
+  "adminEmailLabel": "Correo electrónico",
+  "adminEnableAccount": "Activar cuenta",
+  "adminEndViewAsError": "Error al finalizar la vista como",
+  "adminEnglish": "EN",
+  "adminExportLogs": "Exportar registros",
+  "adminFilterByAction": "Filtrar por acción",
+  "adminFilterByDate": "Filtrar por fecha",
+  "adminFilterByRoleLabel": "Filtrar por rol",
+  "adminFilterByUser": "Filtrar por usuario",
+  "adminFirstNameLabel": "Nombre",
+  "adminFrench": "FR",
+  "adminHealthTrackingActiveLabel": "Activo",
+  "adminHealthTrackingAddCategory": "Agregar categoría",
+  "adminHealthTrackingAddMetric": "Agregar métrica",
+  "adminHealthTrackingAddOption": "Agregar opción",
+  "adminHealthTrackingBaselineBadge": "Línea base",
+  "adminHealthTrackingBaselineLabel": "Incluir en instantánea de referencia",
+  "adminHealthTrackingCategoriesSection": "Categorías y métricas",
+  "adminHealthTrackingChoiceOptionLabel": "Opción {index}",
+  "@adminHealthTrackingChoiceOptionLabel": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "adminHealthTrackingChoiceOptionsLabel": "Opciones de elección",
+  "adminHealthTrackingDeleteCategoryConfirm": "¿Eliminar esta categoría y todas sus métricas? Esta acción no se puede deshacer.",
+  "adminHealthTrackingDeleteCategoryMessage": "¿Eliminar «{name}» y todas sus métricas? Los datos de los participantes se conservan.",
+  "@adminHealthTrackingDeleteCategoryMessage": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "adminHealthTrackingDeleteCategoryTitle": "Eliminar categoría",
+  "adminHealthTrackingDeleteMetricConfirm": "¿Eliminar esta métrica? Esta acción no se puede deshacer.",
+  "adminHealthTrackingDeleteMetricMessage": "¿Eliminar «{name}»? Los datos de los participantes se conservan.",
+  "@adminHealthTrackingDeleteMetricMessage": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "adminHealthTrackingDeleteMetricTitle": "Eliminar métrica",
+  "adminHealthTrackingDescriptionLabel": "Descripción",
+  "adminHealthTrackingDragToReorder": "Arrastrar para reordenar",
+  "adminHealthTrackingEditCategory": "Editar categoría",
+  "adminHealthTrackingEditMetric": "Editar métrica",
+  "adminHealthTrackingFreqAny": "Cualquiera",
+  "adminHealthTrackingFreqDaily": "Diario",
+  "adminHealthTrackingFreqMonthly": "Mensual",
+  "adminHealthTrackingFrequencyLabel": "Frecuencia",
+  "adminHealthTrackingFreqWeekly": "Semanal",
+  "adminHealthTrackingInactiveCategories": "Categorías inactivas ({count})",
+  "@adminHealthTrackingInactiveCategories": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminHealthTrackingInactiveLabel": "Inactivo",
+  "adminHealthTrackingInactiveMetrics": "Preguntas inactivas ({count})",
+  "@adminHealthTrackingInactiveMetrics": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminHealthTrackingNameLabel": "Nombre",
+  "adminHealthTrackingNoCategories": "No hay categorías configuradas.",
+  "adminHealthTrackingNoMetrics": "No hay métricas en esta categoría.",
+  "adminHealthTrackingRemovedCategories": "Categorías eliminadas ({count})",
+  "@adminHealthTrackingRemovedCategories": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminHealthTrackingRemovedMetrics": "Preguntas eliminadas ({count})",
+  "@adminHealthTrackingRemovedMetrics": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminHealthTrackingRestore": "Restaurar",
+  "adminHealthTrackingSaved": "Guardado con éxito.",
+  "adminHealthTrackingSaveError": "Error al guardar: {error}",
+  "@adminHealthTrackingSaveError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "adminHealthTrackingScaleMaxLabel": "Escala máx.",
+  "adminHealthTrackingScaleMinLabel": "Escala mín.",
+  "adminHealthTrackingSubtitle": "Configure las categorías y métricas que los participantes registran diariamente.",
+  "adminHealthTrackingTitle": "Configuración de seguimiento de salud",
+  "adminHealthTrackingToggleCategoryActive": "Activar/desactivar categoría",
+  "adminHealthTrackingTypeLabel": "Tipo de métrica",
+  "adminHealthTrackingTypeNumber": "Número",
+  "adminHealthTrackingTypeScale": "Escala",
+  "adminHealthTrackingTypeSingleChoice": "Opción única",
+  "adminHealthTrackingTypeText": "Texto",
+  "adminHealthTrackingTypeYesno": "Sí / No",
+  "adminHealthTrackingUnitLabel": "Unidad (opcional)",
+  "adminInbox": "Bandeja de entrada",
+  "adminLanguage": "Idioma",
+  "adminLastNameLabel": "Apellido",
+  "adminLoggedInAs": "Logged in as: {name}",
+  "@adminLoggedInAs": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "adminLoggedInAsLabel": "Sesión iniciada como:",
+  "adminMessages": "Mensajes",
+  "adminNavGroupAdmin": "Administrador",
+  "adminNavGroupHealthcareProvider": "Proveedor de atención médica",
+  "adminNavGroupParticipant": "Participante",
+  "adminNavGroupPublicAuth": "Público / Auth",
+  "adminNavGroupResearcher": "Investigador",
+  "adminNavGroupShared": "Compartido",
+  "adminNavHubSubtitle": "Navegue a cualquier página de la aplicación",
+  "adminNavHubTitle": "Navegador de páginas",
+  "adminNewAccountRequestsTab": "Nuevas solicitudes de cuenta",
+  "adminOpenTickets": "Tickets abiertos",
+  "adminPasswordLabel": "Contraseña",
+  "adminResetPassword": "Restablecer contraseña",
+  "adminRestoreDatabase": "Restaurar base de datos",
+  "adminReturnedToDashboard": "Regresó al panel de administración",
+  "adminReturning": "Regresando...",
+  "adminRoleLabel": "Rol",
+  "adminSent": "Enviados",
+  "adminSettingsConsentRequiredDescription": "Cuando está activado, los usuarios deben firmar el formulario de consentimiento antes de acceder a la aplicación. Desactivar solo si el consentimiento no es requerido en su jurisdicción.",
+  "adminSettingsConsentRequiredLabel": "Requerir consentimiento del usuario",
+  "adminSettingsDefaultBadge": "Predeterminado: {value}",
+  "@adminSettingsDefaultBadge": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "adminSettingsKDescription": "Número mínimo de encuestados distintos requeridos antes de exponer datos a investigadores. Predeterminado: 5.",
+  "adminSettingsKFieldLabel": "Mínimo de encuestados (K)",
+  "adminSettingsKHint": "ej. 5",
+  "adminSettingsKLabel": "Umbral de anonimato K",
+  "adminSettingsLockoutDescription": "Tiempo que una cuenta permanece bloqueada. Predeterminado: 30 minutos.",
+  "adminSettingsLockoutFieldLabel": "Duración del bloqueo (min)",
+  "adminSettingsLockoutHint": "ej. 30",
+  "adminSettingsLockoutLabel": "Duración del bloqueo (minutos)",
+  "adminSettingsMaintenanceCompletionDescription": "Hora estimada en que el sistema volverá a estar en línea. Se muestra en el banner de mantenimiento en todas las páginas.",
+  "adminSettingsMaintenanceCompletionHint": "Ej. 17:00 EST",
+  "adminSettingsMaintenanceCompletionLabel": "Hora de finalización estimada",
+  "adminSettingsMaintenanceDescription": "Cuando está activado, los usuarios no administradores reciben una respuesta de servicio no disponible.",
+  "adminSettingsMaintenanceLabel": "Modo de mantenimiento",
+  "adminSettingsMaintenanceMessageDescription": "Mensaje opcional en el banner de inicio de sesión. Incluya el horario de retorno.",
+  "adminSettingsMaintenanceMessageHint": "Ej. Vuelve en línea a las 17:00 EST",
+  "adminSettingsMaintenanceMessageLabel": "Mensaje de mantenimiento",
+  "adminSettingsMaxAttemptsDescription": "Intentos fallidos consecutivos antes del bloqueo temporal. 0 = sin límite. Predeterminado: 10.",
+  "adminSettingsMaxAttemptsFieldLabel": "Máx. intentos (0 = ilimitado)",
+  "adminSettingsMaxAttemptsHint": "ej. 10",
+  "adminSettingsMaxAttemptsLabel": "Máx. intentos de inicio de sesión fallidos",
+  "adminSettingsRegistrationDescription": "Cuando está desactivado, se bloquean las nuevas solicitudes de cuenta.",
+  "adminSettingsRegistrationLabel": "Registro abierto",
+  "adminSettingsResetToDefault": "Restablecer valores predeterminados",
+  "adminSettingsSaveButton": "Guardar cambios",
+  "adminSettingsSaveError": "Error al guardar la configuración.",
+  "adminSettingsSaveSuccess": "Configuración guardada correctamente.",
+  "adminSettingsSaving": "Guardando…",
+  "adminSettingsSectionPrivacy": "Privacidad de datos",
+  "adminSettingsSectionSecurity": "Seguridad de inicio de sesión",
+  "adminSettingsSectionSystem": "Sistema",
+  "adminSettingsSidebarLabel": "Configuración",
+  "adminSettingsTitle": "Configuración del sistema",
+  "adminSettingsValidationNonNegative": "Debe ser 0 o mayor.",
+  "adminSettingsValidationPositive": "Debe ser un número entero positivo.",
+  "adminSpanish": "ES",
+  "adminTicketDetails": "Detalles del ticket",
+  "adminTickets": "Tickets",
+  "adminUiTestSectionBasics": "Básicos",
+  "adminUiTestSectionButtons": "Botones",
+  "adminUiTestSectionDataDisplay": "Visualización de datos",
+  "adminUiTestSectionFeedback": "Retroalimentación",
+  "adminUiTestSectionForms": "Formularios y entrada",
+  "adminUiTestSectionMicroWidgets": "Microcomponentes",
+  "adminUserDetails": "Detalles del usuario",
+  "adminUserList": "Lista de usuarios",
+  "adminUserManagement": "Gestión de usuarios",
+  "adminUserRole": "Rol del usuario",
+  "adminV2LatestSignIns": "Últimos inicios de sesión en el sistema",
+  "adminV2NoUserData": "Aún no hay datos de usuarios disponibles.",
+  "adminV2OpenClassicAdmin": "Abrir administración clásica",
+  "adminV2QuickAuditLog": "Registro de auditoría",
+  "adminV2QuickDatabase": "Base de datos",
+  "adminV2QuickLinks": "Accesos rápidos",
+  "adminV2QuickNavigator": "Navegador",
+  "adminV2QuickRequests": "Solicitudes",
+  "adminV2QuickUiTest": "Prueba de interfaz",
+  "adminV2QuickUsers": "Usuarios",
+  "adminV2RecentActivity": "Actividad reciente",
+  "adminV2RoleDistributionTitle": "Distribución de usuarios",
+  "adminV2RoleMixSubtitle": "Mezcla de roles en la plataforma",
+  "adminV2Subtitle": "Una vista previa de panel más tranquilo y plano basada en la nueva dirección de diseño. La administración existente permanece sin cambios.",
+  "adminV2Title": "Admin v2",
+  "adminViewAsLabel": "Ver como",
+  "adminViewingAsRole": "Viewing as {role}",
+  "@adminViewingAsRole": {
+    "placeholders": {
+      "role": {
+        "type": "String"
+      }
+    }
+  },
+  "adminViewingAsUser": "Viewing as {name} ({email})",
+  "@adminViewingAsUser": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "adminViewLogs": "Ver registros",
+  "adminWelcomeMessage": "Bienvenido al panel de administración. Seleccione una opción de la barra lateral.",
+  "@@_AUDIT": "Audit log",
+  "auditLogAction": "Acción",
+  "auditLogActorId": "ID de actor",
+  "auditLogActorType": "Tipo de actor",
+  "auditLogAllActions": "Todas las acciones",
+  "auditLogAllMethods": "Todos los métodos",
+  "auditLogAllResources": "Todos los recursos",
+  "auditLogAllStatuses": "Todos los estados",
+  "auditLogColumnAction": "Acción",
+  "auditLogColumnActor": "Actor",
+  "auditLogColumnMethod": "Método",
+  "auditLogColumnPath": "Ruta",
+  "auditLogColumnStatus": "Estado",
+  "auditLogColumnTimestamp": "Marca de tiempo",
+  "auditLogDenied": "Denegado",
+  "auditLogErrorCode": "Código de error",
+  "auditLogEventId": "ID de evento",
+  "auditLogExportCsv": "Exportar como CSV",
+  "auditLogFailedToLoad": "Error al cargar los registros de auditoría",
+  "auditLogFailure": "Fallo",
+  "auditLogHttpMethod": "Método HTTP",
+  "auditLogHttpStatus": "Estado HTTP",
+  "auditLogIpAddress": "Dirección IP",
+  "auditLogMetadata": "Metadatos",
+  "auditLogNextPage": "Página siguiente",
+  "auditLogNoEvents": "No se encontraron eventos de auditoría",
+  "auditLogPageOf": "Page {current} of {total}",
+  "@auditLogPageOf": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "auditLogPreviousPage": "Página anterior",
+  "auditLogRequestId": "ID de solicitud",
+  "auditLogResourceId": "ID de recurso",
+  "auditLogResourceType": "Tipo de recurso",
+  "auditLogSearchPlaceholder": "Buscar rutas o acciones...",
+  "auditLogShowingEvents": "Showing {start}-{end} of {total} events",
+  "@auditLogShowingEvents": {
+    "placeholders": {
+      "start": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "auditLogSuccess": "Éxito",
+  "auditLogTitle": "Registro de auditoría",
+  "auditLogUserAgent": "Agente de usuario",
+  "@@_DATABASE": "Database viewer / table descriptions",
+  "dbPageTitle": "Gestión de base de datos",
+  "dbTableDescAccount2FA": "Configuración de autenticación de dos factores por cuenta",
+  "dbTableDescAccountData": "Información de cuenta de usuario y detalles de perfil",
+  "dbTableDescAccountRequest": "Solicitudes de creación de cuenta pendientes de aprobación",
+  "dbTableDescAuditEvent": "Registro de auditoría de eventos relevantes para la seguridad",
+  "dbTableDescAuth": "Hashes de contraseñas para autenticación de usuarios (columnas sensibles ocultas)",
+  "dbTableDescConsentRecord": "Registros de participantes que firmaron el documento de consentimiento",
+  "dbTableDescConversationParticipants": "Asigna cuentas a conversaciones (muchos a muchos)",
+  "dbTableDescConversations": "Conversaciones de mensajería entre usuarios",
+  "dbTableDescDataTypes": "Categorías para datos de salud recopilados por preguntas",
+  "dbTableDescFriendRequests": "Solicitudes de amistad/conexión entre cuentas de participantes",
+  "dbTableDescHcpPatientLink": "Vínculos entre proveedores de atención médica y sus pacientes",
+  "dbTableDescMessages": "Mensajes individuales enviados dentro de conversaciones",
+  "dbTableDescMfaChallenges": "Desafíos de token MFA de un solo uso (columnas sensibles ocultas)",
+  "dbTableDescPasswordResetTokens": "Tokens de restablecimiento de contraseña para recuperación de cuenta",
+  "dbTableDescQuestionBank": "Preguntas reutilizables que se pueden agregar a encuestas",
+  "dbTableDescQuestionCategories": "Categorías para organizar preguntas de encuestas",
+  "dbTableDescQuestionList": "Vincula preguntas a encuestas (muchos a muchos)",
+  "dbTableDescQuestionOptions": "Opciones para preguntas de elección única y múltiple",
+  "dbTableDescResponses": "Respuestas de participantes a preguntas de encuestas",
+  "dbTableDescRoles": "Roles de usuario que definen permisos de acceso",
+  "dbTableDescSessions": "Sesiones de inicio de sesión activas de usuarios (columnas sensibles ocultas)",
+  "dbTableDescSurvey": "Definiciones de encuestas creadas por investigadores",
+  "dbTableDescSurveyAssignment": "Rastrea qué encuestas están asignadas a qué participantes",
+  "dbTableDescSurveyTemplate": "Plantillas de encuestas reutilizables creadas por investigadores",
+  "dbTableDescSystemSettings": "Configuración del sistema y preferencias de la aplicación",
+  "dbTableDescTemplateQuestions": "Vincula preguntas a plantillas de encuestas (muchos a muchos)",
+  "dbUtilitiesTitle": "Utilidades de base de datos",
+  "dbViewerColumnHeader": "Columna",
+  "dbViewerColumnsCount": "{count} columnas",
+  "@dbViewerColumnsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dbViewerConstraintsHeader": "Restricciones",
+  "dbViewerData": "Datos",
+  "dbViewerFailedToLoad": "Error al cargar las tablas de la base de datos",
+  "dbViewerFailedToLoadData": "Error al cargar los datos de la tabla: {error}",
+  "@dbViewerFailedToLoadData": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "dbViewerForeignKey": "Clave foránea",
+  "dbViewerNoData": "No hay datos en la tabla",
+  "dbViewerNotNull": "No nulo",
+  "dbViewerNull": "NULL",
+  "dbViewerNullable": "Nulable",
+  "dbViewerPageOf": "Página {current} de {total}",
+  "@dbViewerPageOf": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "dbViewerPrimaryKey": "Clave primaria",
+  "dbViewerReferenceHeader": "Referencia",
+  "dbViewerRowsCount": "{count} filas",
+  "@dbViewerRowsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dbViewerRowsTotal": "{count} filas en total",
+  "@dbViewerRowsTotal": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dbViewerSchema": "Esquema",
+  "dbViewerSelectATable": "Seleccionar una tabla",
+  "dbViewerSelectTable": "Seleccionar tabla",
+  "dbViewerShowing": "Mostrando {start}–{end} de {total}",
+  "@dbViewerShowing": {
+    "placeholders": {
+      "start": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "dbViewerTableData": "Datos de {name}",
+  "@dbViewerTableData": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "dbViewerTablesCount": "{count} tablas en la base de datos",
+  "@dbViewerTablesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dbViewerTitle": "Visor de base de datos",
+  "dbViewerTypeHeader": "Tipo",
+  "dbViewerViewModeLabel": "Alternar entre vista de esquema y vista de datos",
+  "@@_BACKUP": "Backup / restore",
+  "backupCreatedError": "Error al crear la copia. Revise los registros del servidor.",
+  "backupCreatedSuccess": "Copia de seguridad creada ({size})",
+  "@backupCreatedSuccess": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "backupCreateManual": "Crear copia ahora",
+  "backupCreating": "Creando…",
+  "backupDeleteConfirmBody": "Se eliminará permanentemente {filename}. Esta acción no se puede deshacer.",
+  "@backupDeleteConfirmBody": {
+    "placeholders": {
+      "filename": {
+        "type": "String"
+      }
+    }
+  },
+  "backupDeleteConfirmTitle": "¿Eliminar copia?",
+  "backupDeleteError": "No se pudo eliminar la copia. Inténtelo de nuevo.",
+  "backupDeleteSuccess": "Copia eliminada.",
+  "backupDeleteTooltip": "Eliminar esta copia",
+  "backupDownloadError": "Error al descargar. Por favor, inténtelo de nuevo.",
+  "backupDownloadStarted": "Descarga iniciada.",
+  "backupDownloadTooltip": "Descargar archivo de copia de seguridad",
+  "backupLatest": "Última copia de seguridad",
+  "backupLoadError": "No se pudo cargar la lista de copias de seguridad",
+  "backupNoneFound": "No se encontraron copias de seguridad",
+  "backupNoneFoundSubtitle": "Aún no existen archivos de copia de seguridad. Cree una copia manual o espere a que se ejecute la copia programada.",
+  "backupNoRecent": "Sin copias — cree una ahora.",
+  "backupPageSubtitle": "Las copias de seguridad automáticas se ejecutan diariamente a las 2 AM, los domingos y el día 1 de cada mes. Las copias manuales conservan las últimas 10 ejecuciones.",
+  "backupPageTitle": "Copias de seguridad de la base de datos",
+  "backupRestoreAction": "Restaurar base de datos",
+  "backupRestoreConfirmBody": "Esto reemplazará TODOS los datos actuales con el contenido de {filename}.\n\nSe creará automáticamente una copia de seguridad previa antes de iniciar la restauración.\n\nEsta acción no se puede deshacer.",
+  "@backupRestoreConfirmBody": {
+    "placeholders": {
+      "filename": {
+        "type": "String"
+      }
+    }
+  },
+  "backupRestoreConfirmTitle": "¿Restaurar la base de datos?",
+  "backupRestoreError": "La restauración falló. Inténtelo de nuevo o contacte soporte.",
+  "backupRestoreSelectHint": "Elegir una copia de seguridad para restaurar…",
+  "backupRestoreSelectLabel": "Seleccionar copia de seguridad",
+  "backupRestoreSuccess": "Base de datos restaurada. Copia previa guardada ({size}). {migrations} migración(es) aplicada(s).",
+  "@backupRestoreSuccess": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      },
+      "migrations": {
+        "type": "int"
+      }
+    }
+  },
+  "backupRestoreTitle": "Restaurar desde una copia de seguridad",
+  "backupRestoreTooltip": "Restaurar la base de datos desde esta copia de seguridad",
+  "backupRestoring": "Restaurando…",
+  "backupSavedTo": "Guardado en {path}",
+  "@backupSavedTo": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "backupSectionCollapse": "Ocultar copias",
+  "backupSectionExpand": "Mostrar copias",
+  "backupTypeDaily": "Diaria",
+  "backupTypeManual": "Manual",
+  "backupTypeMonthly": "Mensual",
+  "backupTypeWeekly": "Semanal",
+  "backupViewAll": "Ver todas las copias",
+  "@@_USER_MANAGEMENT": "User management (cross-cutting)",
+  "userManagementActivate": "Activar",
+  "userManagementActivatedSuccess": "Usuario activado",
+  "userManagementActiveOnly": "Solo activos",
+  "userManagementAddNewUser": "Agregar nuevo usuario",
+  "userManagementAddUser": "Agregar usuario",
+  "userManagementAdminConsentExempt": "Administrador — Exento de consentimiento",
+  "userManagementAll": "Todos",
+  "userManagementAllRoles": "Todos los roles",
+  "userManagementCopy": "Copiar",
+  "userManagementCreatedSuccess": "Usuario creado exitosamente",
+  "userManagementDeactivate": "Desactivar",
+  "userManagementDeactivatedSuccess": "Usuario desactivado",
+  "userManagementDeleteUserTitle": "Eliminar usuario",
+  "userManagementDeleteUserTooltip": "Eliminar usuario",
+  "userManagementEditUser": "Editar usuario",
+  "userManagementEditUserTitle": "Editar usuario",
+  "userManagementEditUserTooltip": "Editar usuario",
+  "userManagementFailedToImpersonate": "Error al suplantar al usuario",
+  "userManagementFailedToLoad": "Error al cargar los usuarios",
+  "userManagementFilterByRole": "Filtrar por rol",
+  "userManagementFirstName": "Nombre",
+  "userManagementGenerate": "Generar",
+  "userManagementLastName": "Apellido",
+  "userManagementNoUsers": "No se encontraron usuarios",
+  "userManagementNowViewingAs": "Now viewing as {name}",
+  "@userManagementNowViewingAs": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "userManagementPasswordCopied": "Contraseña copiada al portapapeles",
+  "userManagementResetPasswordTooltip": "Restablecer contraseña",
+  "userManagementRole": "Rol",
+  "userManagementRoleLabel": "Rol",
+  "userManagementSearchByEmail": "Buscar por nombre o correo...",
+  "userManagementSearchPlaceholder": "Buscar por nombre o correo...",
+  "userManagementSearchShort": "Buscar...",
+  "userManagementTableActions": "Acciones",
+  "userManagementTableEmail": "Correo electrónico",
+  "userManagementTableLastLogin": "Último acceso",
+  "userManagementTableName": "Nombre",
+  "userManagementTableRole": "Rol",
+  "userManagementTableStatus": "Estado",
+  "userManagementTitle": "Gestión de usuarios",
+  "userManagementTotalUsers": "Total: {count} usuarios",
+  "@userManagementTotalUsers": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "userManagementUpdatedSuccess": "Usuario actualizado exitosamente",
+  "userManagementUserDeleted": "{name} deleted",
+  "@userManagementUserDeleted": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "userManagementUsersShown": "{count, plural, =1{1 usuario mostrado} other{{count} usuarios mostrados}}",
+  "@userManagementUsersShown": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "userManagementViewAsUser": "Ver como usuario",
+  "userRoleAdmin": "Administrador",
+  "userRoleHcp": "Profesional de la salud",
+  "userRoleHcpShort": "HCP",
+  "userRoleParticipant": "Participante",
+  "userRoleResearcher": "Investigador",
+  "userRoleUnknown": "Desconocido",
+  "@@_SETTINGS": "Settings page",
+  "settings2faDisabledSuccess": "2FA deshabilitado",
+  "settings2faListSubtitle": "Configure o confirme 2FA para su cuenta",
+  "settingsAppearanceApplied": "Aplicado",
+  "settingsAppearanceApply": "Aplicar",
+  "settingsAppearanceReset": "Restablecer",
+  "settingsAppearanceSectionTitle": "Apariencia",
+  "settingsAppearanceSubtitle": "Elija un estilo visual para su cuenta.",
+  "settingsAppearanceUpdated": "Apariencia actualizada.",
+  "settingsChangePasswordSubtitle": "Actualice la contraseña de su cuenta",
+  "settingsDeleteAccountCancel": "Cancelar",
+  "settingsDeleteAccountConfirm": "Enviar solicitud",
+  "settingsDeleteAccountDialogBody": "Su cuenta será desactivada inmediatamente y se enviará una solicitud de eliminación a un administrador.",
+  "settingsDeleteAccountDialogTitle": "¿Solicitar eliminación de cuenta?",
+  "settingsDeleteAccountFailed": "Error al enviar la solicitud de eliminación. Por favor, inténtelo de nuevo.",
+  "settingsDeleteAccountSubtitle": "Solicitar la eliminación permanente de su cuenta",
+  "settingsDeleteAccountTitle": "Eliminar cuenta",
+  "settingsDisable2faDialogBody": "Esto reducirá la seguridad de su cuenta. Puede volver a habilitarlo más tarde.",
+  "settingsDisable2faDialogCancel": "Cancelar",
+  "settingsDisable2faDialogConfirm": "Deshabilitar",
+  "settingsDisable2faDialogTitle": "¿Deshabilitar 2FA?",
+  "settingsDisable2faFailed": "Error al deshabilitar 2FA. Por favor, inténtelo de nuevo.",
+  "settingsDisable2faSubtitle": "Eliminar 2FA de su cuenta",
+  "settingsDisable2faTitle": "Deshabilitar 2FA",
+  "settingsManageAccountSubtitle": "Administre la configuración de su cuenta.",
+  "settingsSecuritySectionTitle": "Seguridad",
+  "settingsTitle": "Configuración",
+  "@@_UI_TEST": "UI Test Page (Widget Catalogue)",
+  "uiClearAll": "Borrar todo",
+  "uiClearFilters": "Borrar filtros",
+  "uiFiltersLabel": "Filtros: ",
+  "uiNever": "Nunca",
+  "uiSearchLabel": "Search: \"{query}\"",
+  "@uiSearchLabel": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestControlActive": "Activo",
+  "uiTestControlArrowTop": "Flecha arriba",
+  "uiTestControlAspect": "Relación",
+  "uiTestControlAsset": "Recurso",
+  "uiTestControlBackground": "Fondo",
+  "uiTestControlColor": "Color",
+  "uiTestControlCreateEnabled": "Creación habilitada",
+  "uiTestControlDisabled": "Deshabilitado",
+  "uiTestControlEnabled": "Habilitado",
+  "uiTestControlFill": "Relleno",
+  "uiTestControlFit": "Ajuste",
+  "uiTestControlHeight": "Alto",
+  "uiTestControlHeightPx": "Alto: {value}px",
+  "@uiTestControlHeightPx": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestControlIcon": "Icono",
+  "uiTestControlLabel": "Etiqueta",
+  "uiTestControlLegend": "Leyenda",
+  "uiTestControlMessage": "Mensaje",
+  "uiTestControlNotification": "Notificación",
+  "uiTestControlProgress": "Progreso: {value}%",
+  "@uiTestControlProgress": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestControlRadius": "Radio",
+  "uiTestControlRequired": "Requerido",
+  "uiTestControlSemantics": "Semántica",
+  "uiTestControlSize": "Tamaño",
+  "uiTestControlSpacing": "Espaciado: {value}",
+  "@uiTestControlSpacing": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestControlStartExpanded": "Iniciar expandido",
+  "uiTestControlSubtitle": "Subtítulo",
+  "uiTestControlTagline": "Eslogan",
+  "uiTestControlText": "Texto",
+  "uiTestControlThickness": "Grosor: {value}",
+  "@uiTestControlThickness": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestControlTrack": "Pista",
+  "uiTestControlTristate": "Triestado",
+  "uiTestControlValues": "Valores",
+  "uiTestControlVariant": "Variante",
+  "uiTestControlWeight": "Grosor",
+  "uiTestControlWidth": "Ancho",
+  "uiTestControlWidthPx": "Ancho: {value}px",
+  "@uiTestControlWidthPx": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestDemoAboveDivider": "Encima del divisor",
+  "uiTestDemoAdminPassword": "Contraseña de administrador",
+  "uiTestDemoAliceCarter": "Alice Carter",
+  "uiTestDemoAppointmentTime": "Hora de la cita",
+  "uiTestDemoBadge": "Insignia",
+  "uiTestDemoBelowDivider": "Debajo del divisor",
+  "uiTestDemoCaution": "Precaución",
+  "uiTestDemoClickMe": "Haz clic aquí",
+  "uiTestDemoCodeCopied": "Código copiado al portapapeles",
+  "uiTestDemoCompletionPrefix": "Completitud: {value}%",
+  "@uiTestDemoCompletionPrefix": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestDemoConfirm": "Confirmar",
+  "uiTestDemoConfirmAction": "Confirmar acción",
+  "uiTestDemoConfirmActionBody": "Esta acción no se puede deshacer.",
+  "uiTestDemoContinue": "Continuar",
+  "uiTestDemoCriticalActionBody": "Esta es una acción segura. Ingrese su contraseña antes de confirmar.",
+  "uiTestDemoCriticalActionTitle": "Confirmación de acción crítica",
+  "uiTestDemoCurrentPassword": "Contraseña actual",
+  "uiTestDemoDateOfBirth": "Fecha de nacimiento",
+  "uiTestDemoDefaultPlaceholder": "Marcador de posición predeterminado",
+  "uiTestDemoDemographics": "Datos demográficos",
+  "uiTestDemoEmail": "Correo electrónico",
+  "uiTestDemoEnrollment": "Inscripción",
+  "uiTestDemoError": "Error",
+  "uiTestDemoExampleImage": "Imagen de ejemplo",
+  "uiTestDemoFullName": "Nombre completo",
+  "uiTestDemoHelloWorld": "Hola mundo",
+  "uiTestDemoInfo": "Información",
+  "uiTestDemoInvalidPasswordMessage": "Contraseña incorrecta. La contraseña de demostración es «Admin123!».",
+  "uiTestDemoKpiTrends": "Tendencias KPI",
+  "uiTestDemoLearnMore": "Saber más",
+  "uiTestDemoNormalizedPrefix": "Normalizado: {value}",
+  "@uiTestDemoNormalizedPrefix": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestDemoNotes": "Notas",
+  "uiTestDemoNullIndeterminate": "nulo (indeterminado)",
+  "uiTestDemoOpenModal": "Abrir modal",
+  "uiTestDemoOpenSecuredModal": "Abrir modal seguro",
+  "uiTestDemoOverview": "Resumen general",
+  "uiTestDemoParticipants": "Participantes",
+  "uiTestDemoPasswordVerified": "Contraseña verificada. Acción confirmada.",
+  "uiTestDemoPhoneNumber": "Número de teléfono",
+  "uiTestDemoPlaceholderGraphic": "Gráfico de marcador de posición",
+  "uiTestDemoPriority": "Prioridad",
+  "uiTestDemoQueryEmpty": "(vacío)",
+  "uiTestDemoQueryNone": "(ninguno)",
+  "uiTestDemoQueryPrefix": "Consulta: {value}",
+  "@uiTestDemoQueryPrefix": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestDemoRespondents": "Encuestados",
+  "uiTestDemoSearchWidgets": "Buscar widgets…",
+  "uiTestDemoShowPopover": "Mostrar popover",
+  "uiTestDemoSuccess": "Éxito",
+  "uiTestDemoSummary": "Resumen",
+  "uiTestDemoTaskCompletion": "Completitud de la tarea",
+  "uiTestDemoThisWeek": "+12 esta semana",
+  "uiTestDemoValuePrefix": "Valor: {value}",
+  "@uiTestDemoValuePrefix": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestDemoVerificationFailed": "Error de verificación.",
+  "uiTestEnterValue": "Ingresar valor",
+  "uiTestPageSubtitle": "Vistas previas interactivas con personalización en vivo para todos los widgets reutilizables.",
+  "uiTestPageTitle": "Catálogo de widgets",
+  "uiTestSectionBasics": "Elementos básicos",
+  "uiTestSectionButtons": "Botones",
+  "uiTestSectionDataDisplay": "Visualización de datos",
+  "uiTestSectionFeedback": "Retroalimentación",
+  "uiTestSectionForms": "Formularios y entrada",
+  "uiTestSectionMicro": "Micro widgets",
+  "uiTestSectionNavbarActiveDestination": "Destino activo: {label}",
+  "@uiTestSectionNavbarActiveDestination": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestSectionNavbarActiveNone": "Ninguno",
+  "uiTestSectionNavbarAddSection": "Agregar sección",
+  "uiTestSectionNavbarAddSubsection": "Agregar subsección",
+  "uiTestSectionNavbarContainedTitle": "Página desplazable contenida",
+  "uiTestSectionNavbarHideCode": "Ocultar código",
+  "uiTestSectionNavbarInitiallyExpanded": "Inicialmente expandido",
+  "uiTestSectionNavbarNoSections": "No hay secciones configuradas. Agregue al menos una sección en PROPIEDADES.",
+  "uiTestSectionNavbarProperties": "PROPIEDADES",
+  "uiTestSectionNavbarRemoveSection": "Eliminar sección",
+  "uiTestSectionNavbarRemoveSubsection": "Eliminar subsección",
+  "uiTestSectionNavbarReset": "Restablecer",
+  "uiTestSectionNavbarScrollHint": "Desplace este panel o haga clic en un destino para ir allí.",
+  "uiTestSectionNavbarSectionLabel": "Etiqueta de sección",
+  "uiTestSectionNavbarSectionN": "Sección {n}",
+  "@uiTestSectionNavbarSectionN": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestSectionNavbarShowCode": "Mostrar código",
+  "uiTestSectionNavbarSubsection1": "Subsección 1",
+  "uiTestSectionNavbarSubsectionLabel": "Etiqueta de subsección",
+  "uiTestSectionNavbarSubsectionN": "Subsección {n}",
+  "@uiTestSectionNavbarSubsectionN": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestSectionNavbarUntitledSection": "Sección sin título",
+  "uiTestSectionNavbarUntitledSubsection": "Subsección sin título",
+  "uiTestWidgetAppAccordion": "AppAccordion",
+  "uiTestWidgetAppAccordionDesc": "Panel expandible para mostrar y ocultar detalles.",
+  "uiTestWidgetAppAnnouncement": "AppAnnouncement",
+  "uiTestWidgetAppAnnouncementDesc": "Banner en línea para anuncios importantes.",
+  "uiTestWidgetAppBadge": "AppBadge",
+  "uiTestWidgetAppBadgeDesc": "Etiquetas tipo pídora para estados, roles y categorías.",
+  "uiTestWidgetAppBarChart": "AppBarChart",
+  "uiTestWidgetAppBarChartDesc": "Gráfico de barras con fl_chart, etiquetas de ejes e información emergente al pasar el cursor.",
+  "uiTestWidgetAppBreadcrumbs": "AppBreadcrumbs",
+  "uiTestWidgetAppBreadcrumbsDesc": "Ruta de navegación para la jerarquía de navegación.",
+  "uiTestWidgetAppCardTask": "AppCardTask",
+  "uiTestWidgetAppCardTaskDesc": "Tarjeta de tarea con texto de vencimiento, texto de repetición opcional y CTA.",
+  "uiTestWidgetAppCheckbox": "AppCheckbox",
+  "uiTestWidgetAppCheckboxDesc": "Casilla de verificación adaptada al tema en modos controlado y no controlado.",
+  "uiTestWidgetAppCreateConfirmPassword": "AppCreatePasswordInput + AppConfirmPasswordInput",
+  "uiTestWidgetAppCreateConfirmPasswordDesc": "Par de creación y confirmación de contraseña con verificación en vivo.",
+  "uiTestWidgetAppDateInput": "AppDateInput",
+  "uiTestWidgetAppDateInputDesc": "Campo selector de fecha con validación requerida.",
+  "uiTestWidgetAppDivider": "AppDivider",
+  "uiTestWidgetAppDividerDesc": "Separador visual con grosor y espaciado configurables.",
+  "uiTestWidgetAppDropdownInput": "AppDropdownInput",
+  "uiTestWidgetAppDropdownInputDesc": "Menú desplegable de formulario con comportamiento requerido y de error.",
+  "uiTestWidgetAppDropdownMenu": "AppDropdownMenu",
+  "uiTestWidgetAppDropdownMenuDesc": "Menú desplegable adaptado al tema para elegir entre opciones.",
+  "uiTestWidgetAppEmailInput": "AppEmailInput",
+  "uiTestWidgetAppEmailInputDesc": "Campo de correo electrónico con validación de estructura y autocompletado.",
+  "uiTestWidgetAppFilledButton": "AppFilledButton",
+  "uiTestWidgetAppFilledButtonDesc": "Botón de acción principal con fondo sólido.",
+  "uiTestWidgetAppGraphRenderer": "AppGraphRenderer",
+  "uiTestWidgetAppGraphRendererDesc": "Contenedor de gráfico responsivo con título y contenido personalizado opcional.",
+  "uiTestWidgetAppIcon": "AppIcon",
+  "uiTestWidgetAppIconDesc": "Contenedor de icono adaptado al tema con tamaño responsivo.",
+  "uiTestWidgetAppImage": "AppImage",
+  "uiTestWidgetAppImageDesc": "Imagen responsiva con soporte de relación de aspecto.",
+  "uiTestWidgetAppLongButton": "AppLongButton",
+  "uiTestWidgetAppLongButtonDesc": "Botón de ancho completo para acciones destacadas.",
+  "uiTestWidgetAppModalOverlay": "AppModal + AppOverlay",
+  "uiTestWidgetAppModalOverlayDesc": "Modal activado por botón con barrera superpuesta.",
+  "uiTestWidgetAppParagraphInput": "AppParagraphInput",
+  "uiTestWidgetAppParagraphInputDesc": "Campo de texto multilínea con control del número de líneas.",
+  "uiTestWidgetAppPasswordInput": "AppPasswordInput",
+  "uiTestWidgetAppPasswordInputDesc": "Campo de contraseña con alternador de visibilidad y verificaciones requeridas.",
+  "uiTestWidgetAppPhoneInput": "AppPhoneInput",
+  "uiTestWidgetAppPhoneInputDesc": "Campo de teléfono con selector de país y salida normalizada.",
+  "uiTestWidgetAppPieChart": "AppPieChart",
+  "uiTestWidgetAppPieChartDesc": "Gráfico circular con leyenda, etiquetas de porcentaje e interacción táctil.",
+  "uiTestWidgetAppPlaceholderGraphic": "AppPlaceholderGraphic",
+  "uiTestWidgetAppPlaceholderGraphicDesc": "Gráfico de marcador de posición adaptado al tema para estados vacíos.",
+  "uiTestWidgetAppPopover": "AppPopover",
+  "uiTestWidgetAppPopoverDesc": "Retroalimentación en línea anclada al contexto.",
+  "uiTestWidgetAppProgressBar": "AppProgressBar",
+  "uiTestWidgetAppProgressBarDesc": "Indicador de progreso adaptado al tema para seguimiento de avance.",
+  "uiTestWidgetAppRadio": "AppRadio",
+  "uiTestWidgetAppRadioDesc": "Botón de opción adaptado al tema en modos controlado y no controlado.",
+  "uiTestWidgetAppRichText": "AppRichText",
+  "uiTestWidgetAppRichTextDesc": "Formato en línea con negrita, cursiva y estilos mixtos.",
+  "uiTestWidgetAppSearchBar": "AppSearchBar",
+  "uiTestWidgetAppSearchBarDesc": "Campo de búsqueda con icono inicial y acción de borrar.",
+  "uiTestWidgetAppSectionNavbar": "AppSectionNavbar",
+  "uiTestWidgetAppSectionNavbarDesc": "Navegación por secciones con grupos plegables y resaltado de destino activo.",
+  "uiTestWidgetAppSecuredModal": "AppSecuredModal",
+  "uiTestWidgetAppSecuredModalDesc": "Modal de confirmación de acción crítica que requiere verificación por contraseña.",
+  "uiTestWidgetAppStatCard": "AppStatCard",
+  "uiTestWidgetAppStatCardDesc": "Tarjeta de estadísticas con icono, etiqueta, valor grande, subtítulo opcional y borde superior de acento.",
+  "uiTestWidgetAppStatusDot": "AppStatusDot",
+  "uiTestWidgetAppStatusDotDesc": "Indicador de notificación superpuesto sobre cualquier icono.",
+  "uiTestWidgetAppText": "AppText",
+  "uiTestWidgetAppTextButton": "AppTextButton",
+  "uiTestWidgetAppTextButtonDesc": "Botón de solo texto para acciones secundarias.",
+  "uiTestWidgetAppTextDesc": "Texto adaptado al tema con variantes tipográficas responsivas.",
+  "uiTestWidgetAppTextInput": "AppTextInput",
+  "uiTestWidgetAppTextInputDesc": "Campo de texto de una línea con etiqueta y validación.",
+  "uiTestWidgetAppTimeInput": "AppTimeInput",
+  "uiTestWidgetAppTimeInputDesc": "Campo selector de hora con validación requerida.",
+  "uiTestWidgetAppToast": "AppToast",
+  "uiTestWidgetAppToastDesc": "Notificaciones superpuestas transitorias con cierre automático.",
+  "uiTestWidgetDataTable": "DataTable",
+  "uiTestWidgetDataTableCell": "DataTableCell",
+  "uiTestWidgetDataTableCellDesc": "Fábricas de celdas tipadas para un estilo de celda coherente.",
+  "uiTestWidgetDataTableDesc": "Tabla ordenable con filas expandibles, encabezados fijos y desplazamiento horizontal.",
+  "uiTestWidgetHealthBankLogo": "HealthBankLogo",
+  "uiTestWidgetHealthBankLogoDesc": "Logotipo de marca con eslogan opcional y variantes de tamaño.",
+  "@@_PRIVACY_TOS": "Privacy policy and Terms of Service",
+  "privacyPolicySection1Body": "HealthBank recopila la información personal que usted proporciona al crear su cuenta, incluyendo su nombre, dirección de correo electrónico, fecha de nacimiento y género. Cuando completa encuestas de salud, recopilamos los datos de salud y las respuestas que usted elige enviar. También recopilamos información técnica como marcas de tiempo de inicio de sesión y actividad de sesión para mantener la seguridad de la plataforma.\n\nSolo recopilamos la información necesaria para operar la plataforma y facilitar la investigación aprobada. Nunca se le requerirá proporcionar información más allá de lo necesario para participar en su programa de investigación específico.",
+  "privacyPolicySection1Title": "Información que recopilamos",
+  "privacyPolicySection2Body": "Su información personal se utiliza únicamente para operar la plataforma HealthBank y facilitar la investigación de salud aprobada. Específicamente, utilizamos sus datos para: autenticar su identidad y gestionar su cuenta; distribuir encuestas y recopilar sus respuestas de salud; permitir que su profesional de salud asignado supervise su participación; y proporcionar a los investigadores resultados agregados y desidentificados para su análisis.\n\nNo utilizamos su información personal con fines de marketing, publicidad ni ningún propósito comercial. Sus datos nunca se venden a terceros.",
+  "privacyPolicySection2Title": "Cómo usamos su información",
+  "privacyPolicySection3Body": "Sus datos de salud individuales solo se comparten con partes autorizadas directamente involucradas en su atención o en su estudio de investigación aprobado. Los investigadores en la plataforma solo reciben datos agregados y desidentificados — las respuestas individuales no pueden vincularse a su identidad en los resultados de investigación.\n\nEs posible que debamos divulgar información cuando lo exija la ley canadiense, una orden judicial o cuando sea necesario para prevenir daños graves. En todos estos casos, divulgamos solo la información mínima requerida y documentamos cada divulgación.",
+  "privacyPolicySection3Title": "Cómo compartimos sus datos",
+  "privacyPolicySection4Body": "HealthBank utiliza medidas de seguridad estándar de la industria para proteger su información personal, incluyendo transmisión de datos cifrada (HTTPS), hash de contraseñas, gestión de sesiones y controles de acceso restringidos. La plataforma opera en servidores seguros con acceso limitado solo al personal autorizado.\n\nSus datos se conservan mientras sea un participante activo en un programa de investigación de HealthBank. Puede solicitar la eliminación de su cuenta y los datos asociados en cualquier momento comunicándose con el Oficial de Privacidad de HealthBank. Algunos datos pueden conservarse en forma agregada y desidentificada para la continuidad de la investigación después de la eliminación de la cuenta.",
+  "privacyPolicySection4Title": "Seguridad y retención de datos",
+  "privacyPolicySection5Body": "Según la PIPEDA y la legislación provincial aplicable, usted tiene derecho a: acceder a la información personal que tenemos sobre usted; solicitar correcciones a información inexacta; retirar su consentimiento y solicitar la eliminación de sus datos; y recibir una explicación sobre cómo se utilizan sus datos.\n\nPara ejercer cualquiera de estos derechos, o si tiene preguntas o inquietudes sobre su privacidad, comuníquese con el Oficial de Privacidad de HealthBank en su institución. Nos comprometemos a responder a todas las consultas de privacidad dentro de los 30 días.",
+  "privacyPolicySection5Title": "Sus derechos y contacto",
+  "privacyPolicyTitle": "Política de privacidad",
+  "privacyPolicyTocTitle": "Tabla de contenidos",
+  "tosSection1Body": "Al crear una cuenta o acceder a la plataforma HealthBank, usted acepta estar sujeto a estos Términos de Servicio y a nuestra Política de Privacidad. Si no está de acuerdo con estos términos, no debe utilizar la plataforma. Estos términos pueden actualizarse periódicamente; el uso continuado de la plataforma tras la notificación de cualquier cambio constituye su aceptación de los términos revisados.",
+  "tosSection1Title": "Aceptación de los términos",
+  "tosSection2Body": "El acceso a HealthBank es solo por invitación. Las cuentas de participantes son creadas por administradores autorizados o profesionales de salud. Debe tener al menos 18 años, o contar con el consentimiento de un padre o tutor si es menor de 18 años. Usted es responsable de mantener la confidencialidad de sus credenciales de inicio de sesión y de toda la actividad que ocurra bajo su cuenta.",
+  "tosSection2Title": "Usuarios elegibles",
+  "tosSection3Body": "Usted acepta utilizar HealthBank únicamente para su propósito previsto: participar en investigaciones de salud aprobadas y gestionar sus datos de salud personales. No debe intentar acceder a los datos de otros usuarios; manipular, realizar ingeniería inversa o interrumpir la plataforma; enviar información falsa o engañosa; ni utilizar la plataforma para ningún propósito ilegal. El incumplimiento de estas responsabilidades puede resultar en la suspensión inmediata de su cuenta.",
+  "tosSection3Title": "Responsabilidades del usuario",
+  "tosSection4Body": "Su uso de HealthBank implica la recopilación y el uso de datos de salud personales según lo descrito en nuestra Política de Privacidad. Al utilizar la plataforma, usted consiente esta recopilación para los fines de la investigación de salud aprobada. Puede retirar su consentimiento en cualquier momento comunicándose con su coordinador de estudio o el Oficial de Privacidad de HealthBank, lo que resultará en la desactivación de su cuenta. HealthBank opera en cumplimiento con la legislación de privacidad canadiense.",
+  "tosSection4Title": "Datos y privacidad",
+  "tosSection5Body": "HealthBank se proporciona como una plataforma de investigación académica \"tal como está\". Si bien tomamos todas las precauciones razonables para mantener la seguridad e integridad de los datos, la Universidad de la Isla del Príncipe Eduardo y el equipo del proyecto HealthBank no serán responsables de daños indirectos, incidentales o consecuentes que surjan de su uso de la plataforma. Nada en estos términos limita la responsabilidad por negligencia grave, mala conducta intencional o según lo requiera la ley aplicable.",
+  "tosSection5Title": "Limitación de responsabilidad",
+  "tosTitle": "Términos de servicio",
+  "tosTocTitle": "Contenido"
+}

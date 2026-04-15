@@ -1,0 +1,83 @@
+@startuml HealthBank_Researcher_Analytics_Sequence
+!theme plain
+skinparam sequenceArrowColor #2C76BF
+skinparam sequenceLifeLineBorderColor #595959
+skinparam sequenceParticipantBorderColor #1A1A2E
+skinparam sequenceParticipantBackgroundColor #EBF4FF
+skinparam sequenceGroupBorderColor #AAAAAA
+skinparam shadowing false
+autoactivate off
+
+title HealthBank — Researcher Views Health Tracking Analytics
+
+actor       "Researcher"          as R
+participant "Flutter App\n(Research HT Page)" as APP
+participant "FastAPI\n/api/v1/health-tracking/research" as API
+participant "SettingsService\n(30s cache)" as SVC
+database    "MySQL"               as DB
+
+== Page Load ==
+
+R -> APP : Navigate to Research → Health Tracking
+APP -> API : GET /health-tracking/research/entry-date-range
+API -> DB  : SELECT MIN(EntryDate), MAX(EntryDate)\nFROM TrackingEntry
+DB --> API : { min_date, max_date }
+API --> APP : EntryDateRange
+APP --> R  : Render controls with default date range
+
+APP -> API : GET /health-tracking/metrics
+API -> DB  : SELECT active categories + metrics
+DB --> API : List<CategoryResponse>
+API --> APP : All categories with metrics
+APP --> R  : Render metric multi-select checkboxes\ngrouped by category
+
+== Load Charts ==
+
+R -> APP : Select 3 metrics, adjust date range\nTap "Load Chart"
+APP -> API : GET /health-tracking/research/aggregate-multi\n?metric_ids=1,5,12&start_date=2026-01-01&end_date=2026-04-11
+
+API -> SVC : get_int_setting("k_anonymity_threshold")
+alt Cache hit (< 30s old)
+  SVC --> API : k = 5 (from cache)
+else Cache miss
+  SVC -> DB  : SELECT SettingValue FROM SystemSettings\nWHERE SettingKey = 'k_anonymity_threshold'
+  DB --> SVC : "5"
+  SVC --> API : k = 5
+end
+
+API -> DB  : Parse and validate metric_ids=[1,5,12]
+DB --> API : 3 metric rows confirmed
+
+loop For each metric_id in [1, 5, 12]
+  API -> DB  : SELECT EntryDate,\n  AVG(CAST(Value AS DECIMAL)) AS avg_value,\n  MIN(CAST(Value AS DECIMAL)) AS min_value,\n  MAX(CAST(Value AS DECIMAL)) AS max_value,\n  COUNT(DISTINCT ParticipantID) AS participant_count\nFROM TrackingEntry\nWHERE MetricID = ? AND EntryDate BETWEEN ? AND ?\nGROUP BY EntryDate\nHAVING participant_count >= 5
+  DB --> API : data points (suppressed intervals omitted)
+end
+
+API --> APP : List<MultiAggregateResult>\n[{ metric_id, metric_key, display_name, data_points }]
+
+APP --> R  : Render one AppLineChart per metric\n(gaps where data was suppressed)
+
+note right of APP
+  Banner shown:
+  "Data points below the k-anonymity
+   threshold (5 participants) are not shown"
+end note
+
+== Export CSV ==
+
+R -> APP : Tap "Export CSV"
+APP -> API : GET /health-tracking/research/export\n?metric_ids=1,5,12&start_date=...&end_date=...
+
+API -> DB  : SELECT te.ParticipantID, tm.MetricKey,\n  te.EntryDate, te.Value, te.IsBaseline\nFROM TrackingEntry te\nJOIN TrackingMetric tm ON tm.MetricID = te.MetricID\nWHERE te.MetricID IN (1,5,12)\nAND te.EntryDate BETWEEN ? AND ?
+DB --> API : raw entry rows
+
+loop For each row
+  API -> API : participant_hash = SHA256(str(ParticipantID))[:16]
+end
+
+API --> APP : StreamingResponse (text/csv)\nColumns: participant_hash, metric_key,\n         entry_date, value, is_baseline
+
+APP -> APP : Trigger browser download\n(web.Blob + anchor.click())
+APP --> R  : health_tracking_export.csv downloaded
+
+@enduml

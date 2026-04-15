@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)file:///Users/adam/projects/HealthBank/htmlcov/index.html -->
+<html lang="en"><style id="videoRecorder-ebeglcfo">
+            ._ext_highlight {
+                outline: 3px solid rgba(255, 0, 0, 0.5);
+                outline-offset: -3px;
+                transition: all 0.1s ease;
+                z-index: 2147483647;
+            }
+            ._ext__floating_popup {
+                position: fixed;
+                top: 80px;
+                right: 30px;
+            
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                border-radius: 2px;
+                margin: auto;
+                height: 30px;
+                white-space: nowrap;
+                padding: 8px;
+                z-index: 2147483647;
+            }
+            
+            ._ext__floating_popup > button {
+                margin-left: 5px;
+                color: black;
+                background-color: white;
+                border: 2px solid #e7e7e7;
+                cursor: pointer;
+            }
+        </style><style id="countdown-ebeglcfo">
+        .countdown-ebeglcfo-button {
+            background: 0 0;
+            border: none;
+            box-sizing: border-box;
+            color: #ffffff;
+            cursor: pointer;
+            display: block;
+            font-family: 'Open-Sans';
+            font-size: 12px;
+            height: auto;
+            line-height: 1;
+            margin: 0 auto;
+            padding: 0 12px;
+        }
+        .countdown-ebeglcfo-button:focus {
+            background: 0 0;
+        }
+        .countdown-ebeglcfo-button:hover {
+            background: 0 0;
+        }
+        .countdown-ebeglcfo {
+            background: rgba(59, 59, 59, 0.8);
+            border-radius: 4px;
+            color: #ffffff;
+            left: 50%;
+            padding: 14px 14px 10px;
+            position: fixed;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 110000;
+        }
+        .countdown-ebeglcfo.capture-delayed {
+            left: 50px;
+            top: 50px;
+            transform: translate(0, 0);
+        }
+        .countdown-ebeglcfo-content {
+            height: 120px;
+            position: relative;
+            width: 120px;
+        }
+        .countdown-ebeglcfo-progress {
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .countdown-ebeglcfo-progress svg {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+        .countdown-ebeglcfo-sep {
+            background: #758386;
+            height: 1px;
+            margin: 7px 0;
+        }
+        .countdown-ebeglcfo-cancel .nsc-button {
+            color: #ffffff;
+            display: block;
+            font-size: 14px;
+            padding: 0 3px;
+            text-align: center;
+            width: 100%;
+        }
+        </style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Coverage report</title>
+    <link rel="icon" sizes="32x32" href="file:///Users/adam/projects/HealthBank/htmlcov/favicon_32_cb_c827f16f.png">
+    <link rel="stylesheet" href="./Coverage report_files/style_cb_9ff733b0.css" type="text/css">
+    <script src="./Coverage report_files/coverage_html_cb_dd2e7eb5.js" defer=""></script>
+</head>
+<body class="indexfile">
+<header>
+    <div class="content">
+        <h1>Coverage report:
+            <span class="pc_cov">89%</span>
+        </h1>
+        <aside id="help_panel_wrapper">
+            <input id="help_panel_state" type="checkbox">
+            <label for="help_panel_state">
+                <img id="keyboard_icon" src="./Coverage report_files/keybd_closed_cb_900cfef5.png" alt="Show/hide keyboard shortcuts">
+            </label>
+            <div id="help_panel">
+                <p class="legend">Shortcuts on this page</p>
+                <div class="keyhelp">
+                    <p>
+                        <kbd>f</kbd>
+                        <kbd>s</kbd>
+                        <kbd>m</kbd>
+                        <kbd>x</kbd>
+                        <kbd>c</kbd>
+                        &nbsp; change column sorting
+                    </p>
+                    <p>
+                        <kbd>[</kbd>
+                        <kbd>]</kbd>
+                        &nbsp; prev/next file
+                    </p>
+                    <p>
+                        <kbd>?</kbd> &nbsp; show/hide this help
+                    </p>
+                </div>
+            </div>
+        </aside>
+        <form id="filter_container">
+            <input id="filter" type="text" value="" placeholder="filter...">
+            <div>
+                <input id="hide100" type="checkbox">
+                <label for="hide100">hide covered</label>
+            </div>
+        </form>
+        <h2>
+                <a class="button current">Files</a>
+                <a class="button" href="file:///Users/adam/projects/HealthBank/htmlcov/function_index.html">Functions</a>
+                <a class="button" href="file:///Users/adam/projects/HealthBank/htmlcov/class_index.html">Classes</a>
+        </h2>
+        <p class="text">
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.13.4">coverage.py v7.13.4</a>,
+            created at 2026-03-16 07:57 -0300
+        </p>
+    </div>
+</header>
+<main id="index">
+    <table class="index" data-sortable="">
+        <thead>
+            <tr class="tablehead" title="Click to sort">
+                <th id="file" class="name" aria-sort="ascending" data-shortcut="f">File<span class="arrows"></span></th>
+                <th class="spacer" aria-sort="none">&nbsp;</th>
+                <th id="statements" aria-sort="none" data-default-sort-order="descending" data-shortcut="s">statements<span class="arrows"></span></th>
+                <th id="missing" aria-sort="none" data-default-sort-order="descending" data-shortcut="m">missing<span class="arrows"></span></th>
+                <th id="excluded" aria-sort="none" data-default-sort-order="descending" data-shortcut="x">excluded<span class="arrows"></span></th>
+                <th class="spacer" aria-sort="none">&nbsp;</th>
+                <th id="coverage" aria-sort="none" data-shortcut="c">coverage<span class="arrows"></span></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        <tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_db5c5b9d094212ab___init___py.html">backend / app / __init__.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_cd756cf0ef5e98d0_deps_py.html">backend / app / api / deps.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>130</td>
+                <td>27</td>
+                <td>1</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="103 130">79%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_5d45c2be45ce9276_admin_py.html">backend / app / api / v1 / admin.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>879</td>
+                <td>170</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="709 879">81%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_5d45c2be45ce9276_assignments_py.html">backend / app / api / v1 / assignments.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>212</td>
+                <td>53</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="159 212">75%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_5d45c2be45ce9276_auth_py.html">backend / app / api / v1 / auth.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>361</td>
+                <td>38</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="323 361">89%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_5d45c2be45ce9276_consent_py.html">backend / app / api / v1 / consent.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>70</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="66 70">94%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_5d45c2be45ce9276_hcp_links_py.html">backend / app / api / v1 / hcp_links.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>168</td>
+                <td>6</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="162 168">96%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_5d45c2be45ce9276_hcp_patients_py.html">backend / app / api / v1 / hcp_patients.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>56</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="56 56">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_5d45c2be45ce9276_messaging_py.html">backend / app / api / v1 / messaging.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>197</td>
+                <td>3</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="194 197">98%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_5d45c2be45ce9276_participants_py.html">backend / app / api / v1 / participants.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>388</td>
+                <td>89</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="299 388">77%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_5d45c2be45ce9276_question_bank_py.html">backend / app / api / v1 / question_bank.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>241</td>
+                <td>13</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="228 241">95%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_5d45c2be45ce9276_research_py.html">backend / app / api / v1 / research.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>157</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="156 157">99%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_5d45c2be45ce9276_responses_py.html">backend / app / api / v1 / responses.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>101</td>
+                <td>26</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="75 101">74%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_5d45c2be45ce9276_sessions_py.html">backend / app / api / v1 / sessions.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>174</td>
+                <td>20</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="154 174">89%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_5d45c2be45ce9276_surveys_py.html">backend / app / api / v1 / surveys.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>291</td>
+                <td>17</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="274 291">94%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_5d45c2be45ce9276_templates_py.html">backend / app / api / v1 / templates.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>197</td>
+                <td>5</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="192 197">97%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_5d45c2be45ce9276_tos_py.html">backend / app / api / v1 / tos.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>25</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="24 25">96%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_5d45c2be45ce9276_two_factor_py.html">backend / app / api / v1 / two_factor.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>148</td>
+                <td>114</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="34 148">23%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_5d45c2be45ce9276_users_py.html">backend / app / api / v1 / users.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>302</td>
+                <td>58</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="244 302">81%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_8ef0c38bc7378ca9_logger_py.html">backend / app / audit / logger.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>45</td>
+                <td>35</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="10 45">22%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_f826b382900ac6db___init___py.html">backend / app / core / __init__.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_f826b382900ac6db_config_py.html">backend / app / core / config.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>30</td>
+                <td>3</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="27 30">90%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_f826b382900ac6db_totp_py.html">backend / app / core / totp.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>87</td>
+                <td>5</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="82 87">94%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_db5c5b9d094212ab_main_py.html">backend / app / main.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>54</td>
+                <td>14</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="40 54">74%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_1ffba365105086e2_audit_to_auditevent_py.html">backend / app / middleware / audit_to_auditevent.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>80</td>
+                <td>8</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="72 80">90%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_709a242b670e636b___init___py.html">backend / app / services / __init__.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="3 3">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_709a242b670e636b_aggregation_py.html">backend / app / services / aggregation.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>543</td>
+                <td>274</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="269 543">50%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d910e42f17d93889___init___py.html">backend / app / services / email / __init__.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d910e42f17d93889_base_py.html">backend / app / services / email / base.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>17</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="15 17">88%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d910e42f17d93889_config_py.html">backend / app / services / email / config.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>13</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="9 13">69%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d910e42f17d93889_gmail_py.html">backend / app / services / email / gmail.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>70</td>
+                <td>56</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="14 70">20%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d910e42f17d93889_service_py.html">backend / app / services / email / service.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>52</td>
+                <td>34</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="18 52">35%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d910e42f17d93889_templates_py.html">backend / app / services / email / templates.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>23</td>
+                <td>12</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="11 23">48%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_709a242b670e636b_email_service_py.html">backend / app / services / email_service.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>66</td>
+                <td>35</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="31 66">47%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_709a242b670e636b_email_templates_py.html">backend / app / services / email_templates.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>18</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="18 18">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_709a242b670e636b_translation_py.html">backend / app / services / translation.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>42</td>
+                <td>15</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="27 42">64%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_29baab00d8463b21_password_reset_tokens_py.html">backend / app / utils / password_reset_tokens.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>36</td>
+                <td>16</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="20 36">56%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_29baab00d8463b21_sanitize_py.html">backend / app / utils / sanitize.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>106</td>
+                <td>20</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="86 106">81%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_29baab00d8463b21_utils_py.html">backend / app / utils / utils.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>96</td>
+                <td>77</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="19 96">20%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_9b5d3c41184f4a9e___init___py.html">backend / tests / __init__.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d___init___py.html">backend / tests / api / __init__.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_2fa_py.html">backend / tests / api / test_2fa.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_account_requests_py.html">backend / tests / api / test_account_requests.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>118</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="118 118">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_admin_py.html">backend / tests / api / test_admin.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>651</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="650 651">99%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_aggregation_py.html">backend / tests / api / test_aggregation.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>425</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="425 425">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_assignments_py.html">backend / tests / api / test_assignments.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>133</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="132 133">99%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_auth_py.html">backend / tests / api / test_auth.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>335</td>
+                <td>3</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="332 335">99%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_boundary_values_py.html">backend / tests / api / test_boundary_values.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>190</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="190 190">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_consent_py.html">backend / tests / api / test_consent.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>188</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="188 188">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_cookies_py.html">backend / tests / api / test_cookies.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>36</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="36 36">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_delete_my_account_py.html">backend / tests / api / test_delete_my_account.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>22</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="22 22">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_hcp_links_py.html">backend / tests / api / test_hcp_links.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>482</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="482 482">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_hcp_patients_py.html">backend / tests / api / test_hcp_patients.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>256</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="256 256">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_messaging_py.html">backend / tests / api / test_messaging.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>709</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="708 709">99%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_participants_py.html">backend / tests / api / test_participants.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>589</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="589 589">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_profile_completion_py.html">backend / tests / api / test_profile_completion.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>110</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="110 110">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_question_bank_py.html">backend / tests / api / test_question_bank.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>121</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="119 121">98%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_rbac_py.html">backend / tests / api / test_rbac.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>61</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="61 61">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_require_role_py.html">backend / tests / api / test_require_role.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>115</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="115 115">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_research_py.html">backend / tests / api / test_research.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>374</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="374 374">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_responses_py.html">backend / tests / api / test_responses.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>162</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="162 162">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_sessions_py.html">backend / tests / api / test_sessions.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>65</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="65 65">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_surveys_py.html">backend / tests / api / test_surveys.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>225</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="224 225">99%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_templates_py.html">backend / tests / api / test_templates.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>148</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="148 148">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_tos_py.html">backend / tests / api / test_tos.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>171</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="171 171">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_d172c99f0a58376d_test_user_py.html">backend / tests / api / test_user.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>284</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="284 284">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_9b5d3c41184f4a9e_conftest_py.html">backend / tests / conftest.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>101</td>
+                <td>13</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="88 101">87%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_9d7b98e46b75f4ec_db_py.html">backend / tests / mocks / db.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>752</td>
+                <td>58</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="694 752">92%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_9b5d3c41184f4a9e_test_admin_impersonation_py.html">backend / tests / test_admin_impersonation.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>140</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="140 140">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_9b5d3c41184f4a9e_test_admin_password_reset_py.html">backend / tests / test_admin_password_reset.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>139</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="138 139">99%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_a44f0ac069e85531_conftest_py.html">tests / conftest.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>40</td>
+                <td>15</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="25 40">62%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_362576575d76e233_test_auth_totp_py.html">tests / core / test_auth_totp.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>78</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="78 78">100%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_ec1634674ac1a2fa_test_fixture_dependencies_example_py.html">tests / examples / test_fixture_dependencies_example.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>48</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="47 48">98%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_ec1634674ac1a2fa_test_mocking_example_py.html">tests / examples / test_mocking_example.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>21</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="19 21">90%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_ec1634674ac1a2fa_test_parametrized_example_py.html">tests / examples / test_parametrized_example.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>10</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="8 10">80%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_a40f6d277e0496df_test_health_endponit_py.html">tests / integration / test_health_endponit.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>21</td>
+                <td>3</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="18 21">86%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_f736e78a4119c885_test_sanitizer_py.html">tests / security / test_sanitizer.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>54</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="53 54">98%</td>
+            </tr><tr class="region">
+                <td class="name"><a href="file:///Users/adam/projects/HealthBank/htmlcov/z_a44f0ac069e85531_test_health_py.html">tests / test_health.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td>7</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 7">86%</td>
+            </tr></tbody>
+        <tfoot>
+            <tr class="total">
+                <td class="name">Total</td>
+                <td class="spacer">&nbsp;</td>
+                <td>12865</td>
+                <td>1361</td>
+                <td>1</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="11504 12865">89%</td>
+            </tr>
+        </tfoot>
+    </table>
+    <p id="no_rows">
+        No items found using the specified filter.
+    </p>
+</main>
+<footer>
+    <div class="content">
+        <p>
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.13.4">coverage.py v7.13.4</a>,
+            created at 2026-03-16 07:57 -0300
+        </p>
+    </div>
+    <aside class="hidden">
+        <a id="prevFileLink" class="nav" href="file:///Users/adam/projects/HealthBank/htmlcov/z_a44f0ac069e85531_test_health_py.html"></a>
+        <a id="nextFileLink" class="nav" href="file:///Users/adam/projects/HealthBank/htmlcov/z_db5c5b9d094212ab___init___py.html"></a>
+        <button type="button" class="button_prev_file" data-shortcut="["></button>
+        <button type="button" class="button_next_file" data-shortcut="]"></button>
+        <button type="button" class="button_show_hide_help" data-shortcut="?"></button>
+    </aside>
+</footer>
+
+
+<div class="region-selector-container" style="position: fixed; top: 0px; left: 0px; width: 100vw; height: 100vh; z-index: 2147483645; display: none;"><template shadowrootmode="open"><div class="region-selector-overlay" style="position: fixed; top: 0px; left: 0px; width: 100vw; height: 100vh; background: transparent; z-index: 2147483646; display: none; cursor: default; user-select: none; pointer-events: auto;"></div><div class="region-selector-box" style="position: fixed; padding: 4px; top: 25%; left: 25%; width: 50%; height: 50%; border: 2px dashed rgb(255, 255, 255); background: transparent; z-index: 2147483647; display: none; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 0px 100vmax; cursor: move;"><div style="width: 100%; height: 100%; background: transparent; pointer-events: none; cursor: none;"></div><div class="handle top-left" style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; top: -6px; left: -6px; cursor: nw-resize;"></div><div class="handle top" style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; top: -6px; left: 50%; margin-left: -6px; cursor: n-resize;"></div><div class="handle top-right" style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; top: -6px; right: -6px; cursor: ne-resize;"></div><div class="handle right" style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; top: 50%; right: -6px; margin-top: -6px; cursor: e-resize;"></div><div class="handle bottom-right" style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; bottom: -6px; right: -6px; cursor: se-resize;"></div><div class="handle bottom" style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; bottom: -6px; left: 50%; margin-left: -6px; cursor: s-resize;"></div><div class="handle bottom-left" style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; bottom: -6px; left: -6px; cursor: sw-resize;"></div><div class="handle left" style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; top: 50%; left: -6px; margin-top: -6px; cursor: w-resize;"></div><div style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); background: rgba(0, 0, 0, 0.7); color: white; padding: 2px 6px; border-radius: 3px; font-size: 12px; white-space: nowrap;"></div><div style="position: absolute; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; bottom: -45px;"><button style="padding: 8px 16px; background: rgb(76, 175, 80); color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">Start Record</button><button style="padding: 8px 16px; background: rgb(244, 67, 54); color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">Cancel Record</button></div></div></template></div></body><iframe id="dl-rec-ebeglcfo" src="./Coverage report_files/recording.html" allow="camera *; microphone *; display-capture *" style="display: none;"></iframe></html>

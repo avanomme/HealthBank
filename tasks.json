@@ -1,0 +1,22 @@
+[
+  {"id": "HT-01", "status": "todo", "subject": "DB migration 009: TrackingCategory + TrackingMetric + TrackingEntry + translation tables + seed all 10 categories and ~35 baseline metrics"},
+  {"id": "HT-02", "status": "todo", "subject": "Backend: participant endpoints — GET metrics by category, POST entries batch upsert, GET entries/history, GET baseline"},
+  {"id": "HT-03", "status": "todo", "subject": "Backend: admin endpoints — CRUD categories, CRUD metrics, toggle active, batch reorder"},
+  {"id": "HT-04", "status": "todo", "subject": "Backend: researcher endpoints — k-anon aggregate, CSV export, category summary"},
+  {"id": "HT-05", "status": "todo", "subject": "Backend: register health_tracking router in main.py"},
+  {"id": "HT-06", "status": "todo", "subject": "Backend tests: test_health_tracking.py — participant CRUD, admin CRUD, researcher aggregate, auth enforcement, k-anon threshold"},
+  {"id": "HT-07", "status": "todo", "subject": "Frontend: Freezed models (TrackingCategory, TrackingMetric, TrackingEntry, TrackingEntrySubmit, MetricsByCategory) + run build_runner"},
+  {"id": "HT-08", "status": "todo", "subject": "Frontend: Retrofit health_tracking_api.dart + register in api_client.dart"},
+  {"id": "HT-09", "status": "todo", "subject": "Frontend: health_tracking_providers.dart (metricsByCategory, entries family, history family, selectedDate, selectedCategory providers)"},
+  {"id": "HT-10", "status": "todo", "subject": "Frontend: HealthMetricEntryCard widget — renders scale/number/yesno/single_choice/text input variants with WCAG semantics"},
+  {"id": "HT-11", "status": "todo", "subject": "Frontend: HealthTrackingChart widget — AppLineChart wrapper with date range selector"},
+  {"id": "HT-12", "status": "todo", "subject": "Frontend: ParticipantHealthTrackingPage — Log Today tab (category tabs + entry cards) + History tab + baseline snapshot banner"},
+  {"id": "HT-13", "status": "todo", "subject": "Frontend: admin_health_tracking_settings_page — category/metric list, toggles, add/edit dialogs, reorder, translation fields"},
+  {"id": "HT-14", "status": "todo", "subject": "Frontend: health_tracking_admin_providers.dart (all categories, all metrics, CRUD mutations)"},
+  {"id": "HT-15", "status": "todo", "subject": "Frontend: add /participant/health-tracking route to go_router.dart + AppRoutes constants"},
+  {"id": "HT-16", "status": "todo", "subject": "Frontend: add Health Tracking nav item to participant_scaffold.dart"},
+  {"id": "HT-17", "status": "todo", "subject": "Frontend: add admin Health Tracking link to admin nav/settings area"},
+  {"id": "HT-18", "status": "todo", "subject": "Localization: add all trackingCategory* + trackingMetric* + healthTracking* keys to EN/FR/ES ARBs + run flutter gen-l10n"},
+  {"id": "HT-19", "status": "todo", "subject": "WCAG: verify all new widgets use appFieldSemantics, tooltips on icon buttons, liveRegion on save status, keyboard reorder on admin page"},
+  {"id": "HT-20", "status": "todo", "subject": "Run full test suite (backend pytest + flutter test) — log results to Testing_Log.xlsx + Adam_Testing_Log.csv"}
+]

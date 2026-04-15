@@ -1,0 +1,5 @@
+# Dart / Flutter
+*.dart text eol=lf
+
+# Generated files
+*.g.dart text eol=lf

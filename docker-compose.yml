@@ -1,0 +1,154 @@
+# HealthBank Docker Compose - Production Configuration
+# Services: MySQL, API (FastAPI), Frontend (Flutter build), Nginx (web server)
+
+name: healthbank
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: hdbtestdb
+    ports:
+      - "3307:3306"
+    restart: unless-stopped
+    env_file:
+      - ./env/mysql.prod.env
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./database/init:/docker-entrypoint-initdb.d:ro
+      - ./database/config/my.cnf:/etc/mysql/conf.d/custom.cnf:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-ppassword"]
+      start_interval: 3s
+      start_period: 120s
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - healthbank-network
+
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: hdb-api
+    depends_on:
+      mysql:
+        condition: service_healthy
+    env_file:
+      - ./env/api.prod.env
+      - ./env/mysql.prod.env
+    ports:
+      - "8000:80"
+    restart: unless-stopped
+    volumes:
+      - db_backups:/backups
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:80/health')"]
+      start_interval: 3s
+      start_period: 60s
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - healthbank-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: hdb-frontend-build
+    volumes:
+      - frontend_build:/output
+    # One-shot container - runs build and exits
+    restart: "no"
+    networks:
+      - healthbank-network
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    container_name: hdb-nginx
+    depends_on:
+      frontend:
+        condition: service_completed_successfully
+      api:
+        condition: service_healthy
+    ports:
+      - "3000:80"
+      - "443:443"
+    volumes:
+      - frontend_build:/usr/share/nginx/html:ro
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://127.0.0.1:80/"]
+      start_interval: 3s
+      start_period: 30s
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - healthbank-network
+  
+  db_backup_cron:
+    build:
+      context: ./database/backup
+      dockerfile: Dockerfile
+    container_name: hdb-backup-cron
+    depends_on:
+      mysql:
+        condition: service_healthy
+    env_file:
+      - ./env/mysql.prod.env
+    environment:
+      MYSQL_HOST: mysql
+    volumes:
+      - db_backups:/backups
+    networks:
+      - healthbank-network
+    restart: unless-stopped
+
+  db_restore:
+    image: mysql:8.0
+    depends_on:
+      mysql:
+        condition: service_healthy
+    env_file:
+      - ./env/mysql.prod.env
+    volumes:
+      - db_backups:/backups:ro
+    networks:
+      - healthbank-network
+    restart: "no"
+    entrypoint:
+      - /bin/sh
+      - -ec
+      - |
+        if [ -z "$${BACKUP_FILE:-}" ]; then
+          echo "ERROR: BACKUP_FILE is not set."
+          echo "Example: BACKUP_FILE=/backups/daily/healthdatabase_2026-03-31_020000.sql.gz docker compose run --rm db_restore"
+          exit 1
+        fi
+        if [ ! -f "$${BACKUP_FILE}" ]; then
+          echo "ERROR: Backup file not found: $${BACKUP_FILE}"
+          ls -lah /backups/daily /backups/weekly /backups/monthly /backups/manual 2>/dev/null || true
+          exit 1
+        fi
+        echo "Restoring from $${BACKUP_FILE} ..."
+        if echo "$${BACKUP_FILE}" | grep -q '\.gz$$'; then
+          zcat "$${BACKUP_FILE}" | mysql -h mysql -u"$${MYSQL_USER}" -p"$${MYSQL_PASSWORD}"
+        else
+          mysql -h mysql -u"$${MYSQL_USER}" -p"$${MYSQL_PASSWORD}" < "$${BACKUP_FILE}"
+        fi
+        echo "Restore complete."
+
+
+networks:
+  healthbank-network:
+    driver: bridge
+
+volumes:
+  mysql_data:
+  frontend_build:
+  db_backups:

@@ -1,0 +1,2913 @@
+{
+  "@@locale": "en",
+  "@@last_modified": "2026-02-07",
+  "@@_COMMON_ACTIONS": "Common action buttons and labels",
+  "commonActions": "Actions",
+  "commonBack": "Back",
+  "commonCancel": "Cancel",
+  "commonClear": "Clear",
+  "commonClose": "Close",
+  "commonConfirm": "Confirm",
+  "commonContactUs": "Contact Us",
+  "commonCopyright": "© 2025 HealthBank. All rights reserved.",
+  "commonDate": "Date",
+  "commonDelete": "Delete",
+  "commonDescription": "Description",
+  "commonDone": "Done",
+  "commonEdit": "Edit",
+  "commonEmail": "Email",
+  "commonEndDate": "End date",
+  "commonErrorWithDetail": "Error: {detail}",
+  "@commonErrorWithDetail": {
+    "placeholders": {
+      "detail": {
+        "type": "String"
+      }
+    }
+  },
+  "commonFilter": "Filter",
+  "commonHidePassword": "Hide password",
+  "commonLoading": "Loading...",
+  "commonName": "Name",
+  "commonNext": "Next",
+  "commonNo": "No",
+  "commonOff": "Off",
+  "commonOn": "On",
+  "commonPassword": "Password",
+  "commonPrivacyPolicy": "Privacy Policy",
+  "commonRefresh": "Refresh",
+  "commonRetry": "Retry",
+  "commonSave": "Save",
+  "commonSaving": "Saving…",
+  "commonSearch": "Search",
+  "commonSeeMore": "See More",
+  "commonShowPassword": "Show password",
+  "commonStartDate": "Start date",
+  "commonStatus": "Status",
+  "commonSubmit": "Submit",
+  "commonTermsOfService": "Terms of Service",
+  "commonTime": "Time",
+  "commonTitle": "Title",
+  "commonType": "Type",
+  "commonViewAll": "View All",
+  "commonYes": "Yes",
+  "@@_COMMON_STATUS": "Status indicators",
+  "statusActive": "Active",
+  "statusCompleted": "Completed",
+  "statusInactive": "Inactive",
+  "statusInProgress": "In Progress",
+  "statusPending": "Pending",
+  "@@_COMMON_ERRORS": "Error messages",
+  "errorGeneric": "Something went wrong. Please try again.",
+  "errorNetwork": "Network error. Please check your connection.",
+  "errorNotFound": "Not found.",
+  "errorUnauthorized": "You are not authorized to perform this action.",
+  "@@_COMMON_VALIDATION": "Form validation messages",
+  "formConfirmPasswordLabel": "Confirm Password",
+  "formConfirmPasswordMismatch": "Passwords must match exactly.",
+  "formConfirmPasswordMustMatch": "Confirmed password must exactly match Create Password.",
+  "formCreatePasswordLabel": "Create Password",
+  "formDateValidationError": "Enter a valid date in YYYY-MM-DD format (e.g. 2024-01-15).",
+  "formEmailValidationError": "Enter a valid email address (e.g. name@example.com).",
+  "formPasswordCheckTitle": "Password Check",
+  "formPasswordRuleAscii": "Use ASCII letters, digits, and common symbols only.",
+  "formPasswordRuleLowercase": "At least one lowercase letter.",
+  "formPasswordRuleMax32": "Maximum 32 characters.",
+  "formPasswordRuleMin8": "Minimum 8 characters.",
+  "formPasswordRuleNoEmail": "Must not contain email-like fragments (for example, local@domain.com).",
+  "formPasswordRuleNumberOrSymbol": "At least one number or symbol.",
+  "formPasswordRulesError": "Password does not meet the required rules.",
+  "formPasswordRulesHelper": "Your password must meet all of the following requirements:",
+  "formPasswordRuleUppercase": "At least one uppercase letter.",
+  "formPhoneHint": "Phone number",
+  "formPhoneValidationError": "Enter a valid phone number including country code.",
+  "formSecuredPasswordVerificationFailed": "Password verification failed.",
+  "formTimeValidationError": "Enter a valid time in HH:MM format (e.g. 09:30).",
+  "validationInvalidEmail": "Enter a valid email address (e.g. name@example.com).",
+  "validationInvalidPassword": "Password must be at least 8 characters.",
+  "validationRequired": "This field is required. Please enter a value.",
+  "@@_COMMON_CONFIRMATIONS": "Confirmation dialogs",
+  "confirmCancel": "Are you sure you want to cancel?",
+  "confirmDelete": "Are you sure you want to delete this?",
+  "confirmUnsavedChanges": "You have unsaved changes. Are you sure you want to leave?",
+  "@@_COMMON_CONTACT": "Contact / footer / about / help",
+  "aboutPageBody": "HealthBank is a secure personal health data platform developed at the University of Prince Edward Island (UPEI). It connects participants, healthcare professionals, and researchers in a privacy-compliant environment for approved health research.\n\nParticipants can complete health surveys and contribute data to research projects they have consented to. Healthcare professionals can monitor the participation and health data of patients under their care. Researchers access only aggregated, de-identified results — individual participant data is never exposed in research outputs.\n\nAll data collection is governed by informed consent and conducted in accordance with Canadian federal and applicable provincial privacy legislation, including PIPEDA and PHIPA. HealthBank is an academic initiative committed to advancing health research for the benefit of all Canadians.",
+  "aboutPageTitle": "About HealthBank",
+  "contactSupportEmailLabel": "Support Email",
+  "contactSupportHoursLabel": "Hours",
+  "contactSupportHoursValue": "Monday to Friday, 9:00 AM - 5:00 PM (ET)",
+  "contactSupportIntro": "Reach our support team for account help, technical issues, or general questions about HealthBank.",
+  "contactSupportNote": "Include your account email and a short summary of the issue so we can respond faster.",
+  "footerHelpAndServices": "Help & Services",
+  "footerHowToUse": "How to Use HealthBank",
+  "footerLegal": "Legal",
+  "footerPrivacy": "Privacy",
+  "footerTermsOfUse": "Terms of Use",
+  "helpFaq1Body": "Accounts are created by a HealthBank administrator or healthcare professional. If you believe you should have access, contact your healthcare provider or the research coordinator overseeing your study. You will receive an email with instructions to set up your password and complete your profile.",
+  "helpFaq1Title": "How do I create an account?",
+  "helpFaq2Body": "After signing in, navigate to the Surveys section from your dashboard. Select an available survey and follow the on-screen instructions. Your responses are saved automatically as you progress, and you can return to an incomplete survey at any time. Contact your study coordinator if you have questions about a specific survey.",
+  "helpFaq2Title": "How do I complete a health survey?",
+  "helpFaq3Body": "Your personal health data is strictly confidential. Only your assigned healthcare professional and authorized administrators can view your individual responses. Researchers access only aggregated, de-identified data — your name and personal details are never visible in research results. See our Privacy Policy for full details.",
+  "helpFaq3Title": "Who can see my data?",
+  "homePagePlaceHolderText": "HealthBank is a secure, privacy-first platform for personal health data collection and research. Participants complete surveys and share health data to support meaningful research. Healthcare professionals monitor patient participation. Researchers access aggregated, de-identified results — never individual records.\n\nAll data is collected under informed consent and protected in accordance with Canadian privacy law (PIPEDA). Sign in to access your dashboard, or request an account to join the HealthBank community.",
+  "@@_COMMON_UI": "Generic UI bits (tooltips, pagination, accessibility, headers, charts, themes, dashboards, roles, sessions, cookies, maintenance, etc.)",
+  "a11ySkipToContent": "Skip to main content",
+  "accessibilitySkipToMain": "Skip to main content",
+  "changePasswordButton": "Change Password",
+  "changePasswordConfirm": "Confirm New Password",
+  "changePasswordCurrent": "Current Password",
+  "changePasswordMinLength": "Password must be at least 8 characters",
+  "changePasswordMismatch": "Passwords do not match",
+  "changePasswordNew": "New Password",
+  "changePasswordRequired": "This field is required",
+  "changePasswordSameAsOld": "New password must be different from current password",
+  "changePasswordSubtitle": "You must change your password before continuing",
+  "changePasswordSuccess": "Password changed successfully",
+  "changePasswordTitle": "Change Password",
+  "chartNoData": "No data available",
+  "chartTableCount": "Count",
+  "chartTableLabel": "{title} — data table",
+  "@chartTableLabel": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "chartTableOption": "Option",
+  "chartTablePercent": "Percent",
+  "cookieAccept": "Accept",
+  "cookieBody": "This website uses essential cookies to maintain secure login sessions. By continuing to use the site you agree to the use of these cookies.",
+  "cookieTitle": "Cookies",
+  "dashboardGraphClearSelection": "Clear",
+  "dashboardGraphMyResults": "My Results",
+  "dashboardGraphNoCompletedSurveys": "No completed surveys yet. Complete a survey to see your data here.",
+  "dashboardGraphNoSelection": "Select a survey and question to view your data",
+  "dashboardGraphQuestionLabel": "Question",
+  "dashboardGraphSelectQuestion": "Select a Question",
+  "dashboardGraphSelectSurvey": "Select a Survey",
+  "dashboardGraphSettingsTitle": "Chart Settings",
+  "dashboardGraphSurveyLabel": "Survey",
+  "deactivatedNoticeMessage": "Your account has been deactivated. If you believe this is a mistake, please contact support.",
+  "deactivatedNoticeReturnToLogin": "Return to Login",
+  "deactivatedNoticeTitle": "Account Deactivated",
+  "headerMenu": "Menu",
+  "headerUnreadNotifications": "Unread notifications",
+  "maintenanceBannerMessage": "The System is Currently Down for Maintenance which is expected to be completed by {time}. We apologize for any inconvenience.",
+  "@maintenanceBannerMessage": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "maintenanceBannerMessageNoTime": "The System is Currently Down for Maintenance. We apologize for any inconvenience.",
+  "maintenanceBannerTitle": "System Under Maintenance",
+  "notFound404Heading": "404 - Page Not Found",
+  "notFoundDescription": "The page you are looking for does not exist.",
+  "notFoundPageTitle": "Page Not Found",
+  "paginationPageOf": "Page {current} of {total}",
+  "@paginationPageOf": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "reorderMoveDown": "Move down",
+  "reorderMoveUp": "Move up",
+  "roleAdmin": "Admin",
+  "roleHcp": "Healthcare Professional",
+  "roleParticipant": "Participant",
+  "roleResearcher": "Researcher",
+  "semanticLogoNavigate": "HealthBank logo, navigate to dashboard",
+  "sessionExpiryExtend": "Stay Logged In",
+  "sessionExpiryExtended": "Session extended.",
+  "sessionExpiryLogout": "Log Out",
+  "sessionExpiryMessage": "Your session will expire in 5 minutes. Would you like to stay logged in?",
+  "sessionExpiryTitle": "Session Expiring Soon",
+  "themePresetClassicCream": "Classic Cream",
+  "themePresetClassicCreamDesc": "Warm ivory chrome",
+  "themePresetClassicGrey": "Classic Grey",
+  "themePresetClassicGreyDesc": "Cool grey chrome",
+  "themePresetDark": "Dark",
+  "themePresetDarkDesc": "Modern dark mode",
+  "themePresetModern": "Modern",
+  "themePresetModernDesc": "Clean flat light",
+  "tooltipBarChart": "Bar chart",
+  "tooltipClearFilter": "Clear filter",
+  "tooltipClearSearch": "Clear search",
+  "tooltipClose": "Close",
+  "tooltipCloseModal": "Close",
+  "tooltipCollapseSidebar": "Collapse sidebar",
+  "tooltipDismissNotification": "Dismiss notification",
+  "tooltipExpandSidebar": "Expand sidebar",
+  "tooltipGoBack": "Go back",
+  "tooltipLineChart": "Line chart",
+  "tooltipNextPage": "Next page",
+  "tooltipPickDate": "Pick date",
+  "tooltipPickTime": "Pick time",
+  "tooltipPieChart": "Pie chart",
+  "tooltipPreviousPage": "Previous page",
+  "tooltipRemoveOption": "Remove option",
+  "tooltipTableView": "Table view",
+  "tooltipTogglePasswordVisibility": "Toggle password visibility",
+  "@@_AUTH": "Authentication: login, logout, register, forgot/reset password, profile menu",
+  "auth2faCodeHint": "123456",
+  "auth2faConfirm2fa": "Confirm 2FA",
+  "auth2faEnrollAndRetrieveProvisioningUri": "Enroll your account and retrieve the provisioning URI (used for QR code).",
+  "auth2faEnrollApi": "Enroll",
+  "auth2faEnterCodeFromAuthenticator": "Enter the 6-digit code from your authenticator app",
+  "auth2faEnterCodeToFinishSignin": "Enter the 6-digit code to finish signing in.",
+  "auth2faErrorEnrollFailed": "Failed to enroll 2FA. Please try again.",
+  "auth2faErrorVerifyFailed": "Failed to verify 2FA. Please try again.",
+  "auth2faPleaseLoginFirstToEnroll": "Please log in first to enroll 2FA.",
+  "auth2faTitle": "Two-Factor Authentication (2FA)",
+  "auth2faVerify": "Verify",
+  "authEmailInvalid": "Please enter a valid email",
+  "authEmailRequired": "Enter your email address.",
+  "authForgotPasswordBackToLogin": "Back to Login",
+  "authForgotPasswordButton": "Send Reset Link",
+  "authForgotPasswordSubtitle": "Enter your email to receive a password reset link",
+  "authForgotPasswordSuccess": "Password reset link sent to your email",
+  "authForgotPasswordTitle": "Forgot Password",
+  "authLoggingIn": "Logging In...",
+  "authLoggingOut": "Logging Out...",
+  "authLoginButton": "Log In",
+  "authLoginEmail": "Email",
+  "authLoginError": "Invalid email or password",
+  "authLoginForgotPassword": "Forgot Password?",
+  "authLoginNoAccount": "Don't have an account?",
+  "authLoginPassword": "Password",
+  "authLoginRememberMe": "Remember me",
+  "authLoginSignUp": "Sign Up",
+  "authLoginSubtitle": "Enter your credentials to access your account",
+  "authLoginTitle": "Log In",
+  "authLogout": "Logout",
+  "authLogoutMessage": "You have been successfully logged out.\nPlease click the Return button to\nreturn to the Log In page.",
+  "authLogoutReturn": "Return",
+  "authLogoutReturnToLogin": "Return to Login",
+  "authLogoutTitle": "Logout Successful",
+  "authMaintenanceModeAdminNote": "Administrator accounts may still log in.",
+  "authMaintenanceModeDefaultMessage": "The system is temporarily unavailable for scheduled maintenance.",
+  "authMaintenanceModeLoginError": "System is under maintenance. Only administrators can log in at this time.",
+  "authMaintenanceModeTitle": "System Maintenance",
+  "authNewHereRequestAccount": "New Here? Request An Account",
+  "authNotifications": "Notifications",
+  "authPasswordRequired": "Enter your password.",
+  "authPleaseLogIn": "Please log in to continue.",
+  "authProfile": "Profile",
+  "authRegisterButton": "Create Account",
+  "authRegisterConfirmPassword": "Confirm Password",
+  "authRegisterFirstName": "First Name",
+  "authRegisterHaveAccount": "Already have an account?",
+  "authRegisterLastName": "Last Name",
+  "authRegisterLogin": "Log In",
+  "authRegisterPasswordMismatch": "Passwords do not match",
+  "authRegisterSubtitle": "Enter your details to create an account",
+  "authRegisterTitle": "Create Account",
+  "authResetPasswordButton": "Reset Password",
+  "authResetPasswordConfirmPassword": "Confirm New Password",
+  "authResetPasswordConfirmRequired": "Please confirm your password",
+  "authResetPasswordInvalidLinkMessage": "This password reset link is invalid or has expired. Please request a new one.",
+  "authResetPasswordInvalidLinkTitle": "Invalid Reset Link",
+  "authResetPasswordNewPassword": "New Password",
+  "authResetPasswordSubtitle": "Enter your new password",
+  "authResetPasswordSuccess": "Password reset successful",
+  "authResetPasswordSuccessMessage": "Your password has been successfully reset.",
+  "authResetPasswordSuccessTitle": "Password Reset Successful",
+  "authResetPasswordTitle": "Reset Password",
+  "authSettings": "Settings",
+  "authWelcomeTo": "Welcome to HealthBank.",
+  "@@_ACCOUNT_REQUEST": "Account request / signup flow",
+  "accountEditError404": "Account not found. It may have been deleted.",
+  "accountEditError409": "This email is already in use by another account.",
+  "accountEditError422": "Invalid data. Please check all fields.",
+  "accountEditErrorNetwork": "Network error. Please check your connection.",
+  "accountEditErrorServer": "A server error occurred. Please try again.",
+  "accountEditSaving": "Saving...",
+  "accountEditSuccess": "User updated successfully.",
+  "accountEditValidationEmail": "Please enter a valid email address.",
+  "accountEditValidationName": "Name cannot be empty.",
+  "requestAccountBackToLogin": "Back to Login",
+  "requestAccountBirthdate": "Date of Birth",
+  "requestAccountDuplicateEmail": "An account with this email already exists",
+  "requestAccountDuplicatePending": "A request for this email is already pending",
+  "requestAccountEmail": "Email",
+  "requestAccountEmailRequired": "Email is required",
+  "requestAccountError": "Unable to submit request. Please try again.",
+  "requestAccountFirstName": "First Name",
+  "requestAccountFirstNameRequired": "First name is required",
+  "requestAccountGender": "Gender",
+  "requestAccountGenderFemale": "Female",
+  "requestAccountGenderMale": "Male",
+  "requestAccountGenderNonBinary": "Non-Binary",
+  "requestAccountGenderOther": "Other",
+  "requestAccountGenderOtherSpecify": "Please specify",
+  "requestAccountGenderPreferNotToSay": "Prefer Not to Say",
+  "requestAccountLastName": "Last Name",
+  "requestAccountLastNameRequired": "Last name is required",
+  "requestAccountRole": "Select Role",
+  "requestAccountRoleHcp": "Healthcare Provider",
+  "requestAccountRoleParticipant": "Participant",
+  "requestAccountRoleRequired": "Please select a role",
+  "requestAccountRoleResearcher": "Researcher",
+  "requestAccountSubmit": "Submit Request",
+  "requestAccountSubtitle": "Fill out this form to request an account",
+  "requestAccountSuccess": "Your request has been submitted. You will receive an email when your account is approved.",
+  "requestAccountTitle": "Request Account",
+  "requestAccountTooManyRequests": "Too many requests. Please try again later.",
+  "@@_PASSWORD_RESET": "Password reset / change flows",
+  "resetPasswordCopied": "Password copied to clipboard",
+  "resetPasswordCopy": "Copy to clipboard",
+  "resetPasswordEmailAddress": "Email Address",
+  "resetPasswordEmailHint": "Enter alternate email",
+  "resetPasswordEmailInvalid": "Enter a valid email address",
+  "resetPasswordEmailRequired": "Email is required",
+  "resetPasswordEmailSubtitle": "Email the temporary password to the user",
+  "resetPasswordGenerate": "Generate random password",
+  "resetPasswordHint": "Enter password or generate",
+  "resetPasswordMinLength": "Password must be at least 8 characters",
+  "resetPasswordModalTitle": "Reset Password",
+  "resetPasswordNewPassword": "New Password",
+  "resetPasswordRequired": "Password is required",
+  "resetPasswordResetting": "Resetting...",
+  "resetPasswordSendEmail": "Send email notification",
+  "resetPasswordSuccessEmail": "Password reset and email sent successfully",
+  "resetPasswordSuccessNoEmail": "Password reset successfully",
+  "resetPasswordUseAlternate": "Use alternate email",
+  "@@_PROFILE": "User profile / completion",
+  "profileBirthdate": "Birthdate",
+  "profileCompletionBirthdate": "Date of Birth",
+  "profileCompletionBirthdateRequired": "Date of birth is required",
+  "profileCompletionError": "Failed to save profile. Please try again.",
+  "profileCompletionGender": "Gender",
+  "profileCompletionGenderFemale": "Female",
+  "profileCompletionGenderMale": "Male",
+  "profileCompletionGenderNonBinary": "Non-Binary",
+  "profileCompletionGenderOther": "Other",
+  "profileCompletionGenderPreferNotToSay": "Prefer Not to Say",
+  "profileCompletionGenderRequired": "Gender selection is required",
+  "profileCompletionSubmit": "Continue",
+  "profileCompletionSubtitle": "Please provide the following information to complete your account setup.",
+  "profileCompletionTitle": "Complete Your Profile",
+  "profileEditInformation": "Edit",
+  "profileEmail": "Email",
+  "profileEmailInvalid": "Enter a valid email",
+  "profileEmailRequired": "Email is required",
+  "profileFirstName": "First name",
+  "profileFirstNameRequired": "First name is required",
+  "profileGender": "Gender",
+  "profileLastName": "Last name",
+  "profileLastNameRequired": "Last name is required",
+  "profileLoadError": "Failed to load profile.",
+  "profileRole": "Role: {role}",
+  "@profileRole": {
+    "placeholders": {
+      "role": {
+        "type": "String"
+      }
+    }
+  },
+  "profileSaveChanges": "Save changes",
+  "profileSubtitle": "Manage your personal account information",
+  "profileTitle": "Profile",
+  "profileUpdateError": "Failed to update profile.",
+  "profileUpdateSuccess": "Profile updated successfully.",
+  "@@_NAVIGATION": "Navigation labels",
+  "navAbout": "About",
+  "navAccountRequests": "Account Requests",
+  "navAuditLog": "Audit Log",
+  "navBackup": "Database Backups",
+  "navChangePassword": "Change Password",
+  "navClients": "Clients",
+  "navCompleteProfile": "Complete Profile",
+  "navConsent": "Consent",
+  "navDashboard": "Dashboard",
+  "navDashboardV2": "Dashboard v2",
+  "navData": "Data",
+  "navDatabase": "Database",
+  "navDatabaseViewer": "Database Viewer",
+  "navDeletionQueue": "Deletion Queue",
+  "navErrorPage": "Error Page",
+  "navForgotPassword": "Forgot Password",
+  "navFriends": "Contacts",
+  "navHealthTracking": "Health Tracking",
+  "navHelp": "Help",
+  "navHome": "Home",
+  "navLogin": "Login",
+  "navMessages": "Messages",
+  "navMySurveys": "My Surveys",
+  "navNewMessage": "New Message",
+  "navNewSurvey": "New Survey",
+  "navNewTemplate": "New Template",
+  "navPageNavigator": "Page Navigator",
+  "navParticipants": "Participants",
+  "navQuestionBank": "Question Bank",
+  "navReports": "Reports",
+  "navRequestAccount": "Request Account",
+  "navResetPassword": "Reset Password",
+  "navResults": "Results",
+  "navSettings": "Settings",
+  "navSurveys": "Surveys",
+  "navTasks": "To-Do",
+  "navTemplates": "Templates",
+  "navTickets": "Tickets",
+  "navUiTest": "UI Test",
+  "navUserManagement": "User Management",
+  "@@_CONSENT": "Consent form and revocation",
+  "consentCheckboxLabel": "I have read, understand, and agree to the terms of this consent form.",
+  "consentDateLabel": "Date",
+  "consentDocumentHcp": "HEALTHCARE PROFESSIONAL DATA ACCESS AND CONFIDENTIALITY AGREEMENT\n\nPlatform: HealthBank — Personal Health Data Collection and Research Platform\n\n1. PROFESSIONAL OBLIGATIONS\n\nAs a Healthcare Professional (HCP) accessing the HealthBank platform, you acknowledge that you are bound by both this agreement and the professional standards and regulations governing your practice, including those of your regulatory college or association. Your obligations under this agreement are in addition to, and do not replace, your existing professional duties of confidentiality.\n\n2. DATA ACCESS LIMITATIONS\n\nYour access to participant data through HealthBank is strictly limited to:\n- Data directly relevant to the care of patients under your supervision\n- Aggregated research data as authorized by your institutional agreement\n- Information necessary for clinical decision-making within your scope of practice\n\nYou must not access data for patients who are not under your care, or for purposes unrelated to authorized clinical or research activities.\n\n3. CONFIDENTIALITY DUTY\n\nYou agree to maintain absolute confidentiality regarding all participant data accessed through this platform. This duty of confidentiality:\n- Is in addition to your professional obligations under your regulatory body\n- Continues indefinitely, even after you cease using the platform\n- Extends to all forms of data, whether digital, verbal, or written\n- Applies in all contexts, including conversations with colleagues not involved in the participant's care\n\n4. BREACH REPORTING\n\nYou are legally and professionally obligated to immediately report any suspected or actual data breach, including:\n- Unauthorized access to patient data\n- Accidental disclosure of identifiable health information\n- Loss or theft of devices used to access the platform\n- Suspicious activity observed on the platform\n\nReports must be made to the HealthBank Privacy Officer within 24 hours of discovery. Failure to report a breach is itself a violation of this agreement and may constitute professional misconduct.\n\n5. LIABILITY ACKNOWLEDGMENT\n\nYou acknowledge that:\n- You are personally liable for any unauthorized access or disclosure of participant data\n- Your institution may also bear liability for breaches occurring within their systems\n- Insurance coverage may not apply to intentional or grossly negligent breaches\n- Participants have the right to seek damages for unauthorized disclosure of their health information\n\n6. REGULATORY COMPLIANCE\n\nYou confirm that you will comply with all applicable privacy and health information legislation, including:\n- PHIPA (Personal Health Information Protection Act)\n- PIPEDA (Personal Information Protection and Electronic Documents Act)\n- Professional standards of your regulatory college\n- Institutional privacy and data handling policies\n\n7. DISCLOSURE EXCEPTIONS\n\nYou may disclose participant information without consent only where required or permitted by law, including:\n- Where required by court order or subpoena\n- To prevent imminent harm to the participant or others\n- Where required by mandatory reporting legislation (e.g., child protection)\n- As required by your professional regulatory body during an investigation\n\nIn all such cases, you must document the disclosure and notify the HealthBank Privacy Officer.\n\n8. CONSEQUENCES OF VIOLATION\n\nViolation of this agreement may result in:\n- Immediate revocation of platform access\n- Reporting to your professional regulatory body\n- Disciplinary proceedings which may include suspension or revocation of licensure\n- Civil liability for damages to affected participants\n- Penalties under PHIPA/PIPEDA (fines up to $100,000 per violation)\n- Criminal prosecution in cases of willful or malicious breach\n\nBy checking the agreement box below, you confirm that you have read, understood, and agree to all terms of this confidentiality agreement.",
+  "consentDocumentParticipant": "PARTICIPANT INFORMED CONSENT FORM\n\nStudy Title: HealthBank — Personal Health Data Collection and Research Platform\n\n1. PURPOSE OF THIS STUDY\n\nYou are being invited to participate in a research study conducted through the HealthBank platform. The purpose of this study is to collect personal health information from participants to support health research, data analysis, and the improvement of healthcare outcomes. Your participation is entirely voluntary.\n\n2. TYPES OF DATA COLLECTED\n\nAs a participant, the following types of information may be collected from you:\n- Demographic information (name, date of birth, gender)\n- Health survey responses (physical health, mental health, lifestyle, symptoms)\n- Survey completion data (timestamps, response patterns)\n- Technical data (IP address, browser information) for security purposes\n\n3. HOW YOUR DATA WILL BE USED\n\nYour data will be used for the following purposes:\n- Health research conducted by authorized researchers\n- Statistical analysis and aggregation to identify health trends\n- Improvement of healthcare services and outcomes\n- Academic publication (only aggregated, de-identified data)\n\nYour individual responses will never be published or shared in a way that could identify you. All research outputs use aggregated data with a minimum of 5 respondents (k-anonymity) to prevent identification.\n\n4. WHO HAS ACCESS TO YOUR DATA\n\nAccess to your data is strictly controlled:\n- Researchers: Access only to aggregated, de-identified data through the research portal\n- Healthcare Professionals (HCPs): Access limited to data relevant to your care\n- System Administrators: Technical access for platform maintenance only\n- No third parties will receive your individual data without your explicit consent\n\n5. DATA RETENTION\n\nYour data will be retained for the duration of the research program. After the program concludes, data will be securely archived or destroyed in accordance with institutional data retention policies. You may request information about data retention timelines at any time.\n\n6. YOUR RIGHT TO WITHDRAW\n\nYou have the right to withdraw your consent at any time without penalty or loss of benefits. To withdraw, contact the Privacy Officer at the contact information provided below. Upon withdrawal:\n- No new data will be collected from you\n- Your account will be deactivated\n- However, data that has already been included in completed analyses or published research cannot be removed, as it has been aggregated and de-identified\n\n7. DATA PERSISTENCE AFTER WITHDRAWAL\n\nPlease be aware that while we will cease collecting new data upon withdrawal, any data that has already been shared with researchers in aggregated form cannot be recalled or removed from completed analyses. This is a necessary limitation of research data that has already been processed.\n\n8. RISKS AND SAFEGUARDS\n\nWhile every effort is made to protect your data, no system is completely without risk. Potential risks include:\n- Unauthorized access despite security measures\n- Re-identification through combination with external data sources\n\nTo mitigate these risks, we employ:\n- Industry-standard encryption for data in transit and at rest\n- Role-based access controls limiting who can see what data\n- K-anonymity thresholds (minimum 5 respondents) for all research outputs\n- Regular security audits and monitoring\n- Secure session management with automatic expiration\n\n9. CONFIDENTIALITY MEASURES\n\nYour information is protected by:\n- Encrypted data storage and transmission\n- Strict access controls based on role and need\n- Audit logging of all data access\n- Compliance with PIPEDA (Personal Information Protection and Electronic Documents Act) and PHIPA (Personal Health Information Protection Act)\n- Adherence to TCPS 2 (Tri-Council Policy Statement: Ethical Conduct for Research Involving Humans)\n\n10. CONTACT INFORMATION\n\nIf you have questions about this study, your rights as a participant, or wish to withdraw your consent, please contact:\n\nHealthBank Privacy Officer\nEmail: privacy@healthbank.ca\n\n11. ELECTRONIC SIGNATURE\n\nBy checking the agreement box below, you confirm that:\n- You have read and understood this consent form\n- You voluntarily agree to participate in this study\n- You understand your right to withdraw at any time\n- You acknowledge that your electronic agreement constitutes a legally binding signature pursuant to the Uniform Electronic Commerce Act (UECA)",
+  "consentDocumentResearcher": "RESEARCHER DATA USE AND CONFIDENTIALITY AGREEMENT\n\nPlatform: HealthBank — Personal Health Data Collection and Research Platform\n\n1. DATA CONFIDENTIALITY OBLIGATIONS\n\nAs an authorized researcher on the HealthBank platform, you agree to maintain the strictest confidentiality regarding all participant data accessed through this platform. You acknowledge that participant data is collected under informed consent and is protected by Canadian privacy legislation including PIPEDA and PHIPA.\n\n2. PERMITTED USES\n\nYou may use data accessed through HealthBank solely for:\n- Approved research projects as defined in your research protocol\n- Statistical analysis using aggregated, de-identified data\n- Academic publications using only aggregated results\n- Quality improvement of research methodologies\n\nAny use beyond these purposes requires separate approval from the HealthBank administration and relevant ethics boards.\n\n3. DISCLOSURE LIMITATIONS\n\nYou agree that you will NOT:\n- Share individual participant data with any unauthorized person\n- Attempt to re-identify or de-anonymize any participant\n- Transfer data outside the HealthBank platform without written authorization\n- Use data for commercial purposes without explicit approval\n- Discuss individual participant responses outside the authorized research team\n\n4. CONSEQUENCES OF BREACH\n\nViolation of this agreement may result in:\n- Immediate revocation of platform access\n- Disciplinary action by your institution\n- Legal liability under PIPEDA and PHIPA (fines up to $100,000 per violation)\n- Professional sanctions from relevant regulatory bodies\n- Civil liability for damages caused to participants\n\n5. DATA HANDLING AND SECURITY\n\nYou agree to:\n- Access data only through the authorized HealthBank platform interface\n- Not download or store individual participant data on personal devices\n- Use only institutional, password-protected devices for research access\n- Report any suspected data breach immediately to the HealthBank Privacy Officer\n- Follow all institutional data security policies and procedures\n\n6. PUBLICATION RESTRICTIONS\n\nWhen publishing research based on HealthBank data, you must:\n- Use only aggregated, de-identified results\n- Ensure no individual participant can be identified through published data\n- Acknowledge the HealthBank platform as the data source\n- Submit publications for review before submission if required by your research agreement\n\n7. BREACH REPORTING\n\nYou are legally obligated to immediately report any suspected or actual data breach, including:\n- Unauthorized access to participant data\n- Accidental disclosure of identifiable information\n- Loss or theft of devices containing research data\n- Any suspicious activity on the platform\n\nReports must be made to the HealthBank Privacy Officer within 24 hours of discovery.\n\n8. DURATION OF OBLIGATIONS\n\nYour confidentiality obligations under this agreement continue indefinitely, even after:\n- Your research project concludes\n- Your access to the platform is terminated\n- Your employment or affiliation with your institution ends\n\n9. DATA RETURN AND DESTRUCTION\n\nUpon completion of your research or termination of access, you agree to:\n- Delete all locally stored research data derived from HealthBank\n- Certify in writing that all data has been destroyed\n- Return any physical materials containing participant information\n\nBy checking the agreement box below, you confirm that you have read, understood, and agree to all terms of this confidentiality agreement.",
+  "consentElectronicSignatureNotice": "By typing your name in the signature field and checking the agreement box, you acknowledge that your electronic signature has the same legal effect as a handwritten signature pursuant to the Uniform Electronic Commerce Act (UECA).",
+  "consentErrorGeneric": "Failed to submit consent. Please try again.",
+  "consentHcpTitle": "Healthcare Professional Confidentiality Agreement",
+  "consentPageSubtitle": "Please review and agree to the consent form to continue.",
+  "consentPageTitle": "Consent Form",
+  "consentParticipantTitle": "Participant Informed Consent",
+  "consentRecordDocumentLanguage": "Document Language",
+  "consentRecordIpAddress": "IP Address",
+  "consentRecordSignatureName": "Signature",
+  "consentRecordSignedAt": "Signed At",
+  "consentRecordTitle": "Consent Record Details",
+  "consentRecordUserAgent": "User Agent",
+  "consentResearcherTitle": "Researcher Confidentiality Agreement",
+  "consentRestoreHcpAccess": "Restore HCP Access",
+  "consentRestoreSuccess": "HCP access restored",
+  "consentRevokeConfirmBody": "This will prevent {hcpName} from viewing your health data. You can restore access later.",
+  "@consentRevokeConfirmBody": {
+    "placeholders": {
+      "hcpName": {
+        "type": "String"
+      }
+    }
+  },
+  "consentRevokeConfirmTitle": "Revoke HCP Access?",
+  "consentRevokeError": "Failed to update consent. Please try again.",
+  "consentRevokeHcpAccess": "Revoke HCP Access",
+  "consentRevokeSuccess": "HCP access revoked",
+  "consentSignatureDisclaimer": "By typing your full legal name in the signature field, you confirm that this constitutes your electronic signature and has the same legal force and effect as a handwritten signature pursuant to the Uniform Electronic Commerce Act (UECA) and applicable Canadian provincial legislation. This electronic signature is legally binding and enforceable under the Personal Information Protection and Electronic Documents Act (PIPEDA).",
+  "consentSignatureHint": "Type your full legal name",
+  "consentSignatureLabel": "Electronic Signature",
+  "consentStatusNotSigned": "Consent Not Signed",
+  "consentStatusSigned": "Consent Signed",
+  "consentStatusSignedAt": "Signed: {date}",
+  "@consentStatusSignedAt": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "consentStatusVersion": "Version: {version}",
+  "@consentStatusVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "consentSubmitButton": "I Agree and Submit",
+  "consentViewRecord": "View Consent Record",
+  "@@_PARTICIPANT": "Participant dashboard, surveys, results, charts, comparisons",
+  "participantAvailableSurveys": "Available Surveys",
+  "participantCategoryLabel": "Category",
+  "participantChartDistribution": "Distribution",
+  "participantChartError": "Could not load chart data.",
+  "participantChartLoading": "Loading charts...",
+  "participantChartMean": "Average",
+  "participantChartMedian": "Median",
+  "participantChartNo": "No",
+  "participantChartNoData": "No chart data available.",
+  "participantChartSuppressed": "Aggregate data hidden for privacy (fewer than 5 respondents).",
+  "participantChartToggle": "Show charts",
+  "participantChartYes": "Yes",
+  "participantChartYourAnswer": "Your answer",
+  "participantChartYourValue": "Your Value",
+  "participantClickToView": "Click to view",
+  "participantCollapseSurvey": "Hide details",
+  "participantCompareAggregate": "Aggregate",
+  "participantCompareError": "Could not load comparison data.",
+  "participantCompareLoading": "Loading comparison...",
+  "participantCompareMostCommon": "Most common",
+  "participantCompareNoData": "No comparison data available.",
+  "participantCompareToggle": "Compare to aggregate",
+  "participantCompletedOn": "Completed {date}",
+  "@participantCompletedOn": {
+    "placeholders": {
+      "date": {}
+    }
+  },
+  "participantCompletedSurveys": "Completed Surveys",
+  "participantCompletedThisWeek": "Completed this week",
+  "participantContinueSurvey": "Continue Survey",
+  "participantDashboardDescription": "Review your graphs and diagrams.",
+  "participantDoTask": "Do Task",
+  "participantDownloadResults": "Download Results",
+  "participantDueOn": "Due on {date}",
+  "@participantDueOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "participantDueToday": "Due today",
+  "participantDueTodayAt": "Due today at {time}",
+  "@participantDueTodayAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "participantExpandSurvey": "Show details",
+  "participantGraphPlaceholder": "Graph placeholder",
+  "participantGraphTitle1": "Graph Title 1",
+  "participantGraphTitle2": "Graph Title 2",
+  "participantLinkedHcps": "Linked Health Care Providers",
+  "participantLoadingResults": "Loading your data...",
+  "participantMyResults": "My Results",
+  "participantMySurveys": "My Surveys",
+  "participantMyTasks": "My Tasks",
+  "participantNewMessages": "{count, plural, =1{You have 1 new message.\nClick to here to view.} other{You have {count} new messages.\nClick to here to view.}}",
+  "@participantNewMessages": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "participantNoDueDate": "No deadline",
+  "participantNoResults": "You haven't completed any surveys yet.",
+  "participantNoResultsYet": "No results available yet",
+  "participantNoSurveys": "No surveys assigned to you yet.",
+  "participantNoSurveysSubtitle": "Review assigned surveys and continue any saved drafts here.",
+  "participantNoTasksDueToday": "No tasks due today",
+  "participantNotificationMessage": "{count, plural, =1{You have 1 new message.\nClick to here to view.} other{You have {count} new messages.\nClick to here to view.}}",
+  "@participantNotificationMessage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "participantOverdueSince": "Overdue since {date}",
+  "@participantOverdueSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "participantOverdueTasksSummary": "{count, plural, =1{1 task is overdue} other{{count} tasks are overdue}}",
+  "@participantOverdueTasksSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "participantPlaceholder": "(Placeholder)",
+  "participantQuestionCount": "{count, plural, =1{1 question} other{{count} questions}}",
+  "@participantQuestionCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "participantQuickInsightsCaughtUpBadge": "You’re all caught up",
+  "participantQuickInsightsCaughtUpMessage": "You’re all caught up. No surveys are waiting right now.",
+  "participantQuickInsightsCompletedOn": "Completed on {date}",
+  "@participantQuickInsightsCompletedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "participantQuickInsightsMostRecentTitle": "Most recent survey completed",
+  "participantQuickInsightsNoCompletedYet": "No completed surveys yet. Once you finish one, it will appear here.",
+  "participantQuickInsightsTitle": "Quick Insights",
+  "participantQuickInsightsViewInResults": "View in Results",
+  "participantRemainingTasks": "{count, plural, =1{1 Remaining Task} other{{count} Remaining Tasks}}",
+  "@participantRemainingTasks": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "participantRemainingTasksForToday": "Remaining tasks for today: {count}",
+  "@participantRemainingTasksForToday": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "participantRepeatsEvery": "Repeats every {days} days",
+  "@participantRepeatsEvery": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "participantResponseLabel": "Your Response",
+  "participantResultsError": "Could not load your data. Please try again.",
+  "participantResultsTitle": "My Data",
+  "participantResumeSurvey": "Resume Survey",
+  "participantRetry": "Retry",
+  "participantStartSurvey": "Start Survey",
+  "participantSurveyCompleted": "Completed",
+  "participantSurveyDueDate": "Due: {date}",
+  "@participantSurveyDueDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "participantSurveyLoadError": "Could not load surveys. Please try again.",
+  "participantSurveyStatusCompleted": "Completed",
+  "participantSurveyStatusExpired": "Expired",
+  "participantSurveyStatusIncomplete": "Incomplete",
+  "participantSurveyStatusPending": "Pending",
+  "participantTaskProgress": "Task Progress",
+  "participantTaskProgressLabel": "Your Task Progress:",
+  "participantTasksCompleted": "{completed} out of {total} tasks completed",
+  "@participantTasksCompleted": {
+    "placeholders": {
+      "completed": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "participantTasksCompletedLabel": "{completed} out of {total} tasks completed",
+  "@participantTasksCompletedLabel": {
+    "placeholders": {
+      "completed": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "participantTasksCompletedThisWeekSummary": "{completed} of {total} current tasks completed this week",
+  "@participantTasksCompletedThisWeekSummary": {
+    "placeholders": {
+      "completed": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "participantUnknownSurvey": "Survey",
+  "participantViewAllTasks": "View All Tasks",
+  "participantViewResults": "View Results",
+  "participantWelcomeGreeting": "Welcome, {name}. How are you today?",
+  "@participantWelcomeGreeting": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "participantWelcomeMessage": "Welcome, {name}. How are you today?",
+  "@participantWelcomeMessage": {
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "John"
+      }
+    }
+  },
+  "participantYourTaskProgress": "Your Task Progress:",
+  "@@_PARTICIPANT_TODO": "Participant tasks / to-do",
+  "todoAlertsTitle": "Action Required",
+  "todoCompletedSummaryTitle": "Your Progress",
+  "todoConsentRequired": "Your consent needs to be renewed. Please review and sign.",
+  "todoDueSoonLabel": "Due soon",
+  "todoHcpAccept": "Accept",
+  "todoHcpDecline": "Decline",
+  "todoHcpLinkAccepted": "Connection accepted",
+  "todoHcpLinkDeclined": "Connection declined",
+  "todoHcpLinkError": "Failed to respond. Please try again.",
+  "todoHcpLinkRequest": "{hcpName} has requested to track your health data.",
+  "@todoHcpLinkRequest": {
+    "placeholders": {
+      "hcpName": {
+        "type": "String"
+      }
+    }
+  },
+  "todoNoTasks": "You have no pending tasks.",
+  "todoOverdueLabel": "Overdue",
+  "todoPageTitle": "My Tasks",
+  "todoPendingSurveysTitle": "Pending Surveys",
+  "todoProfileIncomplete": "Your profile is incomplete. Please add your name.",
+  "todoRefreshing": "Refreshing...",
+  "todoStartSurvey": "Start Survey",
+  "todoViewResults": "View Results",
+  "@@_HEALTH_TRACKING": "Health tracking (participant + research analytics)",
+  "healthCheckInTaskAction": "Start Check-in",
+  "healthCheckInTaskCompletedToday": "Completed today",
+  "healthCheckInTaskDueText": "Due today",
+  "healthCheckInTaskProgress": "{completed}/{total} questions answered",
+  "@healthCheckInTaskProgress": {
+    "placeholders": {
+      "completed": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "healthCheckInTaskRepeat": "Daily",
+  "healthCheckInTaskTitle": "Daily Health Check-in",
+  "healthTrackingAggregateUnavailable": "Population comparison unavailable (insufficient data).",
+  "healthTrackingAllCategories": "All categories",
+  "healthTrackingAverageLabel": "Avg",
+  "healthTrackingAverageTitle": "Average Value Over Time",
+  "healthTrackingAvgValue": "Avg Value",
+  "healthTrackingBaselineBanner": "Record your starting point — fill in today's values as your health baseline.",
+  "healthTrackingCategory": "Category",
+  "healthTrackingChartBar": "Bar chart",
+  "healthTrackingChartEntries": "{count, plural, one{{count} entry} other{{count} entries}}",
+  "@healthTrackingChartEntries": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "healthTrackingChartError": "Could not load chart data.",
+  "healthTrackingChartLine": "Line chart",
+  "healthTrackingChartPie": "Pie chart",
+  "healthTrackingCharts": "Charts",
+  "healthTrackingChartTypeLabel": "Chart type",
+  "healthTrackingChartYesNoHint": "Yes = 1 / No = 0",
+  "healthTrackingClearAllMetrics": "Clear all",
+  "healthTrackingClearSelection": "Clear",
+  "healthTrackingCollapseCategory": "Collapse category",
+  "healthTrackingCompareToAggregate": "Compare to Aggregate",
+  "healthTrackingDraftHint": "{count, plural, one{{count} answer filled} other{{count} answers filled}}",
+  "@healthTrackingDraftHint": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "healthTrackingEnterText": "Enter your response",
+  "healthTrackingEnterValue": "Enter value",
+  "healthTrackingExpandCategory": "Expand category",
+  "healthTrackingExportError": "Export failed: {error}",
+  "@healthTrackingExportError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "healthTrackingExportFiltered": "Export Filtered Data",
+  "healthTrackingExporting": "Exporting…",
+  "healthTrackingExportOwnData": "Export My Data (CSV)",
+  "healthTrackingFilters": "Filters",
+  "healthTrackingGranularityDaily": "Daily",
+  "healthTrackingGranularityLabel": "Granularity",
+  "healthTrackingGranularityMonthly": "Monthly",
+  "healthTrackingGranularityWeekly": "Weekly",
+  "healthTrackingHideFilters": "Hide filters",
+  "healthTrackingHistory": "History",
+  "healthTrackingHistoryAll": "All Entries",
+  "healthTrackingHistoryByCategory": "By Category",
+  "healthTrackingHistoryByMetric": "By Metric",
+  "healthTrackingHistoryDateFrom": "From",
+  "healthTrackingHistoryDateTo": "To",
+  "healthTrackingHistoryModeLabel": "History view mode",
+  "healthTrackingHistoryNoEntries": "No entries found for the selected period.",
+  "healthTrackingHistoryTruncated": "Showing 100 most recent entries.",
+  "healthTrackingLoadChart": "Load Chart",
+  "healthTrackingLogToday": "Log Today",
+  "healthTrackingMetric": "Metric",
+  "healthTrackingMetricsError": "Could not load metrics.",
+  "healthTrackingMonthlySection": "MONTHLY CHECK-IN",
+  "healthTrackingMultiChartTitle": "Average Values Over Time",
+  "healthTrackingMyDataOnly": "My Data Only",
+  "healthTrackingNMetricsSelected": "{count} selected",
+  "@healthTrackingNMetricsSelected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "healthTrackingNoData": "No data yet",
+  "healthTrackingNoMetrics": "No metrics available.",
+  "healthTrackingParticipants": "Participants",
+  "healthTrackingRecentEntries": "Recent entries",
+  "healthTrackingResearchCategories": "Category Overview",
+  "healthTrackingResearchDeepDive": "Metric Deep-Dive",
+  "healthTrackingResearchExport": "Export Health Tracking CSV",
+  "healthTrackingResearchNoData": "No data available for the selected filters.",
+  "healthTrackingResearchTitle": "Health Tracking Analytics",
+  "healthTrackingResultsViewLabel": "View results as table or chart",
+  "healthTrackingSave": "Save Entries",
+  "healthTrackingSaveError": "Failed to save entries. Please try again.",
+  "healthTrackingSaveSuccess": "Entries saved successfully.",
+  "healthTrackingSelectAll": "All",
+  "healthTrackingSelectAllMetrics": "Select all",
+  "healthTrackingSelectCategoryAll": "Select all in category",
+  "healthTrackingSelectMetric": "Select a metric",
+  "healthTrackingSelectMetrics": "Select Metrics",
+  "healthTrackingSelectMetricsHint": "Select at least one metric to load the chart",
+  "healthTrackingSelectMetricTooltip": "Select a metric to load chart data",
+  "healthTrackingShowFilters": "Show filters",
+  "healthTrackingTitle": "Health Tracking",
+  "healthTrackingValueColumn": "Value",
+  "healthTrackingViewChart": "Chart view",
+  "healthTrackingViewModeLabel": "View mode: log today or history",
+  "healthTrackingViewTable": "Table view",
+  "healthTrackingWeeklySection": "WEEKLY CHECK-IN",
+  "healthTrackingXofYMetrics": "{selected} of {total} metrics",
+  "@healthTrackingXofYMetrics": {
+    "placeholders": {
+      "selected": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "@@_SURVEY": "Survey list, builder, assignment, dialogs, preview",
+  "surveyAssignAge3044": "30–44",
+  "surveyAssignAge4559": "45–59",
+  "surveyAssignAge60Plus": "60 and over",
+  "surveyAssignAgeAny": "Any",
+  "surveyAssignAgeMaxLabel": "Age Max",
+  "surveyAssignAgeMinLabel": "Age Min",
+  "surveyAssignAgeRangeLabel": "Age Range",
+  "surveyAssignAgeUnder30": "Under 30",
+  "surveyAssignAgeValidationInteger": "Age must be an integer.",
+  "surveyAssignAgeValidationNonNegative": "Age cannot be negative.",
+  "surveyAssignAgeValidationRange": "Minimum age must be less than or equal to maximum age.",
+  "surveyAssignAgeValidationRequired": "Age is required.",
+  "surveyAssignAgeValidationUpperBound": "Age must be {max} or less.",
+  "@surveyAssignAgeValidationUpperBound": {
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyAssignBulkResult": "Targeted: {totalTargeted} • Assigned: {assigned} • Skipped: {skipped}",
+  "@surveyAssignBulkResult": {
+    "placeholders": {
+      "totalTargeted": {
+        "type": "int"
+      },
+      "assigned": {
+        "type": "int"
+      },
+      "skipped": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyAssignBulkSuccess": "Survey assigned successfully",
+  "surveyAssignButton": "Assign Now",
+  "surveyAssignClearDueDate": "Clear due date",
+  "surveyAssignDueDate": "Due date (optional)",
+  "surveyAssignErrorAlready": "This participant is already assigned.",
+  "surveyAssignErrorGeneral": "Failed to assign survey.",
+  "surveyAssignErrorLoad": "Could not load assignments.",
+  "surveyAssignErrorNotPublished": "Only published surveys can be assigned.",
+  "surveyAssignGenderAll": "All",
+  "surveyAssignGenderAny": "Any",
+  "surveyAssignGenderFemale": "Female",
+  "surveyAssignGenderLabel": "Gender",
+  "surveyAssignGenderMale": "Male",
+  "surveyAssignGenderNonBinary": "Non-binary",
+  "surveyAssignGenderOther": "Other",
+  "surveyAssignGenderUnspecified": "Unspecified",
+  "surveyAssignLoading": "Loading assignments...",
+  "surveyAssignmentDelete": "Remove",
+  "surveyAssignmentDeleteConfirm": "Remove this assignment?",
+  "surveyAssignmentDeleteError": "Failed to remove assignment.",
+  "surveyAssignmentDeleteSuccess": "Assignment removed.",
+  "surveyAssignmentDueDate": "Due: {date}",
+  "@surveyAssignmentDueDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyAssignments": "Current Assignments",
+  "surveyAssignmentsEmpty": "No participants assigned yet.",
+  "surveyAssignmentStatusCompleted": "Completed",
+  "surveyAssignmentStatusExpired": "Expired",
+  "surveyAssignmentStatusPending": "Pending",
+  "surveyAssignSuccess": "Survey assigned successfully",
+  "surveyAssignSummaryCompleted": "{count} completed",
+  "@surveyAssignSummaryCompleted": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyAssignSummaryExpired": "{count} expired",
+  "@surveyAssignSummaryExpired": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyAssignSummaryNone": "No assignments yet",
+  "surveyAssignSummaryPending": "{count} pending",
+  "@surveyAssignSummaryPending": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyAssignSummaryTotal": "{count} assigned",
+  "@surveyAssignSummaryTotal": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyAssignTargetAll": "All Participants",
+  "surveyAssignTargetDemographic": "By Demographic",
+  "surveyAssignTargetLabel": "Assign To",
+  "surveyAssignTitle": "Assign Survey",
+  "surveyBuilderAddNewQuestion": "Add New Question",
+  "surveyBuilderAddQuestions": "Add Questions",
+  "surveyBuilderAddQuestionsFirst": "Please add at least one question before publishing",
+  "surveyBuilderAutoSaveFailed": "Save failed",
+  "surveyBuilderAutoSaveRetry": "Retry",
+  "surveyBuilderAutoSaveSaved": "Saved",
+  "surveyBuilderAutoSaveSaving": "Saving...",
+  "surveyBuilderAutoSaveUnsaved": "Unsaved",
+  "surveyBuilderBack": "Back",
+  "surveyBuilderDescriptionHint": "Describe the purpose of this survey",
+  "surveyBuilderDescriptionLabel": "Description (optional)",
+  "surveyBuilderDragToReorder": "Drag to reorder",
+  "surveyBuilderEditTitle": "Edit Survey",
+  "surveyBuilderEmptyStateSubtitle": "Add questions to build your survey",
+  "surveyBuilderEmptyStateTitle": "No questions yet",
+  "surveyBuilderEndDate": "End Date",
+  "surveyBuilderFailedToLoadQuestions": "Failed to load questions",
+  "surveyBuilderHideQuestionBank": "Hide Question Bank",
+  "surveyBuilderImportDialogAddSelected": "Add Selected ({count})",
+  "@surveyBuilderImportDialogAddSelected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyBuilderImportDialogAlreadyAdded": "Already added",
+  "surveyBuilderImportDialogSearch": "Search questions...",
+  "surveyBuilderImportDialogTitle": "Import from Question Bank",
+  "surveyBuilderImportFromBank": "Import from Question Bank",
+  "surveyBuilderNewTitle": "New Survey",
+  "surveyBuilderNoQuestions": "No questions added yet",
+  "surveyBuilderNoQuestionsInBank": "No questions in bank yet",
+  "surveyBuilderPreview": "Preview Survey",
+  "surveyBuilderPublish": "Publish",
+  "surveyBuilderPublishConfirmMessage": "Once published, the survey will be available for assignment to participants. Are you sure you want to publish?",
+  "surveyBuilderPublishedSuccess": "Survey published successfully",
+  "surveyBuilderQuestionAdded": "Added: {title}",
+  "@surveyBuilderQuestionAdded": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyBuilderQuestionBank": "Question Bank",
+  "surveyBuilderQuestionCardCancelEdit": "Cancel edit",
+  "surveyBuilderQuestionCardConfirm": "Confirm question",
+  "surveyBuilderQuestionCardCreateFailed": "Failed to create question",
+  "surveyBuilderQuestionCardEdit": "Edit question",
+  "surveyBuilderQuestionCardPlaceholder": "Type your question here",
+  "surveyBuilderQuestionCardSave": "Save changes",
+  "surveyBuilderQuestionCardUpdateFailed": "Failed to update question",
+  "surveyBuilderQuestionsCount": "Questions ({count})",
+  "@surveyBuilderQuestionsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyBuilderQuestionsImported": "{count, plural, =1{1 question imported} other{{count} questions imported}}",
+  "@surveyBuilderQuestionsImported": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyBuilderRemoveQuestion": "Remove question",
+  "surveyBuilderSavedAsDraft": "Survey saved as draft",
+  "surveyBuilderSaveDraft": "Save Draft",
+  "surveyBuilderSelectDate": "Select date",
+  "surveyBuilderSelectFromPanel": "Select questions from the available question list",
+  "surveyBuilderShowQuestionBank": "Show Question Bank",
+  "surveyBuilderStartDate": "Start Date",
+  "surveyBuilderStartFromTemplate": "Start from Template",
+  "surveyBuilderTapToAdd": "Tap \"Add Questions\" to select from the question bank",
+  "surveyBuilderTapToAddQuestion": "Tap a question to add it to your survey",
+  "surveyBuilderTemplateLoaded": "Loaded template: {title}",
+  "@surveyBuilderTemplateLoaded": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyBuilderTitleHint": "Enter a descriptive title",
+  "surveyBuilderTitleLabel": "Survey Title *",
+  "surveyBuilderTitleRequired": "Title is required",
+  "surveyBuilderUntitledSurvey": "Untitled Survey",
+  "surveyBuilderUpdatedSuccess": "Survey updated successfully",
+  "surveyBuilderUpdateSurvey": "Update Survey",
+  "surveyCardAssign": "Assign",
+  "surveyCardClose": "Close",
+  "surveyCardDelete": "Delete",
+  "surveyCardEdit": "Edit",
+  "surveyCardPublish": "Publish",
+  "surveyCardViewStatus": "View Survey Status",
+  "surveyCloseButton": "Close Survey",
+  "surveyClosedSuccess": "Survey closed",
+  "surveyCloseFailed": "Failed to close survey: {error}",
+  "@surveyCloseFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyCloseMessage": "Closing the survey will prevent new responses. Are you sure you want to close it?",
+  "surveyCloseTitle": "Close Survey",
+  "surveyDeleteConfirm": "Are you sure you want to delete \"{title}\"?\n\nExisting responses will be preserved for research purposes. This action cannot be undone.",
+  "@surveyDeleteConfirm": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyDeletedSuccess": "Survey deleted",
+  "surveyDeleteFailed": "Failed to delete: {error}",
+  "@surveyDeleteFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyDeleteTitle": "Delete Survey",
+  "surveyListAllSurveys": "All Surveys",
+  "surveyListClearAll": "Clear All",
+  "surveyListClosed": "Closed",
+  "surveyListCreateSurvey": "Create Survey",
+  "surveyListDateFrom": "From {date}",
+  "@surveyListDateFrom": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyListDateUntil": "Until {date}",
+  "@surveyListDateUntil": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyListDrafts": "Drafts",
+  "surveyListFailedToLoad": "Failed to load surveys",
+  "surveyListFiltersLabel": "Filters: ",
+  "surveyListNewSurvey": "New Survey",
+  "surveyListNoMatchFilters": "No surveys match your filters",
+  "surveyListNoSurveys": "No surveys yet",
+  "surveyListPublished": "Published",
+  "surveyListQuestionCount": "{count} questions",
+  "@surveyListQuestionCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyListSearchPlaceholder": "Search surveys...",
+  "surveyListStatus": "Status",
+  "surveyListStatusLabel": "Status: {status}",
+  "@surveyListStatusLabel": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyListTitle": "Surveys",
+  "surveyNumberQuestionHint": "Enter a number",
+  "surveyOpenEndedHint": "Enter your response",
+  "surveyPreviewAddQuestions": "Add questions to see how your survey will look",
+  "surveyPreviewFooterNote": "This is a preview. Responses are not saved.",
+  "surveyPreviewLabel": "Survey Preview",
+  "surveyPreviewNoQuestions": "No questions in this survey",
+  "surveyPreviewNote": "This is a preview. Responses are not saved.",
+  "surveyPreviewQuestionNumber": "Question {number}",
+  "@surveyPreviewQuestionNumber": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyPreviewScaleHigh": "High",
+  "surveyPreviewScaleLow": "Low",
+  "surveyPreviewUnsupportedType": "Unsupported question type: {type}",
+  "@surveyPreviewUnsupportedType": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyPublishButton": "Publish",
+  "surveyPublishedSuccess": "Survey published successfully",
+  "surveyPublishFailed": "Failed to publish: {error}",
+  "@surveyPublishFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "surveyPublishMessage": "Once published, the survey will be available for assignment. Are you sure you want to publish?",
+  "surveyPublishTitle": "Publish Survey",
+  "surveyStatusAssignedTotal": "Assigned Total",
+  "surveyStatusAssignmentAnalytics": "Assignment Analytics",
+  "surveyStatusChartTitle": "Assignment Status Breakdown",
+  "surveyStatusClosed": "Closed",
+  "surveyStatusDraft": "Draft",
+  "surveyStatusEndDate": "End Date",
+  "surveyStatusNoDate": "Not set",
+  "surveyStatusPageTitle": "Survey Status",
+  "surveyStatusPublished": "Published",
+  "surveyStatusStartDate": "Start Date",
+  "surveySubmitErrorAlreadySubmitted": "You have already completed this survey.",
+  "surveySubmitErrorExpired": "This survey has expired and can no longer be submitted.",
+  "surveySubmitErrorGeneral": "Failed to submit survey. Please try again.",
+  "surveySubmitErrorNotAssigned": "You are not assigned to this survey.",
+  "surveySubmitErrorNotFound": "Survey not found.",
+  "surveySubmitErrorNotPublished": "This survey is no longer accepting responses.",
+  "surveySubmitErrorServer": "A server error occurred. Please try again later.",
+  "surveySubmitSuccess": "Survey submitted successfully!",
+  "surveyTakingBackToSurveys": "Back to surveys",
+  "surveyTakingCancel": "Cancel",
+  "surveyTakingClosed": "This survey is no longer accepting responses.",
+  "surveyTakingConfirmSubmitMessage": "You will not be able to edit your answers after submission.",
+  "surveyTakingConfirmSubmitTitle": "Submit survey?",
+  "surveyTakingExpired": "This survey has expired.",
+  "surveyTakingLoadingQuestions": "Loading questions...",
+  "surveyTakingNetworkError": "Network error. Please check your connection and retry.",
+  "surveyTakingProgress": "{current} of {total}",
+  "@surveyTakingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyTakingQuestionCount": "{count, plural, =1{1 question} other{{count} questions}}",
+  "@surveyTakingQuestionCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "surveyTakingRequired": "* Required",
+  "surveyTakingRequiredError": "This question is required.",
+  "surveyTakingRetry": "Retry",
+  "surveyTakingSubmit": "Submit",
+  "surveyTakingSubmitting": "Submitting...",
+  "surveyTakingTitle": "Take Survey",
+  "surveyTakingValidationError": "Please answer all required questions before submitting.",
+  "@@_QUESTION": "Question bank, cards, forms, categories, types, responses",
+  "questionBankAddCount": "Add ({count})",
+  "@questionBankAddCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "questionBankAddQuestion": "Add Question",
+  "questionBankAllCategories": "All Categories",
+  "questionBankAllTypes": "All Types",
+  "questionBankCategoryDemographics": "Demographics",
+  "questionBankCategoryLabel": "Category: {category}",
+  "@questionBankCategoryLabel": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "questionBankCategoryLifestyle": "Lifestyle",
+  "questionBankCategoryMentalHealth": "Mental Health",
+  "questionBankCategoryPhysicalHealth": "Physical Health",
+  "questionBankCategorySymptoms": "Symptoms",
+  "questionBankClearAll": "Clear All",
+  "questionBankClearFilters": "Clear Filters",
+  "questionBankDeleteConfirm": "Are you sure you want to delete \"{title}\"?\n\nThis action cannot be undone.",
+  "@questionBankDeleteConfirm": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "questionBankDeleted": "Question deleted",
+  "questionBankDeleteTitle": "Delete Question",
+  "questionBankFailedToDelete": "Failed to delete: {error}",
+  "@questionBankFailedToDelete": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "questionBankFailedToDuplicate": "Failed to duplicate: {error}",
+  "@questionBankFailedToDuplicate": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "questionBankFailedToLoad": "Failed to load questions",
+  "questionBankFilterCategory": "Category",
+  "questionBankFiltersLabel": "Filters: ",
+  "questionBankFilterType": "Type",
+  "questionBankNewQuestion": "New Question",
+  "questionBankNoMatchFilters": "No questions match your filters",
+  "questionBankNoQuestions": "No questions yet",
+  "questionBankQuestionDeleted": "Question deleted",
+  "questionBankQuestionDuplicated": "Question duplicated",
+  "questionBankSearchLabel": "Search: \"{query}\"",
+  "@questionBankSearchLabel": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "questionBankSearchPlaceholder": "Search questions...",
+  "questionBankSelectQuestions": "Select Questions",
+  "questionBankTitle": "Question Bank",
+  "questionBankTypeLabel": "Type: {type}",
+  "@questionBankTypeLabel": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "questionCardDelete": "Delete",
+  "questionCardDuplicate": "Duplicate",
+  "questionCardEdit": "Edit",
+  "questionCardRequired": "Required",
+  "questionCategoryGeneral": "General",
+  "questionCategoryLifestyle": "Lifestyle",
+  "questionCategoryMentalHealth": "Mental Health",
+  "questionCategoryNutrition": "Nutrition",
+  "questionCategoryOther": "Other",
+  "questionCategoryPhysicalHealth": "Physical Health",
+  "questionFormAddOption": "Add Option",
+  "questionFormCategoryHint": "e.g., Health, Lifestyle, Demographics",
+  "questionFormCategoryLabel": "Category (optional)",
+  "questionFormCreate": "Create",
+  "questionFormEditTitle": "Edit Question",
+  "questionFormMinOptionsRequired": "Minimum 2 options required",
+  "questionFormNewTitle": "New Question",
+  "questionFormOptionLabel": "Option {number}",
+  "@questionFormOptionLabel": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "questionFormOptionsLabel": "Options *",
+  "questionFormProvideOptions": "Please provide at least 2 options",
+  "questionFormQuestionHint": "Enter the question text",
+  "questionFormQuestionLabel": "Question *",
+  "questionFormQuestionRequired": "Question text is required",
+  "questionFormRemoveOption": "Remove option",
+  "questionFormRequiredLabel": "Required",
+  "questionFormRequiredSubtitle": "Participants must answer this question",
+  "questionFormScaleMax": "Max",
+  "questionFormScaleMin": "Min",
+  "questionFormScaleRange": "Scale Range",
+  "questionFormTitleHint": "Short descriptive title",
+  "questionFormTitleLabel": "Title (optional)",
+  "questionFormTypeLabel": "Question Type *",
+  "questionNo": "No",
+  "questionTypeMultiChoice": "Multiple Choice",
+  "questionTypeNumber": "Number",
+  "questionTypeOpenEnded": "Open Ended",
+  "questionTypeScale": "Scale",
+  "questionTypeSingleChoice": "Single Choice",
+  "questionTypeText": "Text",
+  "questionTypeYesNo": "Yes/No",
+  "questionYes": "Yes",
+  "@@_TEMPLATE": "Survey templates: list, builder, preview",
+  "templateBuilderAddQuestions": "Add Questions",
+  "templateBuilderAddQuestionsHint": "Tap \"Add Questions\" to select from the question bank",
+  "templateBuilderBack": "Back",
+  "templateBuilderCreatedSuccess": "Template created successfully",
+  "templateBuilderDescriptionHint": "Describe the purpose of this template",
+  "templateBuilderDescriptionLabel": "Description (optional)",
+  "templateBuilderEditTitle": "Edit Template",
+  "templateBuilderNewTitle": "New Template",
+  "templateBuilderNoQuestions": "No questions added yet",
+  "templateBuilderPublicLabel": "Public Template",
+  "templateBuilderPublicSubtitle": "Allow other researchers to use this template",
+  "templateBuilderQuestionOptionalSubtitle": "This question will be optional in surveys created from this template.",
+  "templateBuilderQuestionRequiredSubtitle": "This question must be answered in surveys created from this template.",
+  "templateBuilderQuestionsCount": "Questions ({count})",
+  "@templateBuilderQuestionsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "templateBuilderRemoveQuestion": "Remove question",
+  "templateBuilderSave": "Save",
+  "templateBuilderTitleHint": "Enter a descriptive title",
+  "templateBuilderTitleLabel": "Template Title *",
+  "templateBuilderTitleRequired": "Title is required",
+  "templateBuilderUpdatedSuccess": "Template updated successfully",
+  "templateCardCreateSurvey": "Create Survey",
+  "templateCardDelete": "Delete",
+  "templateCardDuplicate": "Duplicate",
+  "templateCardEdit": "Edit",
+  "templateCardPreview": "Preview",
+  "templateCardQuestionCount": "{count, plural, =1{1 question} other{{count} questions}}",
+  "@templateCardQuestionCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "templateListAllTemplates": "All Templates",
+  "templateListClearAll": "Clear All",
+  "templateListCreateSurveyFrom": "Create survey from: {title}",
+  "@templateListCreateSurveyFrom": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "templateListCreateTemplate": "Create Template",
+  "templateListDeleteConfirm": "Are you sure you want to delete \"{title}\"?\n\nThis action cannot be undone.",
+  "@templateListDeleteConfirm": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "templateListDeleted": "Template deleted",
+  "templateListDeleteTitle": "Delete Template",
+  "templateListDuplicated": "Template duplicated",
+  "templateListFailedToDelete": "Failed to delete: {error}",
+  "@templateListFailedToDelete": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "templateListFailedToDuplicate": "Failed to duplicate: {error}",
+  "@templateListFailedToDuplicate": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "templateListFailedToLoad": "Failed to load templates",
+  "templateListFailedToLoadTemplate": "Failed to load template: {error}",
+  "@templateListFailedToLoadTemplate": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "templateListFiltersLabel": "Filters: ",
+  "templateListNewTemplate": "New Template",
+  "templateListNoMatchFilters": "No templates match your filters",
+  "templateListNoTemplates": "No templates yet",
+  "templateListPrivate": "Private",
+  "templateListPublic": "Public",
+  "templateListSearchPlaceholder": "Search templates...",
+  "templateListSelectTemplate": "Select Template",
+  "templateListTitle": "Templates",
+  "templateListVisibility": "Visibility",
+  "templateListVisibilityLabel": "Visibility: {visibility}",
+  "@templateListVisibilityLabel": {
+    "placeholders": {
+      "visibility": {
+        "type": "String"
+      }
+    }
+  },
+  "templatePreviewClose": "Close",
+  "templatePreviewFooterNote": "This is a preview. Responses are not saved.",
+  "templatePreviewNoQuestions": "No questions in this template",
+  "templatePreviewQuestionNumber": "Question {number}",
+  "@templatePreviewQuestionNumber": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "templatePreviewScaleHigh": "High",
+  "templatePreviewScaleLow": "Low",
+  "templatePreviewSelectDate": "Select date",
+  "templatePreviewSelectTime": "Select time",
+  "templatePreviewTitle": "Preview",
+  "templatePreviewUnsupportedType": "Unsupported question type: {type}",
+  "@templatePreviewUnsupportedType": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "@@_RESEARCHER": "Researcher dashboard, participant management, surveys, reports",
+  "researchAddFields": "Add Fields",
+  "researchAllCategories": "All Categories",
+  "researchAllTypes": "All Types",
+  "researchAvailableQuestions": "Available Data Fields",
+  "researchCompletionRate": "Completion Rate",
+  "researchCrossAvgCompletion": "Avg Completion",
+  "researchCrossDateFrom": "From",
+  "researchCrossDateTo": "To",
+  "researchCrossNoSurveysSelected": "Use + Add Fields to select data, or filter by survey to browse",
+  "researchCrossSelectSurveys": "Select surveys to pull data from",
+  "researchCrossSuppressedSurveys": "{count, plural, =1{1 survey} other{{count} surveys}} excluded (fewer than 5 respondents)",
+  "@researchCrossSuppressedSurveys": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "researchCrossSurveyColumn": "Survey",
+  "researchCrossSurveysCount": "Surveys",
+  "researchCrossTotalQuestions": "Total Questions",
+  "researchCrossTotalRespondents": "Total Respondents",
+  "researchDataBankAnalysis": "Analysis",
+  "researchDataTitle": "Research Data",
+  "researchDistribution": "Distribution",
+  "researcherActiveSurveys": "Active Surveys",
+  "researcherAddParticipant": "Add Participant",
+  "researcherAssignSurvey": "Assign Survey",
+  "researcherClosedSurveys": "Closed Surveys",
+  "researcherCreateSurvey": "Create Survey",
+  "researcherDashboardChartTitle1": "Recent Surveys",
+  "researcherDashboardChartTitle2": "Chart Title 2",
+  "researcherDashboardChartTitle3": "Chart Title 3",
+  "researcherDashboardChartTitle4": "Chart Title 4",
+  "researcherDashboardGraphPlaceholder": "Graph placeholder",
+  "researcherDashboardGraphTitle1": "Survey Response counts",
+  "researcherDashboardGraphTitle2": "Survey Status Percentages",
+  "researcherDashboardKpiActiveSurveys": "Active surveys",
+  "researcherDashboardKpiAvgCompletion": "Avg completion",
+  "researcherDashboardKpiCompletedSurveys": "Completed surveys",
+  "researcherDashboardKpiTotalRespondents": "Total respondents",
+  "researcherDashboardPlaceholder": "Researcher Dashboard\n(Placeholder)",
+  "researcherDashboardSectionTitle1": "Survey Statistics Overview",
+  "researcherDashboardSectionTitle2": "Section Title 2",
+  "researcherDataAnalytics": "Data Analytics",
+  "researcherDraftSurveys": "Draft Surveys",
+  "researcherEditSurvey": "Edit Survey",
+  "researcherEnrolledParticipants": "Enrolled Participants",
+  "researcherExportData": "Export Data",
+  "researcherGenerateReport": "Generate Report",
+  "researcherParticipantDetails": "Participant Details",
+  "researcherParticipantList": "Participant List",
+  "researcherParticipants": "Participants",
+  "researcherPendingInvitations": "Pending Invitations",
+  "researcherQuickActions": "Quick Actions",
+  "researcherRecentActivity": "Recent Activity",
+  "researcherSurveyDetails": "Survey Details",
+  "researcherSurveyList": "Survey List",
+  "researcherSurveyResponses": "Survey Responses",
+  "researcherWelcomeBack": "Welcome Back",
+  "researchExportCsv": "Export CSV",
+  "researchFilterCategory": "Category",
+  "researchFilterResponseType": "Response Type",
+  "researchHistogram": "Histogram",
+  "researchMean": "Mean",
+  "researchMedian": "Median",
+  "researchModeCrossSurvey": "Data Bank",
+  "researchModeHealthTracking": "Health Tracking",
+  "researchModeSingleSurvey": "By Survey",
+  "researchNo": "No",
+  "researchNoData": "No response data available for this survey",
+  "researchNoSurveys": "No surveys available",
+  "researchOpenEndedNote": "Open-ended responses are not displayed for privacy",
+  "researchOptionCounts": "Option Counts",
+  "researchQuestions": "Questions",
+  "researchRange": "Range",
+  "researchRespondents": "Respondents",
+  "researchResponses": "{count, plural, =1{1 response} other{{count} responses}}",
+  "@researchResponses": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "researchSearchQuestions": "Search fields...",
+  "researchSelectAll": "Select All",
+  "researchSelectedFields": "{count, plural, =1{1 field selected} other{{count} fields selected}}",
+  "@researchSelectedFields": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "researchSelectSurvey": "Select a survey",
+  "researchStdDev": "Std Dev",
+  "researchSuppressed": "Insufficient responses (minimum {count} required)",
+  "@researchSuppressed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "researchTabAnalysis": "Analysis",
+  "researchTabDataTable": "Data Table",
+  "researchYes": "Yes",
+  "@@_HCP": "HCP dashboard, clients/patients, surveys, reports, links",
+  "hcpActiveClients": "Active Clients",
+  "hcpAddClient": "Add Client",
+  "hcpAllPatients": "All Patients",
+  "hcpAssignSurvey": "Assign Survey",
+  "hcpClientDetails": "Client Details",
+  "hcpClientList": "Client List",
+  "hcpClientReports": "Client Reports",
+  "hcpClients": "Clients",
+  "hcpClientSurveys": "Client Surveys",
+  "hcpDashboardLinkedPatients": "Linked Patients",
+  "hcpDashboardNoActivity": "No recent activity.",
+  "hcpDashboardPendingRequests": "Pending Requests",
+  "hcpDashboardTitle": "HCP Dashboard",
+  "hcpDashboardWelcome": "Welcome, {name}",
+  "@hcpDashboardWelcome": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "hcpGenerateReport": "Generate Report",
+  "hcpHealthSummary": "Health Summary",
+  "hcpHtAggregateSeries": "Population avg.",
+  "hcpHtAggregateUnavailable": "Population comparison unavailable (insufficient data).",
+  "hcpHtChartTypeBar": "Bar",
+  "hcpHtChartTypeLabel": "Chart type",
+  "hcpHtChartTypeLine": "Line",
+  "hcpHtChartTypePie": "Pie",
+  "hcpHtClearAll": "Clear all",
+  "hcpHtExportCsv": "Export Patient Data (CSV)",
+  "hcpHtFilters": "Filters",
+  "hcpHtHideFilters": "Hide filters",
+  "hcpHtLoadCharts": "Load Charts",
+  "hcpHtLoadError": "Failed to load health tracking data.",
+  "hcpHtNMetricsSelected": "{count} selected",
+  "@hcpHtNMetricsSelected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "hcpHtNoEntries": "This patient has no health tracking entries for the selected filters.",
+  "hcpHtNoEntriesForMetric": "No entries recorded for this metric in the selected period.",
+  "hcpHtNoMetrics": "No health tracking metrics are configured.",
+  "hcpHtPatientSeries": "Patient",
+  "hcpHtSelectAll": "Select all",
+  "hcpHtSelectMetrics": "Select metrics",
+  "hcpHtSelectMetricsHint": "Select at least one metric to load charts.",
+  "hcpHtSelectPatientFirst": "Select a patient above to view their health tracking data.",
+  "hcpHtShowFilters": "Show filters",
+  "hcpHtViewComparison": "Comparison",
+  "hcpHtViewMode": "View mode",
+  "hcpHtViewModeLabel": "View mode: patient only or comparison with population",
+  "hcpHtViewPatient": "Patient Only",
+  "hcpLinkEnterPatientEmail": "Patient email address",
+  "hcpLinkEnterPatientId": "Enter Patient Account ID",
+  "hcpLinkErrorDuplicate": "A link request already exists for this patient.",
+  "hcpLinkErrorGeneral": "Failed to send request. Please try again.",
+  "hcpLinkErrorNotFound": "Patient account not found.",
+  "hcpLinkLinkedSince": "Linked since {date}",
+  "@hcpLinkLinkedSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "hcpLinkMyPatients": "Linked Patients",
+  "hcpLinkNoPatients": "No linked patients yet.",
+  "hcpLinkNoPending": "No pending requests.",
+  "hcpLinkPageTitle": "My Patients",
+  "hcpLinkPatientEmailHint": "e.g. john.smith@email.com",
+  "hcpLinkPendingFrom": "Requested {date}",
+  "@hcpLinkPendingFrom": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "hcpLinkPendingRequests": "Pending Requests",
+  "hcpLinkRemove": "Remove",
+  "hcpLinkRemoveConfirm": "Remove this patient link?",
+  "hcpLinkRequestPatient": "Request Patient Link",
+  "hcpLinkRequestSent": "Link request sent",
+  "hcpPatientConsentRevoked": "Consent Revoked",
+  "hcpPatientLinkedSince": "Linked since {date}",
+  "@hcpPatientLinkedSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "hcpPatientNoSurveys": "No completed surveys.",
+  "hcpPatientSurveysTitle": "Completed Surveys",
+  "hcpPatientViewSurveys": "View Surveys",
+  "hcpReportsError": "Failed to load report data.",
+  "hcpReportsLoading": "Loading report...",
+  "hcpReportsNoPatients": "No linked patients to report on.",
+  "hcpReportsNoSelection": "Select a patient and survey to view the report.",
+  "hcpReportsNoSurveys": "This patient has no completed surveys.",
+  "hcpReportsSelectPatient": "Select a Patient",
+  "hcpReportsSelectSurvey": "Select a Survey",
+  "hcpReportsTabHealthTracking": "Health Tracking",
+  "hcpReportsTabSurveys": "Surveys",
+  "hcpReportsTitle": "Patient Reports",
+  "hcpSurveyChartAggregate": "Population avg.",
+  "hcpSurveyChartAggUnavailable": "Population comparison unavailable (insufficient data).",
+  "hcpSurveyChartComparison": "Comparison",
+  "hcpSurveyChartComparisonModeLabel": "Chart comparison mode",
+  "hcpSurveyChartNoNumeric": "No numeric or scale questions in this survey to chart.",
+  "hcpSurveyChartPatient": "Patient",
+  "hcpSurveyChartPatientOnly": "Patient Only",
+  "hcpSurveyChartTitle": "Survey Results — {surveyTitle}",
+  "@hcpSurveyChartTitle": {
+    "placeholders": {
+      "surveyTitle": {
+        "type": "String"
+      }
+    }
+  },
+  "hcpSurveyHistory": "Survey History",
+  "hcpSurveyViewChart": "Charts",
+  "hcpSurveyViewModeLabel": "View mode: responses table or charts",
+  "hcpSurveyViewTable": "Responses",
+  "hcpTodaySchedule": "Today's Schedule",
+  "hcpUnknown": "Unknown HCP",
+  "hcpUpcomingAppointments": "Upcoming Appointments",
+  "hcpWelcomeBack": "Welcome Back",
+  "@@_MESSAGING": "Messaging, messages, tickets",
+  "messagesComingSoon": "Messages management coming soon...",
+  "messagesTitle": "Messages",
+  "messagingAcceptRequest": "Accept",
+  "messagingAddColleague": "Add",
+  "messagingAdminAccountIdHint": "Enter numeric account ID",
+  "messagingAdminAccountIdLabel": "Account ID",
+  "messagingBrowseColleagues": "Browse Colleagues",
+  "messagingBrowseColleaguesSubtitle": "Add researchers from your institution",
+  "messagingColleagueAdded": "Contact request sent",
+  "messagingColleagueAddError": "Could not send request",
+  "messagingColleagueRequestSent": "Request sent",
+  "messagingContacts": "Contacts",
+  "messagingContactsTitle": "My Contacts",
+  "messagingConversationTitle": "Conversation",
+  "messagingDeleteContact": "Delete contact",
+  "messagingDeleteContactConfirm": "Remove this contact? You can re-add them later.",
+  "messagingDeleteMessage": "Delete message",
+  "messagingDeleteMessageConfirm": "Are you sure you want to delete this message?",
+  "messagingEditContact": "Edit contact",
+  "messagingEmailHint": "Enter email address to start a conversation",
+  "messagingEmailLabel": "Email address",
+  "messagingEmailNotFound": "No account found for that email",
+  "messagingEmailPermission": "You are not allowed to message this user",
+  "messagingError": "Failed to load messages.",
+  "messagingFriendAccepted": "Contact request accepted",
+  "messagingFriendDeclined": "Contact request declined",
+  "messagingFriendEmailHint": "contact@example.com",
+  "messagingFriendRequestEmail": "Contact's email address",
+  "messagingFriendRequestError": "Failed to send request. Please try again.",
+  "messagingFriendRequestSend": "Send Contact Request",
+  "messagingFriendRequestSent": "If this user exists, a contact request will be sent.",
+  "messagingFriendRequestTitle": "Add a Contact",
+  "messagingInboxTitle": "Messages",
+  "messagingIncomingRequests": "Contact Requests",
+  "messagingJustNow": "Just now",
+  "messagingLastMessage": "Last message",
+  "messagingLoading": "Loading messages...",
+  "messagingMessagePlaceholder": "Type a message...",
+  "messagingNewConversationTitle": "New Conversation",
+  "messagingNoColleaguesFound": "No researchers found",
+  "messagingNoContacts": "No contacts yet. Add a contact to start messaging.",
+  "messagingNoConversations": "No conversations yet.",
+  "messagingNoIncomingRequests": "No pending contact requests.",
+  "messagingNoMessages": "No messages yet. Say hello!",
+  "messagingNoRecipients": "No available recipients.",
+  "messagingOpenConversationWith": "Open conversation with {name}",
+  "@messagingOpenConversationWith": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "messagingOrPickFromContacts": "Or pick from your contacts",
+  "messagingOrPickFromPatients": "Or pick from your patients",
+  "messagingRecipientFriend": "My Contacts",
+  "messagingRecipientHcp": "My Healthcare Provider",
+  "messagingRecipientPatient": "A Patient",
+  "messagingRecipientResearcher": "Researchers",
+  "messagingRejectRequest": "Decline",
+  "messagingSearchColleagues": "Search by name...",
+  "messagingSearchMinChars": "Enter at least 2 characters to search.",
+  "messagingSearchResearchers": "Search researchers...",
+  "messagingSelectConversation": "Select a conversation to start messaging",
+  "messagingSelectRecipient": "Select a recipient",
+  "messagingSend": "Send",
+  "messagingSendError": "Failed to send message. Please try again.",
+  "messagingSending": "Sending...",
+  "messagingStartConversation": "New Message",
+  "messagingUnreadBadge": "{count} unread",
+  "@messagingUnreadBadge": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "messagingYou": "You",
+  "ticketPriorityHigh": "High",
+  "ticketPriorityLow": "Low",
+  "ticketPriorityMedium": "Medium",
+  "ticketsColumnCreated": "Created",
+  "ticketsColumnId": "ID",
+  "ticketsColumnPriority": "Priority",
+  "ticketsColumnStatus": "Status",
+  "ticketsColumnSubject": "Subject",
+  "ticketStatusClosed": "Closed",
+  "ticketStatusOpen": "Open",
+  "ticketStatusPending": "Pending",
+  "ticketsTitle": "Support Tickets",
+  "@@_ADMIN": "Admin sidebar, user management, view-as, dashboard content, deletion, settings",
+  "adminAccountRequests": "Account Requests",
+  "adminAccountRequestsApprove": "Approve",
+  "adminAccountRequestsApproveConfirm": "Are you sure you want to approve this account request? An account will be created and the user will receive an email with their login credentials.",
+  "adminAccountRequestsApproved": "Approved",
+  "adminAccountRequestsApproved_msg": "Account request approved successfully",
+  "adminAccountRequestsDate": "Submitted",
+  "adminAccountRequestsEmail": "Email",
+  "adminAccountRequestsEmpty": "No account requests found",
+  "adminAccountRequestsLoadError": "Error loading account requests",
+  "adminAccountRequestsName": "Name",
+  "adminAccountRequestsPending": "Pending",
+  "adminAccountRequestsReject": "Reject",
+  "adminAccountRequestsRejectConfirm": "Are you sure you want to reject this account request?",
+  "adminAccountRequestsRejected": "Rejected",
+  "adminAccountRequestsRejected_msg": "Account request rejected",
+  "adminAccountRequestsRejectNotes": "Rejection notes (optional)",
+  "adminAccountRequestsRole": "Role",
+  "adminAccountStatus": "Account Status",
+  "adminAddUser": "Add User",
+  "adminAddUserDateOfBirth": "Date of Birth (optional)",
+  "adminAddUserGender": "Gender (optional)",
+  "adminAddUserParticipantOptionals": "Participant details (optional)",
+  "adminAddUserSendSetupEmail": "Send account setup email",
+  "adminAddUserSendSetupEmailHint": "A temporary password will be generated and emailed to the user",
+  "adminAssignTicket": "Assign Ticket",
+  "adminAuditLog": "Audit Log",
+  "adminBackToAdmin": "Back to Admin",
+  "adminBackupDatabase": "Backup Database",
+  "adminClosedTickets": "Closed Tickets",
+  "adminCloseTicket": "Close Ticket",
+  "adminCompose": "Compose",
+  "adminDashboardAccountRequests": "Account Requests",
+  "adminDashboardActiveUsersDetail": "{count} active users",
+  "@adminDashboardActiveUsersDetail": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminDashboardAdminV2Preview": "Admin v2 Preview",
+  "adminDashboardAuditLog": "Audit Log",
+  "adminDashboardBackupAgo": "ago",
+  "adminDashboardBackupNone": "No backups",
+  "adminDashboardDatabaseViewer": "Database Viewer",
+  "adminDashboardDraftCount": "{count} drafts",
+  "@adminDashboardDraftCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminDashboardFailedToLoad": "Failed to load dashboard",
+  "adminDashboardKpiActiveSurveys": "Active Surveys",
+  "adminDashboardKpiDraftSurveys": "Draft Surveys",
+  "adminDashboardKpiLatestBackup": "Latest Backup",
+  "adminDashboardKpiNew30d": "New (30 days)",
+  "adminDashboardKpiPendingDeletions": "Pending Deletions",
+  "adminDashboardKpiPendingRequests": "Pending Requests",
+  "adminDashboardKpiResponses": "Responses",
+  "adminDashboardKpiTotalResponses": "Total Responses",
+  "adminDashboardKpiTotalUsers": "Total Users",
+  "adminDashboardManageUsers": "Manage Users",
+  "adminDashboardNewIn30Days": "{count} new in 30 days",
+  "@adminDashboardNewIn30Days": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminDashboardNoActivity": "No recent activity",
+  "adminDashboardNoPendingRequests": "No pending requests",
+  "adminDashboardNoUsers": "No users yet",
+  "adminDashboardPendingAccountAlert": "{count} pending account requests awaiting approval",
+  "@adminDashboardPendingAccountAlert": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminDashboardPendingAccountRequests": "Pending Account Requests",
+  "adminDashboardPendingDeletionAlert": "{count} pending deletion requests",
+  "@adminDashboardPendingDeletionAlert": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminDashboardPendingDeletionRequests": "Pending Deletion Requests",
+  "adminDashboardQuickLinks": "Quick Links",
+  "adminDashboardRecentLogins": "Recent Logins",
+  "adminDashboardRequestsPending": "{count} requests pending",
+  "@adminDashboardRequestsPending": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminDashboardTitle": "Admin Dashboard",
+  "adminDashboardTotalSurveysSubtitle": "{total} total",
+  "@adminDashboardTotalSurveysSubtitle": {
+    "placeholders": {
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "adminDashboardTotalUsersSubtitle": "{total} total (incl. inactive)",
+  "@adminDashboardTotalUsersSubtitle": {
+    "placeholders": {
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "adminDashboardUiTestPage": "UI Test Page",
+  "adminDashboardUserDistribution": "User Distribution",
+  "adminDashboardUserDistributionByRole": "User Distribution by Role",
+  "adminDashboardUserRoles": "User Roles",
+  "adminDatabase": "Database",
+  "adminDatabaseStatus": "Database Status",
+  "adminDeleteUser": "Delete User",
+  "adminDeletionConfirmContent": "This will permanently delete {name}'s account. Their survey response data will be retained anonymously. This action cannot be undone.",
+  "@adminDeletionConfirmContent": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "adminDeletionConfirmTitle": "Delete Account Permanently",
+  "adminDeletionError": "Failed to delete account: {error}",
+  "@adminDeletionError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "adminDeletionNoUsers": "No users found.",
+  "adminDeletionRequestsApprove": "Approve Deletion",
+  "adminDeletionRequestsApproveConfirm": "This will permanently delete the user's account. Their survey data will be retained anonymously. This cannot be undone.",
+  "adminDeletionRequestsApproved_msg": "Account permanently deleted.",
+  "adminDeletionRequestsEmpty": "No deletion requests found.",
+  "adminDeletionRequestsLoadError": "Error loading deletion requests",
+  "adminDeletionRequestsPendingAlert": "{count} account deletion {count, plural, =1{request} other{requests}} awaiting review",
+  "@adminDeletionRequestsPendingAlert": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminDeletionRequestsReject": "Reject",
+  "adminDeletionRequestsRejectConfirm": "The deletion request will be rejected and the account will be reactivated.",
+  "adminDeletionRequestsRejected_msg": "Deletion request rejected — account reactivated.",
+  "adminDeletionRequestsRejectNotes": "Reason for rejection (optional)",
+  "adminDeletionRequestsRequested": "Requested",
+  "adminDeletionRequestsTab": "Deletion Requests",
+  "adminDeletionSelfForbidden": "You cannot delete your own account.",
+  "adminDeletionSubtitle": "Permanently delete user accounts. Survey response data is preserved anonymously.",
+  "adminDeletionSuccess": "Account deleted successfully.",
+  "adminDeletionTitle": "User Deletion",
+  "adminDisableAccount": "Disable Account",
+  "adminEditUser": "Edit User",
+  "adminEmailLabel": "Email",
+  "adminEnableAccount": "Enable Account",
+  "adminEndViewAsError": "Failed to end view-as",
+  "adminEnglish": "EN",
+  "adminExportLogs": "Export Logs",
+  "adminFilterByAction": "Filter by Action",
+  "adminFilterByDate": "Filter by Date",
+  "adminFilterByRoleLabel": "Filter by Role",
+  "adminFilterByUser": "Filter by User",
+  "adminFirstNameLabel": "First Name",
+  "adminFrench": "FR",
+  "adminHealthTrackingActiveLabel": "Active",
+  "adminHealthTrackingAddCategory": "Add Category",
+  "adminHealthTrackingAddMetric": "Add Metric",
+  "adminHealthTrackingAddOption": "Add Option",
+  "adminHealthTrackingBaselineBadge": "Baseline",
+  "adminHealthTrackingBaselineLabel": "Include in baseline snapshot",
+  "adminHealthTrackingCategoriesSection": "Categories & Metrics",
+  "adminHealthTrackingChoiceOptionLabel": "Option {index}",
+  "@adminHealthTrackingChoiceOptionLabel": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "adminHealthTrackingChoiceOptionsLabel": "Choice Options",
+  "adminHealthTrackingDeleteCategoryConfirm": "Delete this category and all its metrics? This cannot be undone.",
+  "adminHealthTrackingDeleteCategoryMessage": "Remove \"{name}\" and all its metrics? Existing participant data is preserved.",
+  "@adminHealthTrackingDeleteCategoryMessage": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "adminHealthTrackingDeleteCategoryTitle": "Remove Category",
+  "adminHealthTrackingDeleteMetricConfirm": "Delete this metric? This cannot be undone.",
+  "adminHealthTrackingDeleteMetricMessage": "Remove \"{name}\"? Existing participant data is preserved.",
+  "@adminHealthTrackingDeleteMetricMessage": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "adminHealthTrackingDeleteMetricTitle": "Remove Metric",
+  "adminHealthTrackingDescriptionLabel": "Description",
+  "adminHealthTrackingDragToReorder": "Drag to reorder",
+  "adminHealthTrackingEditCategory": "Edit Category",
+  "adminHealthTrackingEditMetric": "Edit Metric",
+  "adminHealthTrackingFreqAny": "Any",
+  "adminHealthTrackingFreqDaily": "Daily",
+  "adminHealthTrackingFreqMonthly": "Monthly",
+  "adminHealthTrackingFrequencyLabel": "Frequency",
+  "adminHealthTrackingFreqWeekly": "Weekly",
+  "adminHealthTrackingInactiveCategories": "Inactive Categories ({count})",
+  "@adminHealthTrackingInactiveCategories": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminHealthTrackingInactiveLabel": "Inactive",
+  "adminHealthTrackingInactiveMetrics": "Inactive Questions ({count})",
+  "@adminHealthTrackingInactiveMetrics": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminHealthTrackingNameLabel": "Name",
+  "adminHealthTrackingNoCategories": "No categories configured yet.",
+  "adminHealthTrackingNoMetrics": "No metrics in this category.",
+  "adminHealthTrackingRemovedCategories": "Removed Categories ({count})",
+  "@adminHealthTrackingRemovedCategories": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminHealthTrackingRemovedMetrics": "Removed Questions ({count})",
+  "@adminHealthTrackingRemovedMetrics": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminHealthTrackingRestore": "Restore",
+  "adminHealthTrackingSaved": "Saved successfully.",
+  "adminHealthTrackingSaveError": "Save failed: {error}",
+  "@adminHealthTrackingSaveError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "adminHealthTrackingScaleMaxLabel": "Scale Max",
+  "adminHealthTrackingScaleMinLabel": "Scale Min",
+  "adminHealthTrackingSubtitle": "Configure the categories and metrics that participants track daily.",
+  "adminHealthTrackingTitle": "Health Tracking Settings",
+  "adminHealthTrackingToggleCategoryActive": "Toggle category active/inactive",
+  "adminHealthTrackingTypeLabel": "Metric Type",
+  "adminHealthTrackingTypeNumber": "Number",
+  "adminHealthTrackingTypeScale": "Scale",
+  "adminHealthTrackingTypeSingleChoice": "Single Choice",
+  "adminHealthTrackingTypeText": "Text",
+  "adminHealthTrackingTypeYesno": "Yes / No",
+  "adminHealthTrackingUnitLabel": "Unit (optional)",
+  "adminInbox": "Inbox",
+  "adminLanguage": "Language",
+  "adminLastNameLabel": "Last Name",
+  "adminLoggedInAs": "Logged in as: {name}",
+  "@adminLoggedInAs": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "adminLoggedInAsLabel": "Logged in as:",
+  "adminMessages": "Messages",
+  "adminNavGroupAdmin": "Admin",
+  "adminNavGroupHealthcareProvider": "Healthcare Provider",
+  "adminNavGroupParticipant": "Participant",
+  "adminNavGroupPublicAuth": "Public / Auth",
+  "adminNavGroupResearcher": "Researcher",
+  "adminNavGroupShared": "Shared",
+  "adminNavHubSubtitle": "Navigate to any page in the application",
+  "adminNavHubTitle": "Page Navigator",
+  "adminNewAccountRequestsTab": "New Account Requests",
+  "adminOpenTickets": "Open Tickets",
+  "adminPasswordLabel": "Password",
+  "adminResetPassword": "Reset Password",
+  "adminRestoreDatabase": "Restore Database",
+  "adminReturnedToDashboard": "Returned to admin dashboard",
+  "adminReturning": "Returning...",
+  "adminRoleLabel": "Role",
+  "adminSent": "Sent",
+  "adminSettingsConsentRequiredDescription": "When on, users must sign the consent form before accessing the app. Disable only if consent is not required in your deployment jurisdiction.",
+  "adminSettingsConsentRequiredLabel": "Require User Consent",
+  "adminSettingsDefaultBadge": "Default: {value}",
+  "@adminSettingsDefaultBadge": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "adminSettingsKDescription": "Minimum distinct respondents required before survey data is exposed to researchers. Set to 1 to allow any data. Default: 5.",
+  "adminSettingsKFieldLabel": "Minimum Respondents (K)",
+  "adminSettingsKHint": "e.g. 5",
+  "adminSettingsKLabel": "K-Anonymity Threshold",
+  "adminSettingsLockoutDescription": "How long an account stays locked after exceeding the failed-login limit. Default: 30 minutes.",
+  "adminSettingsLockoutFieldLabel": "Lockout Duration (min)",
+  "adminSettingsLockoutHint": "e.g. 30",
+  "adminSettingsLockoutLabel": "Lockout Duration (minutes)",
+  "adminSettingsMaintenanceCompletionDescription": "Estimated time when the system will be back online. Shown in the maintenance banner on all pages.",
+  "adminSettingsMaintenanceCompletionHint": "e.g. 5:00 PM EST",
+  "adminSettingsMaintenanceCompletionLabel": "Expected Completion Time",
+  "adminSettingsMaintenanceDescription": "When on, non-admin users cannot log in. A banner is shown on the login page. Admins can still log in and access the dashboard.",
+  "adminSettingsMaintenanceLabel": "Maintenance Mode",
+  "adminSettingsMaintenanceMessageDescription": "Optional message shown in the login banner during maintenance. Include expected return time.",
+  "adminSettingsMaintenanceMessageHint": "e.g. Back online by 5:00 PM EST",
+  "adminSettingsMaintenanceMessageLabel": "Maintenance Message",
+  "adminSettingsMaxAttemptsDescription": "Consecutive failed logins before the account is temporarily locked. Set to 0 for no limit. Default: 10.",
+  "adminSettingsMaxAttemptsFieldLabel": "Max Attempts (0 = unlimited)",
+  "adminSettingsMaxAttemptsHint": "e.g. 10",
+  "adminSettingsMaxAttemptsLabel": "Max Failed Login Attempts",
+  "adminSettingsRegistrationDescription": "When off, new account requests are blocked. Useful during enrollment freezes.",
+  "adminSettingsRegistrationLabel": "Registration Open",
+  "adminSettingsResetToDefault": "Reset to Default",
+  "adminSettingsSaveButton": "Save Changes",
+  "adminSettingsSaveError": "Failed to save settings.",
+  "adminSettingsSaveSuccess": "Settings saved successfully.",
+  "adminSettingsSaving": "Saving…",
+  "adminSettingsSectionPrivacy": "Data Privacy",
+  "adminSettingsSectionSecurity": "Login Security",
+  "adminSettingsSectionSystem": "System",
+  "adminSettingsSidebarLabel": "Settings",
+  "adminSettingsTitle": "System Settings",
+  "adminSettingsValidationNonNegative": "Must be 0 or greater.",
+  "adminSettingsValidationPositive": "Must be a positive whole number.",
+  "adminSpanish": "ES",
+  "adminTicketDetails": "Ticket Details",
+  "adminTickets": "Tickets",
+  "adminUiTestSectionBasics": "Basics",
+  "adminUiTestSectionButtons": "Buttons",
+  "adminUiTestSectionDataDisplay": "Data Display",
+  "adminUiTestSectionFeedback": "Feedback",
+  "adminUiTestSectionForms": "Forms and Input",
+  "adminUiTestSectionMicroWidgets": "Micro Widgets",
+  "adminUserDetails": "User Details",
+  "adminUserList": "User List",
+  "adminUserManagement": "User Management",
+  "adminUserRole": "User Role",
+  "adminV2LatestSignIns": "Latest sign-ins across the system",
+  "adminV2NoUserData": "No user data available yet.",
+  "adminV2OpenClassicAdmin": "Open classic admin",
+  "adminV2QuickAuditLog": "Audit Log",
+  "adminV2QuickDatabase": "Database",
+  "adminV2QuickLinks": "Quick links",
+  "adminV2QuickNavigator": "Navigator",
+  "adminV2QuickRequests": "Requests",
+  "adminV2QuickUiTest": "UI Test",
+  "adminV2QuickUsers": "Users",
+  "adminV2RecentActivity": "Recent activity",
+  "adminV2RoleDistributionTitle": "User distribution",
+  "adminV2RoleMixSubtitle": "Role mix across the platform",
+  "adminV2Subtitle": "A quieter, flatter dashboard preview based on the new design direction. The existing admin remains unchanged.",
+  "adminV2Title": "Admin v2",
+  "adminViewAsLabel": "View As",
+  "adminViewingAsRole": "Viewing as {role}",
+  "@adminViewingAsRole": {
+    "placeholders": {
+      "role": {
+        "type": "String"
+      }
+    }
+  },
+  "adminViewingAsUser": "Viewing as {name} ({email})",
+  "@adminViewingAsUser": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "adminViewLogs": "View Logs",
+  "adminWelcomeMessage": "Welcome to the admin dashboard. Select an option from the sidebar.",
+  "@@_AUDIT": "Audit log",
+  "auditLogAction": "Action",
+  "auditLogActorId": "Actor ID",
+  "auditLogActorType": "Actor Type",
+  "auditLogAllActions": "All Actions",
+  "auditLogAllMethods": "All Methods",
+  "auditLogAllResources": "All Resources",
+  "auditLogAllStatuses": "All Statuses",
+  "auditLogColumnAction": "Action",
+  "auditLogColumnActor": "Actor",
+  "auditLogColumnMethod": "Method",
+  "auditLogColumnPath": "Path",
+  "auditLogColumnStatus": "Status",
+  "auditLogColumnTimestamp": "Timestamp",
+  "auditLogDenied": "Denied",
+  "auditLogErrorCode": "Error Code",
+  "auditLogEventId": "Event ID",
+  "auditLogExportCsv": "Export as CSV",
+  "auditLogFailedToLoad": "Failed to load audit logs",
+  "auditLogFailure": "Failure",
+  "auditLogHttpMethod": "HTTP Method",
+  "auditLogHttpStatus": "HTTP Status",
+  "auditLogIpAddress": "IP Address",
+  "auditLogMetadata": "Metadata",
+  "auditLogNextPage": "Next page",
+  "auditLogNoEvents": "No audit events found",
+  "auditLogPageOf": "Page {current} of {total}",
+  "@auditLogPageOf": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "auditLogPreviousPage": "Previous page",
+  "auditLogRequestId": "Request ID",
+  "auditLogResourceId": "Resource ID",
+  "auditLogResourceType": "Resource Type",
+  "auditLogSearchPlaceholder": "Search paths or actions...",
+  "auditLogShowingEvents": "Showing {start}-{end} of {total} events",
+  "@auditLogShowingEvents": {
+    "placeholders": {
+      "start": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "auditLogSuccess": "Success",
+  "auditLogTitle": "Audit Log",
+  "auditLogUserAgent": "User Agent",
+  "@@_DATABASE": "Database viewer / table descriptions",
+  "dbPageTitle": "Database Management",
+  "dbTableDescAccount2FA": "Two-factor authentication settings per account",
+  "dbTableDescAccountData": "User account information and profile details",
+  "dbTableDescAccountRequest": "Pending account creation requests awaiting approval",
+  "dbTableDescAuditEvent": "Audit log of security-relevant events",
+  "dbTableDescAuth": "Password hashes for user authentication (sensitive columns hidden)",
+  "dbTableDescConsentRecord": "Records of participants signing the consent document",
+  "dbTableDescConversationParticipants": "Maps accounts to conversations (many-to-many)",
+  "dbTableDescConversations": "Messaging conversations between users",
+  "dbTableDescDataTypes": "Categories for health data collected by questions",
+  "dbTableDescFriendRequests": "Friend/connection requests between participant accounts",
+  "dbTableDescHcpPatientLink": "Links between HCP providers and their patients",
+  "dbTableDescMessages": "Individual messages sent within conversations",
+  "dbTableDescMfaChallenges": "One-time MFA token challenges (sensitive columns hidden)",
+  "dbTableDescPasswordResetTokens": "Password reset tokens for account recovery",
+  "dbTableDescQuestionBank": "Reusable questions that can be added to surveys",
+  "dbTableDescQuestionCategories": "Categories for organizing survey questions",
+  "dbTableDescQuestionList": "Links questions to surveys (many-to-many)",
+  "dbTableDescQuestionOptions": "Options for single_choice and multi_choice questions",
+  "dbTableDescResponses": "Participant answers to survey questions",
+  "dbTableDescRoles": "User roles defining access permissions",
+  "dbTableDescSessions": "Active user login sessions (sensitive columns hidden)",
+  "dbTableDescSurvey": "Survey definitions created by researchers",
+  "dbTableDescSurveyAssignment": "Tracks which surveys are assigned to which participants",
+  "dbTableDescSurveyTemplate": "Reusable survey templates created by researchers",
+  "dbTableDescSystemSettings": "System configuration settings and application preferences",
+  "dbTableDescTemplateQuestions": "Links questions to survey templates (many-to-many)",
+  "dbUtilitiesTitle": "Database Utilities",
+  "dbViewerColumnHeader": "Column",
+  "dbViewerColumnsCount": "{count} columns",
+  "@dbViewerColumnsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dbViewerConstraintsHeader": "Constraints",
+  "dbViewerData": "Data",
+  "dbViewerFailedToLoad": "Failed to load database tables",
+  "dbViewerFailedToLoadData": "Failed to load table data: {error}",
+  "@dbViewerFailedToLoadData": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "dbViewerForeignKey": "Foreign Key",
+  "dbViewerNoData": "No data in table",
+  "dbViewerNotNull": "Not Null",
+  "dbViewerNull": "NULL",
+  "dbViewerNullable": "Nullable",
+  "dbViewerPageOf": "Page {current} of {total}",
+  "@dbViewerPageOf": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "dbViewerPrimaryKey": "Primary Key",
+  "dbViewerReferenceHeader": "Reference",
+  "dbViewerRowsCount": "{count} rows",
+  "@dbViewerRowsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dbViewerRowsTotal": "{count} rows total",
+  "@dbViewerRowsTotal": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dbViewerSchema": "Schema",
+  "dbViewerSelectATable": "Select a table",
+  "dbViewerSelectTable": "Select Table",
+  "dbViewerShowing": "Showing {start}-{end} of {total}",
+  "@dbViewerShowing": {
+    "placeholders": {
+      "start": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "dbViewerTableData": "{name} Data",
+  "@dbViewerTableData": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "dbViewerTablesCount": "{count} tables in database",
+  "@dbViewerTablesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dbViewerTitle": "Database Viewer",
+  "dbViewerTypeHeader": "Type",
+  "dbViewerViewModeLabel": "Toggle between schema and data view",
+  "@@_BACKUP": "Backup / restore",
+  "backupCreatedError": "Backup failed. Check server logs.",
+  "backupCreatedSuccess": "Backup created ({size})",
+  "@backupCreatedSuccess": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "backupCreateManual": "Create Backup Now",
+  "backupCreating": "Creating…",
+  "backupDeleteConfirmBody": "This will permanently delete {filename}. This action cannot be undone.",
+  "@backupDeleteConfirmBody": {
+    "placeholders": {
+      "filename": {
+        "type": "String"
+      }
+    }
+  },
+  "backupDeleteConfirmTitle": "Delete Backup?",
+  "backupDeleteError": "Could not delete backup. Please try again.",
+  "backupDeleteSuccess": "Backup deleted.",
+  "backupDeleteTooltip": "Delete this backup",
+  "backupDownloadError": "Download failed. Please try again.",
+  "backupDownloadStarted": "Download started.",
+  "backupDownloadTooltip": "Download backup file",
+  "backupLatest": "Latest Backup",
+  "backupLoadError": "Could not load backup list",
+  "backupNoneFound": "No backups found",
+  "backupNoneFoundSubtitle": "No backup files exist yet. Create a manual backup or wait for the scheduled backup to run.",
+  "backupNoRecent": "No backups yet — create one now.",
+  "backupPageSubtitle": "Automated backups run daily at 2 AM, weekly on Sundays, and monthly on the 1st. Manual backups are kept for the last 10 runs.",
+  "backupPageTitle": "Database Backups",
+  "backupRestoreAction": "Restore Database",
+  "backupRestoreConfirmBody": "This will replace ALL current data with the contents of {filename}.\n\nA pre-restore backup will be created automatically before the restore begins.\n\nThis action cannot be undone.",
+  "@backupRestoreConfirmBody": {
+    "placeholders": {
+      "filename": {
+        "type": "String"
+      }
+    }
+  },
+  "backupRestoreConfirmTitle": "Restore Database?",
+  "backupRestoreError": "Restore failed. Please try again or contact support.",
+  "backupRestoreSelectHint": "Choose a backup to restore…",
+  "backupRestoreSelectLabel": "Select Backup",
+  "backupRestoreSuccess": "Database restored. Pre-restore backup saved ({size}). {migrations} migration(s) applied.",
+  "@backupRestoreSuccess": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      },
+      "migrations": {
+        "type": "int"
+      }
+    }
+  },
+  "backupRestoreTitle": "Restore from Backup",
+  "backupRestoreTooltip": "Restore database from this backup",
+  "backupRestoring": "Restoring…",
+  "backupSavedTo": "Saved to {path}",
+  "@backupSavedTo": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "backupSectionCollapse": "Hide backups",
+  "backupSectionExpand": "Show backups",
+  "backupTypeDaily": "Daily",
+  "backupTypeManual": "Manual",
+  "backupTypeMonthly": "Monthly",
+  "backupTypeWeekly": "Weekly",
+  "backupViewAll": "View All Backups",
+  "@@_USER_MANAGEMENT": "User management (cross-cutting)",
+  "userManagementActivate": "Activate",
+  "userManagementActivatedSuccess": "User activated",
+  "userManagementActiveOnly": "Active only",
+  "userManagementAddNewUser": "Add New User",
+  "userManagementAddUser": "Add User",
+  "userManagementAdminConsentExempt": "Admin — Consent Exempt",
+  "userManagementAll": "All",
+  "userManagementAllRoles": "All Roles",
+  "userManagementCopy": "Copy",
+  "userManagementCreatedSuccess": "User created successfully",
+  "userManagementDeactivate": "Deactivate",
+  "userManagementDeactivatedSuccess": "User deactivated",
+  "userManagementDeleteUserTitle": "Delete User",
+  "userManagementDeleteUserTooltip": "Delete user",
+  "userManagementEditUser": "Edit user",
+  "userManagementEditUserTitle": "Edit User",
+  "userManagementEditUserTooltip": "Edit user",
+  "userManagementFailedToImpersonate": "Failed to impersonate user",
+  "userManagementFailedToLoad": "Failed to load users",
+  "userManagementFilterByRole": "Filter by Role",
+  "userManagementFirstName": "First Name",
+  "userManagementGenerate": "Generate",
+  "userManagementLastName": "Last Name",
+  "userManagementNoUsers": "No users found",
+  "userManagementNowViewingAs": "Now viewing as {name}",
+  "@userManagementNowViewingAs": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "userManagementPasswordCopied": "Password copied to clipboard",
+  "userManagementResetPasswordTooltip": "Reset Password",
+  "userManagementRole": "Role",
+  "userManagementRoleLabel": "Role",
+  "userManagementSearchByEmail": "Search by name or email...",
+  "userManagementSearchPlaceholder": "Search by name or email...",
+  "userManagementSearchShort": "Search...",
+  "userManagementTableActions": "Actions",
+  "userManagementTableEmail": "Email",
+  "userManagementTableLastLogin": "Last Login",
+  "userManagementTableName": "Name",
+  "userManagementTableRole": "Role",
+  "userManagementTableStatus": "Status",
+  "userManagementTitle": "User Management",
+  "userManagementTotalUsers": "Total: {count} users",
+  "@userManagementTotalUsers": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "userManagementUpdatedSuccess": "User updated successfully",
+  "userManagementUserDeleted": "{name} deleted",
+  "@userManagementUserDeleted": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "userManagementUsersShown": "{count, plural, =1{1 user shown} other{{count} users shown}}",
+  "@userManagementUsersShown": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "userManagementViewAsUser": "View as User",
+  "userRoleAdmin": "Admin",
+  "userRoleHcp": "Healthcare Professional",
+  "userRoleHcpShort": "HCP",
+  "userRoleParticipant": "Participant",
+  "userRoleResearcher": "Researcher",
+  "userRoleUnknown": "Unknown",
+  "@@_SETTINGS": "Settings page",
+  "settings2faDisabledSuccess": "2FA disabled",
+  "settings2faListSubtitle": "Set up or confirm 2FA for your account",
+  "settingsAppearanceApplied": "Applied",
+  "settingsAppearanceApply": "Apply",
+  "settingsAppearanceReset": "Reset",
+  "settingsAppearanceSectionTitle": "Appearance",
+  "settingsAppearanceSubtitle": "Choose a visual style for your account.",
+  "settingsAppearanceUpdated": "Appearance updated.",
+  "settingsChangePasswordSubtitle": "Update your account password",
+  "settingsDeleteAccountCancel": "Cancel",
+  "settingsDeleteAccountConfirm": "Submit Request",
+  "settingsDeleteAccountDialogBody": "Your account will be deactivated immediately and a deletion request will be sent to an administrator for review. You will be logged out.",
+  "settingsDeleteAccountDialogTitle": "Request Account Deletion?",
+  "settingsDeleteAccountFailed": "Failed to submit deletion request. Please try again.",
+  "settingsDeleteAccountSubtitle": "Request permanent removal of your account",
+  "settingsDeleteAccountTitle": "Delete Account",
+  "settingsDisable2faDialogBody": "This will reduce the security of your account. You can re-enable it later.",
+  "settingsDisable2faDialogCancel": "Cancel",
+  "settingsDisable2faDialogConfirm": "Disable",
+  "settingsDisable2faDialogTitle": "Disable 2FA?",
+  "settingsDisable2faFailed": "Failed to disable 2FA. Please try again.",
+  "settingsDisable2faSubtitle": "Remove 2FA from your account",
+  "settingsDisable2faTitle": "Disable 2FA",
+  "settingsManageAccountSubtitle": "Manage your account settings.",
+  "settingsSecuritySectionTitle": "Security",
+  "settingsTitle": "Settings",
+  "@@_UI_TEST": "UI Test Page (Widget Catalogue)",
+  "uiClearAll": "Clear All",
+  "uiClearFilters": "Clear Filters",
+  "uiFiltersLabel": "Filters: ",
+  "uiNever": "Never",
+  "uiSearchLabel": "Search: \"{query}\"",
+  "@uiSearchLabel": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestControlActive": "Active",
+  "uiTestControlArrowTop": "Arrow Top",
+  "uiTestControlAspect": "Aspect",
+  "uiTestControlAsset": "Asset",
+  "uiTestControlBackground": "Background",
+  "uiTestControlColor": "Color",
+  "uiTestControlCreateEnabled": "Create Enabled",
+  "uiTestControlDisabled": "Disabled",
+  "uiTestControlEnabled": "Enabled",
+  "uiTestControlFill": "Fill",
+  "uiTestControlFit": "Fit",
+  "uiTestControlHeight": "Height",
+  "uiTestControlHeightPx": "Height: {value}px",
+  "@uiTestControlHeightPx": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestControlIcon": "Icon",
+  "uiTestControlLabel": "Label",
+  "uiTestControlLegend": "Legend",
+  "uiTestControlMessage": "Message",
+  "uiTestControlNotification": "Notification",
+  "uiTestControlProgress": "Progress: {value}%",
+  "@uiTestControlProgress": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestControlRadius": "Radius",
+  "uiTestControlRequired": "Required",
+  "uiTestControlSemantics": "Semantics",
+  "uiTestControlSize": "Size",
+  "uiTestControlSpacing": "Spacing: {value}",
+  "@uiTestControlSpacing": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestControlStartExpanded": "Start Expanded",
+  "uiTestControlSubtitle": "Subtitle",
+  "uiTestControlTagline": "Tagline",
+  "uiTestControlText": "Text",
+  "uiTestControlThickness": "Thickness: {value}",
+  "@uiTestControlThickness": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestControlTrack": "Track",
+  "uiTestControlTristate": "Tristate",
+  "uiTestControlValues": "Values",
+  "uiTestControlVariant": "Variant",
+  "uiTestControlWeight": "Weight",
+  "uiTestControlWidth": "Width",
+  "uiTestControlWidthPx": "Width: {value}px",
+  "@uiTestControlWidthPx": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestDemoAboveDivider": "Above divider",
+  "uiTestDemoAdminPassword": "Admin Password",
+  "uiTestDemoAliceCarter": "Alice Carter",
+  "uiTestDemoAppointmentTime": "Appointment Time",
+  "uiTestDemoBadge": "Badge",
+  "uiTestDemoBelowDivider": "Below divider",
+  "uiTestDemoCaution": "Caution",
+  "uiTestDemoClickMe": "Click Me",
+  "uiTestDemoCodeCopied": "Code copied to clipboard",
+  "uiTestDemoCompletionPrefix": "Completion: {value}%",
+  "@uiTestDemoCompletionPrefix": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestDemoConfirm": "Confirm",
+  "uiTestDemoConfirmAction": "Confirm action",
+  "uiTestDemoConfirmActionBody": "This action cannot be undone.",
+  "uiTestDemoContinue": "Continue",
+  "uiTestDemoCriticalActionBody": "This is a secured action. Enter your password before confirmation.",
+  "uiTestDemoCriticalActionTitle": "Critical Action Confirmation",
+  "uiTestDemoCurrentPassword": "Current Password",
+  "uiTestDemoDateOfBirth": "Date of Birth",
+  "uiTestDemoDefaultPlaceholder": "Default placeholder",
+  "uiTestDemoDemographics": "Demographics",
+  "uiTestDemoEmail": "Email",
+  "uiTestDemoEnrollment": "Enrollment",
+  "uiTestDemoError": "Error",
+  "uiTestDemoExampleImage": "Example image",
+  "uiTestDemoFullName": "Full Name",
+  "uiTestDemoHelloWorld": "Hello World",
+  "uiTestDemoInfo": "Info",
+  "uiTestDemoInvalidPasswordMessage": "Incorrect password. Demo password is \"Admin123!\".",
+  "uiTestDemoKpiTrends": "KPI Trends",
+  "uiTestDemoLearnMore": "Learn more",
+  "uiTestDemoNormalizedPrefix": "Normalized: {value}",
+  "@uiTestDemoNormalizedPrefix": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestDemoNotes": "Notes",
+  "uiTestDemoNullIndeterminate": "null (indeterminate)",
+  "uiTestDemoOpenModal": "Open modal",
+  "uiTestDemoOpenSecuredModal": "Open secured modal",
+  "uiTestDemoOverview": "Overview",
+  "uiTestDemoParticipants": "Participants",
+  "uiTestDemoPasswordVerified": "Password verified. Action confirmed.",
+  "uiTestDemoPhoneNumber": "Phone Number",
+  "uiTestDemoPlaceholderGraphic": "Placeholder graphic",
+  "uiTestDemoPriority": "Priority",
+  "uiTestDemoQueryEmpty": "(empty)",
+  "uiTestDemoQueryNone": "(none)",
+  "uiTestDemoQueryPrefix": "Query: {value}",
+  "@uiTestDemoQueryPrefix": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestDemoRespondents": "Respondents",
+  "uiTestDemoSearchWidgets": "Search widgets...",
+  "uiTestDemoShowPopover": "Show popover",
+  "uiTestDemoSuccess": "Success",
+  "uiTestDemoSummary": "Summary",
+  "uiTestDemoTaskCompletion": "Task completion",
+  "uiTestDemoThisWeek": "+12 this week",
+  "uiTestDemoValuePrefix": "Value: {value}",
+  "@uiTestDemoValuePrefix": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestDemoVerificationFailed": "Verification failed.",
+  "uiTestEnterValue": "Enter value",
+  "uiTestPageSubtitle": "Interactive previews with live customization for all reusable widgets.",
+  "uiTestPageTitle": "UI Widget Catalogue",
+  "uiTestSectionBasics": "Basics",
+  "uiTestSectionButtons": "Buttons",
+  "uiTestSectionDataDisplay": "Data Display",
+  "uiTestSectionFeedback": "Feedback",
+  "uiTestSectionForms": "Forms and Input",
+  "uiTestSectionMicro": "Micro Widgets",
+  "uiTestSectionNavbarActiveDestination": "Active destination: {label}",
+  "@uiTestSectionNavbarActiveDestination": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestSectionNavbarActiveNone": "None",
+  "uiTestSectionNavbarAddSection": "Add Section",
+  "uiTestSectionNavbarAddSubsection": "Add Subsection",
+  "uiTestSectionNavbarContainedTitle": "Contained Scrollable Page",
+  "uiTestSectionNavbarHideCode": "Hide Code",
+  "uiTestSectionNavbarInitiallyExpanded": "Initially expanded",
+  "uiTestSectionNavbarNoSections": "No sections configured. Add at least one section in PROPERTIES.",
+  "uiTestSectionNavbarProperties": "PROPERTIES",
+  "uiTestSectionNavbarRemoveSection": "Remove section",
+  "uiTestSectionNavbarRemoveSubsection": "Remove subsection",
+  "uiTestSectionNavbarReset": "Reset",
+  "uiTestSectionNavbarScrollHint": "Scroll this panel or click a destination to jump.",
+  "uiTestSectionNavbarSectionLabel": "Section label",
+  "uiTestSectionNavbarSectionN": "Section {n}",
+  "@uiTestSectionNavbarSectionN": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestSectionNavbarShowCode": "Show Code",
+  "uiTestSectionNavbarSubsection1": "Subsection 1",
+  "uiTestSectionNavbarSubsectionLabel": "Subsection label",
+  "uiTestSectionNavbarSubsectionN": "Subsection {n}",
+  "@uiTestSectionNavbarSubsectionN": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "uiTestSectionNavbarUntitledSection": "Untitled Section",
+  "uiTestSectionNavbarUntitledSubsection": "Untitled Subsection",
+  "uiTestWidgetAppAccordion": "AppAccordion",
+  "uiTestWidgetAppAccordionDesc": "Expandable panel for showing and hiding details.",
+  "uiTestWidgetAppAnnouncement": "AppAnnouncement",
+  "uiTestWidgetAppAnnouncementDesc": "Inline banner for important announcements.",
+  "uiTestWidgetAppBadge": "AppBadge",
+  "uiTestWidgetAppBadgeDesc": "Semantic pill labels for status, roles, and categories.",
+  "uiTestWidgetAppBarChart": "AppBarChart",
+  "uiTestWidgetAppBarChartDesc": "Bar chart with fl_chart, axis labels, and hover tooltips.",
+  "uiTestWidgetAppBreadcrumbs": "AppBreadcrumbs",
+  "uiTestWidgetAppBreadcrumbsDesc": "Breadcrumb trail for navigation hierarchy.",
+  "uiTestWidgetAppCardTask": "AppCardTask",
+  "uiTestWidgetAppCardTaskDesc": "Actionable task card with due text, optional repeat text, and CTA.",
+  "uiTestWidgetAppCheckbox": "AppCheckbox",
+  "uiTestWidgetAppCheckboxDesc": "Theme-aware checkbox with controlled and uncontrolled modes.",
+  "uiTestWidgetAppCreateConfirmPassword": "AppCreatePasswordInput + AppConfirmPasswordInput",
+  "uiTestWidgetAppCreateConfirmPasswordDesc": "Create/confirm password pair with live rule checks.",
+  "uiTestWidgetAppDateInput": "AppDateInput",
+  "uiTestWidgetAppDateInputDesc": "Date picker input with required validation.",
+  "uiTestWidgetAppDivider": "AppDivider",
+  "uiTestWidgetAppDividerDesc": "Visual separator with configurable thickness and spacing.",
+  "uiTestWidgetAppDropdownInput": "AppDropdownInput",
+  "uiTestWidgetAppDropdownInputDesc": "Form dropdown with required and error behavior.",
+  "uiTestWidgetAppDropdownMenu": "AppDropdownMenu",
+  "uiTestWidgetAppDropdownMenuDesc": "Theme-aware dropdown for choosing from options.",
+  "uiTestWidgetAppEmailInput": "AppEmailInput",
+  "uiTestWidgetAppEmailInputDesc": "Email input with structure validation and autofill.",
+  "uiTestWidgetAppFilledButton": "AppFilledButton",
+  "uiTestWidgetAppFilledButtonDesc": "Primary action button with filled background.",
+  "uiTestWidgetAppGraphRenderer": "AppGraphRenderer",
+  "uiTestWidgetAppGraphRendererDesc": "Responsive graph container with title and optional custom chart content.",
+  "uiTestWidgetAppIcon": "AppIcon",
+  "uiTestWidgetAppIconDesc": "Theme-aware icon wrapper with responsive sizing.",
+  "uiTestWidgetAppImage": "AppImage",
+  "uiTestWidgetAppImageDesc": "Responsive image with aspect ratio support.",
+  "uiTestWidgetAppLongButton": "AppLongButton",
+  "uiTestWidgetAppLongButtonDesc": "Full-width button for prominent actions.",
+  "uiTestWidgetAppModalOverlay": "AppModal + AppOverlay",
+  "uiTestWidgetAppModalOverlayDesc": "Button-triggered modal with overlay barrier.",
+  "uiTestWidgetAppParagraphInput": "AppParagraphInput",
+  "uiTestWidgetAppParagraphInputDesc": "Multi-line text input with controlled line sizing.",
+  "uiTestWidgetAppPasswordInput": "AppPasswordInput",
+  "uiTestWidgetAppPasswordInputDesc": "Password input with eye toggle and required checks.",
+  "uiTestWidgetAppPhoneInput": "AppPhoneInput",
+  "uiTestWidgetAppPhoneInputDesc": "Phone input with country selector and normalized output.",
+  "uiTestWidgetAppPieChart": "AppPieChart",
+  "uiTestWidgetAppPieChartDesc": "Pie chart with legend, percentage labels, and touch interaction.",
+  "uiTestWidgetAppPlaceholderGraphic": "AppPlaceholderGraphic",
+  "uiTestWidgetAppPlaceholderGraphicDesc": "Theme-aware placeholder graphic for empty states.",
+  "uiTestWidgetAppPopover": "AppPopover",
+  "uiTestWidgetAppPopoverDesc": "Context-anchored inline feedback.",
+  "uiTestWidgetAppProgressBar": "AppProgressBar",
+  "uiTestWidgetAppProgressBarDesc": "Theme-aware progress indicator for completion and status tracking.",
+  "uiTestWidgetAppRadio": "AppRadio",
+  "uiTestWidgetAppRadioDesc": "Theme-aware radio button with controlled and uncontrolled modes.",
+  "uiTestWidgetAppRichText": "AppRichText",
+  "uiTestWidgetAppRichTextDesc": "Inline formatting with bold, italic, and mixed styles.",
+  "uiTestWidgetAppSearchBar": "AppSearchBar",
+  "uiTestWidgetAppSearchBarDesc": "Search input with leading icon and clear action.",
+  "uiTestWidgetAppSectionNavbar": "AppSectionNavbar",
+  "uiTestWidgetAppSectionNavbarDesc": "Section navigation with collapsible groups and active destination highlighting.",
+  "uiTestWidgetAppSecuredModal": "AppSecuredModal",
+  "uiTestWidgetAppSecuredModalDesc": "Critical-action confirmation modal requiring password verification.",
+  "uiTestWidgetAppStatCard": "AppStatCard",
+  "uiTestWidgetAppStatCardDesc": "Stat card with icon, label, big value, optional subtitle, and accent top border.",
+  "uiTestWidgetAppStatusDot": "AppStatusDot",
+  "uiTestWidgetAppStatusDotDesc": "Notification indicator overlay on any icon.",
+  "uiTestWidgetAppText": "AppText",
+  "uiTestWidgetAppTextButton": "AppTextButton",
+  "uiTestWidgetAppTextButtonDesc": "Text-only button for secondary actions.",
+  "uiTestWidgetAppTextDesc": "Theme-aware text with responsive typography variants.",
+  "uiTestWidgetAppTextInput": "AppTextInput",
+  "uiTestWidgetAppTextInputDesc": "Single-line text input with label and validation.",
+  "uiTestWidgetAppTimeInput": "AppTimeInput",
+  "uiTestWidgetAppTimeInputDesc": "Time picker input with required validation.",
+  "uiTestWidgetAppToast": "AppToast",
+  "uiTestWidgetAppToastDesc": "Transient overlay notifications with auto-dismiss.",
+  "uiTestWidgetDataTable": "DataTable",
+  "uiTestWidgetDataTableCell": "DataTableCell",
+  "uiTestWidgetDataTableCellDesc": "Typed cell factories for consistent table cell styling.",
+  "uiTestWidgetDataTableDesc": "Sortable table with expandable rows, sticky headers, and horizontal scroll.",
+  "uiTestWidgetHealthBankLogo": "HealthBankLogo",
+  "uiTestWidgetHealthBankLogoDesc": "Brand logo with optional tagline and size variants.",
+  "@@_PRIVACY_TOS": "Privacy policy and Terms of Service",
+  "privacyPolicySection1Body": "HealthBank collects personal information that you provide when creating your account, including your name, email address, date of birth, and gender. When you complete health surveys, we collect the health data and responses you choose to submit. We also collect technical information such as login timestamps and session activity to maintain platform security.\n\nWe collect only the information necessary to operate the platform and facilitate approved research. You are never required to provide information beyond what is needed to participate in your specific research program.",
+  "privacyPolicySection1Title": "Information We Collect",
+  "privacyPolicySection2Body": "Your personal information is used solely to operate the HealthBank platform and facilitate approved health research. Specifically, we use your data to: authenticate your identity and manage your account; deliver surveys and collect your health responses; allow your assigned healthcare professional to monitor your participation; and provide researchers with aggregated, de-identified results for analysis.\n\nWe do not use your personal information for marketing, advertising, or any commercial purpose. Your data is never sold to third parties.",
+  "privacyPolicySection2Title": "How We Use Your Information",
+  "privacyPolicySection3Body": "Your individual health data is shared only with authorized parties directly involved in your care or your approved research study. Researchers on the platform receive only aggregated, de-identified data — individual responses cannot be linked to your identity in research outputs.\n\nWe may be required to disclose information where mandated by Canadian law, court order, or where disclosure is necessary to prevent serious harm. In all such cases, we disclose only the minimum information required and document every disclosure.",
+  "privacyPolicySection3Title": "How We Share Your Data",
+  "privacyPolicySection4Body": "HealthBank uses industry-standard security measures to protect your personal information, including encrypted data transmission (HTTPS), password hashing, session management, and restricted access controls. The platform is operated on secure servers with access limited to authorized personnel only.\n\nYour data is retained for as long as you are an active participant in a HealthBank research program. You may request deletion of your account and associated data at any time by contacting the HealthBank Privacy Officer. Some data may be retained in aggregated, de-identified form for research continuity after account removal.",
+  "privacyPolicySection4Title": "Data Security and Retention",
+  "privacyPolicySection5Body": "Under PIPEDA and applicable provincial legislation, you have the right to: access the personal information we hold about you; request corrections to inaccurate information; withdraw your consent and request deletion of your data; and receive an explanation of how your data is used.\n\nTo exercise any of these rights, or if you have questions or concerns about your privacy, please contact the HealthBank Privacy Officer at your institution. We are committed to responding to all privacy inquiries within 30 days.",
+  "privacyPolicySection5Title": "Your Rights and Contact",
+  "privacyPolicyTitle": "Privacy Policy",
+  "privacyPolicyTocTitle": "Table of Contents",
+  "tosSection1Body": "By creating an account or accessing the HealthBank platform, you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree to these terms, you must not use the platform. These terms may be updated periodically; continued use of the platform following notice of any changes constitutes your acceptance of the revised terms.",
+  "tosSection1Title": "Acceptance of Terms",
+  "tosSection2Body": "Access to HealthBank is by invitation only. Participant accounts are created by authorized administrators or healthcare professionals. You must be at least 18 years of age, or have the consent of a parent or guardian if under 18. You are responsible for maintaining the confidentiality of your login credentials and for all activity that occurs under your account.",
+  "tosSection2Title": "Eligible Users",
+  "tosSection3Body": "You agree to use HealthBank solely for its intended purpose — participating in approved health research and managing your personal health data. You must not attempt to access data belonging to other users; tamper with, reverse-engineer, or disrupt the platform; submit false or misleading information; or use the platform for any unlawful purpose. Violation of these responsibilities may result in immediate account suspension.",
+  "tosSection3Title": "User Responsibilities",
+  "tosSection4Body": "Your use of HealthBank involves the collection and use of personal health data as described in our Privacy Policy. By using the platform, you consent to this collection for the purposes of approved health research. You may withdraw your consent at any time by contacting your study coordinator or the HealthBank Privacy Officer, which will result in the deactivation of your account. HealthBank is operated in compliance with Canadian privacy legislation.",
+  "tosSection4Title": "Data and Privacy",
+  "tosSection5Body": "HealthBank is provided as an academic research platform on an \"as is\" basis. While we take all reasonable precautions to maintain security and data integrity, the University of Prince Edward Island and the HealthBank project team shall not be liable for indirect, incidental, or consequential damages arising from your use of the platform. Nothing in these terms limits liability for gross negligence, wilful misconduct, or as required by applicable law.",
+  "tosSection5Title": "Limitation of Liability",
+  "tosTitle": "Terms of Service",
+  "tosTocTitle": "Contents"
+}

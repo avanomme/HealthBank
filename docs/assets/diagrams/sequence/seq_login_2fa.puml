@@ -1,0 +1,72 @@
+@startuml HealthBank_Login_2FA_Sequence
+!theme plain
+skinparam sequenceArrowColor #2C76BF
+skinparam sequenceLifeLineBorderColor #595959
+skinparam sequenceParticipantBorderColor #1A1A2E
+skinparam sequenceParticipantBackgroundColor #EBF4FF
+skinparam sequenceGroupBorderColor #AAAAAA
+skinparam shadowing false
+autoactivate off
+
+title HealthBank — Login with 2FA Sequence
+
+actor       "User"         as U
+participant "Flutter App"  as APP
+participant "FastAPI\n/api/v1/auth" as API
+database    "MySQL"        as DB
+
+== Standard Login ==
+
+U -> APP : Enter email + password\n[Submit]
+APP -> API : POST /api/v1/auth/login\n{ email, password }
+API -> DB  : SELECT AccountID, PasswordHash, RoleID,\n       IsActive, MustChangePassword,\n       LockoutUntil, FailedAttempts\nFROM Auth JOIN AccountData
+DB --> API : account row
+
+alt Account is locked
+  API --> APP : 403 { "locked": true, retry_after }
+  APP --> U   : "Account locked — contact administrator"
+
+else Invalid credentials
+  API -> DB  : UPDATE Auth SET FailedAttempts = FailedAttempts + 1
+  API --> APP : 401 Unauthorized
+  APP --> U   : "Incorrect email or password"
+
+else Valid credentials, 2FA disabled
+  API -> DB  : INSERT INTO Sessions (TokenHash, AccountID, ExpiresAt)
+  DB --> API : session created
+  API --> APP : 200 { role, must_change_password }\nSet-Cookie: session_token=<hash>; HttpOnly; SameSite=Lax
+  APP --> U   : Redirect to role dashboard
+
+else Valid credentials, 2FA enabled
+  API --> APP : 200 { requires_2fa: true, challenge_token }
+  APP --> U   : Show TOTP prompt
+
+  == 2FA Challenge ==
+
+  U -> APP : Enter 6-digit TOTP code
+  APP -> API : POST /api/v1/2fa/verify\n{ challenge_token, code }
+  API -> DB  : SELECT TotpSecret (encrypted)\nFROM TwoFactor WHERE AccountID = ?
+  DB --> API : encrypted secret
+  API -> API : Decrypt secret\nValidate TOTP code (±30s window)
+
+  alt TOTP code valid
+    API -> DB  : INSERT INTO Sessions\nUPDATE Auth SET FailedAttempts = 0
+    DB --> API : session created
+    API --> APP : 200 { role, must_change_password }\nSet-Cookie: session_token=<hash>; HttpOnly
+    APP --> U   : Redirect to role dashboard
+
+  else TOTP code invalid (rate-limited: 5 attempts / 60s)
+    API --> APP : 401 { "invalid_code": true }
+    APP --> U   : "Incorrect code — try again"
+  end
+end
+
+== Temporary Password Enforcement ==
+
+note over APP, API
+  If must_change_password = true, Flutter router
+  redirects to /change-password before any
+  other route is accessible
+end note
+
+@enduml

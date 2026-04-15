@@ -1,0 +1,95 @@
+@startuml HealthBank_Health_Tracking_Log_Sequence
+!theme plain
+skinparam sequenceArrowColor #2C76BF
+skinparam sequenceLifeLineBorderColor #595959
+skinparam sequenceParticipantBorderColor #1A1A2E
+skinparam sequenceParticipantBackgroundColor #EBF4FF
+skinparam sequenceGroupBorderColor #AAAAAA
+skinparam shadowing false
+autoactivate off
+
+title HealthBank — Participant Logs Health Metrics
+
+actor       "Participant"         as P
+participant "Flutter App\n(Health Tracking Page)" as APP
+participant "FastAPI\n/api/v1/health-tracking" as API
+database    "MySQL"               as DB
+
+== Page Load ==
+
+P -> APP : Navigate to Health Tracking
+APP -> API : GET /health-tracking/status/today\n[session cookie]
+API -> DB  : SELECT metrics logged today vs. due today
+DB --> API : { is_complete, total_due, completed_count }
+API --> APP : CheckInStatusResponse
+
+APP -> API : GET /health-tracking/metrics?lang=en
+API -> DB  : SELECT TrackingCategory WHERE IsActive=1 AND IsDeleted=0\nSELECT TrackingMetric WHERE IsActive=1 AND IsDeleted=0\nSELECT TrackingCategoryTranslation (if lang ≠ en)
+DB --> API : categories with nested metrics
+API --> APP : List<CategoryResponse>
+
+APP --> P  : Render Log Today tab\n(category sidebar + metric cards)
+
+== Baseline Check ==
+
+alt No baseline entries exist
+  APP -> API : GET /health-tracking/baseline
+  API -> DB  : SELECT * FROM TrackingEntry WHERE ParticipantID=? AND IsBaseline=1
+  DB --> API : []
+  API --> APP : empty list
+  APP --> P  : Show baseline banner:\n"Record your baseline snapshot"
+end
+
+== Fill in Metrics ==
+
+P -> APP : Adjust metric inputs\n(sliders, toggles, number fields, dropdowns)
+note over APP : Values stored in local\ntrackingDraftProvider (in-memory)
+
+== Save Entries ==
+
+P -> APP : Tap "Save"
+APP -> APP : Collect draft values → BatchEntrySubmit\n{ entries: [...], is_baseline: false }
+APP -> API : POST /health-tracking/entries\n{ entries: [{ metric_id, value, notes, entry_date }], is_baseline }
+
+loop For each entry in batch
+  API -> DB  : SELECT MetricID, MetricType, ScaleMin,\n       ScaleMax, ChoiceOptions, IsActive\nFROM TrackingMetric WHERE MetricID = ?
+  DB --> API : metric row
+
+  alt Metric not found
+    API --> APP : 404 metric_id not found
+  else Metric inactive
+    API --> APP : 400 metric is not active
+  else Value fails type validation
+    API --> APP : 422 { detail: "Scale value must be between 1 and 10" }
+  else Validation passes
+    API -> DB  : INSERT INTO TrackingEntry\n  (ParticipantID, MetricID, Value,\n   Notes, EntryDate, IsBaseline)\nVALUES (?, ?, ?, ?, ?, ?)\nON DUPLICATE KEY UPDATE\n  Value = ?, Notes = ?
+    DB --> API : 1 row affected (insert or update)
+  end
+end
+
+API -> DB  : COMMIT
+API --> APP : 201 { entries_saved: N }
+APP --> P  : Show "Saved ✓" confirmation\n(liveRegion for screen readers)
+
+== View History ==
+
+P -> APP : Tap "History" tab
+APP --> P : Render metric selector + date range
+
+P -> APP : Select metric: "Sleep Hours"\nDate range: last 30 days
+APP -> API : GET /health-tracking/history/1\n(metric_id = 1 for sleep_hours)
+API -> DB  : SELECT EntryDate, Value FROM TrackingEntry\nWHERE ParticipantID=? AND MetricID=?\nORDER BY EntryDate ASC
+DB --> API : list of entries
+API --> APP : List<EntryResponse>
+
+APP --> P  : Render AppLineChart with date on X, value on Y
+
+opt Show Population Average toggle
+  APP -> API : GET /health-tracking/participant/aggregate\n?metric_id=1&start_date=...&end_date=...
+  API -> DB  : SELECT EntryDate, AVG(Value), COUNT(DISTINCT ParticipantID)\nFROM TrackingEntry WHERE MetricID=?\nGROUP BY EntryDate\nHAVING participant_count >= k
+  DB --> API : aggregate data points
+  API --> APP : List<AggregateDataPoint>
+  APP --> P  : Overlay population average line\n(suppressed intervals shown as gaps)
+end
+
+@enduml
