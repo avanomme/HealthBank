@@ -125,3 +125,7 @@ Other Features.docx
 run_linux.sh
 run_mac.sh
 run_windows.ps1
+
+# Secrets — never commit real env files
+env/*.env
+!env/*.example
